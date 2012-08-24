@@ -1,0 +1,26 @@
+.adFlipper{
+    display: block;
+}
+.adFlipper img{
+    border: none;
+}
+.adFlipper ul {
+    padding: 0;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    list-style: none;
+    width: 50%;
+}
+.adFlipper ul li{
+    float: left;
+    cursor: pointer;
+    background: url('../img/bullet.png') no-repeat;
+    height: 16px;
+    width: 16px;
+    margin: 5px;
+    text-indent: -9999px;
+}
+.adFlipper ul li.current{
+    background: url('../img/bulletCurrent.png') no-repeat;
+}
