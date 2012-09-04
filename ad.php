@@ -73,7 +73,7 @@ if(isset($eAPI->cleanPost['MYSQL']['createAd']) or isset($eAPI->cleanPost['MYSQL
     if(!isset($eAPI->cleanPost['MYSQL']['imgActionType']) or is_empty($eAPI->cleanPost['MYSQL']['imgActionType'])){
         errorHandle::errorMsg("No value supplied for image action");
     }else
-    if(strip_tags($eAPI->cleanPost['MYSQL']['imgActionValue']) != $eAPI->cleanPost['MYSQL']['imgActionValue']){
+    if(isset($eAPI->cleanPost['MYSQL']['imgActionValue']) && strip_tags($eAPI->cleanPost['MYSQL']['imgActionValue']) != $eAPI->cleanPost['MYSQL']['imgActionValue']){
         errorHandle::errorMsg("HTML is not allowed in the image action!");
     }
     switch($eAPI->cleanPost['MYSQL']['imgActionType']){
@@ -246,7 +246,9 @@ if(isset($eAPI->cleanPost['MYSQL']['createAd']) or isset($eAPI->cleanPost['MYSQL
                 $eAPI->openDB->escape($img->getImageInfo('width')),
                 strip_tags($eAPI->cleanPost['MYSQL']['imgAltText']),
                 strip_tags($eAPI->cleanPost['MYSQL']['imgActionType']),
-                strip_tags($eAPI->cleanPost['MYSQL']['imgActionValue'])));
+                (isset($eAPI->cleanPost['MYSQL']['imgActionValue']))?strip_tags($eAPI->cleanPost['MYSQL']['imgActionValue']):""
+                )
+            );
             if($dbCreateAd['errorNumber']){
                 sessionSet('adManager_success', false);
                 sessionSet('adManager_successMsg', "Advertisement failed to save. (Please submit a helpdesk ticket so we can fix this)");
