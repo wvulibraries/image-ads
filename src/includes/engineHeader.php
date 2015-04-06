@@ -10,7 +10,7 @@
 	
 	// These are specific to EngineAPI and pulling the appropriate files
 //		recurseInsert("acl.php","php"); 
-		recurseInsert("vars.php","php");
+		recurseInsert("includes/vars.php","php");
 		recurseInsert('includes/engineIncludes.php',"php");
 
 		formBuilder::process();

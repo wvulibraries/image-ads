@@ -16,7 +16,7 @@
             'label'           => "File Upload",
             'showInEditStrip' => TRUE,
             'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE),
-            'required'        => TRUE,
+            //'required'        => TRUE,
             'type'            => 'file'
         )
     );

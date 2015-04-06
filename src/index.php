@@ -1,11 +1,24 @@
 
 <?php 
 	require_once "includes/engineHeader.php";
-
     templates::display('header'); 
     
     // Insert Form Definintions 
     recurseInsert("includes/imageForm.php","php"); 
+
+    $db      = db::get($localvars->get('dbConnectionName')); // TELL WHAT DB TO CONNECT TO
+    $sql     = sprintf("SELECT * FROM imageAds ORDER BY ID"); // SELECT ALL COLUMNS IN IMAGEADS AND ORDER THEM BY THE NAME
+    
+    //print "LOCAL VARS: " . $localvars->get('dbConnectionName'); 
+    // USE THE SQL STATEMENT, AND THE DATABASE NAME TO MAKE THE CONNECTION AND PULL THE INFORMATION
+    $result = $db->query($sql);    // caused PHP Fatal Error non-object
+    
+    // TESTING THE LOGIC ABOVE 
+    if(!$result) { 
+        die("no results : " . mysql_error());  // ERROR GOT NO RESULTS 
+    } else { 
+        echo "Results Found";    
+    }
 ?>
 
 <header> 
@@ -16,7 +29,10 @@
     <h2> Current Advertisements </h2>
     <p> List all of the current ads here. </p>
     
-    {{ PHP Template Here }} 
+    <?php 
+      
+      
+    ?>
     
     <br/><br/>
     <br/><br/>
@@ -31,7 +47,11 @@
     <br/><br/>
     
     <div id="UploadImageForm">
-	   //{form name="imageAdForm" display="form" addGet="true"}
+	   {form name="imageAdForm" display="form" addGet="true"}
+        
+        
+
+       {form name="imageAdForm" display="edit" expandable="true" addGet="true"}
     </div>
     
     <div>

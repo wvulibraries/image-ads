@@ -11,4 +11,5 @@
    // DB Name and login steup for the rest of the app 
     $databaseOptions['dbName'] = 'rotatingImageAds'; // change this to your app db name 
     $db                        = db::create('mysql', $databaseOptions, 'appDB');
+    //var_dump($db); // dumps the variable 
 ?>
