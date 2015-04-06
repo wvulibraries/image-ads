@@ -1,9 +1,11 @@
 
 <?php 
-	require_once("includes/engineHeader.php"); 
+	require_once "includes/engineHeader.php";
+
     templates::display('header'); 
+    
     // Insert Form Definintions 
-     recurseInsert("includes/imageForm.php","php"); 
+    recurseInsert("includes/imageForm.php","php"); 
 ?>
 
 <header> 
