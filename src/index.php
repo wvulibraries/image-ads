@@ -15,10 +15,18 @@
     
     // TESTING THE LOGIC ABOVE 
     if(!$result) { 
-        die("no results : " . mysql_error());  // ERROR GOT NO RESULTS 
+        die("Something went wrong with the database connection, please refresh your screen and try again. " . mysql_error());  // ERROR GOT NO RESULTS 
     } else { 
-        echo "Results Found";    
+        // echo "Results Found";    
     }
+
+  /*
+   while($row = $result->fetch()) { 
+       foreach($row as $entry) {
+            print "\n <br/>" . $entry . "\n";    
+       }
+   } */
+
 ?>
 
 <header> 

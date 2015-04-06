@@ -264,3 +264,101 @@
 [Mon Apr 06 16:55:14 2015] [error] [client 10.0.2.2] PHP Fatal error:  Call to a member function query() on a non-object in /vagrant/src/index.php on line 14, referer: http://localhost:8090/admin/image_manager/index.php
 [Mon Apr 06 16:56:16 2015] [error] [client 10.0.2.2] PHP Fatal error:  Call to a member function query() on a non-object in /vagrant/src/index.php on line 15, referer: http://localhost:8090/admin/image_manager/index.php
 [Mon Apr 06 16:56:48 2015] [error] [client 10.0.2.2] PHP Fatal error:  Call to a member function query() on a non-object in /vagrant/src/index.php on line 15, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:20:25 2015] [error] [client 10.0.2.2] PHP Parse error:  syntax error, unexpected '=' in /vagrant/src/index.php on line 24, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:22:17 2015] [error] [client 10.0.2.2] PHP Parse error:  syntax error, unexpected ')' in /vagrant/src/index.php on line 24, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:33 2015] [error] [client 10.0.2.2] Use of undefined constant n - assumed 'n' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:33 2015] [error] [client 10.0.2.2] Division by zero at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:33 2015] [error] [client 10.0.2.2] Use of undefined constant n - assumed 'n' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:33 2015] [error] [client 10.0.2.2] Division by zero at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:33 2015] [error] [client 10.0.2.2] Use of undefined constant n - assumed 'n' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:33 2015] [error] [client 10.0.2.2] Division by zero at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:33 2015] [error] [client 10.0.2.2] Use of undefined constant n - assumed 'n' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:33 2015] [error] [client 10.0.2.2] Division by zero at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:33 2015] [error] [client 10.0.2.2] Use of undefined constant n - assumed 'n' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:33 2015] [error] [client 10.0.2.2] Division by zero at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:33 2015] [error] [client 10.0.2.2] Use of undefined constant n - assumed 'n' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:33 2015] [error] [client 10.0.2.2] Division by zero at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:33 2015] [error] [client 10.0.2.2] Use of undefined constant n - assumed 'n' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:33 2015] [error] [client 10.0.2.2] Division by zero at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:33 2015] [error] [client 10.0.2.2] Use of undefined constant n - assumed 'n' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:33 2015] [error] [client 10.0.2.2] Division by zero at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:33 2015] [error] [client 10.0.2.2] Use of undefined constant n - assumed 'n' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:33 2015] [error] [client 10.0.2.2] Division by zero at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:33 2015] [error] [client 10.0.2.2] Use of undefined constant n - assumed 'n' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:33 2015] [error] [client 10.0.2.2] Division by zero at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:33 2015] [error] [client 10.0.2.2] Use of undefined constant n - assumed 'n' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:33 2015] [error] [client 10.0.2.2] Division by zero at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:33 2015] [error] [client 10.0.2.2] Use of undefined constant n - assumed 'n' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:33 2015] [error] [client 10.0.2.2] Division by zero at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:33 2015] [error] [client 10.0.2.2] Use of undefined constant n - assumed 'n' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:33 2015] [error] [client 10.0.2.2] Division by zero at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:33 2015] [error] [client 10.0.2.2] Use of undefined constant n - assumed 'n' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:33 2015] [error] [client 10.0.2.2] Division by zero at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:33 2015] [error] [client 10.0.2.2] Use of undefined constant n - assumed 'n' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:33 2015] [error] [client 10.0.2.2] Division by zero at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:33 2015] [error] [client 10.0.2.2] Use of undefined constant n - assumed 'n' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:33 2015] [error] [client 10.0.2.2] Division by zero at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:33 2015] [error] [client 10.0.2.2] Use of undefined constant n - assumed 'n' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:33 2015] [error] [client 10.0.2.2] Division by zero at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:33 2015] [error] [client 10.0.2.2] Use of undefined constant n - assumed 'n' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:33 2015] [error] [client 10.0.2.2] Division by zero at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:33 2015] [error] [client 10.0.2.2] Use of undefined constant n - assumed 'n' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:33 2015] [error] [client 10.0.2.2] Division by zero at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:33 2015] [error] [client 10.0.2.2] Use of undefined constant n - assumed 'n' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:33 2015] [error] [client 10.0.2.2] Division by zero at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:33 2015] [error] [client 10.0.2.2] Use of undefined constant n - assumed 'n' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:33 2015] [error] [client 10.0.2.2] Division by zero at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:41 2015] [error] [client 10.0.2.2] Use of undefined constant n - assumed 'n' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:41 2015] [error] [client 10.0.2.2] Division by zero at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:41 2015] [error] [client 10.0.2.2] Use of undefined constant n - assumed 'n' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:41 2015] [error] [client 10.0.2.2] Division by zero at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:41 2015] [error] [client 10.0.2.2] Use of undefined constant n - assumed 'n' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:41 2015] [error] [client 10.0.2.2] Division by zero at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:41 2015] [error] [client 10.0.2.2] Use of undefined constant n - assumed 'n' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:41 2015] [error] [client 10.0.2.2] Division by zero at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:41 2015] [error] [client 10.0.2.2] Use of undefined constant n - assumed 'n' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:41 2015] [error] [client 10.0.2.2] Division by zero at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:41 2015] [error] [client 10.0.2.2] Use of undefined constant n - assumed 'n' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:41 2015] [error] [client 10.0.2.2] Division by zero at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:41 2015] [error] [client 10.0.2.2] Use of undefined constant n - assumed 'n' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:41 2015] [error] [client 10.0.2.2] Division by zero at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:41 2015] [error] [client 10.0.2.2] Use of undefined constant n - assumed 'n' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:41 2015] [error] [client 10.0.2.2] Division by zero at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:41 2015] [error] [client 10.0.2.2] Use of undefined constant n - assumed 'n' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:41 2015] [error] [client 10.0.2.2] Division by zero at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:41 2015] [error] [client 10.0.2.2] Use of undefined constant n - assumed 'n' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:41 2015] [error] [client 10.0.2.2] Division by zero at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:41 2015] [error] [client 10.0.2.2] Use of undefined constant n - assumed 'n' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:41 2015] [error] [client 10.0.2.2] Division by zero at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:41 2015] [error] [client 10.0.2.2] Use of undefined constant n - assumed 'n' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:41 2015] [error] [client 10.0.2.2] Division by zero at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:41 2015] [error] [client 10.0.2.2] Use of undefined constant n - assumed 'n' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:41 2015] [error] [client 10.0.2.2] Division by zero at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:41 2015] [error] [client 10.0.2.2] Use of undefined constant n - assumed 'n' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:41 2015] [error] [client 10.0.2.2] Division by zero at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:41 2015] [error] [client 10.0.2.2] Use of undefined constant n - assumed 'n' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:41 2015] [error] [client 10.0.2.2] Division by zero at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:41 2015] [error] [client 10.0.2.2] Use of undefined constant n - assumed 'n' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:41 2015] [error] [client 10.0.2.2] Division by zero at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:41 2015] [error] [client 10.0.2.2] Use of undefined constant n - assumed 'n' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:41 2015] [error] [client 10.0.2.2] Division by zero at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:41 2015] [error] [client 10.0.2.2] Use of undefined constant n - assumed 'n' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:41 2015] [error] [client 10.0.2.2] Division by zero at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:41 2015] [error] [client 10.0.2.2] Use of undefined constant n - assumed 'n' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:41 2015] [error] [client 10.0.2.2] Division by zero at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:41 2015] [error] [client 10.0.2.2] Use of undefined constant n - assumed 'n' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:41 2015] [error] [client 10.0.2.2] Division by zero at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:41 2015] [error] [client 10.0.2.2] Use of undefined constant n - assumed 'n' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:41 2015] [error] [client 10.0.2.2] Division by zero at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:23:59 2015] [error] [client 10.0.2.2] PHP Parse error:  syntax error, unexpected '/' in /vagrant/src/index.php on line 25, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:24:01 2015] [error] [client 10.0.2.2] PHP Parse error:  syntax error, unexpected '/' in /vagrant/src/index.php on line 25, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:25:39 2015] [error] [client 10.0.2.2] PHP Parse error:  syntax error, unexpected T_NS_SEPARATOR, expecting ',' or ';' in /vagrant/src/index.php on line 25, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:25:42 2015] [error] [client 10.0.2.2] PHP Parse error:  syntax error, unexpected T_NS_SEPARATOR, expecting ',' or ';' in /vagrant/src/index.php on line 25, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:25:56 2015] [error] [client 10.0.2.2] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ',' or ';' in /vagrant/src/index.php on line 25, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:25:58 2015] [error] [client 10.0.2.2] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ',' or ';' in /vagrant/src/index.php on line 25, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 17:26:00 2015] [error] [client 10.0.2.2] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ',' or ';' in /vagrant/src/index.php on line 25, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 18:59:27 2015] [error] [client 10.0.2.2] PHP Parse error:  syntax error, unexpected '{' in /vagrant/src/includes/imageForm.php on line 13, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 19:42:00 2015] [error] [client 10.0.2.2] PHP Parse error:  syntax error, unexpected T_BOOLEAN_OR, expecting ',' or ')' in /vagrant/src/includes/imageForm.php on line 22, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 19:43:50 2015] [error] [client 10.0.2.2] PHP Parse error:  syntax error, unexpected T_BOOLEAN_OR, expecting ',' or ')' in /vagrant/src/includes/imageForm.php on line 22, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 19:44:19 2015] [error] [client 10.0.2.2] PHP Parse error:  syntax error, unexpected '=' in /vagrant/src/includes/imageForm.php on line 32, referer: http://localhost:8090/admin/image_manager/index.php
+[Mon Apr 06 19:45:16 2015] [error] [client 10.0.2.2] formProcessor::setCallback() Invalid callback trigger! (Valid triggers: beforeInsert,doInsert,afterInsert,beforeUpdate,doUpdate,afterUpdate,beforeEdit,doEdit,afterEdit,beforeDelete,doDelete,afterDelete,onSuccess,onFailure) at 161:/tmp/git/engineAPI-Modules/src/modules/form/formProcessor.php, referer: http://localhost:8090/admin/image_manager/index.php

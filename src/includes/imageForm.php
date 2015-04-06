@@ -9,13 +9,40 @@
     $form->editTitle   = "Edit Rotating Image";
 
 
+    // Callback Logic for handling the image upload 
+    if(!is_empty($_POST) || session::has('POST')) { 
+        
+        // Code for the Processor 
+        // =======================================
+        
+        function insertImage($processor,$data,$fieldName) {
+            $fieldName = "imageAd";
+            
+             // Testing the Files Logic 
+              if($_FILES[$filename]["name"]) { 
+                print "FILES FOUND";   
+              } else {
+                print "No Files Found";   
+              }
+
+        }
+        
+        // Run the Processor 
+        // ========================================
+        $processor = formBuilder::createProcessor(); 
+        $processor->setCallback('processor', 'picInsertBefore');
+        $processor->processPost(); 
+    }
+    
+
+
     $form->addField(
         array(
             'name'            => "imageAd",
             'fieldID'         => "imgFile",
             'label'           => "File Upload",
             'showInEditStrip' => TRUE,
-            'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE),
+            'showIn'          => array(formBuilder::TYPE_INSERT),
             //'required'        => TRUE,
             'type'            => 'file'
         )
