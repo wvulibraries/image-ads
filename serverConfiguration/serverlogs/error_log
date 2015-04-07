@@ -546,3 +546,4 @@
 [Tue Apr 07 18:35:17 2015] [error] [client 10.0.2.2] Undefined index: enable at 27:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/index.php
 [Tue Apr 07 18:38:24 2015] [error] [client 10.0.2.2] Undefined index: enable at 28:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/index.php
 [Tue Apr 07 18:38:24 2015] [error] [client 10.0.2.2] Undefined index: enable at 28:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 19:51:26 2015] [notice] caught SIGTERM, shutting down
