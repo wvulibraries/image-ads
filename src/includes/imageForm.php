@@ -15,22 +15,25 @@
         // Code for the Processor 
         // =======================================
         
-        function insertImage($processor,$data,$fieldName) {
-            $fieldName = "imageAd";
-            
-             // Testing the Files Logic 
-              if($_FILES[$filename]["name"]) { 
-                print "FILES FOUND";   
-              } else {
-                print "No Files Found";   
-              }
-
+        function insertImage($processor,$data) {
+            $message = "No conditions passed"; 
+            // Testing the Files Logic 
+            if($_FILES['imageAd']['name']) { 
+                print "FILES FOUND";
+                // noerrors detected 
+                if(!$_FILES['imageAd']['error']) {
+                    $message = "Great Job"; 
+                } else { 
+                    $message = "Something went Wrong Upload Error: " . $_FILES['imageAd']['error'];   
+                }  
+            }
+            echo $message; 
         }
         
         // Run the Processor 
         // ========================================
         $processor = formBuilder::createProcessor(); 
-        $processor->setCallback('processor', 'picInsertBefore');
+        $processor->setCallback('beforeInsert', 'insertImage');
         $processor->processPost(); 
     }
     
