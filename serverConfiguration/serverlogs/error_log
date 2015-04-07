@@ -362,3 +362,182 @@
 [Mon Apr 06 19:43:50 2015] [error] [client 10.0.2.2] PHP Parse error:  syntax error, unexpected T_BOOLEAN_OR, expecting ',' or ')' in /vagrant/src/includes/imageForm.php on line 22, referer: http://localhost:8090/admin/image_manager/index.php
 [Mon Apr 06 19:44:19 2015] [error] [client 10.0.2.2] PHP Parse error:  syntax error, unexpected '=' in /vagrant/src/includes/imageForm.php on line 32, referer: http://localhost:8090/admin/image_manager/index.php
 [Mon Apr 06 19:45:16 2015] [error] [client 10.0.2.2] formProcessor::setCallback() Invalid callback trigger! (Valid triggers: beforeInsert,doInsert,afterInsert,beforeUpdate,doUpdate,afterUpdate,beforeEdit,doEdit,afterEdit,beforeDelete,doDelete,afterDelete,onSuccess,onFailure) at 161:/tmp/git/engineAPI-Modules/src/modules/form/formProcessor.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 12:08:53 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Tue Apr 07 14:08:26 2015] [error] [client 10.0.2.2] Undefined variable: localvars at 13:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:08:26 2015] [error] [client 10.0.2.2] PHP Fatal error:  Call to a member function get() on a non-object in /vagrant/src/index.php on line 13, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:08:56 2015] [error] [client 10.0.2.2] Undefined variable: localvars at 13:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:08:56 2015] [error] [client 10.0.2.2] PHP Fatal error:  Call to a member function get() on a non-object in /vagrant/src/index.php on line 13, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:09:26 2015] [error] [client 10.0.2.2] PHP Fatal error:  Call to undefined function currentAds() in /vagrant/src/index.php on line 35, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:19:48 2015] [error] [client 10.0.2.2] Use of undefined constant F - assumed 'F' at 31:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:22:47 2015] [error] [client 10.0.2.2] Use of undefined constant F - assumed 'F' at 33:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:22:47 2015] [error] [client 10.0.2.2] Use of undefined constant j - assumed 'j' at 34:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:22:47 2015] [error] [client 10.0.2.2] Use of undefined constant l - assumed 'l' at 35:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:24:46 2015] [error] [client 10.0.2.2] Use of undefined constant F - assumed 'F' at 33:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:24:46 2015] [error] [client 10.0.2.2] Use of undefined constant j - assumed 'j' at 34:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:24:46 2015] [error] [client 10.0.2.2] Use of undefined constant l - assumed 'l' at 35:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:24:46 2015] [error] [client 10.0.2.2] Use of undefined constant y - assumed 'y' at 36:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:25:08 2015] [error] [client 10.0.2.2] Use of undefined constant F - assumed 'F' at 33:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:25:08 2015] [error] [client 10.0.2.2] Use of undefined constant j - assumed 'j' at 34:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:25:08 2015] [error] [client 10.0.2.2] Use of undefined constant l - assumed 'l' at 35:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:25:08 2015] [error] [client 10.0.2.2] Use of undefined constant y - assumed 'y' at 36:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:25:33 2015] [error] [client 10.0.2.2] Use of undefined constant F - assumed 'F' at 33:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:25:33 2015] [error] [client 10.0.2.2] Use of undefined constant j - assumed 'j' at 34:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:25:33 2015] [error] [client 10.0.2.2] Use of undefined constant l - assumed 'l' at 35:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:25:33 2015] [error] [client 10.0.2.2] Use of undefined constant Y - assumed 'Y' at 36:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:27:43 2015] [error] [client 10.0.2.2] Use of undefined constant F - assumed 'F' at 33:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:27:43 2015] [error] [client 10.0.2.2] Use of undefined constant j - assumed 'j' at 34:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:27:43 2015] [error] [client 10.0.2.2] Use of undefined constant l - assumed 'l' at 35:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:27:43 2015] [error] [client 10.0.2.2] Use of undefined constant Y - assumed 'Y' at 36:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:27:43 2015] [error] [client 10.0.2.2] Use of undefined constant gi - assumed 'gi' at 39:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:27:55 2015] [error] [client 10.0.2.2] Use of undefined constant F - assumed 'F' at 33:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:27:55 2015] [error] [client 10.0.2.2] Use of undefined constant j - assumed 'j' at 34:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:27:55 2015] [error] [client 10.0.2.2] Use of undefined constant l - assumed 'l' at 35:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:27:55 2015] [error] [client 10.0.2.2] Use of undefined constant Y - assumed 'Y' at 36:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:27:55 2015] [error] [client 10.0.2.2] Use of undefined constant gi - assumed 'gi' at 39:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:28:07 2015] [error] [client 10.0.2.2] PHP Parse error:  syntax error, unexpected ':' in /vagrant/src/index.php on line 39, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:28:25 2015] [error] [client 10.0.2.2] Use of undefined constant F - assumed 'F' at 33:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:28:25 2015] [error] [client 10.0.2.2] Use of undefined constant j - assumed 'j' at 34:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:28:25 2015] [error] [client 10.0.2.2] Use of undefined constant l - assumed 'l' at 35:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:28:25 2015] [error] [client 10.0.2.2] Use of undefined constant Y - assumed 'Y' at 36:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:28:25 2015] [error] [client 10.0.2.2] Use of undefined constant g - assumed 'g' at 39:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:28:25 2015] [error] [client 10.0.2.2] Use of undefined constant i - assumed 'i' at 39:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:31:53 2015] [error] [client 10.0.2.2] Use of undefined constant F - assumed 'F' at 33:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:31:53 2015] [error] [client 10.0.2.2] Use of undefined constant j - assumed 'j' at 34:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:31:53 2015] [error] [client 10.0.2.2] Use of undefined constant l - assumed 'l' at 35:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:31:53 2015] [error] [client 10.0.2.2] Use of undefined constant Y - assumed 'Y' at 36:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:31:53 2015] [error] [client 10.0.2.2] Use of undefined constant g - assumed 'g' at 41:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:31:53 2015] [error] [client 10.0.2.2] Use of undefined constant i - assumed 'i' at 41:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:33:18 2015] [error] [client 10.0.2.2] Use of undefined constant F - assumed 'F' at 33:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:33:18 2015] [error] [client 10.0.2.2] Use of undefined constant j - assumed 'j' at 34:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:33:18 2015] [error] [client 10.0.2.2] Use of undefined constant l - assumed 'l' at 35:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:33:18 2015] [error] [client 10.0.2.2] Use of undefined constant Y - assumed 'Y' at 36:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:42:28 2015] [error] [client 10.0.2.2] Use of undefined constant F - assumed 'F' at 31:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:42:28 2015] [error] [client 10.0.2.2] Use of undefined constant j - assumed 'j' at 32:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:42:28 2015] [error] [client 10.0.2.2] Use of undefined constant l - assumed 'l' at 33:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:42:28 2015] [error] [client 10.0.2.2] Use of undefined constant Y - assumed 'Y' at 34:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:43:54 2015] [error] [client 10.0.2.2] Use of undefined constant F - assumed 'F' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:43:54 2015] [error] [client 10.0.2.2] Use of undefined constant j - assumed 'j' at 26:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:43:54 2015] [error] [client 10.0.2.2] Use of undefined constant l - assumed 'l' at 27:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:43:54 2015] [error] [client 10.0.2.2] Use of undefined constant Y - assumed 'Y' at 28:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:44:40 2015] [error] [client 10.0.2.2] PHP Parse error:  syntax error, unexpected ')' in /vagrant/src/index.php on line 60, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:44:44 2015] [error] [client 10.0.2.2] PHP Parse error:  syntax error, unexpected ')' in /vagrant/src/index.php on line 60, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:45:02 2015] [error] [client 10.0.2.2] Use of undefined constant F - assumed 'F' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:45:02 2015] [error] [client 10.0.2.2] Use of undefined constant j - assumed 'j' at 26:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:45:02 2015] [error] [client 10.0.2.2] Use of undefined constant l - assumed 'l' at 27:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:45:02 2015] [error] [client 10.0.2.2] Use of undefined constant Y - assumed 'Y' at 28:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:47:09 2015] [error] [client 10.0.2.2] Use of undefined constant F - assumed 'F' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:47:09 2015] [error] [client 10.0.2.2] Use of undefined constant j - assumed 'j' at 26:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:47:09 2015] [error] [client 10.0.2.2] Use of undefined constant l - assumed 'l' at 27:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:47:09 2015] [error] [client 10.0.2.2] Use of undefined constant Y - assumed 'Y' at 28:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:47:45 2015] [error] [client 10.0.2.2] Use of undefined constant F - assumed 'F' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:47:45 2015] [error] [client 10.0.2.2] Use of undefined constant j - assumed 'j' at 26:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:47:45 2015] [error] [client 10.0.2.2] Use of undefined constant l - assumed 'l' at 27:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:47:45 2015] [error] [client 10.0.2.2] Use of undefined constant Y - assumed 'Y' at 28:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:47:54 2015] [error] [client 10.0.2.2] Use of undefined constant F - assumed 'F' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:47:54 2015] [error] [client 10.0.2.2] Use of undefined constant j - assumed 'j' at 26:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:47:54 2015] [error] [client 10.0.2.2] Use of undefined constant l - assumed 'l' at 27:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:47:54 2015] [error] [client 10.0.2.2] Use of undefined constant Y - assumed 'Y' at 28:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:58:07 2015] [error] [client 10.0.2.2] PHP Parse error:  syntax error, unexpected ';' in /vagrant/src/index.php on line 49, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:58:10 2015] [error] [client 10.0.2.2] PHP Parse error:  syntax error, unexpected ';' in /vagrant/src/index.php on line 49, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:58:30 2015] [error] [client 10.0.2.2] PHP Parse error:  syntax error, unexpected ';' in /vagrant/src/index.php on line 49, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:58:49 2015] [error] [client 10.0.2.2] Use of undefined constant F - assumed 'F' at 22:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:58:49 2015] [error] [client 10.0.2.2] Use of undefined constant j - assumed 'j' at 23:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:58:49 2015] [error] [client 10.0.2.2] Use of undefined constant l - assumed 'l' at 24:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:58:49 2015] [error] [client 10.0.2.2] Use of undefined constant Y - assumed 'Y' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:58:49 2015] [error] [client 10.0.2.2] PHP Fatal error:  Call to undefined function displayAllAds() in /vagrant/src/index.php on line 54, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:59:18 2015] [error] [client 10.0.2.2] Undefined variable: localvars at 5:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 14:59:18 2015] [error] [client 10.0.2.2] PHP Fatal error:  Call to a member function get() on a non-object in /vagrant/src/includes/currentAdsDisplay.php on line 5, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:01:21 2015] [error] [client 10.0.2.2] Undefined variable: localvars at 8:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:01:21 2015] [error] [client 10.0.2.2] PHP Fatal error:  Call to a member function get() on a non-object in /vagrant/src/includes/currentAdsDisplay.php on line 8, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:05:09 2015] [error] [client 10.0.2.2] Undefined variable: localvars at 5:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:05:09 2015] [error] [client 10.0.2.2] PHP Fatal error:  Call to a member function get() on a non-object in /vagrant/src/includes/currentAdsDisplay.php on line 5, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:05:59 2015] [error] [client 10.0.2.2] Use of undefined constant F - assumed 'F' at 22:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:05:59 2015] [error] [client 10.0.2.2] Use of undefined constant j - assumed 'j' at 23:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:05:59 2015] [error] [client 10.0.2.2] Use of undefined constant l - assumed 'l' at 24:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:05:59 2015] [error] [client 10.0.2.2] Use of undefined constant Y - assumed 'Y' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:05:59 2015] [error] [client 10.0.2.2] Undefined variable: result at 15:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:05:59 2015] [error] [client 10.0.2.2] PHP Fatal error:  Call to a member function fetch() on a non-object in /vagrant/src/includes/currentAdsDisplay.php on line 15, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:06:18 2015] [error] [client 10.0.2.2] Use of undefined constant F - assumed 'F' at 22:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:06:18 2015] [error] [client 10.0.2.2] Use of undefined constant j - assumed 'j' at 23:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:06:18 2015] [error] [client 10.0.2.2] Use of undefined constant l - assumed 'l' at 24:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:06:18 2015] [error] [client 10.0.2.2] Use of undefined constant Y - assumed 'Y' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:06:18 2015] [error] [client 10.0.2.2] Undefined variable: result at 15:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:06:18 2015] [error] [client 10.0.2.2] PHP Fatal error:  Call to a member function fetch() on a non-object in /vagrant/src/includes/currentAdsDisplay.php on line 15, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:09:58 2015] [error] [client 10.0.2.2] Use of undefined constant F - assumed 'F' at 22:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:09:58 2015] [error] [client 10.0.2.2] Use of undefined constant j - assumed 'j' at 23:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:09:58 2015] [error] [client 10.0.2.2] Use of undefined constant l - assumed 'l' at 24:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:09:58 2015] [error] [client 10.0.2.2] Use of undefined constant Y - assumed 'Y' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:09:58 2015] [error] [client 10.0.2.2] Undefined variable: result at 17:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:09:58 2015] [error] [client 10.0.2.2] PHP Fatal error:  Call to a member function fetch() on a non-object in /vagrant/src/includes/currentAdsDisplay.php on line 17, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:11:12 2015] [error] [client 10.0.2.2] Use of undefined constant F - assumed 'F' at 22:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:11:12 2015] [error] [client 10.0.2.2] Use of undefined constant j - assumed 'j' at 23:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:11:12 2015] [error] [client 10.0.2.2] Use of undefined constant l - assumed 'l' at 24:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:11:12 2015] [error] [client 10.0.2.2] Use of undefined constant Y - assumed 'Y' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:11:12 2015] [error] [client 10.0.2.2] Undefined variable: result at 54:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:11:12 2015] [error] [client 10.0.2.2] PHP Fatal error:  Call to a member function fetch() on a non-object in /vagrant/src/includes/currentAdsDisplay.php on line 15, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:11:27 2015] [error] [client 10.0.2.2] Use of undefined constant F - assumed 'F' at 22:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:11:27 2015] [error] [client 10.0.2.2] Use of undefined constant j - assumed 'j' at 23:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:11:27 2015] [error] [client 10.0.2.2] Use of undefined constant l - assumed 'l' at 24:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:11:27 2015] [error] [client 10.0.2.2] Use of undefined constant Y - assumed 'Y' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:11:27 2015] [error] [client 10.0.2.2] Undefined variable: result at 54:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:11:27 2015] [error] [client 10.0.2.2] PHP Fatal error:  Call to a member function fetch() on a non-object in /vagrant/src/includes/currentAdsDisplay.php on line 15, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:13:18 2015] [error] [client 10.0.2.2] Use of undefined constant F - assumed 'F' at 22:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:13:18 2015] [error] [client 10.0.2.2] Use of undefined constant j - assumed 'j' at 23:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:13:18 2015] [error] [client 10.0.2.2] Use of undefined constant l - assumed 'l' at 24:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:13:18 2015] [error] [client 10.0.2.2] Use of undefined constant Y - assumed 'Y' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:14:24 2015] [error] [client 10.0.2.2] Use of undefined constant F - assumed 'F' at 22:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:14:24 2015] [error] [client 10.0.2.2] Use of undefined constant j - assumed 'j' at 23:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:14:24 2015] [error] [client 10.0.2.2] Use of undefined constant l - assumed 'l' at 24:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:14:24 2015] [error] [client 10.0.2.2] Use of undefined constant Y - assumed 'Y' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:15:04 2015] [error] [client 10.0.2.2] Use of undefined constant F - assumed 'F' at 22:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:15:04 2015] [error] [client 10.0.2.2] Use of undefined constant j - assumed 'j' at 23:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:15:04 2015] [error] [client 10.0.2.2] Use of undefined constant l - assumed 'l' at 24:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:15:04 2015] [error] [client 10.0.2.2] Use of undefined constant Y - assumed 'Y' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:15:46 2015] [error] [client 10.0.2.2] Use of undefined constant F - assumed 'F' at 22:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:15:46 2015] [error] [client 10.0.2.2] Use of undefined constant j - assumed 'j' at 23:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:15:46 2015] [error] [client 10.0.2.2] Use of undefined constant l - assumed 'l' at 24:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:15:46 2015] [error] [client 10.0.2.2] Use of undefined constant Y - assumed 'Y' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:18:18 2015] [error] [client 10.0.2.2] Use of undefined constant F - assumed 'F' at 22:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:18:18 2015] [error] [client 10.0.2.2] Use of undefined constant j - assumed 'j' at 23:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:18:18 2015] [error] [client 10.0.2.2] Use of undefined constant l - assumed 'l' at 24:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:18:18 2015] [error] [client 10.0.2.2] Use of undefined constant Y - assumed 'Y' at 25:/vagrant/src/index.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:19:38 2015] [error] [client 10.0.2.2] PHP Parse error:  syntax error, unexpected ',' in /vagrant/src/index.php on line 9, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 15:19:43 2015] [error] [client 10.0.2.2] PHP Parse error:  syntax error, unexpected ',' in /vagrant/src/index.php on line 9, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 17:04:27 2015] [error] [client 10.0.2.2] PHP Fatal error:  Call to undefined function fetch() in /vagrant/src/includes/currentAdsDisplay.php on line 14, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 17:10:00 2015] [error] [client 10.0.2.2] Undefined variable: db at 14:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 17:10:00 2015] [error] [client 10.0.2.2] PHP Fatal error:  Call to a member function prepare() on a non-object in /vagrant/src/includes/currentAdsDisplay.php on line 14, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 17:10:13 2015] [error] [client 10.0.2.2] Undefined variable: db at 14:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 17:10:13 2015] [error] [client 10.0.2.2] PHP Fatal error:  Call to a member function prepare() on a non-object in /vagrant/src/includes/currentAdsDisplay.php on line 14, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 17:11:19 2015] [error] [client 10.0.2.2] PHP Fatal error:  Call to undefined method dbDriver_mysql::prepare() in /vagrant/src/includes/currentAdsDisplay.php on line 11, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 17:11:22 2015] [error] [client 10.0.2.2] PHP Fatal error:  Call to undefined method dbDriver_mysql::prepare() in /vagrant/src/includes/currentAdsDisplay.php on line 11, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 17:11:47 2015] [error] [client 10.0.2.2] PHP Fatal error:  Call to undefined method dbDriver_mysql::prepare() in /vagrant/src/includes/currentAdsDisplay.php on line 11, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 17:12:22 2015] [error] [client 10.0.2.2] PHP Fatal error:  Call to undefined method dbDriver_mysql::prepare() in /vagrant/src/includes/currentAdsDisplay.php on line 11, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 17:12:37 2015] [error] [client 10.0.2.2] PHP Fatal error:  Call to undefined method dbDriver_mysql::fetch() in /vagrant/src/includes/currentAdsDisplay.php on line 11, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 17:36:52 2015] [error] [client 10.0.2.2] PHP Parse error:  syntax error, unexpected T_PUBLIC in /vagrant/src/includes/currentAdsDisplay.php on line 8, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 17:37:16 2015] [error] [client 10.0.2.2] PHP Parse error:  syntax error, unexpected '[' in /vagrant/src/includes/currentAdsDisplay.php on line 22, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 17:41:38 2015] [error] [client 10.0.2.2] Undefined variable: db at 10:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 17:41:38 2015] [error] [client 10.0.2.2] PHP Fatal error:  Call to a member function query() on a non-object in /vagrant/src/includes/currentAdsDisplay.php on line 10, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 17:41:55 2015] [error] [client 10.0.2.2] PHP Fatal error:  Call to undefined function displayAllAds() in /vagrant/src/includes/currentAdsDisplay.php on line 31, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 17:42:07 2015] [error] [client 10.0.2.2] Undefined variable: db at 10:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 17:42:07 2015] [error] [client 10.0.2.2] PHP Fatal error:  Call to a member function query() on a non-object in /vagrant/src/includes/currentAdsDisplay.php on line 10, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 17:42:42 2015] [error] [client 10.0.2.2] Undefined variable: localvars at 6:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 17:42:42 2015] [error] [client 10.0.2.2] PHP Fatal error:  Call to a member function get() on a non-object in /vagrant/src/includes/currentAdsDisplay.php on line 6, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 17:42:52 2015] [error] [client 10.0.2.2] Undefined variable: localvars at 6:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 17:42:52 2015] [error] [client 10.0.2.2] PHP Fatal error:  Call to a member function get() on a non-object in /vagrant/src/includes/currentAdsDisplay.php on line 6, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 17:43:17 2015] [error] [client 10.0.2.2] Undefined variable: localvars at 30:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 17:43:17 2015] [error] [client 10.0.2.2] PHP Fatal error:  Call to a member function set() on a non-object in /vagrant/src/includes/currentAdsDisplay.php on line 30, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 17:43:49 2015] [error] [client 10.0.2.2] Undefined variable: localvars at 29:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 17:43:49 2015] [error] [client 10.0.2.2] PHP Fatal error:  Call to a member function set() on a non-object in /vagrant/src/includes/currentAdsDisplay.php on line 29, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 17:43:51 2015] [error] [client 10.0.2.2] Undefined variable: localvars at 29:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 17:43:51 2015] [error] [client 10.0.2.2] PHP Fatal error:  Call to a member function set() on a non-object in /vagrant/src/includes/currentAdsDisplay.php on line 29, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 17:56:52 2015] [error] [client 10.0.2.2] PHP Parse error:  syntax error, unexpected '}' in /vagrant/src/includes/currentAdsDisplay.php on line 23, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 17:57:29 2015] [error] [client 10.0.2.2] Undefined variable: dqlResult at 24:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 17:57:29 2015] [error] [client 10.0.2.2] PHP Fatal error:  Call to a member function rowCount() on a non-object in /vagrant/src/includes/currentAdsDisplay.php on line 24, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 18:02:36 2015] [error] [client 10.0.2.2] Undefined offset: 1 at 23:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 18:02:36 2015] [error] [client 10.0.2.2] Undefined offset: 1 at 23:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 18:03:57 2015] [error] [client 10.0.2.2] PHP Parse error:  syntax error, unexpected T_VARIABLE in /vagrant/src/includes/currentAdsDisplay.php on line 24, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 18:15:31 2015] [error] [client 10.0.2.2] Undefined variable: localvars at 33:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 18:15:31 2015] [error] [client 10.0.2.2] PHP Fatal error:  Call to a member function set() on a non-object in /vagrant/src/includes/currentAdsDisplay.php on line 33, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 18:15:40 2015] [error] [client 10.0.2.2] Undefined variable: localvars at 33:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 18:15:40 2015] [error] [client 10.0.2.2] PHP Fatal error:  Call to a member function set() on a non-object in /vagrant/src/includes/currentAdsDisplay.php on line 33, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 18:21:38 2015] [error] [client 10.0.2.2] PHP Parse error:  syntax error, unexpected ')' in /vagrant/src/includes/currentAdsDisplay.php on line 25, referer: http://localhost:8090/admin/image_manager/index.php

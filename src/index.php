@@ -2,31 +2,10 @@
 <?php 
 	require_once "includes/engineHeader.php";
     templates::display('header'); 
-    
     // Insert Form Definintions 
     recurseInsert("includes/imageForm.php","php"); 
-
-    $db      = db::get($localvars->get('dbConnectionName')); // TELL WHAT DB TO CONNECT TO
-    $sql     = sprintf("SELECT * FROM imageAds ORDER BY ID"); // SELECT ALL COLUMNS IN IMAGEADS AND ORDER THEM BY THE NAME
-    
-    //print "LOCAL VARS: " . $localvars->get('dbConnectionName'); 
-    // USE THE SQL STATEMENT, AND THE DATABASE NAME TO MAKE THE CONNECTION AND PULL THE INFORMATION
-    $result = $db->query($sql);    // caused PHP Fatal Error non-object
-    
-    // TESTING THE LOGIC ABOVE 
-    if(!$result) { 
-        die("Something went wrong with the database connection, please refresh your screen and try again. " . mysql_error());  // ERROR GOT NO RESULTS 
-    } else { 
-        // echo "Results Found";    
-    }
-
-  /*
-   while($row = $result->fetch()) { 
-       foreach($row as $entry) {
-            print "\n <br/>" . $entry . "\n";    
-       }
-   } */
-
+    // Insert DipslayCurrentAds Logic 
+    recurseInsert("includes/currentAdsDisplay.php", "php"); 
 ?>
 
 <header> 
@@ -34,13 +13,41 @@
 </header> 
 
 <section>
+    <h2> Playspace for Testing date and time setup </h2>
+    <?php 
+
+//       // Setup Date Variables
+//        $currentMonth = date(F); // current month 
+//        $currentDay   = date(j); // day of the month 1-31
+//        $dayOfWeek    = date(l); // day of the week
+//        $currentYear  = date(Y); // year 
+//    
+//        // Unbroken Date 
+//        $today = date("F j, Y, g:i a"); 
+//
+//        // Timestamps 
+//        $currentTime = date("g:i a");
+//        
+//    
+//       // Test Date Variables 
+//        print $currentMonth . "<br/>";  
+//        print $currentDay . "<br/>";  
+//        print $dayOfWeek . "<br/>";  
+//        print $currentYear . "<br/>"; 
+//        print $currentTime . "<br/>"; 
+//        print $today; 
+//
+//        
+//        // Need to Look at the Users input and makes sure we can transfer it to a certain set of concepts
+//        // If Enabled is False display conditions mean nothing
+
+
+
+    ?> 
+    
     <h2> Current Advertisements </h2>
     <p> List all of the current ads here. </p>
-    
-    <?php 
-      
-      
-    ?>
+    //{local var="displayAllAds"}
     
     <br/><br/>
     <br/><br/>

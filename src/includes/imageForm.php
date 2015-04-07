@@ -10,39 +10,24 @@
 
 
     // Callback Logic for handling the image upload 
-    if(!is_empty($_POST) || session::has('POST')) { 
-        
-        // Code for the Processor 
-        // =======================================
-        
-        function insertImage($processor,$data) {
-            $message = "No conditions passed"; 
-            // Testing the Files Logic 
-            if($_FILES['imageAd']['name']) { 
-                print "FILES FOUND";
-                // noerrors detected 
-                if(!$_FILES['imageAd']['error']) {
-                    $message = "Great Job"; 
-                } else { 
-                    $message = "Something went Wrong Upload Error: " . $_FILES['imageAd']['error'];   
-                }  
-            }
-            echo $message; 
-        }
+    /*if(!is_empty($_POST) || session::has('POST')) { 
+        // callback file 
+        //=========================================
+        recurseInsert('includes/callbacks.php'); 
         
         // Run the Processor 
         // ========================================
         $processor = formBuilder::createProcessor(); 
-        $processor->setCallback('beforeInsert', 'insertImage');
+        $processor->setCallback('beforeUpdate', 'insertImage');
         $processor->processPost(); 
-    }
-    
+    }*/
+
 
 
     $form->addField(
         array(
             'name'            => "imageAd",
-            'fieldID'         => "imgFile",
+            'fieldID'         => "imageAd",
             'label'           => "File Upload",
             'showInEditStrip' => TRUE,
             'showIn'          => array(formBuilder::TYPE_INSERT),
