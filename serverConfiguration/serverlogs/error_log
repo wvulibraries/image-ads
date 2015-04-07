@@ -541,3 +541,8 @@
 [Tue Apr 07 18:15:40 2015] [error] [client 10.0.2.2] Undefined variable: localvars at 33:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/index.php
 [Tue Apr 07 18:15:40 2015] [error] [client 10.0.2.2] PHP Fatal error:  Call to a member function set() on a non-object in /vagrant/src/includes/currentAdsDisplay.php on line 33, referer: http://localhost:8090/admin/image_manager/index.php
 [Tue Apr 07 18:21:38 2015] [error] [client 10.0.2.2] PHP Parse error:  syntax error, unexpected ')' in /vagrant/src/includes/currentAdsDisplay.php on line 25, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 18:29:08 2015] [error] [client 10.0.2.2] PHP Fatal error:  Function name must be a string in /vagrant/src/includes/currentAdsDisplay.php on line 25, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 18:35:17 2015] [error] [client 10.0.2.2] Undefined index: enable at 27:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 18:35:17 2015] [error] [client 10.0.2.2] Undefined index: enable at 27:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 18:38:24 2015] [error] [client 10.0.2.2] Undefined index: enable at 28:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Tue Apr 07 18:38:24 2015] [error] [client 10.0.2.2] Undefined index: enable at 28:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/index.php

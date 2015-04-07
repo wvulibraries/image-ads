@@ -18,15 +18,23 @@
 			return FALSE;
 		}
         
+        
+        
         while($row = $sqlResult->fetch()) {
-            print "Ads Found!";
-            print $row;
+            //print "Ads Found!";
+            //print $row . "<br>";
+            //print $sqlResult; 
+            //print $row['nameOfImage'] . "<br>" .
+            //      $row['enable'] . "<br>" ;
             
-            foreach($row as $r) { 
-                $i = 0; 
-                print "Hello World" . $i; 
-                $i++; 
-            }
+            print "<p class='something'>";
+                // This is decontructing the array in the while loop.  
+                // using $i is the index of the associative array $r is the value.  
+                foreach($row as $i=>$r) { 
+                    print "<strong>" . $i . "</strong>  " . $r . "<br>";      
+                }
+            print "</p>"; 
+            
         }  
         
         //$numOfRows = $sqlResult->rowCount(); 
