@@ -1,24 +1,41 @@
  <?php 
 
+
+
+    $localvars = localvars::getInstance();
+
+    // DISPLAY PARAMETERS -- Date Range / Time Range / Weekday 
+    // ==========================================================================================
+    // Engine Setups for making dropdown menus 
+    // Throws huge amounts of erros, but functions fine?  
+    $date = new date;
+    // Start Range 
+    $localvars->set("monthSelect",$date->dropdownMonthSelect(1,TRUE,array("id"=>"start_month")));
+    $localvars->set("daySelect",$date->dropdownDaySelect(TRUE,array("id"=>"start_day")));
+    $localvars->set("yearSelect",$date->dropdownYearSelect(0,5,TRUE,array("id"=>"start_year")));
+
+    $localvars->set("monthSelectEnd",$date->dropdownMonthSelect(1,TRUE,array("id" => "end_month")));
+    $localvars->set("daySelectEnd",$date->dropdownDaySelect(TRUE,array("id"=>"end_day")));
+    $localvars->set("yearSelectEnd",$date->dropdownYearSelect(0,5,TRUE,array("id"=>"end_year")));
+
+    $localvars->set("startTime",$date->timeDropDown(array("formname" => "start_Time")));
+    $localvars->set("endTime",$date->timeDropDown(array("formname" => "end_Time")));
+
     // Functions required to make the image and display options happen 
     function displayOptionsFields() {
         $htmlInputs = 
             " <div class='displayOptions'>  
-                <strong> Add Conditions By: </strong> <br> 
-                <a href='javascript:void(0)' class='date-range'> Date Range </a>   <br/> 
-                <a href='javascript:void(0)' class='weekday'> Week Day </a>   <br/> 
-                <a href='javascript:void(0)' class='time-range'> Time Range </a>   <br/> 
+                <strong> Add New: </strong> 
+                <a href='javascript:void(0)' class='date-range'> Date Range </a>  |
+                <a href='javascript:void(0)' class='weekday'> Week Day </a>     | 
+                <a href='javascript:void(0)' class='time-range'> Time Range </a>   
+              </div> 
+              <div class='displayOptionInputs'> 
+
               </div> 
             "; 
 
         return $htmlInputs;   
-    }
-
-    // Function for Creating The inputs for the Date Range 
-    function dateRangeInput() { 
-        $range = range(1,12); // Number of Months  
-        //return "<select name='month'>"  
-
     }
 
 

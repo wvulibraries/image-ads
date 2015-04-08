@@ -5,7 +5,8 @@
     // Insert Form Definintions 
     recurseInsert("includes/imageForm.php","php"); 
     // Insert DipslayCurrentAds Logic 
-    recurseInsert("includes/currentAdsDisplay.php", "php"); 
+    recurseInsert("includes/currentAdsDisplay.php", "php");
+
 ?>
 
 <header> 
@@ -32,13 +33,46 @@
 ?>
 
 <script charset="utf-8">
-	// HOLY COW YOU CAN ADD PHP THROUGH JS 
-    /*
-	$(".click-test").on('click', function(e) {
-		e.preventDefault();
-		$(this).before('<?php echo "Something Stupid" ?>');
-	});
-    */ 
+    $('.date-range').on('click', function() { 
+        console.log('click is working'); 
+        // Create a Box to for each start and end date in the case of multiple ranges 
+        $('.displayOptionInputs').append('<div class="dateRanges"> </div>')
+
+        // Start and End Dates into the Document 
+        var inputClass = $('.dateRanges');
+        inputClass.append('<div class="startRange"> <span> Start Date Range: </span> {local var="monthSelect"} {local var="daySelect"} {local var="yearSelect"} </div>');
+        inputClass.append('<div class="endRange"> <span> End Date Range: </span> {local var="monthSelectEnd"} {local var="daySelectEnd"} {local var="yearSelectEnd"}</div>');
+        
+        $('.date-range').off(); // Turn off event listener
+    });
+
+    $('.time-range').on('click', function() {
+        console.log('time range click'); 
+
+        $('.displayOptionInputs').append('<div class="timeRanges"></div>'); 
+        var inputClass = $('.timeRanges'); 
+        inputClass.append('<div class="startRange_time"> <span> Start Time: </span> {local var="startTime"}');
+        inputClass.append('<div class="endRange_time"> <span> End Time: </span> {local var="endTime"}');
+
+        $('.time-range').off(); // Turn off event Listener 
+    });
+
+
+    $('.weekday').on('click', function() { 
+        console.log('days in week opened.');
+        $('.displayOptionInputs').append('<div class="displayDays"></div>'); 
+        var myDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+        console.log(myDays.length);
+
+        for(var i = 0; i < myDays.length; i++) {
+            console.log("working");
+            $('.displayDays').append('<label>' + myDays[i] + '</labe> <input name="weekday" value"' + myDays[i] + '" type="radio" /> ');
+        }
+
+        $('.weekday').off(); // Turn off Event Listener 
+    }); 
+
+
 </script>
 
 
