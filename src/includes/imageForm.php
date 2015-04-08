@@ -1,4 +1,27 @@
  <?php 
+
+    // Functions required to make the image and display options happen 
+    function displayOptionsFields() {
+        $htmlInputs = 
+            " <div class='displayOptions'>  
+                <strong> Add Conditions By: </strong> <br> 
+                <a href='javascript:void(0)' class='date-range'> Date Range </a>   <br/> 
+                <a href='javascript:void(0)' class='weekday'> Week Day </a>   <br/> 
+                <a href='javascript:void(0)' class='time-range'> Time Range </a>   <br/> 
+              </div> 
+            "; 
+
+        return $htmlInputs;   
+    }
+
+    // Function for Creating The inputs for the Date Range 
+    function dateRangeInput() { 
+        $range = range(1,12); // Number of Months  
+        //return "<select name='month'>"  
+
+    }
+
+
     $form = formBuilder::createForm('imageAdForm');
 
     $form->linkToDatabase(array(
@@ -10,7 +33,7 @@
 
 
     // Callback Logic for handling the image upload 
-    /*if(!is_empty($_POST) || session::has('POST')) { 
+    if(!is_empty($_POST) || session::has('POST')) { 
         // callback file 
         //=========================================
         recurseInsert('includes/callbacks.php'); 
@@ -18,9 +41,8 @@
         // Run the Processor 
         // ========================================
         $processor = formBuilder::createProcessor(); 
-        $processor->setCallback('beforeUpdate', 'insertImage');
         $processor->processPost(); 
-    }*/
+    }
 
 
 
@@ -48,7 +70,7 @@
 
     $form->addField(
         array(
-            'name'            => "nameOfImage",
+            'name'            => "name",
             'label'           => "Image Name",
             'showInEditStrip' => TRUE,
             'required'        => TRUE,
@@ -106,5 +128,14 @@
         )
     );
     
-
+    // Adding Other Fields that will show up conditionally 
+    $form->addField( 
+        array(
+            'name'  => "displayOptions",
+            'label' => "Edit Display Options", 
+            'type'  => "plaintext",
+            'value' => displayOptionsFields()
+        )
+    );
+    
 ?> 

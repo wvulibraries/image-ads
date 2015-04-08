@@ -9,67 +9,17 @@
 ?>
 
 <header> 
-    <h1> Advertising Manager Home </h1>
+    <h1 class="click-test"> Advertising Manager Home </h1>
 </header> 
 
 <section>
-    <h2> Playspace for Testing date and time setup </h2>
-    <?php 
-
-//       // Setup Date Variables
-//        $currentMonth = date(F); // current month 
-//        $currentDay   = date(j); // day of the month 1-31
-//        $dayOfWeek    = date(l); // day of the week
-//        $currentYear  = date(Y); // year 
-//    
-//        // Unbroken Date 
-//        $today = date("F j, Y, g:i a"); 
-//
-//        // Timestamps 
-//        $currentTime = date("g:i a");
-//        
-//    
-//       // Test Date Variables 
-//        print $currentMonth . "<br/>";  
-//        print $currentDay . "<br/>";  
-//        print $dayOfWeek . "<br/>";  
-//        print $currentYear . "<br/>"; 
-//        print $currentTime . "<br/>"; 
-//        print $today; 
-//
-//        
-//        // Need to Look at the Users input and makes sure we can transfer it to a certain set of concepts
-//        // If Enabled is False display conditions mean nothing
-
-
-
-    ?> 
-    
-    <h2> Current Advertisements </h2>
-    <p> List all of the current ads here. </p>
-    //{local var="displayAllAds"}
-    
-    <br/><br/>
-    <br/><br/>
-    
-    <h2> Search Current Ads </h2>
-    <p> Search Filtering of all the Current Ads, probably will need JS to do this. </p>
-    
-    
-    {{ PHP Template Here }} 
-    
-    <br/><br/>
-    <br/><br/>
-    
     <div id="UploadImageForm">
 	   {form name="imageAdForm" display="form" addGet="true"}
-        
-        
-
        {form name="imageAdForm" display="edit" expandable="true" addGet="true"}
     </div>
     
     <div>
+        
 	</div>
 
 </section>
@@ -80,4 +30,15 @@
     include 'includes/jsIncludes.php'; 
     templates::display('footer'); 
 ?>
+
+<script charset="utf-8">
+	// HOLY COW YOU CAN ADD PHP THROUGH JS 
+    /*
+	$(".click-test").on('click', function(e) {
+		e.preventDefault();
+		$(this).before('<?php echo "Something Stupid" ?>');
+	});
+    */ 
+</script>
+
 

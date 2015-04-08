@@ -22,7 +22,7 @@ CREATE TABLE `displayConditions` (
   `months` varchar(50) DEFAULT NULL,
   `day` tinyint(2) DEFAULT NULL,
   `timeStart` tinyint(4) DEFAULT NULL,
-  `year` tinyint(4) DEFAULT NULL
+  `year` int(4) DEFAULT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
