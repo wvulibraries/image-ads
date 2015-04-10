@@ -14481,3 +14481,1190 @@
 [Thu Apr 09 14:05:16 2015] [error] [client 10.0.2.2] Undefined index: prompts at 385:/tmp/git/engineAPI/engine/engineAPI/latest/modules/dates/date.php
 [Thu Apr 09 14:05:16 2015] [error] [client 10.0.2.2] Undefined index: prompts at 397:/tmp/git/engineAPI/engine/engineAPI/latest/modules/dates/date.php
 [Thu Apr 09 14:05:16 2015] [error] [client 10.0.2.2] Undefined index: prompts at 398:/tmp/git/engineAPI/engine/engineAPI/latest/modules/dates/date.php
+[Thu Apr 09 15:06:16 2015] [error] [client 10.0.2.2] PHP Parse error:  syntax error, unexpected ';' in /vagrant/src/includes/dispOptions.php on line 19
+[Thu Apr 09 15:06:52 2015] [error] [client 10.0.2.2] PHP Parse error:  syntax error, unexpected ';' in /vagrant/src/includes/dispOptions.php on line 19
+[Thu Apr 09 15:07:36 2015] [error] [client 10.0.2.2] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ')' in /vagrant/src/includes/dispOptions.php on line 54
+[Thu Apr 09 15:07:55 2015] [error] [client 10.0.2.2] formBuilder::templateMatches() Form 'displayconditions' not defined at 508:/tmp/git/engineAPI-Modules/src/modules/form/formBuilder.php
+[Thu Apr 09 15:22:10 2015] [error] [client 10.0.2.2] Undefined variable: sqlResult at 11:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Thu Apr 09 15:22:10 2015] [error] [client 10.0.2.2] PHP Fatal error:  Call to a member function error() on a non-object in /vagrant/src/includes/currentAdsDisplay.php on line 11, referer: http://localhost:8090/admin/image_manager/index.php
+[Thu Apr 09 15:22:44 2015] [error] [client 10.0.2.2] Undefined variable: localvars at 6:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Thu Apr 09 15:22:44 2015] [error] [client 10.0.2.2] PHP Fatal error:  Call to a member function get() on a non-object in /vagrant/src/includes/currentAdsDisplay.php on line 6, referer: http://localhost:8090/admin/image_manager/index.php
+[Thu Apr 09 15:22:52 2015] [error] [client 10.0.2.2] Undefined variable: localvars at 6:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/index.php
+[Thu Apr 09 15:22:52 2015] [error] [client 10.0.2.2] PHP Fatal error:  Call to a member function get() on a non-object in /vagrant/src/includes/currentAdsDisplay.php on line 6, referer: http://localhost:8090/admin/image_manager/index.php
+[Thu Apr 09 15:24:27 2015] [error] [client 10.0.2.2] PHP Parse error:  syntax error, unexpected T_STRING in /vagrant/src/includes/currentAdsDisplay.php on line 37, referer: http://localhost:8090/admin/image_manager/index.php
+[Thu Apr 09 15:26:27 2015] [error] [client 10.0.2.2] script '/home/www.libraries.wvu.edu/public_html/displayOptions.php' not found or unable to stat, referer: http://localhost:8090/admin/image_manager/index.php
+[Thu Apr 09 19:53:25 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] client sent HTTP/1.1 request without hostname (see RFC2616 section 14.23): /password
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] Invalid method in request \x16\x03\x01
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] Invalid method in request \x16\x03\x01
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/favicon2.iso
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/favicon.iso
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] Invalid method in request \x16\x03\x01
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] Invalid URI in request GNUTELLA CONNECT/0.6
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] Invalid URI in request GNUTELLA CONNECT/0.4
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] Invalid URI in request some invalid request
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/commoncgi
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] Invalid method in request Secure * Secure-HTTP/1.4
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/index.html
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/MSWSMTP
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/check_proxy.html
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/intruvert
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/xmldata
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/robots.txt
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/sitemap.xml
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/.cobalt
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/Home.do
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/admin.back
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/file
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/properties
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] script '/home/www.libraries.wvu.edu/public_html/login.php' not found or unable to stat
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/wavemaster.internal
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/properties
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/header.php
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/this_server
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/authenticate
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/login.html
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/aboutprinter.html
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/start.js
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/properties
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/ddem
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/tmui
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/login
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/ZggBlOe0uaG6.html
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/netmri
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/ZggBlOe0uaG6.cgi
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/scgi-bin
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/ZggBlOe0uaG6.sh
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/admin/login.do
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/ZggBlOe0uaG6.pl
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/en
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/mgmt
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/ZggBlOe0uaG6.inc
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/ZggBlOe0uaG6.shtml
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/dms2
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/ZggBlOe0uaG6.asp
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/login
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/ZggBlOe0uaG6.php
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/home.htm
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/sws
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/ZggBlOe0uaG6.php3
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/ZggBlOe0uaG6.cfm
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/wcd
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/js
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] script not found or unable to stat: /var/www/cgi-bin/ZggBlOe0uaG6.html
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/ptz.htm
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] script not found or unable to stat: /var/www/cgi-bin/ZggBlOe0uaG6.cgi
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/header.php
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] script not found or unable to stat: /var/www/cgi-bin/ZggBlOe0uaG6.sh
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] script not found or unable to stat: /var/www/cgi-bin/ZggBlOe0uaG6.pl
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/admin/login.jsp
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] script not found or unable to stat: /var/www/cgi-bin/ZggBlOe0uaG6.inc
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/ZggBlOe0uaG6.shtml
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] script not found or unable to stat: /var/www/cgi-bin/ZggBlOe0uaG6.asp
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/ZggBlOe0uaG6.php
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] script not found or unable to stat: /var/www/cgi-bin/ZggBlOe0uaG6.php3
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] script not found or unable to stat: /var/www/cgi-bin/ZggBlOe0uaG6.cfm
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/scripts
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/scripts
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/scripts
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/scripts
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/scripts
+[Thu Apr 09 19:53:27 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/scripts
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/scripts
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/scripts
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/scripts
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/scripts
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/tightvnc-jviewer.jar
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/cgi
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/help
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] File does not exist: /var/www/manual/ag
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/system
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/images
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/get_status.cgi
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/images
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/tomcat-docs
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/examples
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/netflow
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/examples
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/examples
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/examples
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/syslog.htm
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/something
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/sitemap.xml
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/sitemap
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/map
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/crossdomain.xml
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/.svn
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/PUBLIC
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/examples
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/_vti_bin
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/login.html
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/platform-ui
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/NASApp
+[Thu Apr 09 19:53:28 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/images
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/NASApp
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/servlet
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/system
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/IDMProv
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/rest-service
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/dndirector
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/devinfo.xml
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/dndirector
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/configurations.do
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/portal
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/.DS_Store
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/ews
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/NCMContainer.cc
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/this_page_should_not_exist.htm
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/app
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/SnoopServlet
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/servlet
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/snoopservlet
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/index.cgi
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/snoop
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/hc
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/servlet
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/index.jsp
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/servlet
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/admincp
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/index.JSP
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/servlet
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/<script>cross_site_scripting.nasl<
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/spotfire
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/veha66l7.asp
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/<IMG SRC="javascript:alert(cross_site_scripting.nasl);">.asp
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/builtin
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/~nobody
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/veha66l7.asp
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/<script>cross_site_scripting.nasl<
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/web-console
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/SiteScope
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/veha66l7.aspx
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/<IMG SRC="javascript:alert(cross_site_scripting.nasl);">.aspx
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/veha66l7.aspx
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/vsmc.html
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/<script>cross_site_scripting.nasl<
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/query.idq
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/veha66l7.pl
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/query.idq
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/<IMG SRC="javascript:alert(cross_site_scripting.nasl);">.pl
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/perl
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/veha66l7.pl
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/PassTrixMain.cc
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/<script>cross_site_scripting.nasl<
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] Invalid URI in request GET . HTTP/1.0
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] Invalid URI in request GET /%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd HTTP/1.1
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/veha66l7.cgi
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/<IMG SRC="javascript:alert(cross_site_scripting.nasl);">.cgi
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/index.exp
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/veha66l7.cgi
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/stcenter.nsf
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/<script>cross_site_scripting.nasl<
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/menu.htm
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/veha66l7.exe
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/Sametime
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/<IMG SRC="javascript:alert(cross_site_scripting.nasl);">.exe
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/Sametime
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/invoker
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/veha66l7.exe
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/invoker
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/<script>cross_site_scripting.nasl<
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/btmui
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/veha66l7.cfm
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/<IMG SRC="javascript:alert(cross_site_scripting.nasl);">.cfm
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/veha66l7.cfm
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/servlet
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/<script>cross_site_scripting.nasl<
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/veha66l7.html
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/spywall
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/<IMG SRC="javascript:alert(cross_site_scripting.nasl);">.html
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/index.html
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/veha66l7.html
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/ldap
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/<script>cross_site_scripting.nasl<
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/veha66l7.jsp
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/<IMG SRC="javascript:alert(cross_site_scripting.nasl);">.jsp
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/someunexistantstuff1594732652854931008.html
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/nps
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/veha66l7.jsp
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/someunexistantstuff.exe
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/someunexistantantsutff943260809588157963.html
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/<script>cross_site_scripting.nasl<
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/authentication
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/veha66l7.php
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/<IMG SRC="javascript:alert(cross_site_scripting.nasl);">.php
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/csamc52
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/veha66l7.php
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/login
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/<script>cross_site_scripting.nasl<
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/veha66l7.php3
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/js
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/<IMG SRC="javascript:alert(cross_site_scripting.nasl);">.php3
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/js
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/veha66l7.php3
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/js
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/<script>cross_site_scripting.nasl<
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/1428609876
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/js
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/veha66l7.cfc
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/js
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/<IMG SRC="javascript:alert(cross_site_scripting.nasl);">.cfc
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/veha66l7.cfc
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/<script>cross_site_scripting.nasl<
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/smconf.nsf
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/veha66l7.nsf
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/smadmr5.nsf
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/f360
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/<IMG SRC="javascript:alert(cross_site_scripting.nasl);">.nsf
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/smency.nsf
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/login.jsp
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/veha66l7.nsf
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/smftypes.nsf
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/smsmvlog.nsf
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/<script>cross_site_scripting.nasl<
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/iisprotect
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/smhelp.nsf
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/veha66l7.dll
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/iisprotect
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/<IMG SRC="javascript:alert(cross_site_scripting.nasl);">.dll
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/smmsg.nsf
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/veha66l7.dll
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/smtime.nsf
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/<script>cross_site_scripting.nasl<
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/smquar.nsf
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] Client sent malformed Host header
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/veha66l7.fts
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/rcladmin
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/<IMG SRC="javascript:alert(cross_site_scripting.nasl);">.fts
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/html
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/veha66l7.fts
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/<script>cross_site_scripting.nasl<
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/brightmail
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/veha66l7.jspa
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/nessus345678.html
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/<IMG SRC="javascript:alert(cross_site_scripting.nasl);">.jspa
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/VncViewer.jar
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/veha66l7.jspa
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/ui
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/nsn
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/<script>cross_site_scripting.nasl<
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/nsn
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/veha66l7.kspx
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/nsn
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/<IMG SRC="javascript:alert(cross_site_scripting.nasl);">.kspx
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/_vti_bin
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/nsn
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/veha66l7.kspx
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/nsn
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/<script>cross_site_scripting.nasl<
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/nsn
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/core
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/veha66l7.mscgi
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/nsn
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/<IMG SRC="javascript:alert(cross_site_scripting.nasl);">.mscgi
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/nsn
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/veha66l7.mscgi
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/autopass
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/<script>cross_site_scripting.nasl<
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/InitialPage.asp
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/veha66l7.do
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/<IMG SRC="javascript:alert(cross_site_scripting.nasl);">.do
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/np_handler
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/ofbizsetup
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/veha66l7.do
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/ordermgr
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/<script>cross_site_scripting.nasl<
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/veha66l7.htm
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/av-centerd
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/robots.txt
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/<IMG SRC="javascript:alert(cross_site_scripting.nasl);">.htm
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/servlet
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/veha66l7.htm
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/SilverStream
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/webapps
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/<script>cross_site_scripting.nasl<
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/webct
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/veha66l7.idc
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/<IMG SRC="javascript:alert(cross_site_scripting.nasl);">.idc
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/perl
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/chassis
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/veha66l7.idc
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/perl.exe
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/<script>cross_site_scripting.nasl<
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/login
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/veha66l7.x
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/lem
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/<IMG SRC="javascript:alert(cross_site_scripting.nasl);">.x
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/rdweb
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/veha66l7.x
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/<script>cross_site_scripting.nasl<
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/vncviewer.jar
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] Invalid URI in request GET <script>cross_site_scripting.nasl</script> HTTP/1.1
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/mod_gzip_status
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/apex
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/<IMG SRC="javascript:alert(cross_site_scripting.nasl);">
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/pls
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] Invalid URI in request GET <IMG%20SRC="javascript:alert(cross_site_scripting.nasl);"> HTTP/1.1
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/PAN_help
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/PAN_help
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/client
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/broadWeb
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/index.html
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/servlet
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/<script>foo<
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/perl
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/header.php
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/LoginPage.do
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/nosuchfile-1348974663-272812377.jsp
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/images
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/iisadmpwd
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/iisadmpwd
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/iisadmpwd
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/admin/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/iisadmpwd
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/admin/LocalIndex.html
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/iisadmpwd
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/scmadmin
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/iisadmpwd
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/scmadmin
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:29 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/ruei
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] request failed: error reading the headers
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/Wsusadmin
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/CVS
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/login.jsp
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/CN6AUi6j.ashx
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/caucho-status
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/tUeiQRGc.aspx
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/mve
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/server-status
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/i2xcGJ2B.asmx
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/hazelcast
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/imc
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/ControllerWeb
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/nps
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/tJyCeXTA.ashx
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/HNAP1
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/zH20e2u4.aspx
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/cas
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/2MYFFDIM.asmx
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/dwr
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/server-status
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/BPReLcLb.rem
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/login.html
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/WebID
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/ifYAFLLg.soap
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/names.nsf
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/currentsetting.htm
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/niet1962307715
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/forum.php
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/niet1846341697.
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] Invalid URI in request GET c:\\boot.ini HTTP/1.1
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/I4I7g74q.aspx
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/niet1956598799.asp
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/niet2132184110.aspx
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/exchweb
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/niet411218434.html
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/qwe
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] Directory index forbidden by Options directive: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/niet1627409043.htm
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/sapmc
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/mapviewer
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/niet1604615118.shtm
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/login.htm
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/niet128599342.shtml
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/server-info
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/shared
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/active.log
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/niet1441327176.jsp
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/niet1196651391.jspx
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/xmldata
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/SAPHostControl
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/niet1268958269.php
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/common
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] File does not exist: /home/www.libraries.wvu.edu/public_html/niet1949800469.php3
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/reporter
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/interscan
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/login
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/niet606402906.php4
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/WEB-INF.
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/sabin
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/SilverStream
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/niet88747100.php5
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/status.php3
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/niet661701972.php6
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/imp
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/nessus345678.html
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/niet393674244.cfm
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/xampp
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/horde
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/mainui
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/securecgi-bin
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/com5.pl
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/ords
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/securecgi-bin
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/sgdadmin
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/apex
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/webui
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/portal
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/login
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/search
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/portal
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/autodiscover
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] Invalid URI in request GET /../../../../../../../../../../../../windows/win.ini HTTP/1.1
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/page
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/login
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] Invalid URI in request GET /../../../../../../../../../../../../winnt/win.ini HTTP/1.1
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/admin/login.jsp
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] Invalid URI in request GET ../../../../../../../../../../../../windows/win.ini HTTP/1.1
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/doc
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/portal
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] Invalid URI in request GET ../../../../../../../../../../../../winnt/win.ini HTTP/1.1
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/portal
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] Invalid URI in request GET ..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\windows\\win.ini HTTP/1.1
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/idm
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/portal
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/spipe
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/tarantella
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] Invalid URI in request GET ..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\winnt\\win.ini HTTP/1.1
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/portal
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\windows\\win.ini
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/portal
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/clientaccesspolicy.xml
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/etc
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\winnt\\win.ini
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/portal
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/etc
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/\\..\\..\\..\\..\\..\\..\\..\\..\\..\\windows\\win.ini
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/portal
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/\\..\\..\\..\\..\\..\\..\\..\\..\\..\\winnt\\win.ini
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/cgi-mod
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/portal
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/\\..\\..\\..\\..\\..\\..\\..\\..\\..\\windows\\win.ini
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/login
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/portal
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/\\..\\..\\..\\..\\..\\..\\..\\..\\..\\winnt\\win.ini
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/portal
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/+CSCOE+
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/MM
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/portal
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/logout
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/pls
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/.|.
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/pls
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/event
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/.|.
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/CSCOnm
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/pls
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] Invalid URI in request GET /%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/windows/win.ini HTTP/1.1
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/pls
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/about.jsp
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] Invalid URI in request GET /%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/winnt/win.ini HTTP/1.1
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/kvm.cgi
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/pls
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\windows\\win.ini
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/pls
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/web-determinations
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/login.jsp
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\winnt\\win.ini
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/pls
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/pls
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\windows\\win.ini
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/content
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/jts
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/pls
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] Invalid URI in request GET %5c%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5cwinnt%5cwin.ini HTTP/1.1
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/pls
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/...
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/pub
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/...
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/pls
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/tsp
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/...\\...\\...\\...\\...\\...\\...\\...\\...\\windows\\win.ini
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/stream
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/ap
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/...\\...\\...\\...\\...\\...\\...\\...\\...\\winnt\\win.ini
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/ssp
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/....
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/....
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/com
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/default.php
+[Thu Apr 09 19:53:32 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/....\\....\\....\\....\\....\\....\\....\\....\\....\\windows\\win.ini
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/fogbugz
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/....\\....\\....\\....\\....\\....\\....\\....\\....\\winnt\\win.ini
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/features
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] Invalid URI in request GET /././././././../../../../../windows/win.ini HTTP/1.1
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] Invalid URI in request GET /././././././../../../../../winnt/win.ini HTTP/1.1
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/self_upgrade.html
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/main_internet.php
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] Invalid URI in request GET .\\.\\.\\.\\.\\.\\.\\.\\.\\.\\/windows/win.ini HTTP/1.1
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/user
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/getxml
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] Invalid URI in request GET .\\.\\.\\.\\.\\.\\.\\.\\.\\.\\/winnt/win.ini HTTP/1.1
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/apps
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/mail
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/nessus\\..\\..\\..\\..\\..\\..\\windows\\win.ini
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/webman
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/gwadmin-console
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/nessus\\..\\..\\..\\..\\..\\..\\winnt\\win.ini
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/j2ut78ka.asp
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/\x80..
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/usage
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/j2ut78ka.asp
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/about
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/js
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/\x80..
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/webalizer
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/j2ut78ka.aspx
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/\xc0.\xc0.
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/ConsoleHelp
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/j2ut78ka.aspx
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/login
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/\xc0.\xc0.
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/login
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/j2ut78ka.pl
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/\xc0.\xc0.
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/j2ut78ka.pl
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/\xc0.\xc0.
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/j2ut78ka.cgi
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/WEB-INF
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/login.php
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/j2ut78ka.cgi
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/j2ut78ka.exe
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/html
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/gatedesc.xml
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/scripts
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/j2ut78ka.exe
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/stronghold-info
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/j2ut78ka.cfm
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/devdescr.xml
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/scripts
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/stronghold-status
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/favicon.ico
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/dyndev
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/j2ut78ka.cfm
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/scripts
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/scripts
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/j2ut78ka.html
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] Invalid URI in request GET /../../../../../../../../../../../../etc/passwd HTTP/1.1
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/j2ut78ka.html
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/wanipconn-361.xml
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/VncViewer.jar
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/pdesk.cgi
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] Invalid URI in request GET /./../../../../../../../../../../../etc/passwd HTTP/1.1
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/j2ut78ka.jsp
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/RootDevice.xml
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/description.xml
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] Invalid URI in request GET //../../../../../../../../../../../../etc/passwd HTTP/1.1
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/j2ut78ka.jsp
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/....
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/j2ut78ka.php
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/igsponsor
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] Invalid URI in request GET /%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd HTTP/1.1
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/plc
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/j2ut78ka.php
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/j2ut78ka.php3
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/login
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/j2ut78ka.php3
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/Orion
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/j2ut78ka.cfc
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/Orion
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] Invalid URI in request GET /././././././../../../../../etc/passwd HTTP/1.1
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/j2ut78ka.cfc
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/dhost
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/printenv
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/j2ut78ka.nsf
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/j2ut78ka.nsf
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/scripts
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/Director
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/netbasic
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/j2ut78ka.dll
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/scripts
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/DesktopDirector
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/lcgi
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/j2ut78ka.dll
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/lcgi
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/j2ut78ka.fts
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] Invalid URI in request GET ..\\..\\..\\..\\..\\..\\windows\\win.ini HTTP/1.1
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/CFIDE
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/perl
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/j2ut78ka.fts
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] Invalid URI in request GET ..\\..\\..\\..\\..\\..\\winnt\\win.ini HTTP/1.1
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/j2ut78ka.jspa
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/perl
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/j2ut78ka.jspa
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/perl
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/j2ut78ka.kspx
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/perl
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/public
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/snmx-cgi
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/nsn
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/j2ut78ka.kspx
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/nsn
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/j2ut78ka.mscgi
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/nnm
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/NULL.ida
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/j2ut78ka.mscgi
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/.htaccess.old
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/j2ut78ka.do
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/.htaccess.bak
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/j2ut78ka.do
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/.htaccess~
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/j2ut78ka.htm
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/.htaccess.copy
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/j2ut78ka.htm
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/.htaccess.tmp
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/j2ut78ka.idc
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/..htaccess.swp
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/j2ut78ka.idc
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/.htaccess.1
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/j2ut78ka.x
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/.htaccess.~1~
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/j2ut78ka.x
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/<script>document.cookie="testinll=1639;"<
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] Invalid URI in request GET <script>document.cookie=%22testinll=1639;%22</script> HTTP/1.1
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/servlet
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/examples
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/<meta http-equiv=Set-Cookie content="testinll=1639">
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/ossim
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/examples
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/acopia
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] Invalid URI in request GET <meta%20http-equiv=Set-Cookie%20content=%22testinll=1639%22> HTTP/1.1
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/login.php
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/mxhelp
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/index.php
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/nul.dbm
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/conf
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/conf
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/LoginPage.do
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/console
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/admin/statistics
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/console
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/item.fts
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/index.aspx
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/login
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/Default.aspx
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/home.jsf
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/*<apache_mod_proxy_ftp_glob_xss.nasl>
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/webhost
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/CFIDE
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/Websense
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/altercast
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/CFIDE
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/logon
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/login_up.php3
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/user_settings.cfg
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] Invalid URI in request GET 1428609880:@157.182.147.238/ HTTP/1.1
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/.anydomain.test
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/.%2e
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/_mt
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/.%2e
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/admin.cgi
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/.%2e
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/administrator.cgi
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/DB4Web
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/ifx
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/buglist.cgi
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] Invalid URI in request GET 1428609880:@157.182.147.238/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/cgi
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/faqmanager.cgi
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/-
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/admin.cgi
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/log.jsp
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/CFIDE
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/admin.pl
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/search
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/php
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/bugreport.cgi
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/..\\pixfir~1\\how_to_login.html
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/search
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/scripts
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/clwarn.cgi
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/xsql
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/count.cgi
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/global.asa
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/Count.cgi
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/OvCgi
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/error/\\..\\..\\..\\..\\autoexec.bat
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/faqmanager.cgi
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/error/\\..\\..\\..\\..\\winnt\\win.ini
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/phppath
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/FormHandler.cgi
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/error/\\..\\..\\..\\..\\boot.ini
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/status.xsl.
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/SiteScope
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/index.jsp
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/FormMail.cgi
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/index.jsp
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/guestbook.cgi
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/filescan
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/help.cgi
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/hi
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/sc3
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/Reporting
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/index.cgi
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/index.pl
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] request failed: error reading the headers
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/index.sh
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/_mt
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/mailit.pl
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] request failed: error reading the headers
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/FormHandler.cgi
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/admin.cgi
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/mt
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/struts
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/administrator.cgi
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] Invalid URI in request GET /././.. HTTP/1.1
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/mt
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/buglist.cgi
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/status
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/mt-static
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] Invalid URI in request GET ././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././../../../../../../../../ HTTP/1.1
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/axis
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/cgi
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/lcgi
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/mt-static
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/admin.cgi
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/ncbook
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/admin.pl
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/enter.php
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/quickstore.cgi
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/error_page.htm
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/bugreport.cgi
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/dev
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/search
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/clwarn.cgi
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/trace.axd
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/search.cgi
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/count.cgi
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/eweosa1.html
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/note.txt
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/search
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/Count.cgi
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/test.cgi
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/note.txt
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/faqmanager.cgi
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/eweosa1.html
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/coldfusion_double_encoded_null_info_disclosure-1428609881.asp%00.cfm
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/test.sh
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/FormHandler.cgi
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/eweosa1.html
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/test-cgi
+[Thu Apr 09 19:53:33 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/FormMail.cgi
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/upload.cgi
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/guestbook.cgi
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/rails_info
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/urlcount.cgi
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/help.cgi
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/index.html
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/viewcvs.cgi
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/hi
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/wa
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/index.cgi
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/wa.cgi
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/index.pl
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/wa.exe
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/index.sh
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/whois.cgi
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/mailit.pl
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/cgi-bin-sdb
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/mt
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/cgi-mod
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/mt
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/cgi-sys
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/mt-static
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/cgi-sys
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/mt-static
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/index.cgi
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/ncbook
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/index.pl
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/quickstore.cgi
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/index.sh
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/search
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/nph-mr.cgi
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/search.cgi
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/query.cgi
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/search
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/session_login.cgi
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/test.cgi
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/show_bug.cgi
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/test.sh
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/test
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/test-cgi
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/test.cgi
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/upload.cgi
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/ucsm
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/urlcount.cgi
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/whois.cgi
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/viewcvs.cgi
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/wp-login.php
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/wa
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/wa.cgi
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/wwwadmin.cgi
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/wwwboard.cgi
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/wa.exe
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/xampp
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /var/www/cgi-bin/whois.cgi
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/cgi-bin-sdb
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/cgi-mod
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/cgi-sys
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/cgi-sys
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/index.cgi
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/index.pl
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/index.sh
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/nph-mr.cgi
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/query.cgi
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/session_login.cgi
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/show_bug.cgi
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/test
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/test.cgi
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/ucsm
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/whois.cgi
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/wp-login.php
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/wwwadmin.cgi
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/wwwboard.cgi
+[Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/xampp

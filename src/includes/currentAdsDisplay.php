@@ -1,5 +1,5 @@
 <?php
-
+    
 	function getAllAds() {
         //DB Connection and SQL Statements    
         $localvars = localvars::getInstance();
@@ -7,6 +7,9 @@
 		$sql       = sprintf("SELECT * FROM imageAds");
 		$sqlResult = $db->query($sql);
         $data      = NULL;  
+        $URLpath = "http://$_SERVER[HTTP_HOST]/admin/image_manager";
+       
+
         
 		if ($sqlResult->error()) {
 			print "ERROR GETTING ADS"; 
@@ -33,18 +36,20 @@
                 foreach($row as $i=>$r) { 
                     print "<strong>" . $i . "</strong>  " . $r . "<br>";      
                 }
+            print "<a href='" . $URLpath . "/displayOptions.php'> Edit Ad Display Options </a>";
             print "</p>"; 
+
+            print $URLpath; 
+
             
         }  
         
         //$numOfRows = $sqlResult->rowCount(); 
-        //print $numOfRows; 
-     
-        // Working on displaying our current Ads and also setting up the information to render out on a website 
-        // $localvars->set("displayAllAds", getAllAds());
-        
-       
+        //print $numOfRows;  
     }
+
+    // Working on displaying our current Ads and also setting up the information to render out on a website 
+    // $localvars->set("displayAllAds", getAllAds());
 
     getAllAds(); 
 ?> 

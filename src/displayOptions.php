@@ -3,20 +3,16 @@
 	require_once "includes/engineHeader.php";
     templates::display('header'); 
     // Insert Form Definintions 
-    recurseInsert("includes/imageForm.php","php"); 
-    // Insert DipslayCurrentAds Logic 
-    recurseInsert("includes/currentAdsDisplay.php", "php");
-
+    recurseInsert("includes/dispOptionsForm.php","php"); 
 ?>
 
 <header> 
-    <h1 class="click-test"> Advertising Manager Home </h1>
+    <h1 class="click-test"> Display Options Page </h1>
 </header> 
 
 <section>
     <div id="UploadImageForm">
-	   {form name="imageAdForm" display="form"}
-       {form name="imageAdForm" display="edit" expandable="true" addGet="true"}
+	   {form name="displayOptions" display="form" addGet="true"}
     </div>
     
     <div>

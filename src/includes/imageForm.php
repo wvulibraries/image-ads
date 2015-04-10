@@ -49,17 +49,17 @@
     $form->editTitle   = "Edit Rotating Image";
 
 
-    // Callback Logic for handling the image upload 
-    if(!is_empty($_POST) || session::has('POST')) { 
-        // callback file 
-        //=========================================
-        recurseInsert('includes/callbacks.php'); 
+    // // Callback Logic for handling the image upload 
+    // if(!is_empty($_POST) || session::has('POST')) { 
+    //     // callback file 
+    //     //=========================================
+    //     recurseInsert('includes/callbacks.php'); 
         
-        // Run the Processor 
-        // ========================================
-        $processor = formBuilder::createProcessor(); 
-        $processor->processPost(); 
-    }
+    //     // Run the Processor 
+    //     // ========================================
+    //     $processor = formBuilder::createProcessor(); 
+    //     $processor->processPost(); 
+    // }
 
 
 
@@ -92,7 +92,7 @@
             'showInEditStrip' => TRUE,
             'required'        => TRUE,
             'type'            => 'text',
-            'duplicates'      => FALSE, 
+            'duplicates'      => TRUE, 
             'fieldID'         => "imgName"
         )
     );
