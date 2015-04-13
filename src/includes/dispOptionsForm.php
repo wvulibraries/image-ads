@@ -13,11 +13,10 @@ $form->linkToDatabase(array(
 
         $form->addField(
             array(
-                'name'     => "ID", 
-                'label'    => "Image Name",
-                'type'     => "text",
-                'value'    => $_GET['MYSQL']['imageName'],
-                'readonly' => TRUE 
+                'name'     => "imageAdID", 
+                'label'    => "Image ID",
+                //'type'     => "hidden",
+                'value'    => $_GET['MYSQL']['imageID']
             )
         );
 
@@ -25,7 +24,7 @@ $form->linkToDatabase(array(
             array(
                 'name'   => "dateStart",
                 'label'  => "Date Range Start",
-                'type'   => "date", 
+                'type'   => "text", 
                 'showIn' => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE)
             )
         );
@@ -34,7 +33,7 @@ $form->linkToDatabase(array(
             array(
                 'name'   => "dateEnd",
                 'label'  => "Date Range End", 
-                'type'   => "date",
+                'type'   => "text",
                 'showIn' => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE)
             )
         );
@@ -43,7 +42,7 @@ $form->linkToDatabase(array(
             array(
                 'name'   => "timeStart",
                 'label'  => "Time Range Start",
-                'type'   => "time", 
+                'type'   => "text", 
                 'showIn' => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE)
             )
         );
@@ -52,7 +51,7 @@ $form->linkToDatabase(array(
             array(
                 'name'   => "timeEnd",
                 'label'  => "Time Range End", 
-                'type'   => "time",
+                'type'   => "text",
                 'showIn' => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE)
             )
         );

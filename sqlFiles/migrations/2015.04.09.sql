@@ -11,20 +11,19 @@ CREATE TABLE `imageAds` (
   `actionURL` varchar(200) DEFAULT NULL,
   `imageAd` blob DEFAULT NULL, 
   ## LINK DIPSLAY CONDITIONS IN THIS TABLE 
-  `displayOptions` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 
 DROP TABLE IF EXISTS `displayConditions`;
 CREATE TABLE `displayConditions` (
-  `imageID` tinyint(1) DEFAULT NULL,
+  `imageAdID` tinyint(1) DEFAULT NULL,
   `ID` tinyint(1) unsigned AUTO_INCREMENT NOT NULL, 
   `dateStart` tinyint(8) DEFAULT NULL,
   `dateEnd` tinyint(8) DEFAULT NULL,
-  `weekdays` varchar(50) DEFAULT NULL,
+  `weekdays` varchar(100) DEFAULT NULL,
   `timeStart` tinyint(4) DEFAULT NULL,
-  `timeEnd` int(4) DEFAULT NULL,
-  PRIMARY KEY (`UID`)
+  `timeEnd` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
