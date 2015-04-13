@@ -3,7 +3,7 @@
 	require_once "includes/engineHeader.php";
     templates::display('header'); 
     // Insert Form Definintions 
-    recurseInsert("includes/dispOptionsForm.php","php"); 
+    recurseInsert("includes/dispOptionsForm.php","php");
 ?>
 
 <header> 
@@ -14,10 +14,6 @@
     <div id="UploadImageForm">
 	   {form name="displayOptions" display="form" addGet="true"}
     </div>
-    
-    <div>
-        
-	</div>
 
 </section>
 

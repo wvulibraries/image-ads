@@ -2,6 +2,7 @@
 
 $localvars         = localvars::getInstance();
 $form              = formBuilder::createForm('displayOptions');
+$imageId = $_GET['MYSQL']['imageID']; 
 
 $form->linkToDatabase(array(
     'table'            => "displayConditions"
@@ -13,8 +14,9 @@ $form->linkToDatabase(array(
         $form->addField(
             array(
                 'name'     => "ID", 
-                'label'    => "Link To Image",
+                'label'    => "Image Name",
                 'type'     => "text",
+                'value'    => $_GET['MYSQL']['imageName'],
                 'readonly' => TRUE 
             )
         );

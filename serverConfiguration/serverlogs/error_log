@@ -15668,3 +15668,9 @@
 [Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/wwwadmin.cgi
 [Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/wwwboard.cgi
 [Thu Apr 09 19:53:34 2015] [error] [client 10.0.2.2] client denied by server configuration: /home/www.libraries.wvu.edu/public_html/xampp
+[Sun Apr 12 20:39:09 2015] [notice] SIGHUP received.  Attempting to restart
+httpd: apr_sockaddr_info_get() failed for vagrant-centos64.vagrantup.com
+httpd: Could not reliably determine the server's fully qualified domain name, using 127.0.0.1 for ServerName
+[Sun Apr 12 20:39:15 2015] [notice] Digest: generating secret for digest authentication ...
+[Sun Apr 12 20:39:15 2015] [notice] Digest: done
+[Sun Apr 12 20:39:15 2015] [notice] Apache/2.2.15 (Unix) DAV/2 mod_auth_kerb/5.4 mod_ssl/2.2.15 OpenSSL/1.0.1e-fips mod_wsgi/3.2 Python/2.6.6 mod_perl/2.0.4 Perl/v5.10.1 configured -- resuming normal operations

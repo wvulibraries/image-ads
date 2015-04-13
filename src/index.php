@@ -18,11 +18,6 @@
 	   {form name="imageAdForm" display="form"}
        {form name="imageAdForm" display="edit" expandable="true" addGet="true"}
     </div>
-    
-    <div>
-        
-	</div>
-
 </section>
 
 
