@@ -15674,3 +15674,185 @@ httpd: Could not reliably determine the server's fully qualified domain name, us
 [Sun Apr 12 20:39:15 2015] [notice] Digest: generating secret for digest authentication ...
 [Sun Apr 12 20:39:15 2015] [notice] Digest: done
 [Sun Apr 12 20:39:15 2015] [notice] Apache/2.2.15 (Unix) DAV/2 mod_auth_kerb/5.4 mod_ssl/2.2.15 OpenSSL/1.0.1e-fips mod_wsgi/3.2 Python/2.6.6 mod_perl/2.0.4 Perl/v5.10.1 configured -- resuming normal operations
+[Tue Apr 14 12:47:59 2015] [notice] suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Tue Apr 14 12:48:04 2015] [notice] Digest: generating secret for digest authentication ...
+[Tue Apr 14 12:48:04 2015] [notice] Digest: done
+[Tue Apr 14 12:48:04 2015] [notice] Apache/2.2.15 (Unix) DAV/2 mod_auth_kerb/5.4 mod_ssl/2.2.15 OpenSSL/1.0.1e-fips mod_wsgi/3.2 Python/2.6.6 mod_perl/2.0.4 Perl/v5.10.1 configured -- resuming normal operations
+[Tue Apr 14 12:49:16 2015] [error] [client 10.0.2.2] formProcessor::insert() SQL Error! 1054:Unknown column 'name' in 'field list' (INSERT INTO `imageAds` (`name`,`enabled`,`priority`,`altText`,`actionURL`) VALUES (?,?,?,?,?)) at 333:/tmp/git/engineAPI-Modules/src/modules/form/formProcessor.php, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 12:55:35 2015] [error] [client 10.0.2.2] PHP Parse error:  syntax error, unexpected T_STRING in /vagrant/src/includes/currentAdsDisplay.php on line 92, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 13:03:10 2015] [error] [client 10.0.2.2] Undefined index: /i^* at 72:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 13:03:25 2015] [error] [client 10.0.2.2] Undefined index: /i^* at 72:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 13:03:42 2015] [error] [client 10.0.2.2] Undefined index: /i^* at 72:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 13:14:27 2015] [error] [client 10.0.2.2] Undefined offset: 2 at 403:/tmp/git/engineAPI/engine/engineAPI/latest/helperFunctions/misc.php
+[Tue Apr 14 13:14:27 2015] [error] [client 10.0.2.2] [Deprecated] isempty() called from : at 418:/tmp/git/engineAPI/engine/engineAPI/latest/helperFunctions/misc.php
+[Tue Apr 14 13:14:27 2015] [error] [client 10.0.2.2] Undefined offset: 2 at 403:/tmp/git/engineAPI/engine/engineAPI/latest/helperFunctions/misc.php
+[Tue Apr 14 13:14:27 2015] [error] [client 10.0.2.2] [Deprecated] isempty() called from : at 418:/tmp/git/engineAPI/engine/engineAPI/latest/helperFunctions/misc.php
+[Tue Apr 14 13:14:27 2015] [error] [client 10.0.2.2] Undefined offset: 2 at 403:/tmp/git/engineAPI/engine/engineAPI/latest/helperFunctions/misc.php
+[Tue Apr 14 13:14:27 2015] [error] [client 10.0.2.2] [Deprecated] isempty() called from : at 418:/tmp/git/engineAPI/engine/engineAPI/latest/helperFunctions/misc.php
+[Tue Apr 14 13:14:27 2015] [error] [client 10.0.2.2] Undefined offset: 2 at 403:/tmp/git/engineAPI/engine/engineAPI/latest/helperFunctions/misc.php
+[Tue Apr 14 13:14:27 2015] [error] [client 10.0.2.2] [Deprecated] isempty() called from : at 418:/tmp/git/engineAPI/engine/engineAPI/latest/helperFunctions/misc.php
+[Tue Apr 14 13:14:58 2015] [error] [client 10.0.2.2] Undefined offset: 2 at 403:/tmp/git/engineAPI/engine/engineAPI/latest/helperFunctions/misc.php
+[Tue Apr 14 13:14:58 2015] [error] [client 10.0.2.2] [Deprecated] isempty() called from : at 418:/tmp/git/engineAPI/engine/engineAPI/latest/helperFunctions/misc.php
+[Tue Apr 14 13:14:58 2015] [error] [client 10.0.2.2] Undefined offset: 2 at 403:/tmp/git/engineAPI/engine/engineAPI/latest/helperFunctions/misc.php
+[Tue Apr 14 13:14:58 2015] [error] [client 10.0.2.2] [Deprecated] isempty() called from : at 418:/tmp/git/engineAPI/engine/engineAPI/latest/helperFunctions/misc.php
+[Tue Apr 14 13:14:58 2015] [error] [client 10.0.2.2] Undefined offset: 2 at 403:/tmp/git/engineAPI/engine/engineAPI/latest/helperFunctions/misc.php
+[Tue Apr 14 13:14:58 2015] [error] [client 10.0.2.2] [Deprecated] isempty() called from : at 418:/tmp/git/engineAPI/engine/engineAPI/latest/helperFunctions/misc.php
+[Tue Apr 14 13:14:58 2015] [error] [client 10.0.2.2] Undefined offset: 2 at 403:/tmp/git/engineAPI/engine/engineAPI/latest/helperFunctions/misc.php
+[Tue Apr 14 13:14:58 2015] [error] [client 10.0.2.2] [Deprecated] isempty() called from : at 418:/tmp/git/engineAPI/engine/engineAPI/latest/helperFunctions/misc.php
+[Tue Apr 14 13:15:11 2015] [error] [client 10.0.2.2] Undefined offset: 2 at 403:/tmp/git/engineAPI/engine/engineAPI/latest/helperFunctions/misc.php
+[Tue Apr 14 13:15:11 2015] [error] [client 10.0.2.2] [Deprecated] isempty() called from : at 418:/tmp/git/engineAPI/engine/engineAPI/latest/helperFunctions/misc.php
+[Tue Apr 14 13:15:11 2015] [error] [client 10.0.2.2] Undefined offset: 2 at 403:/tmp/git/engineAPI/engine/engineAPI/latest/helperFunctions/misc.php
+[Tue Apr 14 13:15:11 2015] [error] [client 10.0.2.2] [Deprecated] isempty() called from : at 418:/tmp/git/engineAPI/engine/engineAPI/latest/helperFunctions/misc.php
+[Tue Apr 14 13:15:11 2015] [error] [client 10.0.2.2] Undefined offset: 2 at 403:/tmp/git/engineAPI/engine/engineAPI/latest/helperFunctions/misc.php
+[Tue Apr 14 13:15:11 2015] [error] [client 10.0.2.2] [Deprecated] isempty() called from : at 418:/tmp/git/engineAPI/engine/engineAPI/latest/helperFunctions/misc.php
+[Tue Apr 14 13:15:11 2015] [error] [client 10.0.2.2] Undefined offset: 2 at 403:/tmp/git/engineAPI/engine/engineAPI/latest/helperFunctions/misc.php
+[Tue Apr 14 13:15:11 2015] [error] [client 10.0.2.2] [Deprecated] isempty() called from : at 418:/tmp/git/engineAPI/engine/engineAPI/latest/helperFunctions/misc.php
+[Tue Apr 14 13:22:03 2015] [error] [client 10.0.2.2] preg_match(): Compilation failed: nothing to repeat at offset 1 at 30:/vagrant/src/test.php
+[Tue Apr 14 13:22:03 2015] [error] [client 10.0.2.2] preg_match(): Compilation failed: nothing to repeat at offset 1 at 30:/vagrant/src/test.php
+[Tue Apr 14 13:22:03 2015] [error] [client 10.0.2.2] preg_match(): Compilation failed: nothing to repeat at offset 1 at 30:/vagrant/src/test.php
+[Tue Apr 14 13:22:03 2015] [error] [client 10.0.2.2] preg_match(): Compilation failed: nothing to repeat at offset 1 at 30:/vagrant/src/test.php
+[Tue Apr 14 13:37:11 2015] [error] [client 10.0.2.2] Undefined index: name at 66:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 13:37:11 2015] [error] [client 10.0.2.2] Undefined index: enabled at 67:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 13:37:11 2015] [error] [client 10.0.2.2] Undefined index: priority at 68:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 13:37:11 2015] [error] [client 10.0.2.2] Undefined index: altText at 69:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 13:37:11 2015] [error] [client 10.0.2.2] Undefined index: actionURL at 70:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 13:37:11 2015] [error] [client 10.0.2.2] Undefined index: imageAd at 71:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 13:48:07 2015] [error] [client 10.0.2.2] Undefined variable: displayAd at 64:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 13:57:29 2015] [error] [client 10.0.2.2] PHP Parse error:  syntax error, unexpected '}' in /vagrant/src/includes/currentAdsDisplay.php on line 100, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 13:57:38 2015] [error] [client 10.0.2.2] PHP Parse error:  syntax error, unexpected '}' in /vagrant/src/includes/currentAdsDisplay.php on line 100, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 13:58:27 2015] [error] [client 10.0.2.2] PHP Parse error:  syntax error, unexpected $end in /vagrant/src/includes/currentAdsDisplay.php on line 105, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 13:58:29 2015] [error] [client 10.0.2.2] PHP Parse error:  syntax error, unexpected $end in /vagrant/src/includes/currentAdsDisplay.php on line 105, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 14:01:25 2015] [error] [client 10.0.2.2] Undefined variable: i at 79:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 14:01:25 2015] [error] [client 10.0.2.2] Undefined variable: i at 79:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 14:30:09 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 62:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 14:30:09 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 62:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 14:33:05 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 62:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 14:33:05 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 62:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 14:33:05 2015] [error] [client 10.0.2.2] Use of undefined constant ID - assumed 'ID' at 97:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 14:33:05 2015] [error] [client 10.0.2.2] Use of undefined constant ID - assumed 'ID' at 97:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 14:33:05 2015] [error] [client 10.0.2.2] Use of undefined constant ID - assumed 'ID' at 97:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 14:33:05 2015] [error] [client 10.0.2.2] Use of undefined constant ID - assumed 'ID' at 97:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 14:33:05 2015] [error] [client 10.0.2.2] Use of undefined constant ID - assumed 'ID' at 97:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 14:33:05 2015] [error] [client 10.0.2.2] Use of undefined constant ID - assumed 'ID' at 97:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 14:33:05 2015] [error] [client 10.0.2.2] Use of undefined constant ID - assumed 'ID' at 97:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 14:33:05 2015] [error] [client 10.0.2.2] Use of undefined constant ID - assumed 'ID' at 97:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 14:33:05 2015] [error] [client 10.0.2.2] Use of undefined constant ID - assumed 'ID' at 97:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 14:33:05 2015] [error] [client 10.0.2.2] Use of undefined constant ID - assumed 'ID' at 97:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 14:33:05 2015] [error] [client 10.0.2.2] Use of undefined constant ID - assumed 'ID' at 97:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 14:33:05 2015] [error] [client 10.0.2.2] Use of undefined constant ID - assumed 'ID' at 97:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 14:33:05 2015] [error] [client 10.0.2.2] Use of undefined constant ID - assumed 'ID' at 97:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 14:33:05 2015] [error] [client 10.0.2.2] Use of undefined constant ID - assumed 'ID' at 97:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 14:34:10 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 62:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 14:34:10 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 62:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 14:35:55 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 62:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 14:35:55 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 62:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 14:37:21 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 62:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 14:37:21 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 62:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 14:38:02 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 62:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 14:38:02 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 62:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 14:43:38 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 62:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 14:43:38 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 62:/vagrant/src/includes/currentAdsDisplay.php, referer: http://localhost:8090/admin/image_manager/
+[Tue Apr 14 14:44:46 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 62:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:44:46 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 70:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:44:46 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 70:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:44:46 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 70:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:44:46 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 70:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:44:46 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 70:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:44:46 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 62:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:44:46 2015] [error] [client 10.0.2.2] Undefined index: ID at 112:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:44:46 2015] [error] [client 10.0.2.2] Undefined index: name at 112:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:44:46 2015] [error] [client 10.0.2.2] Undefined index: ID at 112:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:44:46 2015] [error] [client 10.0.2.2] Undefined index: name at 112:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:44:46 2015] [error] [client 10.0.2.2] Undefined index: ID at 112:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:44:46 2015] [error] [client 10.0.2.2] Undefined index: name at 112:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:44:46 2015] [error] [client 10.0.2.2] Undefined index: ID at 112:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:44:46 2015] [error] [client 10.0.2.2] Undefined index: name at 112:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:44:46 2015] [error] [client 10.0.2.2] Undefined index: ID at 112:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:44:46 2015] [error] [client 10.0.2.2] Undefined index: name at 112:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:45:07 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 62:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:45:07 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 70:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:45:07 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 70:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:45:07 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 70:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:45:07 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 70:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:45:07 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 70:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:45:07 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 62:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:45:07 2015] [error] [client 10.0.2.2] Undefined index: ID at 112:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:45:07 2015] [error] [client 10.0.2.2] Undefined index: name at 112:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:45:07 2015] [error] [client 10.0.2.2] Undefined index: ID at 112:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:45:07 2015] [error] [client 10.0.2.2] Undefined index: name at 112:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:45:07 2015] [error] [client 10.0.2.2] Undefined index: ID at 112:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:45:07 2015] [error] [client 10.0.2.2] Undefined index: name at 112:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:45:07 2015] [error] [client 10.0.2.2] Undefined index: ID at 112:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:45:07 2015] [error] [client 10.0.2.2] Undefined index: name at 112:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:45:07 2015] [error] [client 10.0.2.2] Undefined index: ID at 112:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:45:07 2015] [error] [client 10.0.2.2] Undefined index: name at 112:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:46:22 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 62:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:46:22 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 70:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:46:22 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 70:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:46:22 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 70:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:46:22 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 70:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:46:22 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 70:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:46:22 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 62:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:46:22 2015] [error] [client 10.0.2.2] Undefined index: ID at 112:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:46:22 2015] [error] [client 10.0.2.2] Undefined index: name at 112:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:46:22 2015] [error] [client 10.0.2.2] Undefined index: ID at 112:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:46:22 2015] [error] [client 10.0.2.2] Undefined index: name at 112:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:46:22 2015] [error] [client 10.0.2.2] Undefined index: ID at 112:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:46:22 2015] [error] [client 10.0.2.2] Undefined index: name at 112:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:46:22 2015] [error] [client 10.0.2.2] Undefined index: ID at 112:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:46:22 2015] [error] [client 10.0.2.2] Undefined index: name at 112:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:46:22 2015] [error] [client 10.0.2.2] Undefined index: ID at 112:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:46:22 2015] [error] [client 10.0.2.2] Undefined index: name at 112:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:54:31 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 62:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:54:31 2015] [error] [client 10.0.2.2] Use of undefined constant hasDisplayOptions - assumed 'hasDisplayOptions' at 81:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:54:31 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 82:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:54:31 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 62:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:54:31 2015] [error] [client 10.0.2.2] Use of undefined constant hasDisplayOptions - assumed 'hasDisplayOptions' at 81:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:54:31 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 82:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:54:31 2015] [error] [client 10.0.2.2] Undefined index: ID at 123:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:54:31 2015] [error] [client 10.0.2.2] Undefined index: name at 123:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:54:31 2015] [error] [client 10.0.2.2] Undefined index: ID at 123:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:54:31 2015] [error] [client 10.0.2.2] Undefined index: name at 123:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:56:03 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 62:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:56:03 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 82:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:56:03 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 62:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:56:03 2015] [error] [client 10.0.2.2] Undefined index: ID at 123:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 14:56:03 2015] [error] [client 10.0.2.2] Undefined index: name at 123:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 15:02:03 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 62:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 15:02:03 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 82:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 15:02:03 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 62:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 15:02:03 2015] [error] [client 10.0.2.2] Undefined index: ID at 123:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 15:02:03 2015] [error] [client 10.0.2.2] Undefined index: name at 123:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 15:02:52 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 62:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 15:02:52 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 82:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 15:02:52 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 62:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 15:02:52 2015] [error] [client 10.0.2.2] Undefined index: ID at 123:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 15:02:52 2015] [error] [client 10.0.2.2] Undefined index: name at 123:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 15:03:30 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 62:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 15:03:30 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 82:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 15:03:30 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 62:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 15:03:30 2015] [error] [client 10.0.2.2] Invalid argument supplied for foreach() at 107:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 15:03:30 2015] [error] [client 10.0.2.2] Invalid argument supplied for foreach() at 107:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 15:03:30 2015] [error] [client 10.0.2.2] Invalid argument supplied for foreach() at 107:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 15:03:30 2015] [error] [client 10.0.2.2] Invalid argument supplied for foreach() at 107:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 15:03:30 2015] [error] [client 10.0.2.2] Invalid argument supplied for foreach() at 107:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 15:04:11 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 62:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 15:04:11 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 82:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 15:04:11 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 62:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 15:04:11 2015] [error] [client 10.0.2.2] Invalid argument supplied for foreach() at 107:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 15:04:11 2015] [error] [client 10.0.2.2] Invalid argument supplied for foreach() at 107:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 15:04:11 2015] [error] [client 10.0.2.2] Invalid argument supplied for foreach() at 107:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 15:04:11 2015] [error] [client 10.0.2.2] Invalid argument supplied for foreach() at 107:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 15:04:11 2015] [error] [client 10.0.2.2] Invalid argument supplied for foreach() at 107:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 15:04:11 2015] [error] [client 10.0.2.2] Invalid argument supplied for foreach() at 107:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 15:04:11 2015] [error] [client 10.0.2.2] Invalid argument supplied for foreach() at 107:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 15:04:33 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 62:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 15:04:33 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 82:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 15:04:33 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 62:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 15:04:33 2015] [error] [client 10.0.2.2] Undefined index: ID at 123:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 15:04:33 2015] [error] [client 10.0.2.2] Undefined index: name at 123:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 15:05:12 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 62:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 15:05:12 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 82:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 15:05:12 2015] [error] [client 10.0.2.2] Undefined index: imageAdID at 62:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 15:05:12 2015] [error] [client 10.0.2.2] Undefined index: ID at 123:/vagrant/src/includes/currentAdsDisplay.php
+[Tue Apr 14 15:05:12 2015] [error] [client 10.0.2.2] Undefined index: name at 123:/vagrant/src/includes/currentAdsDisplay.php

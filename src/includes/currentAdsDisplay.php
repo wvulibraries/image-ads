@@ -3,7 +3,7 @@
     //DB Connection and SQL Statements    
     $localvars = localvars::getInstance();
     $db        = db::get($localvars->get('dbConnectionName')); // TELL WHAT DB TO CONNECT TO
-	$sql       = sprintf("SELECT * FROM imageAds LEFT JOIN displayConditions ON displayConditions.imageAdID = imageAds.ID");
+	$sql       = sprintf("SELECT imageAds.*, displayConditions.dateStart, displayConditions.dateEnd, displayConditions.weekdays, displayConditions.timeStart, displayConditions.timeEnd FROM imageAds LEFT JOIN displayConditions ON displayConditions.imageAdID = imageAds.ID");
 	$sqlResult = $db->query($sql);
     $data      = NULL;  
     $URLpath = "http://$_SERVER[HTTP_HOST]/admin/image_manager";
@@ -18,65 +18,114 @@
 		return FALSE;
 	}
 
-    // Build an Arry out of the Data 
-    // This array will make each record a single record, but allow it to have multiple displays
-
-    // $displayAdArray = array();
-    // while ($row = $sqlResult->fetch()) {
-    //     // Populate an array for all the image ads
-
-
-    //     // $optionsArray = array();
-    //     // $optionsArray['dateStart'] = $row['dateStart'];
-
-    //     // $temp = array( 
-    //     //     'name' => $row['name']
-    //     //     );
-
-    //     // $foo[$row['imageAdID']][] = $temp;
-
-    //     // $foo[$row['imageAdID']]['options'][] = $optionsArray;
-
-    // }
-    
-    // print "<pre>";
-    // var_dump($foo);
-    // print "</pre>";
-
     $displayAdRecords = array(); 
     while($row = $sqlResult->fetch()) {
+
+    // print "<pre>";
+    // var_dump($row);
+    // print "</pre>";
+
         
         // A placeholder array that will be used for the basic info from the imageAds Table
         $tempAdArray = array(
-            'name' => $row['name'], 
-            'enabled' => $row['enabled'],
-            'priority' => $row['priority'],
-            'altText' => $row ['altText'],
+            'ID'        => $row['ID'],
+            'name'      => $row['name'], 
+            'enabled'   => $row['enabled'],
+            'priority'  => $row['priority'],
+            'altText'   => $row ['altText'],
             'actionURL' => $row['actionURL'],
-            'imageAd' => $row['imageAd']
+            'imageAd'   => $row['imageAd']
         ); 
 
+        // print "<pre>";
+        // var_dump($tempAdArray);
+        // print "</pre>";
+
+
+
+
         // The display Options Temp Array
+        // Need to add something to search for if Null or Not Null 
+
         $tempDispArray = array(
             'dateStart' => $row['dateStart'],
-            'dateEnd' => $row['dateEnd'],
+            'dateEnd'   => $row['dateEnd'],
             'timeStart' => $row['timeStart'],
-            'timeEnd' => $row['timeEnd'],
-            'weekdays' => $row['weekdays']
+            'timeEnd'   => $row['timeEnd'],
+            'weekdays'  => $row['weekdays']
         );
 
-        $displayAdRecords[$row['imageAdID']]["imageInfo"] = $tempAdArray; 
-        $displayAdRecords[$row['imageAdID']][] = $tempDispArray;  
+        // @TODO 
+            // I think this can be made less diving to get to information 
+            // Look at ways to take down the number of nested arrays 
+
+        $displayAdRecords[$row['imageAdID']]["imageInfo"][] = $tempAdArray; 
+        
+        // Use Is null to check to make sure the display options aren't showing
+        // switched to is empty for empty form fields since its valid to have no
+        // items entered in the field. 
+
+        // Create Boolean to Test conditions from 
+        $hasDisplayOptions =  false; 
+        // loop through temp disp array and see if the items are null 
+        foreach($tempDispArray as $I=>$V) { 
+            if(!is_empty($V)) {
+                $hasDisplayOptions = true; 
+            } else { 
+                $hasDisplayOptions = false; 
+            }
+        }
+        // Check the Boolean 
+        // If True then add the stuff to the display records 
+        // This is done so that it is only added once 
+        if($hasDisplayOptions) {
+            $displayAdRecords[$row['imageAdID']][][] = $tempDispArray; 
+        }
     }  
 
     print "<pre>";
     var_dump($displayAdRecords);
     print "</pre>";   
 
+    foreach($displayAdRecords as $imageRecords) {
+        // Loop through the first Array which is really a placeholder for all arrays
+        //var_dump($imageRecords);
+       
+        // $image Records is going to have an array with the value of more arrays
+        // they will be the number of total images in the db
+        foreach($imageRecords as $image) {
+            // print "<pre>";
+            // var_dump($image);
+            // print "</pre>";
 
+            foreach($image as $record){
+                // print "<pre>";
+                // var_dump($record);
+                // print "</pre>";
 
-    // Working on displaying our current Ads and also setting up the information to render out on a website 
-    //$localvars->set("displayAllAds",);
+                print "<ul class='current-images'>";
+                    foreach($record as $I => $imgProperties) { 
+                        if($I == "ID") { 
+                            // Do nothing  
+                        } elseif ($I == "imageAd") {
+                            // Do Nothing
+                        } else { 
+                            print "<li>"; 
+                            print $imgProperties; 
+                            print "</li>";
+                        }
 
-    //getAllAds(); 
+                    }
+
+                    print "<li>";
+                        print "<a href='#'> EDIT IMAGE </a> |";
+                        print "<a href='#'> DELETE IMAGE </a> |";
+                        print "<a href='displayOptions.php?imageID=$record[ID]&imageName=$record[name]'> ADD DISPLAY PROPERTIES </a>"; 
+                    print "</li>";
+
+                print "</ul>";
+            }
+        }
+    }
+   
 ?> 
