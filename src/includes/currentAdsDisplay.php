@@ -20,11 +20,6 @@
 
     $displayAdRecords = array(); 
     while($row = $sqlResult->fetch()) {
-
-    // print "<pre>";
-    // var_dump($row);
-    // print "</pre>";
-
         
         // A placeholder array that will be used for the basic info from the imageAds Table
         $tempAdArray = array(
@@ -37,13 +32,6 @@
             'imageAd'   => $row['imageAd']
         ); 
 
-        // print "<pre>";
-        // var_dump($tempAdArray);
-        // print "</pre>";
-
-
-
-
         // The display Options Temp Array
         // Need to add something to search for if Null or Not Null 
 
@@ -55,16 +43,9 @@
             'weekdays'  => $row['weekdays']
         );
 
-        // @TODO 
-            // I think this can be made less diving to get to information 
-            // Look at ways to take down the number of nested arrays 
-
-        $displayAdRecords[$row['imageAdID']]["imageInfo"][] = $tempAdArray; 
         
-        // Use Is null to check to make sure the display options aren't showing
-        // switched to is empty for empty form fields since its valid to have no
-        // items entered in the field. 
-
+        $displayAdRecords[$row['ID']]["imageInfo"] = $tempAdArray; 
+        
         // Create Boolean to Test conditions from 
         $hasDisplayOptions =  false; 
         // loop through temp disp array and see if the items are null 
@@ -79,53 +60,39 @@
         // If True then add the stuff to the display records 
         // This is done so that it is only added once 
         if($hasDisplayOptions) {
-            $displayAdRecords[$row['imageAdID']][][] = $tempDispArray; 
+            $displayAdRecords[$row['ID']]['display'][] = $tempDispArray; 
         }
-    }  
-
-    print "<pre>";
-    var_dump($displayAdRecords);
-    print "</pre>";   
+    }   
 
     foreach($displayAdRecords as $imageRecords) {
         // Loop through the first Array which is really a placeholder for all arrays
-        //var_dump($imageRecords);
-       
-        // $image Records is going to have an array with the value of more arrays
-        // they will be the number of total images in the db
-        foreach($imageRecords as $image) {
-            // print "<pre>";
-            // var_dump($image);
-            // print "</pre>";
+        print "<pre>";
+        print "<h2>IMAGE RECORDS</h2>"; 
+        var_dump($imageRecords);
+        print "</pre>";
 
-            foreach($image as $record){
-                // print "<pre>";
-                // var_dump($record);
-                // print "</pre>";
+        print "<ul class='current-images'>";
 
-                print "<ul class='current-images'>";
-                    foreach($record as $I => $imgProperties) { 
-                        if($I == "ID") { 
-                            // Do nothing  
-                        } elseif ($I == "imageAd") {
-                            // Do Nothing
-                        } else { 
-                            print "<li>"; 
-                            print $imgProperties; 
-                            print "</li>";
-                        }
-
-                    }
-
-                    print "<li>";
-                        print "<a href='#'> EDIT IMAGE </a> |";
-                        print "<a href='#'> DELETE IMAGE </a> |";
-                        print "<a href='displayOptions.php?imageID=$record[ID]&imageName=$record[name]'> ADD DISPLAY PROPERTIES </a>"; 
-                    print "</li>";
-
-                print "</ul>";
-            }
+        // Loop through interior of arrays to get information such as image properties
+        foreach($imageRecords["imageInfo"] as $imgProperties) {
+            print $imgProperties;  
         }
+
+        // Loop through the display conditions 
+        foreach($imageRecords["display"] as $imgDisplay) { 
+            foreach($imgDisplay as $displayProperty){
+                print $displayProperty ."</br>";
+            }
+        } 
+
+        // Setup Buttons to pass the editing of the information into different forms
+        print "<li>";
+            print "<a href='#'> EDIT IMAGE </a> |";
+            print "<a href='#'> DELETE IMAGE </a> |";
+            print "<a href='displayOptions.php?imageID=$record[ID]&imageName=$record[name]'> ADD DISPLAY PROPERTIES </a>"; 
+        print "</li>";
+
+        print "</ul>";
     }
    
 ?> 
