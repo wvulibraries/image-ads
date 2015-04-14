@@ -2,22 +2,21 @@
 <?php 
 	require_once "includes/engineHeader.php";
     templates::display('header'); 
+    // Insert Form Definintions 
+    recurseInsert("includes/imageForm.php","php"); 
 ?>
 
 <header> 
-    <h1> Advertising Manager Home </h1>
+    <h1> Add New Image </h1>
 </header> 
 
-<section> 
-    <?php 
-         // Insert DipslayCurrentAds Logic 
-        recurseInsert("includes/currentAdsDisplay.php", "php");
-    ?>
+<section>
+    <div id="UploadImageForm">
+	   {form name="imageAdForm" display="form"}
+       {form name="imageAdForm" display="edit" expandable="true" addGet="true"}
+    </div>
 </section>
 
-<section> 
-    <a href="addNewImage.php" class="button"> Add New Image </a>
-</section>
 
 <?php
     // Add JS in the Lower Part of the Body Before the footer to keep from blocking render 

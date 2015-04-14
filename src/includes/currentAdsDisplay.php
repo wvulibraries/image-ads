@@ -7,7 +7,8 @@
 	$sqlResult = $db->query($sql);
     $data      = NULL;  
     $URLpath = "http://$_SERVER[HTTP_HOST]/admin/image_manager";
-    
+
+    // Testing the SQL Stuff
 	if ($sqlResult->error()) {
 		print "ERROR GETTING ADS  -- the error -- " . $sqlResult->error(); 
 		return(FALSE);
@@ -18,7 +19,9 @@
 		return FALSE;
 	}
 
-    $displayAdRecords = array(); 
+    $displayAdRecords = array();  // Create an Array to parse the data in there 
+
+    // Look at the stuff in the DB and actually fetch it 
     while($row = $sqlResult->fetch()) {
         
         // A placeholder array that will be used for the basic info from the imageAds Table
@@ -64,32 +67,44 @@
         }
     }   
 
+    
     foreach($displayAdRecords as $imageRecords) {
-        // Loop through the first Array which is really a placeholder for all arrays
-        print "<pre>";
-        print "<h2>IMAGE RECORDS</h2>"; 
-        var_dump($imageRecords);
-        print "</pre>";
+        $imgID; // Create Varible for the ID
+        $imgName; // Creat Variable for the Name 
 
+        // Loop through the first Array which is really a placeholder for all arrays
         print "<ul class='current-images'>";
 
         // Loop through interior of arrays to get information such as image properties
-        foreach($imageRecords["imageInfo"] as $imgProperties) {
-            print $imgProperties;  
-        }
-
-        // Loop through the display conditions 
-        foreach($imageRecords["display"] as $imgDisplay) { 
-            foreach($imgDisplay as $displayProperty){
-                print $displayProperty ."</br>";
+        foreach($imageRecords["imageInfo"] as $recordsIndex => $imgProperties) {
+            if($recordsIndex == "name") {
+                $imgName = $imgProperties; 
+                print "<li> <h2>" . $imgProperties . "</h2></li>";
+            } elseif ($recordsIndex == "ID") {
+                // do nothing so that it doesn't show that to the user
+                $imgID = $imgProperties; 
+            } else { 
+                print "<li>" . $imgProperties . "</li>"; 
             }
-        } 
+
+        }
+        // Check to make sure that the there are records for the iamgeRecords
+        // If not we don't want them in our array because they will make the display look funny
+        if (!is_null($imageRecords["display"])) { 
+             // Loop through the display conditions 
+            foreach($imageRecords["display"] as $imgDisplay) { 
+                foreach($imgDisplay as $dispProp){
+                   print $dispProp ."</br>";
+                }
+            } 
+        }
+       
 
         // Setup Buttons to pass the editing of the information into different forms
         print "<li>";
             print "<a href='#'> EDIT IMAGE </a> |";
             print "<a href='#'> DELETE IMAGE </a> |";
-            print "<a href='displayOptions.php?imageID=$record[ID]&imageName=$record[name]'> ADD DISPLAY PROPERTIES </a>"; 
+            print "<a href='displayOptions.php?imageID=$imgID&imageName=$imgName'> ADD DISPLAY PROPERTIES </a>"; 
         print "</li>";
 
         print "</ul>";
