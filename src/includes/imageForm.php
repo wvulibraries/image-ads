@@ -1,44 +1,33 @@
  <?php 
 
+  // callback functions 
+  //=========================================
+    function testfunc(){
+        $thisdata = $_POST['MYSQL']; 
+        
+        $thisdata["name"] = "I changed this Name";   
+
+            print "<pre>"; 
+            var_dump($thisdata);
+            print "</pre>";  
+
+        return $thisdata;  
+    }
+
+
+// Callback Logic for handling the image upload 
+    if(!is_empty($_POST) || session::has('POST')) { 
+        // Run the Processor 
+        // ========================================
+        $processor = formBuilder::createProcessor(); 
+        // Set the Callback functions to fire from the callbacks.php file
+        // =========================================
+        // Parameter Types ($trigger, $callback) 
+        $processor->setCallback('beforeInsert', 'testFunc');
+        $processor->processPost(); 
+    }
+
     $localvars = localvars::getInstance();
-
-    // SCRAPPED FOR MULTIPLE FORMS 
-
-    // DISPLAY PARAMETERS -- Date Range / Time Range / Weekday 
-    // ==========================================================================================
-    // Engine Setups for making dropdown menus 
-    // Throws huge amounts of erros, but functions fine?  
-    // $date = new date;
-    // Start Range 
-    // $localvars->set("monthSelect",$date->dropdownMonthSelect(1,TRUE,array("id"=>"start_month")));
-    // $localvars->set("daySelect",$date->dropdownDaySelect(TRUE,array("id"=>"start_day")));
-    // $localvars->set("yearSelect",$date->dropdownYearSelect(0,5,TRUE,array("id"=>"start_year")));
-
-    // $localvars->set("monthSelectEnd",$date->dropdownMonthSelect(1,TRUE,array("id" => "end_month")));
-    // $localvars->set("daySelectEnd",$date->dropdownDaySelect(TRUE,array("id"=>"end_day")));
-    // $localvars->set("yearSelectEnd",$date->dropdownYearSelect(0,5,TRUE,array("id"=>"end_year")));
-
-    // $localvars->set("startTime",$date->timeDropDown(array("formname" => "start_Time")));
-    // $localvars->set("endTime",$date->timeDropDown(array("formname" => "end_Time")));
-
-    // Functions required to make the image and display options happen 
-    // function displayOptionsFields() {
-    //     $htmlInputs = 
-    //         " <div class='displayOptions'>  
-    //             <strong> Add New: </strong> 
-    //             <a href='javascript:void(0)' class='date-range'> Date Range </a>  |
-    //             <a href='javascript:void(0)' class='weekday'> Week Day </a>     | 
-    //             <a href='javascript:void(0)' class='time-range'> Time Range </a>   
-    //           </div> 
-    //           <div class='displayOptionInputs'> 
-
-    //           </div> 
-    //         "; 
-
-    //     return $htmlInputs;   
-    // }
-
-
     $form = formBuilder::createForm('imageAdForm');
 
     $form->linkToDatabase(array(
@@ -49,17 +38,7 @@
     $form->editTitle   = "Edit Rotating Image";
 
 
-    // // Callback Logic for handling the image upload 
-    // if(!is_empty($_POST) || session::has('POST')) { 
-    //     // callback file 
-    //     //=========================================
-    //     recurseInsert('includes/callbacks.php'); 
-        
-    //     // Run the Processor 
-    //     // ========================================
-    //     $processor = formBuilder::createProcessor(); 
-    //     $processor->processPost(); 
-    // }
+    
 
 
 

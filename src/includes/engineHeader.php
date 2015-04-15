@@ -13,7 +13,6 @@
 		recurseInsert("includes/vars.php","php");
 		recurseInsert('includes/engineIncludes.php',"php");
 
-		formBuilder::process();
 		formBuilder::ajaxHandler();
 
 		recurseInsert("engineHeader.php","php");

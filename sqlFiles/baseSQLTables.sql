@@ -20,25 +20,28 @@
 --
 
 DROP TABLE IF EXISTS `imageAds`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `imageAds` (
-  `ID` tinyint(3) unsigned NOT NULL AUTO_INCREMENT,
-  `nameOfImage` varchar(50) DEFAULT NULL,
+  `ID` tinyint(1) unsigned AUTO_INCREMENT NOT NULL,
+  `name` varchar(50) DEFAULT NULL,
   `enabled` boolean DEFAULT FALSE, 
   `priority` boolean DEFAULT FALSE, 
   `altText` varchar(200) DEFAULT NULL,
   `actionURL` varchar(200) DEFAULT NULL,
-  `imageAd` blob DEFAULT NULL,
+  `imageAd` blob DEFAULT NULL, 
+  ## LINK DIPSLAY CONDITIONS IN THIS TABLE 
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `ImageAds`
---
 
-LOCK TABLES `imageAds` WRITE;
-/*!40000 ALTER TABLE `imageAds` DISABLE KEYS */;
-/*!40000 ALTER TABLE `imageAds` ENABLE KEYS */;
-UNLOCK TABLES;
+DROP TABLE IF EXISTS `displayConditions`;
+CREATE TABLE `displayConditions` (
+  `imageAdID` tinyint(1) DEFAULT NULL,
+  `ID` tinyint(1) unsigned AUTO_INCREMENT NOT NULL, 
+  `dateStart` tinyint(8) DEFAULT NULL,
+  `dateEnd` tinyint(8) DEFAULT NULL,
+  `weekdays` varchar(100) DEFAULT NULL,
+  `timeStart` tinyint(4) DEFAULT NULL,
+  `timeEnd` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+

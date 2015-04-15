@@ -1,6 +1,7 @@
 <?php
 
 require_once "includes/engineHeader.php";
+templates::display('header'); 
 
 $foo = array();
 
@@ -34,3 +35,4 @@ foreach ($foo as $I=>$V) {
 }
 
 
+?> 
