@@ -3,15 +3,36 @@
   // callback functions 
   //=========================================
     function testfunc(){
-        $thisdata = $_POST['MYSQL']; 
-        
-        $thisdata["name"] = "I changed this Name";   
+       if(!isset($_FILES['imageAd'])) { 
+            echo "No Files"; 
+        } else { 
+            $imageInfo = $_FILES['imageAd']; 
 
             print "<pre>"; 
-            var_dump($thisdata);
-            print "</pre>";  
+            var_dump($imageInfo);
+            print "</pre>"; 
 
-        return $thisdata;  
+            // Upload the File 
+            imageUpload($imageInfo); 
+
+        }
+    }
+
+    function imageUpload($filedata){ 
+            // $filedata['name'];
+            // $filedata['type']; 
+            // $filedata['tmp_name']; 
+            // $filedata['size']; 
+            // $filedata['error'];
+
+            // Test The Image Stuff 
+            $maxFileSize = 1000000; // 1mb  
+
+            if($filedata['size'] < $maxFileSize) { 
+                echo "Image Works!"; 
+            } else {
+                echo "David screwed up";
+            }
     }
 
 
