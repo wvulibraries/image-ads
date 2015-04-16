@@ -1,36 +1,73 @@
 <?php 
 // callback functions 
 //=========================================
-function adjustStartDate(){
+function adjustTime(){
     // Take the Input Data
-    $thisdata = $_POST['MYSQL']; 
+     $dispCondData = $_POST['MYSQL'];
+    
+     print "<pre>";  
+     var_dump($dispCondData);
+     print "</pre>"; 
 
-    print "<pre>";
-    var_dump($thisdata);
-    print "</pre>"; 
-
+    // Adjust Mins to make them look better
+     $startMins    = adjustMins($dispCondData["timeStart_min"]);
+     $endMins      = adjustMins($dispCondData["timeEnd_min"]);
+     
     // Make Adjustments to the Time Stuff 
-    $theStartTime = $thisdata["timeStart_hour"] . $thisdata["timeStart_min"] . $thisdata["timeStart_ampm"];
-    print strtotime($theStartTime); 
+     $theStartTime = $dispCondData["timeStart_hour"] . ":" . $startMins . $dispCondData["timeStart_ampm"];
+     $theEndTime   = $dispCondData["timeEnd_hour"] . ":" . $endMins . $dispCondData["timeEnd_ampm"];  
+     
+    // DO THIS SOON
+     if($theEndTime == $theStartTime) { 
+        // Throw a Form Error and Send Feedback to the User 
+     }
+    
     // Start to refactor the input Data
     // Put the Input data into a new array, array should match the mysql information
-    // $databaseData array(); 
-    //return $databaseData; 
+     $databaseData              = array(); 
+     $databaseData["timeStart"] = $theStartTime; 
+     $databaseData["timeEnd"]   = $theEndTime;
+
+     return $databaseData; 
 }
 
 
-// array(10) {
-//   ["__formID"]=> string(32) "6998c8ad8733b48e2e63628c50875ec9"
-//   ["__csrfID"]=> string(13) "552eb7bbe5263"
-//   ["__csrfToken"]=> string(32) "16178b01170ee839b212e3c40208932d"
-//   ["imageAdID"]=> string(1) "5"
-//   ["start_Time_hour"]=> string(1) "1"
-//   ["start_Time_min"]=> string(1) "0"
-//   ["start_Time_ampm"]=> string(2) "am"
-//   ["end_Time_hour"]=> string(1) "1"
-//   ["end_Time_min"]=> string(1) "0"
-//   ["end_Time_ampm"]=> string(2) "pm"
-// }
+// ReUseable Function to adjust the Time and add an extra 0 to the mins
+function adjustMins($time){    
+    if($time<10) { 
+        $time = "0".$time; 
+    }
+    return $time; 
+}
+
+// Making Date ranges into a function for JS to create new ones on the fly. 
+// Engine Setups for making dropdown menus 
+function addDateRanges() {
+    $date = new date;
+    // Date and Time Dropdown built by engine 
+    $startDateRange = $date->dateDropDown(array("id"=>"start_date","formname"=>"dateStart[]","monthdformat"=>"mon","setdate"=>"Ymd"));
+    $endDateRange   = $date->dateDropDown(array("id"=>"end_date","formname"=>"dateEnd[]","monthdformat"=>"mon","setdate"=>"Ymd"));
+    // Return JS
+    return sprintf('<div class="inputs"> %s %s </div>', 
+        $startDateRange,
+        $endDateRange
+    );
+}
+
+function addTimeRanges() {
+    $date = new date;
+    // Engine Time Dropdowns & Return them for JS
+    $startTime      = $date->timeDropDown(array("formname" => "timeStart[]",)); 
+    $endTime        = $date->timeDropDown(array("formname" => "timeEnd[]")); 
+    // Return for JS
+    return sprintf('<div class="times"> %s %s </div>', 
+        $startTime,
+        $endTime
+    );
+}
+
+
+
 
 // Callback Logic for handling the image upload 
 if(!is_empty($_POST) || session::has('POST')) { 
@@ -40,7 +77,7 @@ if(!is_empty($_POST) || session::has('POST')) {
     // Set the Callback functions to fire from the callbacks.php file
     // =========================================
     // Parameter Types ($trigger, $callback) 
-    $processor->setCallback('beforeInsert', 'adjustStartDate');
+    $processor->setCallback('beforeInsert', 'adjustTime');
     $processor->processPost(); 
 }
 
@@ -50,29 +87,8 @@ $form      = formBuilder::createForm('displayOptions');
 $imageId   = $_GET['MYSQL']['imageID']; 
 
 
-// DISPLAY PARAMETERS -- Date Range / Time Range / Weekday 
-// ==========================================================================================
-// Engine Setups for making dropdown menus 
-// Throws huge amounts of erros, but functions fine?  
-$date = new date;
-
-//DropDowns 
-// $startMonth = $date->dropdownMonthSelect(1,TRUE,array("id"=>"start_month","name"=>"dateStart_1"));
-// $startDay   = $date->dropdownDaySelect(TRUE,array("id"=>"start_day","name"=>"dateStart_2"));
-// $startYear  = $date->dropdownYearSelect(0,5,TRUE,array("id"=>"start_year","name"=>"dateStart_3"));
-$startDateRange = $date->dateDropDown(array("id"=>"start_date","formname"=>"dateStart","monthdformat"=>"mon","setdate"=>"Ymd"));
-$endDateRange  = $date->dateDropDown(array("id"=>"end_date","formname"=>"dateEnd","monthdformat"=>"mon","setdate"=>"Ymd"));
-
-// $endMonth   = $date->dropdownMonthSelect(1,TRUE,array("id"=>"end_month", "name"=>"date_end_1"));
-// $endDay     = $date->dropdownDaySelect(TRUE,array("id"=>"end_day", "name"=>"date_end_1"));
-// $endYear    = $date->dropdownYearSelect(0,5,TRUE,array("id"=>"end_year", "name"=>"date_end_1"));
-
-$startTime  = $date->timeDropDown(array("formname" => "timeStart")); 
-$endTime    = $date->timeDropDown(array("formname" => "timeEnd")); 
-
-
-
-
+//  Setup the form itself & Add form fields
+//  Built using Engines Form Builder 
 $form->linkToDatabase(array(
     'table'            => "displayConditions"
 ));
@@ -88,43 +104,23 @@ $form->linkToDatabase(array(
                 'value'    => $_GET['MYSQL']['imageID']
             )
         );
+   
+        $form->addField(
+            array(
+                'name'   => "Date Ranges",
+                'label'  => "Add Dates Image Will Display", 
+                'type'   => "plaintext",
+                'value'  => "<a href='javascript:void(0);' class='addDateRange'> Add Date </a> | <a href='javascript:void(0);' class='deleteDateRange'> Remove Last Date </a>  ",
+                'showIn' => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE)
+            )
+        );
 
         $form->addField(
             array(
-                'name'   => "dateStart",
-                'label'  => "Date Range Start",
-                'type'   => "plaintext", 
-                'value'  => $startDateRange,
-                'showIn' => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE)
-            )
-        );
-            
-        $form->addField(
-            array(
-                'name'   => "dateEnd",
-                'label'  => "Date Range End", 
+                'name'   => "Time Ranges",
+                'label'  => "Add Times Image Will Display", 
                 'type'   => "plaintext",
-                'value'  => $endDateRange,
-                'showIn' => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE)
-            )
-        );
-            
-        $form->addField(
-            array(
-                'name'   => "timeStart",
-                'label'  => "Time Range Start",
-                'type'   => "plaintext",
-                'value'  => $startTime,
-                'showIn' => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE)
-            )
-        );
-            
-        $form->addField(
-            array(
-                'name'   => "timeEnd",
-                'label'  => "Time Range End", 
-                'type'   => "plaintext",
-                'value'  => $endTime,
+                'value'  => "<a href='javascript:void(0);' class='addTimeRange'> Add Time </a> | <a href='javascript:void(0);' class='deleteTimeRange'> Remove Last Time Range </a>  ",
                 'showIn' => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE)
             )
         );

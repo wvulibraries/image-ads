@@ -35,4 +35,13 @@ foreach ($foo as $I=>$V) {
 }
 
 
+$mininterval = 1; 
+
+for($I=0;$I<60;$I++) {
+	if($I % $mininterval == 0) {
+		$minArray[$I] = (($I<10)?"0".$I:$I);
+	}
+}
+
+
 ?> 
