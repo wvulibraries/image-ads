@@ -1,5 +1,4 @@
 <?php
-
  
     $form->linkToDatabase(array(
     'table'            => "displayConditions"

@@ -9,13 +9,13 @@
 		$enginevars = enginevars::getInstance();
 	
 	// These are specific to EngineAPI and pulling the appropriate files
-//		recurseInsert("acl.php","php"); 
-		recurseInsert("includes/vars.php","php");
-		recurseInsert('includes/engineIncludes.php',"php");
+	// recurseInsert("acl.php","php"); 
+		recurseInsert("includes/engine/vars.php","php");
+		recurseInsert('includes/engine/engineIncludes.php',"php");
 
 		formBuilder::ajaxHandler();
 
-		recurseInsert("engineHeader.php","php");
+		recurseInsert("includes/engine/headerIncludes.php","php");
 		templates::load("library2012.2col");
 
 	// Looks like I need to change this area 

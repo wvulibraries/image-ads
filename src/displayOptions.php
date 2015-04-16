@@ -1,9 +1,9 @@
 
 <?php 
-	require_once "includes/engineHeader.php";
+	require_once "includes/engine/engineHeader.php";
     templates::display('header'); 
     // Insert Form Definintions 
-    recurseInsert("includes/dispOptionsForm.php","php");
+    recurseInsert("includes/forms/dispOptionsForm.php","php");
 ?>
 
 <header> 
@@ -23,14 +23,3 @@
     include 'includes/jsIncludes.php'; 
     templates::display('footer'); 
 ?>
-
-
-<script> 
-    //  Sample of Create a new Element on a Form 
-    //  ----------------------------------------- 
-    // $('mytrigger').on('click', function(){
-    //     $('myclass').append('
-    //         <?php echo myfunction() ?> 
-    //     '); 
-    // });  
-</script> 

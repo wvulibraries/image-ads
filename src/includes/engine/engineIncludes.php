@@ -12,4 +12,6 @@
     $databaseOptions['dbName'] = 'rotatingImageAds'; // change this to your app db name 
     $db                        = db::create('mysql', $databaseOptions, 'appDB');
     //var_dump($db); // dumps the variable 
+
+    //echo "EINCLUDES IS WORKING!";
 ?>
