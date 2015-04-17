@@ -80,10 +80,15 @@
             if($recordsIndex == "name") {
                 $imgName = $imgProperties; 
                 print "<li> <h2>" . $imgProperties . "</h2></li>";
-            } elseif ($recordsIndex == "ID") {
+            } 
+            elseif($recordsIndex =="imageAd"){ 
+               echo '<img src="', $imgProperties ,'"> ';  
+            }
+            elseif ($recordsIndex == "ID") {
                 // do nothing so that it doesn't show that to the user
                 $imgID = $imgProperties; 
-            } else { 
+            } 
+            else { 
                 print "<li>" . $imgProperties . "</li>"; 
             }
 
