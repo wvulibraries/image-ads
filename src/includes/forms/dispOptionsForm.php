@@ -1,32 +1,40 @@
 <?php 
 // callback functions 
 //=========================================
-function adjustTime(){
+function adjustDisplayConditions(){
     // Take the Input Data
      $dispCondData = $_POST['MYSQL'];
-    
-     print "<pre>";  
-     var_dump($dispCondData);
-     print "</pre>"; 
+
+     // Adjust the Date Ranges 
+     $startDates =  adjustDates($dispCondData['dateStart']); 
+     $endDates = adjustDates($dispCondData['dateEnd']); 
 
     // Adjust Mins to make them look better
-     $startMins    = adjustMins($dispCondData["timeStart_min"]);
-     $endMins      = adjustMins($dispCondData["timeEnd_min"]);
+    //  $startMins    = adjustMins($dispCondData["timeStart_min"]);
+    //  $endMins      = adjustMins($dispCondData["timeEnd_min"]);
      
     // Make Adjustments to the Time Stuff 
-     $theStartTime = $dispCondData["timeStart_hour"] . ":" . $startMins . $dispCondData["timeStart_ampm"];
-     $theEndTime   = $dispCondData["timeEnd_hour"] . ":" . $endMins . $dispCondData["timeEnd_ampm"];  
+    //  $theStartTime = $dispCondData["timeStart_hour"] . ":" . $startMins . $dispCondData["timeStart_ampm"];
+    //  $theEndTime   = $dispCondData["timeEnd_hour"] . ":" . $endMins . $dispCondData["timeEnd_ampm"];  
      
-    // DO THIS SOON
-     if($theEndTime == $theStartTime) { 
-        // Throw a Form Error and Send Feedback to the User 
-     }
+    // // DO THIS SOON
+    //  if($theEndTime == $theStartTime) { 
+    //     // Throw a Form Error and Send Feedback to the User 
+    //  }
     
-    // Start to refactor the input Data
-    // Put the Input data into a new array, array should match the mysql information
+    // // Start to refactor the input Data
+    // // Put the Input data into a new array, array should match the mysql information
      $databaseData              = array(); 
-     $databaseData["timeStart"] = $theStartTime; 
-     $databaseData["timeEnd"]   = $theEndTime;
+     $databaseData["dateStart"] = $startDates;
+     $databaseDate["dateEnd"]   = $endDates;  
+    //  $databaseData["timeStart"] = $theStartTime; 
+    //  $databaseData["timeEnd"]   = $theEndTime;
+
+
+      print "<pre>"; 
+      var_dump($databaseData);
+      print "</pre>"; 
+
 
      return $databaseData; 
 }
@@ -40,15 +48,31 @@ function adjustMins($time){
     return $time; 
 }
 
+function adjustDates($formData){ 
+   $returnDates = array(); 
+   // Loop through the array 3 numbers at a time 
+   // pull out the first value of each 
+   for($i=0; $i<=count($formData); $i+=3) { 
+        $month = array_shift($formData); 
+        $day   = array_shift($formData); 
+        $year  = array_shift($formData); 
+
+        $newDateString = $month . "/" . $day . "/" . $year; 
+        array_push($returnDates, mktime($newDateString)); 
+    }
+    return serialize($returnDates); 
+}
+
+
 // Making Date ranges into a function for JS to create new ones on the fly. 
 // Engine Setups for making dropdown menus 
 function addDateRanges() {
     $date = new date;
     // Date and Time Dropdown built by engine 
-    $startDateRange = $date->dateDropDown(array("id"=>"start_date","formname"=>"dateStart[]","monthdformat"=>"mon","setdate"=>"Ymd"));
-    $endDateRange   = $date->dateDropDown(array("id"=>"end_date","formname"=>"dateEnd[]","monthdformat"=>"mon","setdate"=>"Ymd"));
+    $startDateRange = $date->dateDropDown(array("id"=>"start_date","formname"=>"dateStart[]","monthdformat"=>"mon"));
+    $endDateRange   = $date->dateDropDown(array("id"=>"end_date","formname"=>"dateEnd[]","monthdformat"=>"mon"));
     // Return JS
-    return sprintf('<div class="inputs"> %s %s </div>', 
+    return sprintf('<div class="inputs"> <strong> Start Date : </strong> <br/> %s <br/> <strong> End Date : </strong> <br/> %s <br/><br/> </div>', 
         $startDateRange,
         $endDateRange
     );
@@ -60,14 +84,11 @@ function addTimeRanges() {
     $startTime      = $date->timeDropDown(array("formname" => "timeStart[]",)); 
     $endTime        = $date->timeDropDown(array("formname" => "timeEnd[]")); 
     // Return for JS
-    return sprintf('<div class="times"> %s %s </div>', 
+    return sprintf('<div class="times"> %s <br/><br/> %s <br/><br/> </div>', 
         $startTime,
         $endTime
     );
 }
-
-
-
 
 // Callback Logic for handling the image upload 
 if(!is_empty($_POST) || session::has('POST')) { 
@@ -77,7 +98,7 @@ if(!is_empty($_POST) || session::has('POST')) {
     // Set the Callback functions to fire from the callbacks.php file
     // =========================================
     // Parameter Types ($trigger, $callback) 
-    $processor->setCallback('beforeInsert', 'adjustTime');
+    $processor->setCallback('beforeInsert', 'adjustDisplayConditions');
     $processor->processPost(); 
 }
 

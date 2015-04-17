@@ -19,11 +19,11 @@ DROP TABLE IF EXISTS `displayConditions`;
 CREATE TABLE `displayConditions` (
   `imageAdID` tinyint(1) DEFAULT NULL,
   `ID` tinyint(1) unsigned AUTO_INCREMENT NOT NULL, 
-  `dateStart` tinyint(8) DEFAULT NULL,
-  `dateEnd` tinyint(8) DEFAULT NULL,
+  `dateStart` int unsigned DEFAULT NULL,
+  `dateEnd` int unsigned DEFAULT NULL,
   `weekdays` varchar(100) DEFAULT NULL,
-  `timeStart` varchar(7) DEFAULT NULL,
-  `timeEnd` varchar(7) DEFAULT NULL,
+  `timeStart` int unsigned DEFAULT NULL,
+  `timeEnd` int unsigned DEFAULT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
