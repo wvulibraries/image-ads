@@ -17,6 +17,14 @@
     </div>
 </section>
 
+<!-- 
+===================================================================
+// Need to insert some JS Here that shows the preivew of the image 
+// in the formbuilder form so before the post the user 
+// has the option to see what they have posted.
+===================================================================
+--> 
+
 
 <?php
     // Add JS in the Lower Part of the Body Before the footer to keep from blocking render 

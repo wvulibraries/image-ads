@@ -20792,3 +20792,184 @@ httpd: Could not reliably determine the server's fully qualified domain name, us
 [Mon Apr 20 18:47:26 2015] [error] [client 10.0.2.2] Invalid argument supplied for foreach() at 310:/tmp/git/engineAPI-Modules/src/modules/form/formProcessor.php, referer: http://localhost:8090/admin/image_manager/displayOptions.php?imageID=3&imageName=Puppet%20Show
 [Mon Apr 20 18:48:59 2015] [error] [client 10.0.2.2] Invalid argument supplied for foreach() at 310:/tmp/git/engineAPI-Modules/src/modules/form/formProcessor.php, referer: http://localhost:8090/admin/image_manager/displayOptions.php?imageID=3&imageName=Puppet%20Show
 [Mon Apr 20 18:49:24 2015] [error] [client 10.0.2.2] Invalid argument supplied for foreach() at 310:/tmp/git/engineAPI-Modules/src/modules/form/formProcessor.php, referer: http://localhost:8090/admin/image_manager/displayOptions.php?imageID=3&imageName=Puppet%20Show
+[Mon Apr 20 18:53:44 2015] [error] [client 10.0.2.2] Invalid argument supplied for foreach() at 310:/tmp/git/engineAPI-Modules/src/modules/form/formProcessor.php, referer: http://localhost:8090/admin/image_manager/displayOptions.php?imageID=4&imageName=Something%20Sampled%20and%20Crazy
+[Mon Apr 20 19:03:49 2015] [error] [client 10.0.2.2] PHP Parse error:  syntax error, unexpected ',' in /vagrant/src/includes/currentAdsDisplay.php on line 87
+[Mon Apr 20 19:03:52 2015] [error] [client 10.0.2.2] PHP Parse error:  syntax error, unexpected ',' in /vagrant/src/includes/currentAdsDisplay.php on line 87
+[Mon Apr 20 19:14:48 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 113:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:14:48 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 119:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:14:48 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 113:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:14:48 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 119:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:14:48 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 113:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:14:48 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 119:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:14:48 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 113:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:14:48 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 119:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:14:48 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 113:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:14:48 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 119:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:14:48 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 113:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:14:48 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 119:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:15:42 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 113:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:15:42 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 119:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:15:42 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 113:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:15:42 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 119:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:15:42 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 113:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:15:42 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 119:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:15:42 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 113:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:15:42 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 119:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:15:42 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 113:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:15:42 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 119:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:15:42 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 113:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:15:42 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 119:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:16:43 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 113:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:16:43 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 124:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:16:43 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 119:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:16:43 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 124:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:16:43 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 124:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:16:43 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 124:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:16:43 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 124:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:16:43 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 113:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:16:43 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 124:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:16:43 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 119:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:16:43 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 124:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:16:43 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 124:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:16:43 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 124:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:16:43 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 124:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:16:43 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 113:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:16:43 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 124:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:16:43 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 119:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:16:43 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 124:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:16:43 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 124:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:16:43 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 124:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:16:43 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 124:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:16:43 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 113:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:16:43 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 124:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:16:43 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 119:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:16:43 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 124:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:16:43 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 124:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:16:43 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 124:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:16:43 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 124:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:16:43 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 113:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:16:43 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 124:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:16:43 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 119:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:16:43 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 124:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:16:43 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 124:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:16:43 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 124:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:16:43 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 124:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:16:43 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 113:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:16:43 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 124:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:16:43 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 119:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:16:43 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 124:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:16:43 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 124:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:16:43 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 124:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:16:43 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 124:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:17:36 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 113:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:17:36 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 119:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:17:36 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 113:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:17:36 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 119:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:17:36 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 113:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:17:36 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 119:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:17:36 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 113:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:17:36 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 119:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:17:36 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 113:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:17:36 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 119:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:17:36 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 113:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:17:36 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 119:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:18:10 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 113:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:18:10 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 119:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:18:10 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 113:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:18:10 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 119:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:18:10 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 113:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:18:10 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 119:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:18:10 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 113:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:18:10 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 119:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:18:10 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 113:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:18:10 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 119:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:18:10 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 113:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:18:10 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 119:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:24:48 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 117:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:24:48 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 117:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:24:51 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 117:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:24:51 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 117:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:25:58 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 114:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:25:58 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 114:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:25:58 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 114:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:25:58 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 114:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:25:58 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 114:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:25:58 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 114:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:26:10 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 114:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:26:10 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 114:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:26:10 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 114:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:26:10 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 114:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:26:10 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 114:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:26:10 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 114:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:27:13 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 114:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:27:13 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 114:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:27:13 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 114:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:27:13 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 114:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:27:13 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 114:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:27:13 2015] [error] [client 10.0.2.2] Undefined variable: discRec at 114:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:28:16 2015] [error] [client 10.0.2.2] Invalid argument supplied for foreach() at 110:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:28:16 2015] [error] [client 10.0.2.2] Invalid argument supplied for foreach() at 110:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:28:16 2015] [error] [client 10.0.2.2] Invalid argument supplied for foreach() at 110:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:28:16 2015] [error] [client 10.0.2.2] Invalid argument supplied for foreach() at 110:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:28:16 2015] [error] [client 10.0.2.2] Invalid argument supplied for foreach() at 110:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:28:16 2015] [error] [client 10.0.2.2] Invalid argument supplied for foreach() at 110:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:28:16 2015] [error] [client 10.0.2.2] Invalid argument supplied for foreach() at 110:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:28:16 2015] [error] [client 10.0.2.2] Invalid argument supplied for foreach() at 110:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:28:16 2015] [error] [client 10.0.2.2] Invalid argument supplied for foreach() at 110:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:28:16 2015] [error] [client 10.0.2.2] Invalid argument supplied for foreach() at 110:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:29:00 2015] [error] [client 10.0.2.2] Invalid argument supplied for foreach() at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:29:00 2015] [error] [client 10.0.2.2] Invalid argument supplied for foreach() at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:29:00 2015] [error] [client 10.0.2.2] Invalid argument supplied for foreach() at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:29:00 2015] [error] [client 10.0.2.2] Invalid argument supplied for foreach() at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:29:00 2015] [error] [client 10.0.2.2] Invalid argument supplied for foreach() at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:29:00 2015] [error] [client 10.0.2.2] Invalid argument supplied for foreach() at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:29:00 2015] [error] [client 10.0.2.2] Invalid argument supplied for foreach() at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:29:00 2015] [error] [client 10.0.2.2] Invalid argument supplied for foreach() at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:29:00 2015] [error] [client 10.0.2.2] Invalid argument supplied for foreach() at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:29:00 2015] [error] [client 10.0.2.2] Invalid argument supplied for foreach() at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:29:54 2015] [error] [client 10.0.2.2] Undefined variable: value at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:29:54 2015] [error] [client 10.0.2.2] Undefined variable: disRecords at 122:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:29:54 2015] [error] [client 10.0.2.2] Undefined variable: value at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:29:54 2015] [error] [client 10.0.2.2] Undefined variable: disRecords at 122:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:29:54 2015] [error] [client 10.0.2.2] Undefined variable: value at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:29:54 2015] [error] [client 10.0.2.2] Undefined variable: disRecords at 122:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:29:54 2015] [error] [client 10.0.2.2] Undefined variable: value at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:29:54 2015] [error] [client 10.0.2.2] Undefined variable: disRecords at 122:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:29:54 2015] [error] [client 10.0.2.2] Undefined variable: value at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:29:54 2015] [error] [client 10.0.2.2] Undefined variable: disRecords at 122:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:29:54 2015] [error] [client 10.0.2.2] Undefined variable: value at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:29:54 2015] [error] [client 10.0.2.2] Undefined variable: disRecords at 122:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:29:54 2015] [error] [client 10.0.2.2] Undefined variable: value at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:29:54 2015] [error] [client 10.0.2.2] Undefined variable: disRecords at 122:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:29:54 2015] [error] [client 10.0.2.2] Undefined variable: value at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:29:54 2015] [error] [client 10.0.2.2] Undefined variable: disRecords at 122:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:29:54 2015] [error] [client 10.0.2.2] Undefined variable: value at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:29:54 2015] [error] [client 10.0.2.2] Undefined variable: disRecords at 122:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:29:54 2015] [error] [client 10.0.2.2] Undefined variable: value at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:29:54 2015] [error] [client 10.0.2.2] Undefined variable: disRecords at 122:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:30:27 2015] [error] [client 10.0.2.2] Undefined variable: value at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:30:27 2015] [error] [client 10.0.2.2] Undefined variable: value at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:30:27 2015] [error] [client 10.0.2.2] Undefined variable: value at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:30:27 2015] [error] [client 10.0.2.2] Undefined variable: value at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:30:27 2015] [error] [client 10.0.2.2] Undefined variable: value at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:30:27 2015] [error] [client 10.0.2.2] Undefined variable: value at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:30:27 2015] [error] [client 10.0.2.2] Undefined variable: value at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:30:27 2015] [error] [client 10.0.2.2] Undefined variable: value at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:30:27 2015] [error] [client 10.0.2.2] Undefined variable: value at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:30:27 2015] [error] [client 10.0.2.2] Undefined variable: value at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:30:40 2015] [error] [client 10.0.2.2] Undefined variable: value at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:30:40 2015] [error] [client 10.0.2.2] Undefined variable: value at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:30:40 2015] [error] [client 10.0.2.2] Undefined variable: value at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:30:40 2015] [error] [client 10.0.2.2] Undefined variable: value at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:30:40 2015] [error] [client 10.0.2.2] Undefined variable: value at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:30:40 2015] [error] [client 10.0.2.2] Undefined variable: value at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:30:40 2015] [error] [client 10.0.2.2] Undefined variable: value at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:30:40 2015] [error] [client 10.0.2.2] Undefined variable: value at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:30:40 2015] [error] [client 10.0.2.2] Undefined variable: value at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:30:40 2015] [error] [client 10.0.2.2] Undefined variable: value at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:31:38 2015] [error] [client 10.0.2.2] Undefined variable: value at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:31:38 2015] [error] [client 10.0.2.2] Undefined variable: value at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:31:38 2015] [error] [client 10.0.2.2] Undefined variable: value at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:31:38 2015] [error] [client 10.0.2.2] Undefined variable: value at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:31:38 2015] [error] [client 10.0.2.2] Undefined variable: value at 115:/vagrant/src/includes/currentAdsDisplay.php
+[Mon Apr 20 19:31:38 2015] [error] [client 10.0.2.2] Undefined variable: value at 115:/vagrant/src/includes/currentAdsDisplay.php

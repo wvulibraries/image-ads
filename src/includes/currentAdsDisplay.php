@@ -48,6 +48,11 @@
         
         $displayAdRecords[$row['ID']]["imageInfo"] = $tempAdArray; 
         $displayAdRecords[$row['ID']]['display'][] = $tempDispArray; 
+
+        print "<h2> Display Array </h2> <pre>"; 
+        var_dump($tempDispArray); 
+        print "</pre>"; 
+
         
         // // Create Boolean to Test conditions from 
         // $hasDisplayOptions =  true; 
@@ -83,8 +88,8 @@
                 $imgName = $imgProperties; 
                 print "<li> <h2>" . $imgProperties . "</h2></li>";
             } 
-            elseif($recordsIndex =="imageAd"){ 
-               echo '<img src="', $imgProperties ,'"> ';  
+            elseif($recordsIndex == "imageAd"){ 
+                echo '<img src="', $imgProperties ,'"> ';  
             }
             elseif ($recordsIndex == "ID") {
                 // do nothing so that it doesn't show that to the user
@@ -93,7 +98,6 @@
             else { 
                 print "<li>" . $imgProperties . "</li>"; 
             }
-
         }
         // Check to make sure that the there are records for the iamgeRecords
         // If not we don't want them in our array because they will make the display look funny
@@ -105,14 +109,30 @@
         // }
         
 
-        foreach($imageRecords["display"] as  $value => $displayRecords) { 
-            foreach($displayRecords as $disRec) {
-                if(is_empty($disRec)) {
-                    // Do Nothing
-                } else { 
-                    print $disRec ."<br>"; 
+        foreach($imageRecords["display"] as $displayRecords) { 
+
+
+                if($value == "dateStart") { 
+                    print "<li> <strong> Date Range: <br/> </strong> <div class='startDate'>";
+                    print $discRec; 
+                    print "</div>";
                 }
-            }
+
+                print "<h2> Record </h2> <pre>"; 
+                var_dump($displayRecords); 
+                print "</pre>"; 
+
+
+                // if($value == "dateEnd") { 
+                //     print "<div class='endDate'>";
+                //     print $discRec; 
+                //     print "</div></li>";
+                // }
+
+
+                // print "<h2> Record </h2> <pre>"; 
+                // var_dump($displayRecords); 
+                // print "</pre>"; 
         }
 
         // Setup Buttons to pass the editing of the information into different forms
