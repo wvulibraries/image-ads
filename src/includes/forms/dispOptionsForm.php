@@ -1,76 +1,89 @@
-<?php 
+<?php
+
+// glob vars  
+//=========================================
+$localvars = localvars::getInstance();
+$form      = formBuilder::createForm('displayOptions');
+$imageId   = $_GET['MYSQL']['imageID']; 
+$db  = db::get($localvars->get('dbConnectionName')); // TELL WHAT DB TO CONNECT TO
+
 // callback functions 
 //=========================================
 function adjustDisplayConditions(){
     // Take the Input Data
      $dispCondData = $_POST['MYSQL'];
 
-     // Adjust the Date Ranges 
-     $startDates =  adjustDates($dispCondData['dateStart']); 
-     $endDates = adjustDates($dispCondData['dateEnd']); 
-
-    // Adjust Mins to make them look better
-    //  $startMins    = adjustMins($dispCondData["timeStart_min"]);
-    //  $endMins      = adjustMins($dispCondData["timeEnd_min"]);
-     
-    // Make Adjustments to the Time Stuff 
-    //  $theStartTime = $dispCondData["timeStart_hour"] . ":" . $startMins . $dispCondData["timeStart_ampm"];
-    //  $theEndTime   = $dispCondData["timeEnd_hour"] . ":" . $endMins . $dispCondData["timeEnd_ampm"];  
-     
-    // // DO THIS SOON
-    //  if($theEndTime == $theStartTime) { 
-    //     // Throw a Form Error and Send Feedback to the User 
-    //  }
+    // Run the function to handle the display conditions for start dates 
+     insertingDates($dispCondData); 
     
-    // // Start to refactor the input Data
-    // // Put the Input data into a new array, array should match the mysql information
-     $databaseData              = array(); 
-     $databaseData["dateStart"] = $startDates;
-     $databaseDate["dateEnd"]   = $endDates;  
-    //  $databaseData["timeStart"] = $theStartTime; 
-    //  $databaseData["timeEnd"]   = $theEndTime;
-
-
-      print "<pre>"; 
-      var_dump($databaseData);
+      print "<h2> Display Condition </h2>";
+      print "<pre>";  
+      var_dump($dispCondData);
       print "</pre>"; 
 
-
-     return $databaseData; 
+      //return $dispCondData;
 }
 
+// DATE FUNCTIONS FOR CALLBACKS 
+// ===========================================
+function insertingDates($formInfo){ 
+    // Adjust them with to Unix timestamps
+    $startDates =  adjustDates($formInfo["dateStart"]); 
+    $endDates = adjustDates($formInfo["dateEnd"]);
 
-// ReUseable Function to adjust the Time and add an extra 0 to the mins
-function adjustMins($time){    
-    if($time<10) { 
-        $time = "0".$time; 
+    // DB Stuff 
+    $localvars = localvars::getInstance();
+    $db  = db::get($localvars->get('dbConnectionName'));
+
+    // We dont' want to add complete null stuff 
+    if(!$startDates == NULL) { 
+
+        // Setup the DB query 
+        $sql = sprintf("INSERT INTO displayConditions (imageAdID,dateStart,dateEnd, weekdays,timeStart,timeEnd) VALUES (?,?,?,?,?,?)");
+
+        // Loop through the Date Ranges and Push them into the DB 
+        for($dateIteration = 0; $dateIteration < count($startDates); $dateIteration++) { 
+            $insertSQL = array($formInfo['imageAdID'],$startDates[$dateIteration],$endDates[$dateIteration], NULL, NULL, NULL);
+            $db->query($sql, $insertSQL); 
+        }
     }
-    return $time; 
 }
 
 function adjustDates($formData){ 
    $returnDates = array(); 
    // Loop through the array 3 numbers at a time 
    // pull out the first value of each 
-   for($i=0; $i<=count($formData); $i+=3) { 
+   // count the number of items in the array outside of the for loop
+   // if not the loop is always short after the second loop
+   $numofIterations = count($formData); 
+
+   for($i=0; $i<$numofIterations; $i+=3) { 
         $month = array_shift($formData); 
         $day   = array_shift($formData); 
         $year  = array_shift($formData); 
 
         $newDateString = $month . "/" . $day . "/" . $year; 
-        array_push($returnDates, mktime($newDateString)); 
+        $unixDate = date("U", strtotime($newDateString));
+        array_push($returnDates, $unixDate); 
     }
-    return serialize($returnDates); 
+    return $returnDates;
 }
-
 
 // Making Date ranges into a function for JS to create new ones on the fly. 
 // Engine Setups for making dropdown menus 
 function addDateRanges() {
     $date = new date;
     // Date and Time Dropdown built by engine 
-    $startDateRange = $date->dateDropDown(array("id"=>"start_date","formname"=>"dateStart[]","monthdformat"=>"mon"));
-    $endDateRange   = $date->dateDropDown(array("id"=>"end_date","formname"=>"dateEnd[]","monthdformat"=>"mon"));
+    $startMonth = $date->dropdownMonthSelect(1, TRUE, array("id"=>"start_date","name"=>"dateStart[]"));
+    $startDay   = $date->dropdownDaySelect(TRUE, array("id"=>"start_date","name"=>"dateStart[]")); 
+    $startYear  = $date->dropdownYearSelect(0,5, TRUE, array("id"=>"start_date","name"=>"dateStart[]"));
+    
+    $endMonth = $date->dropdownMonthSelect(1, TRUE, array("id"=>"end_date","name"=>"dateEnd[]"));
+    $endDay   = $date->dropdownDaySelect(TRUE, array("id"=>"end_date","name"=>"dateEnd[]")); 
+    $endYear  = $date->dropdownYearSelect(0,5, TRUE, array("id"=>"end_date","name"=>"dateEnd[]"));
+    
+    $startDateRange = $startMonth . "/" . $startDay . "/" . $startYear; 
+    $endDateRange   = $endMonth . "/" . $endDay . "/" . $endYear;
     // Return JS
     return sprintf('<div class="inputs"> <strong> Start Date : </strong> <br/> %s <br/> <strong> End Date : </strong> <br/> %s <br/><br/> </div>', 
         $startDateRange,
@@ -78,13 +91,33 @@ function addDateRanges() {
     );
 }
 
+
+// TIME FUNCTIONS FOR CALLBACKS 
+// ===========================================
+// ReUseable Function to adjust the Time and add an extra 0 to the mins
+// function adjustMins($time){    
+//     if($time<10) { 
+//         $time = "0".$time; 
+//     }
+//     return $time; 
+// }
+
 function addTimeRanges() {
     $date = new date;
+
+    // Define Dropdwons 
+    $startHour = $date->dropdownHourSelect(TRUE, TRUE, array("name" => "timeStart[]")); 
+    $startMin  = $date->dropdownMinuteSelect(TRUE, TRUE, array("name" => "timeStart[]"));  
+
+    $endHour   = $date->dropdownHourSelect(TRUE, TRUE, array("name" => "timeEnd[]")); 
+    $endMin    = $date->dropdownMinuteSelect(TRUE, TRUE, array("name" => "timeEnd[]")); 
+
     // Engine Time Dropdowns & Return them for JS
-    $startTime      = $date->timeDropDown(array("formname" => "timeStart[]",)); 
-    $endTime        = $date->timeDropDown(array("formname" => "timeEnd[]")); 
+    $startTime = $startHour . " : " . $startMin . "mins"; 
+    $endTime   = $endHour . " : " . $endMin . "mins"; 
+
     // Return for JS
-    return sprintf('<div class="times"> %s <br/><br/> %s <br/><br/> </div>', 
+    return sprintf('<div class="times"><strong> Start Time : </strong> <br/>  %s <br/><strong> End Time : </strong> <br/>  %s <br/><br/> </div>', 
         $startTime,
         $endTime
     );
@@ -93,19 +126,11 @@ function addTimeRanges() {
 // Callback Logic for handling the image upload 
 if(!is_empty($_POST) || session::has('POST')) { 
     // Run the Processor 
-    // ========================================
     $processor = formBuilder::createProcessor(); 
     // Set the Callback functions to fire from the callbacks.php file
-    // =========================================
-    // Parameter Types ($trigger, $callback) 
     $processor->setCallback('beforeInsert', 'adjustDisplayConditions');
     $processor->processPost(); 
 }
-
-
-$localvars = localvars::getInstance();
-$form      = formBuilder::createForm('displayOptions');
-$imageId   = $_GET['MYSQL']['imageID']; 
 
 
 //  Setup the form itself & Add form fields

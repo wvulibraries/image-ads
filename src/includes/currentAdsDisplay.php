@@ -46,11 +46,15 @@
             'weekdays'  => $row['weekdays']
         );
 
+        var_dump($tempDispArray); 
+
         
         $displayAdRecords[$row['ID']]["imageInfo"] = $tempAdArray; 
         
         // Create Boolean to Test conditions from 
         $hasDisplayOptions =  false; 
+
+        
         // loop through temp disp array and see if the items are null 
         foreach($tempDispArray as $I=>$V) { 
             if(!is_empty($V)) {
