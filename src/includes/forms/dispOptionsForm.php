@@ -15,13 +15,10 @@ function adjustDisplayConditions(){
 
     // Run the function to handle the display conditions for start dates 
      insertingDates($dispCondData); 
-    
-      print "<h2> Display Condition </h2>";
-      print "<pre>";  
-      var_dump($dispCondData);
-      print "</pre>"; 
+     insertingTimes($dispCondData);
+     insertWeekdays($dispCondData);
 
-      //return $dispCondData;
+      return false; 
 }
 
 // DATE FUNCTIONS FOR CALLBACKS 
@@ -62,8 +59,9 @@ function adjustDates($formData){
         $day   = array_shift($formData); 
         $year  = array_shift($formData); 
 
-        $newDateString = $month . "/" . $day . "/" . $year; 
-        $unixDate = date("U", strtotime($newDateString));
+        // $newDateString = $month . "/" . $day . "/" . $year; 
+        $unixDate = mktime(0,0,0,$month,$day,$year);
+        // $unixDate = date("U", strtotime($newDateString));
         array_push($returnDates, $unixDate); 
     }
     return $returnDates;
@@ -94,13 +92,6 @@ function addDateRanges() {
 
 // TIME FUNCTIONS FOR CALLBACKS 
 // ===========================================
-// ReUseable Function to adjust the Time and add an extra 0 to the mins
-// function adjustMins($time){    
-//     if($time<10) { 
-//         $time = "0".$time; 
-//     }
-//     return $time; 
-// }
 
 function addTimeRanges() {
     $date = new date;
@@ -122,6 +113,66 @@ function addTimeRanges() {
         $endTime
     );
 }
+
+// Adjust Time Into Time Stamps 
+function adjustTimes($formInfo){
+    $returnTimes = array(); // array to send info back to the insert function 
+    $numOfTimes  = count($formInfo); 
+
+    // Loop through the times by 2 so that I can grab hour and minute
+    for($i=0; $i < $numOfTimes;  $i+=2){
+        $hour = array_shift($formInfo); 
+        $min  = array_shift($formInfo);
+
+        $theTimes = mktime($hour,$min,0,0,0,0); 
+        array_push($returnTimes, $theTimes); 
+    }
+
+    return $returnTimes;
+}
+// Insert Time into the DB  
+function insertingTimes($formData){ 
+    $startTimes = adjustTimes($formData["timeStart"]); 
+    $endTimes = adjustTimes($formData["timeEnd"]); 
+
+    // DB Stuff 
+    $localvars = localvars::getInstance();
+    $db  = db::get($localvars->get('dbConnectionName'));
+
+    // We dont' want to add complete null stuff 
+    if(!$startTimes == NULL) { 
+        // Setup the DB query 
+        $sql = sprintf("INSERT INTO displayConditions (imageAdID,dateStart,dateEnd, weekdays,timeStart,timeEnd) VALUES (?,?,?,?,?,?)");
+        // Loop through the Date Ranges and Push them into the DB 
+        for($timeIt = 0; $timeIt < count($startTimes); $timeIt++) { 
+            $insertSQL = array($formData['imageAdID'], NULL, NULL, NULL, $startTimes[$timeIt], $endTimes[$timeIt]);
+            $db->query($sql, $insertSQL); 
+        }
+    }
+}
+
+
+
+// Inserting Weeday Values 
+// ===========================================
+function insertWeekdays($formData) { 
+    // DB Stuff 
+    $localvars = localvars::getInstance();
+    $db  = db::get($localvars->get('dbConnectionName'));
+
+    if(!$formData['weekdays'] == NULL) { 
+        $sql = sprintf("INSERT INTO displayConditions (imageAdID,dateStart,dateEnd, weekdays,timeStart,timeEnd) VALUES (?,?,?,?,?,?)");
+        
+        $weekArrays = implode(",", $formData['weekdays']); 
+        $insertSQL = array($formData['imageAdID'], NULL, NULL, $weekArrays, NULL, NULL);
+        $db->query($sql,$insertSQL);
+    }
+}
+
+
+
+// FORM LOGIC FOR FORM BUILDER  
+// ===========================================
 
 // Callback Logic for handling the image upload 
 if(!is_empty($_POST) || session::has('POST')) { 

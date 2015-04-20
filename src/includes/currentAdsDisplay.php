@@ -44,31 +44,29 @@
             'timeStart' => $row['timeStart'],
             'timeEnd'   => $row['timeEnd'],
             'weekdays'  => $row['weekdays']
-        );
-
-        var_dump($tempDispArray); 
-
+        ); 
         
         $displayAdRecords[$row['ID']]["imageInfo"] = $tempAdArray; 
+        $displayAdRecords[$row['ID']]['display'][] = $tempDispArray; 
         
-        // Create Boolean to Test conditions from 
-        $hasDisplayOptions =  false; 
+        // // Create Boolean to Test conditions from 
+        // $hasDisplayOptions =  true; 
 
-        
-        // loop through temp disp array and see if the items are null 
-        foreach($tempDispArray as $I=>$V) { 
-            if(!is_empty($V)) {
-                $hasDisplayOptions = true; 
-            } else { 
-                $hasDisplayOptions = false; 
-            }
-        }
-        // Check the Boolean 
-        // If True then add the stuff to the display records 
-        // This is done so that it is only added once 
-        if($hasDisplayOptions) {
-            $displayAdRecords[$row['ID']]['display'][] = $tempDispArray; 
-        }
+
+        // // loop through temp disp array and see if the items are null 
+        // foreach($tempDispArray as $I=>$V) { 
+        //     if(!is_empty($V)) {
+        //         $hasDisplayOptions = true; 
+        //     } else { 
+        //         $hasDisplayOptions = false; 
+        //     }
+        // }
+        // // Check the Boolean 
+        // // If True then add the stuff to the display records 
+        // // This is done so that it is only added once 
+        // if($hasDisplayOptions) {
+        //     $displayAdRecords[$row['ID']]['display'][] = $tempDispArray; 
+        // }
     }   
 
     
@@ -99,15 +97,23 @@
         }
         // Check to make sure that the there are records for the iamgeRecords
         // If not we don't want them in our array because they will make the display look funny
-        if (!is_null($imageRecords["display"])) { 
-             // Loop through the display conditions 
-            foreach($imageRecords["display"] as $imgDisplay) { 
-                foreach($imgDisplay as $dispProp){
-                   print $dispProp ."</br>";
+        // if (!is_null($imageRecords["display"])) { 
+        //      // Loop through the display conditions 
+        //     foreach($imageRecords["display"] as $imgDisplay) { 
+        //         print $imgDisplay;
+        //     } 
+        // }
+        
+
+        foreach($imageRecords["display"] as  $value => $displayRecords) { 
+            foreach($displayRecords as $disRec) {
+                if(is_empty($disRec)) {
+                    // Do Nothing
+                } else { 
+                    print $disRec ."<br>"; 
                 }
-            } 
+            }
         }
-       
 
         // Setup Buttons to pass the editing of the information into different forms
         print "<li>";
