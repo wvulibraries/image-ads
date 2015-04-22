@@ -10,8 +10,8 @@
 
     // Testing the SQL Stuff
 	if ($sqlResult->error()) {
-		print "ERROR GETTING ADS  -- the error -- " . $sqlResult->error(); 
-		return(FALSE);
+		print "ERROR GETTING ADS  -- the error -- " . $sqlResult->errorMsg(); 
+		return FALSE;
 	}
     
 	if ($sqlResult->rowCount() < 1) {
@@ -145,8 +145,8 @@
 
         // Setup Buttons to pass the editing of the information into different forms
         print "<li>";
-            print "<a href='#'> EDIT IMAGE </a> |";
-            print "<a href='deleteAd.php?imageID=$imgID' class='deleteImage' > DELETE IMAGE </a> |";
+            print "<a href='editAd.php?imageID=$imgID'> EDIT IMAGE </a> |";
+            print "<a href='deleteAd.php?imageID=$imgID'> DELETE IMAGE </a> |";
             print "<a href='displayOptions.php?imageID=$imgID&imageName=$imgName'> ADD DISPLAY PROPERTIES </a>"; 
         print "</li>";
 

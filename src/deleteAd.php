@@ -12,13 +12,23 @@
     $sqlRemoveDispCond = sprintf("DELETE FROM displayConditions WHERE imageAdID=".$imageID);
     $sqlRemoveImg      = sprintf("DELETE FROM imageAds WHERE ID=".$imageID);
 
-     var_dump($sqlRemoveImg);
-
     // // remove the image from the DB 
     // // remove the conditions associated with that image
-     $db->query($sqlRemoveImg);  
-     $db->query($sqlRemoveDispCond);
+     $sqlImgResult = $db->query($sqlRemoveImg);     
+     if($sqlImgResult->error()) {
+        errorHandle::newError(__FUNCTION__."() - " . $sqlImgResult->errorMsg(), errorHandle::DEBUG);
+        errorHandle::errorMsg(getResultMessage("systemsPolicyError")); 
+        return false; 
+     } else { 
+        // Success message for 3 seconds 
+        echo "<div class='success'> Your have successfully deleted the records </div>"; 
+     }
+
+     $sqlDisCondResult = $db->query($sqlRemoveDispCond);
+     if($sqlDisCondResult->error()) {
+        errorHandle::newError(__FUNCTION__."() - " . $sqlDisCondResult->errorMsg(), errorHandle::DEBUG);
+        errorHandle::errorMsg(getResultMessage("systemsPolicyError")); 
+        return false; 
+     }
 
 ?>
-
-<h2> Something Here </h2> 

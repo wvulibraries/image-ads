@@ -59,6 +59,9 @@
 
     $form->insertTitle = "New Roating Image";
     $form->editTitle   = "Edit Rotating Image";
+    $form->updateTitle = "Update Form";
+    $form->submitTextUpdate = 'Update';
+    $form->submitTextEdit   = 'Update';
 
     $form->addField(
         array(
@@ -66,7 +69,7 @@
             'fieldID'         => "imageAd",
             'label'           => "File Upload",
             'showInEditStrip' => TRUE,
-            'showIn'          => array(formBuilder::TYPE_INSERT),
+            'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE, formbuilder::TYPE_EDIT),
             //'required'        => TRUE,
             'type'            => 'file'
         )
@@ -77,7 +80,7 @@
             'name'            => "ID",
             'label'           => "Table ID",
             'primary'         => TRUE,
-            'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE),
+            'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE, formbuilder::TYPE_EDIT),
             'type'            => 'hidden'
         )
     );
@@ -86,7 +89,7 @@
         array(
             'name'            => "name",
             'label'           => "Image Name",
-            'showInEditStrip' => TRUE,
+            'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE, formbuilder::TYPE_EDIT),
             //'required'        => TRUE,
             'type'            => 'text',
             'duplicates'      => TRUE, 
@@ -99,7 +102,7 @@
             'name'            => "enabled",
             'label'           => "Is this image being displayed now?",
             'showInEditStrip' => TRUE,
-            'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE),
+            'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE, formbuilder::TYPE_EDIT),
             //'required'        => TRUE,
             'type'            => 'boolean',
             'duplicates'      => TRUE,
@@ -112,7 +115,7 @@
             'name'            => "priority",
             'label'           => "Is this iamge high priority?",
             'showInEditStrip' => TRUE,
-            'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE),
+            'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE, formbuilder::TYPE_EDIT),
             //'required'        => TRUE,
             'type'            => 'boolean',
             'duplicates'      => TRUE,
@@ -125,7 +128,7 @@
             'name'            => "altText",
             'label'           => "Please provide meaningful alt text.",
             'showInEditStrip' => TRUE,
-            'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE),
+            'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE, formbuilder::TYPE_EDIT),
             //'required'        => TRUE,
             'type'            => 'textarea',
         )
@@ -136,7 +139,7 @@
             'name'            => "actionURL",
             'label'           => "Add a Link",
             'showInEditStrip' => TRUE,
-            'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE),
+            'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE, formbuilder::TYPE_EDIT),
             //'required'        => TRUE,
             'type'            => 'URL',
         )
