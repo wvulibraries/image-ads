@@ -19,8 +19,7 @@
     <a href="addNewImage.php" class="button"> Add New Image </a>
 </section>
 
+
 <?php
-    // Add JS in the Lower Part of the Body Before the footer to keep from blocking render 
-    include 'includes/jsIncludes.php'; 
     templates::display('footer'); 
 ?>

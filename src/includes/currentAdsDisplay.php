@@ -48,11 +48,6 @@
         
         $displayAdRecords[$row['ID']]["imageInfo"] = $tempAdArray; 
         $displayAdRecords[$row['ID']]['display'][] = $tempDispArray; 
-
-        print "<h2> Display Array </h2> <pre>"; 
-        var_dump($tempDispArray); 
-        print "</pre>"; 
-
         
         // // Create Boolean to Test conditions from 
         // $hasDisplayOptions =  true; 
@@ -109,40 +104,53 @@
         // }
         
 
-        foreach($imageRecords["display"] as $displayRecords) { 
+        foreach($imageRecords["display"] as $index => $displayRecords) { 
 
-
-                if($value == "dateStart") { 
-                    print "<li> <strong> Date Range: <br/> </strong> <div class='startDate'>";
-                    print $discRec; 
-                    print "</div>";
-                }
-
-                print "<h2> Record </h2> <pre>"; 
-                var_dump($displayRecords); 
-                print "</pre>"; 
-
-
-                // if($value == "dateEnd") { 
-                //     print "<div class='endDate'>";
-                //     print $discRec; 
-                //     print "</div></li>";
-                // }
-
-
-                // print "<h2> Record </h2> <pre>"; 
-                // var_dump($displayRecords); 
+    
+            foreach($displayRecords as $value => $dispRecord){ 
+                // print "Values  - " . $value . "<br>";
+                // print "Display Options - " . $dispRecord . "<br>"; 
+                // print "<pre>";
+                // var_dump($dispRecord);
                 // print "</pre>"; 
+
+                // Print the Values but Only if they aren't Null and have a specific Time 
+                if($value === "dateStart" && !isnull($dispRecord)) { 
+                    print "<li> <strong> Display Dates: </strong>"; 
+                    print "<span class='start-date-range'>";
+                    print date("m/d/Y", $dispRecord) . " - "; 
+                    print "</span>";
+                } 
+                elseif($value === "dateEnd" && !isnull($dispRecord)) {
+                    print "<span class='end-date-range'>"; 
+                    print date("m/d/Y", $dispRecord); 
+                    print "</span> </li>";
+                }
+                elseif($value === "timeStart" && !isnull($dispRecord)) {
+                    print "<li> <strong> Display Times: </strong> <span class='start-time-range'>"; 
+                    print date("h:i a", $dispRecord) .  " - "; 
+                    print "</span>";
+                }
+                elseif($value === "timeEnd" && !isnull($dispRecord)) {
+                    print "<span class='end-time-range'>"; 
+                    print date("h:i a", $dispRecord); 
+                    print "</span> </li>";
+                }
+                elseif($value === "weekdays" && !isnull($dispRecord)) { 
+                    print "<li><strong> Display on Weekdays </strong>" . $dispRecord . "</li>"; 
+                }
+           
+            }
         }
 
         // Setup Buttons to pass the editing of the information into different forms
         print "<li>";
             print "<a href='#'> EDIT IMAGE </a> |";
-            print "<a href='#'> DELETE IMAGE </a> |";
+            print "<a href='deleteAd.php?imageID=$imgID' class='deleteImage' > DELETE IMAGE </a> |";
             print "<a href='displayOptions.php?imageID=$imgID&imageName=$imgName'> ADD DISPLAY PROPERTIES </a>"; 
         print "</li>";
 
         print "</ul>";
     }
-   
+
 ?> 
