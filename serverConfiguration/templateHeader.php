@@ -30,8 +30,6 @@ $localVars->set("pageURL","http".((isset($_SERVER['HTTPS']))?"s":"")."://".$_SER
 	<meta property="fb:admins" content="1021916351" />
 
 	<script type="text/javascript" src="{local var="jsURL"}/jquery/jquery.js"></script>
-	<script type="text/javascript" src="{local var="jsURL"}/jquery/jquery.tweet.js"></script>
-
 	<script type="text/javascript" src="{local var="jsURL"}/modernizr.js"></script>
 	<!-- // <script type="text/javascript" src="{local var="jsURL"}/html5.js"></script> -->
 	<script type="text/javascript" src="{local var="jsURL"}/bootstrap.js"></script>
@@ -43,110 +41,11 @@ $localVars->set("pageURL","http".((isset($_SERVER['HTTPS']))?"s":"")."://".$_SER
 
 	<!-- <script type="text/javascript" src="{local var="jsURL"}/bootstrap/js/bootstrap.min.js"></script> -->
 	<!-- <link rel="stylesheet"                       type="text/css" href="{local var="jsURL"}/bootstrap/css/bootstrap.min.css"/> -->
-	<link rel="stylesheet"                       type="text/css" href="{local var="cssURL"}/bootstrap.css"/>
+
 	<link rel="stylesheet{local var="styleRel"}" type="text/css" href="{local var="cssURL"}/common.{local var="cssExt"}" />
 	<link rel="stylesheet{local var="styleRel"}" type="text/css" href="{local var="cssURL"}/fonts.{local var="cssExt"}" />
 	<link rel="stylesheet" type="text/css" href="{local var="cssURL"}/print.css" media="print" />
 
-	<link rel="stylesheet"      type="text/css" href="{local var="cssURL"}/jquery.tweet.css" />
-
-	<script type="text/javascript">
-
-	$(document).ready(function() {
-
-		{local var="alertJS"}
-
-		// Footer
-		$("#footerTwitter").tweet(
-			{
-				count: 1,
-				username: "wvulibraries",
-				loading_text: "Loading Twitter Feed ... "
-			}
-		);
-
-		// Homepage Only
-		$("#newsTwitter").tweet(
-			{
-				count: 2,
-				username: "wvulibraries",
-				loading_text: "Loading Twitter Feed ... "
-			}
-		);
-
-		// Header
-		if (!Modernizr.input.placeholder) {
-			$('input[type="search"], input[type="text"]', 'header').each(function () {
-				if (!$(this).val()) {
-					this.value = $(this).attr('placeholder');
-				}
-
-				$(this).focus(function () {
-					if (this.value == $(this).attr('placeholder')) {
-						this.value = '';
-					}
-				});
-
-				$(this).blur(function () {
-					if (this.value == '') {
-						this.value = $(this).attr('placeholder');
-					}
-				});
-
-			});
-		}
-
-		var leftNavURLMatch = window.location.pathname;
-
-		if (leftNavURLMatch.match(/[^\/]$/)) {
-			regex = /^(\/(.*?\/)+)(.*)$/;
-			if (leftNavURLMatch.match(regex)) {
-				leftNavURLMatch = RegExp.$1;
-			}
-		}
-
-
-		var dirs = leftNavURLMatch.split("/");
-
-
-
-		for (I=0;I< dirs.length+1;I++) {
-			selected = false;
-
-			leftNavURLMatch = dirs.join("/") + "/";
-
-			leftNavURLMatch = leftNavURLMatch.replace(/\//g,"\\/");
-			myregexp = new RegExp("^"+leftNavURLMatch);
-			myregexp2 = new RegExp("^"+window.location.pathname+"$");
-
-			$('#contentContainerLeft ul li a').each(function(index) {
-
-				if ($(this).attr("href").match(myregexp2)) {
-					$(this).parent().addClass("leftNavSelected");
-					selected = true;
-					return( false );
-				}
-				else if ($(this).attr("href").match(myregexp)) {
-					$(this).parent().addClass("leftNavSelected");
-					selected = true;
-					return( false );
-				}
-			});
-
-
-			if (selected == true) {
-				break;
-			}
-
-			dirs.pop();
-
-		}
-
-
-
-	});
-
-	</script>
 
 	<?php
 	// include the CSS for the home page
@@ -169,7 +68,7 @@ $localVars->set("pageURL","http".((isset($_SERVER['HTTPS']))?"s":"")."://".$_SER
 
 	?>
 
-	<?php recurseInsert("headerIncludes.php","php"); ?>
+	<?php recurseInsert("includes/engine/headerIncludes.php","php"); ?>
 
 	<!-- Less should be removed once development is done and less should be compiled into JS -->
 	<!-- <script type="text/javascript" src="{local var="jsURL"}/less.js"></script> -->

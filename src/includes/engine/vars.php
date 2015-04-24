@@ -1,6 +1,8 @@
 <?php
     $localvars = localvars::getInstance();
+    
     $localvars->set('dbConnectionName', 'appDB');
+    $localvars->set('pageTitle', 'Image Ad Manager');
 
-    $db = db::get($localvars->get('dbConnectionName'));
+    $localvars->set("baseDirectory","/admin/image_manager");
 ?>

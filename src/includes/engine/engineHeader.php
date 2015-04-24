@@ -10,7 +10,7 @@
 	
 	// These are specific to EngineAPI and pulling the appropriate files
 	// recurseInsert("acl.php","php"); 
-		recurseInsert("includes/engine/vars.php","php");
+		recurseInsert("includes/engine/vars.php","php"); // sets vars 
 		recurseInsert('includes/engine/engineIncludes.php',"php");
 
 		formBuilder::ajaxHandler();
@@ -18,7 +18,5 @@
 		recurseInsert("includes/engine/headerIncludes.php","php");
 		templates::load("library2012.2col");
 
-	// Looks like I need to change this area 
-    // This creates a variable for the directory to rooms folder 
-    // $localvars->set("roomResBaseDir","/services/rooms");
+
 ?>

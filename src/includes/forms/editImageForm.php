@@ -46,6 +46,11 @@
         
         $displayAdRecords[$row['ID']]["imageInfo"] = $tempAdArray; 
         $displayAdRecords[$row['ID']]['display'][] = $tempDispArray; 
+        
+        // Create variables for more easily accessing the information in these rows 
+        // Specifically looping through dipslay options and image info
+        $imageInfoArray = $displayAdRecords[$row['ID']]['imageInfo'];
+        $imageDisplayArray = $displayAdRecords[$row['ID']]['display']; 
     }
 
 // Call backs 
@@ -60,6 +65,8 @@ function processImageInfo() {
      return false; 
 }
 
+// Form Creating and Updating Pulling information into the values fo the form
+// ============================================================================
 
 // Callback Logic for handling the image upload 
     if(!is_empty($_POST) || session::has('POST')) { 
@@ -86,7 +93,7 @@ function processImageInfo() {
             'label'           => "Table ID",
             'primary'         => TRUE,
             'showIn'          => array(formBuilder::TYPE_INSERT),
-            //'type'            => 'hidden',
+            'type'            => 'hidden',
             'value'           => $imageID
         )
     );
@@ -105,10 +112,11 @@ function processImageInfo() {
             'name'            => "name",
             'label'           => "Image Name",
             'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE, formbuilder::TYPE_EDIT),
-            //'required'        => TRUE,
+            'required'        => TRUE,
             'type'            => 'text',
             'duplicates'      => TRUE, 
-            'fieldID'         => "imgName"
+            'fieldID'         => "imgName",
+            'value'           => $imageInfoArray['name']
         )
     );
 
@@ -118,10 +126,11 @@ function processImageInfo() {
             'label'           => "Is this image being displayed now?",
             'showInEditStrip' => TRUE,
             'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE, formbuilder::TYPE_EDIT),
-            //'required'        => TRUE,
+            'required'        => TRUE,
             'type'            => 'boolean',
             'duplicates'      => TRUE,
-            'options'         => array("YES","N0")
+            'options'         => array("YES","N0"),
+            'value'           => $imageInfoArray['enabled']
         )
     );
 
@@ -131,10 +140,11 @@ function processImageInfo() {
             'label'           => "Is this iamge high priority?",
             'showInEditStrip' => TRUE,
             'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE, formbuilder::TYPE_EDIT),
-            //'required'        => TRUE,
+            'required'        => TRUE,
             'type'            => 'boolean',
             'duplicates'      => TRUE,
-            'options'         => array("YES","NO")
+            'options'         => array("YES","NO"),
+            'value'           => $imageInfoArray['priority']
         )
     );
 
@@ -144,8 +154,9 @@ function processImageInfo() {
             'label'           => "Please provide meaningful alt text.",
             'showInEditStrip' => TRUE,
             'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE, formbuilder::TYPE_EDIT),
-            //'required'        => TRUE,
+            'required'        => TRUE,
             'type'            => 'textarea',
+            'value'           => $imageInfoArray['altText']
         )
     );
 
@@ -155,8 +166,9 @@ function processImageInfo() {
             'label'           => "Add a Link",
             'showInEditStrip' => TRUE,
             'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE, formbuilder::TYPE_EDIT),
-            //'required'        => TRUE,
+            'required'        => TRUE,
             'type'            => 'URL',
+            'value'           => $imageInfoArray['actionURL']
         )
     );
 
@@ -165,7 +177,7 @@ function processImageInfo() {
                 'name'   => "Date Ranges",
                 'label'  => "Add Dates Image Will Display", 
                 'type'   => "plaintext",
-                'value'  => "<a href='javascript:void(0);' class='addDateRange'> Add Date </a> | <a href='javascript:void(0);' class='deleteDateRange'> Remove Last Date </a>  ",
+                'value'  => "<a href='javascript:void(0);' class='addDateRange'> Add Date </a> | <a href='javascript:void(0);' class='deleteDateRange'> Remove Last Date </a>",
                 'showIn' => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE)
             )
         );
@@ -194,9 +206,27 @@ function processImageInfo() {
                                 'Saturday'  => "Saturday", 
                                 'Sunday'    => "Sunday" 
                               ), 
-                'showIn'  => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE)
+                'showIn'  => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE),
             )
         );
+
+
+        // Look at the conditions
+        // test to see which conditions there are
+        // format them into a field object 
+        // show them in the form with a remove button      
+        // foreach($imageDisplayArray as $condition) {
+        //     foreach($condition as $dispCond) {
+        //         $form-addField( 
+        //             array(
+        //                 'name'   => "Current Display Conditions",
+        //                 'label'  => "Add Times Image Will Display", 
+        //                 'type'   => "plaintext",
+        //             )
+        //         );
+        //     }
+        // }
+    
 
     
     
