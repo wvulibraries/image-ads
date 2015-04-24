@@ -220,9 +220,25 @@ function processImageInfo() {
 
     $numOfDisplayConditions = count($imageDisplayArray); 
 
-    for($i = 0; $i < $numOfDisplayConditions; $i++) { 
-      
+    //  for($i = 0; $i < $numOfDisplayConditions; $i++) { 
+    //     print "ECHO <br>";
+    // }
+
+    function pullTimeStart($unixdate){
+        $date = date("H:m", $unixdate);
+        // Going to have to build out the form elements and do the insertions through this function 
     }
+
+
+
+    foreach($imageDisplayArray as $imageDisplay) {
+        foreach($imageDisplay as $dispIndex => $dispValue) {
+            if(!is_empty($dispValue && $dispIndex === "timeStart")) {
+                print $dispIndex . " == " . $dispValue . "<br/>"; 
+            }
+        }
+    }
+      
 
 
         // Look at the conditions
