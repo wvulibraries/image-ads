@@ -16,6 +16,10 @@
         return FALSE;
     }
 
+    // Insert Time and Date Functions used by JS 
+    // ========================================================================
+    recurseInsert("includes/addDateTimeFunctions.php","php");    
+
     // Create a new array for the data 
     // Pull the data into to multiple arrays so that it is easier to work with 
     // =========================================================================
@@ -171,7 +175,7 @@ function processImageInfo() {
             'value'           => $imageInfoArray['actionURL']
         )
     );
-    
+
 
     if(!isnull($imageDisplayArray)) {
      $form->addField(
@@ -217,7 +221,7 @@ function processImageInfo() {
     $numOfDisplayConditions = count($imageDisplayArray); 
 
     for($i = 0; $i < $numOfDisplayConditions; $i++) { 
-        print "echo";
+      
     }
 
 

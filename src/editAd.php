@@ -4,6 +4,7 @@
     //recurseInsert("includes/forms/imageForm.php", "php");
     recurseInsert("includes/forms/editImageForm.php","php");    
 
+
     // EDIT THE FORM VALUES OF THE FORMBUILDER FORM 
 ?>
 
@@ -18,5 +19,12 @@
       {form name="editImage" display="insert"}
     </div>
 </section>
+
+
+
+<?php
+    templates::display('footer'); 
+    recurseInsert("includes/jsIncludes.php","php");
+?>
 
 
