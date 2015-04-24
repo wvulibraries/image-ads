@@ -171,44 +171,54 @@ function processImageInfo() {
             'value'           => $imageInfoArray['actionURL']
         )
     );
+    
 
-    $form->addField(
-            array(
-                'name'   => "Date Ranges",
-                'label'  => "Add Dates Image Will Display", 
-                'type'   => "plaintext",
-                'value'  => "<a href='javascript:void(0);' class='addDateRange'> Add Date </a> | <a href='javascript:void(0);' class='deleteDateRange'> Remove Last Date </a>",
-                'showIn' => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE)
-            )
-        );
+    if(!isnull($imageDisplayArray)) {
+     $form->addField(
+                array(
+                    'name'   => "Date Ranges",
+                    'label'  => "Add Dates Image Will Display", 
+                    'type'   => "plaintext",
+                    'value'  => "<a href='javascript:void(0);' class='addDateRange'> Add Date </a> | <a href='javascript:void(0);' class='deleteDateRange'> Remove Last Date </a>",
+                    'showIn' => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE)
+                )
+            );
 
-        $form->addField(
-            array(
-                'name'   => "Time Ranges",
-                'label'  => "Add Times Image Will Display", 
-                'type'   => "plaintext",
-                'value'  => "<a href='javascript:void(0);' class='addTimeRange'> Add Time </a> | <a href='javascript:void(0);' class='deleteTimeRange'> Remove Last Time Range </a>  ",
-                'showIn' => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE)
-            )
-        );
-            
-        $form->addField(
-            array(
-                'name'    => "weekdays",
-                'label'   => "Days of the Week",
-                'type'    => "checkbox",
-                'options' => array(
-                                'Monday'    => "Monday",
-                                'Tuesday'   => 'Tuesday',
-                                'Wednesday' => "Wednesday",
-                                'Thursday'  => "Thursday", 
-                                'Friday'    => "Friday", 
-                                'Saturday'  => "Saturday", 
-                                'Sunday'    => "Sunday" 
-                              ), 
-                'showIn'  => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE),
-            )
-        );
+            $form->addField(
+                array(
+                    'name'   => "Time Ranges",
+                    'label'  => "Add Times Image Will Display", 
+                    'type'   => "plaintext",
+                    'value'  => "<a href='javascript:void(0);' class='addTimeRange'> Add Time </a> | <a href='javascript:void(0);' class='deleteTimeRange'> Remove Last Time Range </a>  ",
+                    'showIn' => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE)
+                )
+            );
+                
+            $form->addField(
+                array(
+                    'name'    => "weekdays",
+                    'label'   => "Days of the Week",
+                    'type'    => "checkbox",
+                    'options' => array(
+                                    'Monday'    => "Monday",
+                                    'Tuesday'   => 'Tuesday',
+                                    'Wednesday' => "Wednesday",
+                                    'Thursday'  => "Thursday", 
+                                    'Friday'    => "Friday", 
+                                    'Saturday'  => "Saturday", 
+                                    'Sunday'    => "Sunday" 
+                                  ), 
+                    'showIn'  => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE),
+                )
+            );
+        }
+
+
+    $numOfDisplayConditions = count($imageDisplayArray); 
+
+    for($i = 0; $i < $numOfDisplayConditions; $i++) { 
+        print "echo";
+    }
 
 
         // Look at the conditions
