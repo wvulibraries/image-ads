@@ -7,6 +7,8 @@
     $sql       = sprintf("SELECT imageAds.*, displayConditions.dateStart, displayConditions.dateEnd, displayConditions.weekdays, displayConditions.timeStart, displayConditions.timeEnd FROM imageAds LEFT JOIN displayConditions ON displayConditions.imageAdID = imageAds.ID WHERE imageAds.ID=".$imageID);
     $sqlResult = $db->query($sql);
 
+    $localvars->set("buildDateTimes", "CrazyText");
+
     if ($sqlResult->error()) {
         print "ERROR GETTING ADS  -- the error -- " . $sqlResult->errorMsg(); 
         return FALSE;
@@ -57,6 +59,77 @@
         $imageDisplayArray = $displayAdRecords[$row['ID']]['display']; 
     }
 
+
+    // Functions for building out the current date and time back into form options and setting them in the form fields
+    // ================================================================================================================
+
+    $numOfDisplayConditions = count($imageDisplayArray);
+    
+    // function pullTime($unixdate){
+    //     $date = date("H:m", $unixdate);
+    //     // Going to have to build out the form elements and do the insertions through this function 
+    // }
+        foreach($imageDisplayArray as $imageDisplay) {
+            foreach($imageDisplay as $dispIndex => $dispValue) {
+                if(!is_empty($dispValue) && $dispIndex === "dateStart") {
+                    // echo addDateRanges();
+                    //print $dispIndex . " - " . $dispValue . "<br>"; 
+
+                    // Seperate the date into values for the select menus 
+                    $month = date('F', $dispValue);
+                    $day = date('d', $dispValue); 
+                    $year = date('Y', $dispValue); 
+                    
+                    // Rebuild Forms 
+                    $dateMonths = array("", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+                    $selectMenuOptions = array("id" => "start_date", "name" => "dateStart[]"); 
+                    
+                    // Rebuild Select Menu using the options and dates above 
+                    $output = sprintf('<select %s>', "name='dateStart[]' id='state_date'");
+                    // Loop through array, but forget the blank space
+                    for($I=1; $I<count($dateMonths); $I++) {
+                        $output .= sprintf('<option value="%s" %s> %s </option>', 
+                                                $dateMonths[$I],
+                                                ($dateMonths[$I] == $month)?"selected":"",
+                                                $dateMonths[$I]
+                                           );
+                    }
+                    $output .= sprintf('</select>');
+
+                   print $output; 
+
+
+                    // $date = new date; 
+                    // // Date and Time Dropdown
+                    // // Let engine build then modify the value 
+                    // $startMonth = $date->dropdownMonthSelect(1, FALSE, array("id"=>"start_date","name"=>"dateStart[]"));
+                    // $startDay   = $date->dropdownDaySelect(FALSE, array("id"=>"start_date","name"=>"dateStart[]")); 
+                    // $startYear  = $date->dropdownYearSelect(0,1, FALSE, array("id"=>"start_date","name"=>"dateStart[]"));
+                    // print $startMonth . " - " . $startDay . " - " . $startYear . "<br>"; 
+                }
+               
+                if(!is_empty($dispValue && $dispIndex === "timeStart")) {
+                    print $dispIndex . " == " . date('H:i', $dispValue) . "<br/>"; 
+                }
+                if(!is_empty($dispValue && $dispIndex === "timeEnd")) {
+                    print $dispIndex . " == " . date('H:i',$dispValue) . "<br/>"; 
+                }
+                if(!is_empty($dispValue && $dispIndex === "weekdays")) {
+                    print $dispIndex . " == " . $dispValue . "<br/>"; 
+                }
+            }
+        }
+    
+
+
+    //  // Define Dropdwons 
+    // $startHour = $date->dropdownHourSelect(TRUE, TRUE, array("name" => "timeStart[]")); 
+    // $startMin  = $date->dropdownMinuteSelect(TRUE, TRUE, array("name" => "timeStart[]"));  
+
+    // $endHour   = $date->dropdownHourSelect(TRUE, TRUE, array("name" => "timeEnd[]")); 
+    // $endMin    = $date->dropdownMinuteSelect(TRUE, TRUE, array("name" => "timeEnd[]")); 
+      
+
 // Call backs 
 // ============================================================================
 
@@ -93,12 +166,12 @@ function processImageInfo() {
 
     $form->addField(
         array(
-            'name'            => "ID",
-            'label'           => "Table ID",
-            'primary'         => TRUE,
-            'showIn'          => array(formBuilder::TYPE_INSERT),
-            'type'            => 'hidden',
-            'value'           => $imageID
+            'name'    => "ID",
+            'label'   => "Table ID",
+            'primary' => TRUE,
+            'showIn'  => array(formBuilder::TYPE_INSERT),
+            'type'    => 'hidden',
+            'value'   => $imageID
         )
     );
 
@@ -217,47 +290,6 @@ function processImageInfo() {
             );
         }
 
-
-    $numOfDisplayConditions = count($imageDisplayArray); 
-
-    //  for($i = 0; $i < $numOfDisplayConditions; $i++) { 
-    //     print "ECHO <br>";
-    // }
-
-    function pullTimeStart($unixdate){
-        $date = date("H:m", $unixdate);
-        // Going to have to build out the form elements and do the insertions through this function 
-    }
+?>
 
 
-
-    foreach($imageDisplayArray as $imageDisplay) {
-        foreach($imageDisplay as $dispIndex => $dispValue) {
-            if(!is_empty($dispValue && $dispIndex === "timeStart")) {
-                print $dispIndex . " == " . $dispValue . "<br/>"; 
-            }
-        }
-    }
-      
-
-
-        // Look at the conditions
-        // test to see which conditions there are
-        // format them into a field object 
-        // show them in the form with a remove button      
-        // foreach($imageDisplayArray as $condition) {
-        //     foreach($condition as $dispCond) {
-        //         $form-addField( 
-        //             array(
-        //                 'name'   => "Current Display Conditions",
-        //                 'label'  => "Add Times Image Will Display", 
-        //                 'type'   => "plaintext",
-        //             )
-        //         );
-        //     }
-        // }
-    
-
-    
-    
-?> 

@@ -1,6 +1,5 @@
 <?php 
    //  Do nothing in here, but recursively inserting this file will keep me from repeating myself 
-   echo "PRINT";
 ?> 
 
  <!-- Add JS in the Lower Part of the Body Before the footer to keep from blocking render  -->
