@@ -63,6 +63,72 @@
     // Functions for building out the current date and time back into form options and setting them in the form fields
     // ================================================================================================================
 
+    function formatMonthSelectMenu($month) {
+        // Rebuild Forms 
+        $dateMonths        = array("", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+        $selectMenuOptions = array("id" => "start_date", "name" => "dateStart[]"); 
+
+        // Rebuild Select Menu using the options and dates above 
+        $theMenu = sprintf('<select %s>', "name='dateStart[]' id='state_date'");
+
+        // Loop through array, but forget the blank space
+        for($I=1; $I<count($dateMonths); $I++) {
+            $theMenu .= sprintf('<option value="%s" %s> %s </option>', 
+                                    $dateMonths[$I],
+                                    ($dateMonths[$I] == $month)?"selected":"",
+                                    $dateMonths[$I]
+                               );
+        }
+        $theMenu .= sprintf('</select>');
+
+        return $theMenu; 
+    }
+
+    function formatDaySelectMenu($day) {
+        $days = 31; // Max Number of Days in a Month 
+        // Select menu Build 
+        $theMenu = sprintf('<select %s>', "name='dateStart[]' id='state_date'");
+        // Loop through the days starting at day 1 because you can't have 0 days
+        for($I=1; $I<=$days; $I++) {
+            $theMenu .= sprintf('<option value="%s" %s> %s </option>', 
+                                    $I, 
+                                    ($I == $day)?"selected":"", 
+                                    $I
+                                    //($I < 10)?"0".$I:$I
+                                 );
+        }
+        $theMenu .= sprintf('</select>');
+        return $theMenu; 
+    }
+
+    function formatYearSelectMenu($year) {
+       
+        $getCurrentYear = date("Y"); 
+        $yearOptions = array(); 
+
+        if($year <= $getCurrentYear) { 
+            $yearsTemp = ($year - 1);            
+            for($J = 5; $J >= 0;  $J--){ 
+                $yearsTemp += 1;
+                array_push($yearOptions,$yearsTemp); 
+            }
+        }
+        
+        $theMenu = sprintf('<select %s>', "name='dateStart[]' id='state_date'");
+        // Loop through the days starting at day 1 because you can't have 0 days
+        for($I=0; $I<=count($yearOptions); $I++) {
+            $theMenu .= sprintf('<option value="%s" %s> %s </option>', 
+                                    $yearOptions[$I], 
+                                    ($yearOptions[$I] == $year)?"selected":"", 
+                                    $yearOptions[$I]
+                                 );
+        }
+        $theMenu .= sprintf('</select>');
+        return $theMenu; 
+    }
+
+
+
     $numOfDisplayConditions = count($imageDisplayArray);
     
     // function pullTime($unixdate){
@@ -77,27 +143,12 @@
 
                     // Seperate the date into values for the select menus 
                     $month = date('F', $dispValue);
-                    $day = date('d', $dispValue); 
-                    $year = date('Y', $dispValue); 
+                    $day   = date('d', $dispValue); 
+                    $year  = date('Y', $dispValue); 
                     
-                    // Rebuild Forms 
-                    $dateMonths = array("", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
-                    $selectMenuOptions = array("id" => "start_date", "name" => "dateStart[]"); 
-                    
-                    // Rebuild Select Menu using the options and dates above 
-                    $output = sprintf('<select %s>', "name='dateStart[]' id='state_date'");
-                    // Loop through array, but forget the blank space
-                    for($I=1; $I<count($dateMonths); $I++) {
-                        $output .= sprintf('<option value="%s" %s> %s </option>', 
-                                                $dateMonths[$I],
-                                                ($dateMonths[$I] == $month)?"selected":"",
-                                                $dateMonths[$I]
-                                           );
-                    }
-                    $output .= sprintf('</select>');
 
-                   print $output; 
-
+                    // Print the form elements to the screen 
+                    print formatMonthSelectMenu($month) . formatDaySelectMenu($day) . formatYearSelectMenu($year) . "<br>";
 
                     // $date = new date; 
                     // // Date and Time Dropdown
