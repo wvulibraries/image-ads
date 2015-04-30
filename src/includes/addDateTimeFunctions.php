@@ -25,13 +25,13 @@ function addDateRanges($options=NULL) {
     $date = new date; 
 
     // Date and Time Dropdown built by engine 
-    $startMonth = $date->dropdownMonthSelect(1, (isset($options['month']) && checkDateOptionMonth($options['month']))?$options['month']:TRUE, array("id"=>"start_date","name"=>"dateStart[]"));
-    $startDay   = $date->dropdownDaySelect((isset($options['day']) && checkDateOptionDay($options['day']))?$options['day']:TRUE, array("id"=>"start_date","name"=>"dateStart[]")); 
-    $startYear  = $date->dropdownYearSelect(0,5, (isset($options['year']))?$options['year']:TRUE, array("id"=>"start_date","name"=>"dateStart[]"));
+    $startMonth     = $date->dropdownMonthSelect(1, (isset($options['month']) && checkDateOptionMonth($options['month']))?$options['month']:TRUE, array("id"=>"start_date","name"=>"dateStart[]"));
+    $startDay       = $date->dropdownDaySelect((isset($options['day']) && checkDateOptionDay($options['day']))?$options['day']:TRUE, array("id"=>"start_date","name"=>"dateStart[]")); 
+    $startYear      = $date->dropdownYearSelect(0,5, (isset($options['year']))?$options['year']:TRUE, array("id"=>"start_date","name"=>"dateStart[]"));
     
-    $endMonth = $date->dropdownMonthSelect(1, (isset($options['endMonth']) && checkDateOptionMonth($options['endMonth']))?$options['endMonth']:TRUE, array("id"=>"end_date","name"=>"dateEnd[]"));
-    $endDay   = $date->dropdownDaySelect((isset($options['endDay']) && checkDateOptionDay($options['endDay']))?$options['endDay']:TRUE, array("id"=>"end_date","name"=>"dateEnd[]")); 
-    $endYear  = $date->dropdownYearSelect(0,5, (isset($options['endYear']))?$options['endYear']:TRUE, array("id"=>"end_date","name"=>"dateEnd[]"));
+    $endMonth       = $date->dropdownMonthSelect(1, (isset($options['endMonth']) && checkDateOptionMonth($options['endMonth']))?$options['endMonth']:TRUE, array("id"=>"end_date","name"=>"dateEnd[]"));
+    $endDay         = $date->dropdownDaySelect((isset($options['endDay']) && checkDateOptionDay($options['endDay']))?$options['endDay']:TRUE, array("id"=>"end_date","name"=>"dateEnd[]")); 
+    $endYear        = $date->dropdownYearSelect(0,5, (isset($options['endYear']))?$options['endYear']:TRUE, array("id"=>"end_date","name"=>"dateEnd[]"));
     
     $startDateRange = $startMonth . "/" . $startDay . "/" . $startYear; 
     $endDateRange   = $endMonth . "/" . $endDay . "/" . $endYear;
@@ -47,15 +47,16 @@ function addDateRanges($options=NULL) {
 // TIME FUNCTIONS FOR CALLBACKS 
 // ===========================================
 
-function addTimeRanges() {
+
+
+function addTimeRanges($options=NULL) {
     $date = new date;
 
     // Define Dropdwons 
-    $startHour = $date->dropdownHourSelect(TRUE, TRUE, array("name" => "timeStart[]")); 
-    $startMin  = $date->dropdownMinuteSelect(TRUE, TRUE, array("name" => "timeStart[]"));  
-
-    $endHour   = $date->dropdownHourSelect(TRUE, TRUE, array("name" => "timeEnd[]")); 
-    $endMin    = $date->dropdownMinuteSelect(TRUE, TRUE, array("name" => "timeEnd[]")); 
+    $startHour = $date->dropdownHourSelect(TRUE, isset($options['startHour'])?$options['startHour']:TRUE, array("name" => "timeStart[]")); 
+    $startMin  = $date->dropdownMinuteSelect(TRUE, isset($options['startMin'])?$options['startMin']:TRUE, array("name" => "timeStart[]"));  
+    $endHour   = $date->dropdownHourSelect(TRUE, isset($options['endHour'])?$options['endHour']:TRUE, array("name" => "timeEnd[]")); 
+    $endMin    = $date->dropdownMinuteSelect(TRUE, isset($options['endMin'])?$options['endMin']:TRUE, array("name" => "timeEnd[]")); 
 
     // Engine Time Dropdowns & Return them for JS
     $startTime = $startHour . " : " . $startMin . "mins"; 

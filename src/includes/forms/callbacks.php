@@ -114,6 +114,44 @@ function insertWeekdays($formData) {
 }
 
 
+// callback functions 
+  //=========================================
+    function processImg(){
+       // Check if there is a legit file in there  
+       if(isset($_FILES['imageAd'])) { 
+           // Return the Image Info; 
+           $imageInfo = $_FILES['imageAd']; 
+           $imageData = imageUpload($imageInfo); 
+        } else { 
+            echo "Fail!"; 
+        }
+
+        $imgInfo = $_POST['MYSQL'];
+        $imgInfo['imageAd'] = $imageData; // set the image to go back with the post 
+
+        return $imgInfo;
+    }
+
+    function imageUpload($filedata){ 
+       // Test The Image Stuff 
+        $maxFileSize = 1000000; // 1mb  
+        $fileTypesAllowed = array("image/gif", "image/png", "image/jpeg", "image/jpg");  
+        
+        $theImageData = base64_encode(file_get_contents($filedata['tmp_name']));
+        $theImageMimeType = $filedata['type']; 
+        $theImageDataURI = "data:" . $theImageMimeType . ";" . 'base64,' . $theImageData; 
+
+
+        // Test to see if the image isn't too big & is an image 
+        if($filedata['size'] < $maxFileSize && in_array($filedata['type'], $fileTypesAllowed)) { 
+            return $theImageDataURI;
+        } else {
+            echo "Error!"; 
+            return false; 
+        }
+    }
+
+
 
 
 ?> 

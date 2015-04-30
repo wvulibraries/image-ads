@@ -21,6 +21,10 @@
     // ========================================================================
     recurseInsert("includes/addDateTimeFunctions.php","php");    
 
+    // Callbacks 
+    // ========================================================================
+    recurseInsert("includes/forms/callbacks.php", "php");
+
     // Create a new array for the data 
     // Pull the data into to multiple arrays so that it is easier to work with 
     // =========================================================================
@@ -65,9 +69,11 @@
     // ==========================================================================================
 
     $weekdayArray = array();
-    $startDates =  array(); 
-    $endDates = array(); 
-    $someValue = NULL; 
+    $startDates   = array(); 
+    $endDates     = array(); 
+    $startTime    = array(); 
+    $endTime      = array();
+
     foreach($imageDisplayArray as $imageDisplay) {
         foreach($imageDisplay as $dispIndex => $dispValue) {
             if(!is_empty($dispValue) && ($dispIndex === "dateStart" || $dispIndex === "dateEnd")) {
@@ -78,28 +84,13 @@
                      array_push($endDates, $dispValue); 
                 }
             }
-            if(!is_empty($dispValue && $dispIndex === "timeStart")) {
-                
-                $hour = date("H", $dispValue); 
-                $min  = date("i", $dispValue); 
-
-                $date = new date; 
-                $ddHour = $date->dropdownHourSelect(TRUE, $hour, array("name" => "timeStart[]"));
-                $ddMin =  $date->dropdownMinuteSelect(TRUE, $min, array("name" => "timeStart[]"));
-
-               // print $ddHour . $ddMin . "<br/>"; 
-
-            }
-            if(!is_empty($dispValue && $dispIndex === "timeEnd")) {
-                
-                $hour = date("H", $dispValue); 
-                $min  = date("i", $dispValue); 
-
-                $date = new date; 
-                $ddHour = $date->dropdownHourSelect(TRUE, $hour, array("name" => "timeStart[]"));
-                $ddMin =  $date->dropdownMinuteSelect(TRUE, $min, array("name" => "timeStart[]"));
-
-               // print $ddHour . $ddMin . "<br/>"; 
+            if(!is_empty($dispValue && $dispIndex === "timeStart" || $dispIndex ==="timeEnd")) {
+                // Pull into easier arrays to work with 
+                 if ( $dispIndex === "timeStart") { 
+                     array_push($startTime, $dispValue);
+                } else {  
+                     array_push($endTime, $dispValue); 
+                }
             }
             if(!is_empty($dispValue && $dispIndex === "weekdays")) {
                 $weekdaysTemp = explode(",", $dispValue); 
@@ -113,7 +104,9 @@
             }
         }
     }
-
+    // Loop through the easy array and make the display conditions
+    // then save to local var for re-use later 
+    // $itDates is a variable to keep from using $I, it is just the number of iterations to loop through
     for ($itDates = 0; $itDates < count($startDates); $itDates++) {
         
         $startValue = $startDates[$itDates]; 
@@ -129,19 +122,43 @@
         
         $dbDateRanges .= addDateRanges( 
                         array(
-                            'month' => $sMonth, 
-                            'day' => $sDay, 
-                            'year' => $sYear, 
+                            'month'    => $sMonth, 
+                            'day'      => $sDay, 
+                            'year'     => $sYear, 
                             'endMonth' => $eMonth,
-                            'endDay' => $eDay,
-                            'endYear' => $eYear
+                            'endDay'   => $eDay,
+                            'endYear'  => $eYear
                         )
                     );
     }
     // Set the DB Ranges toa  local var for use later 
     $localvars->set("exsistingDateRanges", $dbDateRanges); 
 
-    
+    // Loop through the array to make the display conditions for times 
+    // Very similar to above 
+    for($itTimes = 0; $itTimes < count($startTime); $itTimes++ ) {
+        $startValue = $startTime[$itTimes]; 
+        $endValue   = $endTime[$itTimes];
+
+         $starthour = date("H", $startValue); 
+         $startmin  = date("i", $startValue); 
+         $endhour   = date("H", $endValue); 
+         $endmin    = date("i", $endValue); 
+
+         $dbTimeRanges .= addTimeRanges( 
+                        array(
+                            'startHour' => $starthour,
+                            'startMin'  => $startmin,
+                            'endHour'   => $endhour,
+                            'endMin'    => $endmin
+                        )
+                    );
+    }
+
+    // Set the DB Ranges toa  local var for use later 
+    $localvars->set("exsistingTimeRanges", $dbTimeRanges); 
+
+
 
 // Call backs 
 // ============================================================================
@@ -159,6 +176,7 @@ function processImageInfo() {
     if(!is_empty($_POST) || session::has('POST')) { 
         $processor = formBuilder::createProcessor(); // create processor
         $processor->setCallback('beforeInsert', 'processImageInfo'); // Callbacks 
+        $processor->setCallback('afterInsert', 'adjustDisplayConditions');
         $processor->processPost();  // process form after callback is inserted 
     }
 
@@ -276,7 +294,7 @@ function processImageInfo() {
                     'name'   => "Time Ranges",
                     'label'  => "Add Times Image Will Display", 
                     'type'   => "plaintext",
-                    'value'  => "<a href='javascript:void(0);' class='addTimeRange'> Add Time </a> | <a href='javascript:void(0);' class='deleteTimeRange'> Remove Last Time Range </a>  ",
+                    'value'  => "<a href='javascript:void(0);' class='addTimeRange'> Add Time </a> | <a href='javascript:void(0);' class='deleteTimeRange'> Remove Last Time Range </a>" . $localvars->get("exsistingTimeRanges"),
                     'showIn' => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE)
                 )
             );
