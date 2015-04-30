@@ -3,25 +3,62 @@
 // Process New Image Callback 
 // ========================================
 function processNewImage() { 
-    echo "Callback working!"; 
-    return FALSE;  
+ // Grab the POST Data 
+ $imgInfo = $_POST['MYSQL'];
+ var_dump($imgInfo);
+
+ // Check if there is a file 
+    if(isset($_FILES['imageAd'])) { 
+      // if file exsists then look at the info and pass that into the 
+      // upload function -- upload function will test the image 
+       $imageInfo = $_FILES['imageAd']; 
+       $imageData = imageUpload($imageInfo); 
+    } else { 
+        // No image was loaded or something wasn't right
+        echo "Fail!"; 
+        return FALSE;
+    }
+
+    // Check to see if the Display Options exsist to run that information on the same callback 
+    // If it does we are going to go to the do run the commented function below 
+    // Needs to happen after the insert of the imageAds so I can then pull the imageAd ID
+    // addDisplayConditions($imgInfo);
+
+    $imgInfo['imageAd'] = $imageData; // set the image to go back with the post 
+    return $imgInfo;
+}   
+
+
+// Processing the Image and Uploading It 
+// ========================================
+function imageUpload($filedata){ 
+    // Test The Image Stuff 
+    $maxFileSize = 1000000; // 1mb  
+    $fileTypesAllowed = array("image/gif", "image/png", "image/jpeg", "image/jpg");  
+
+    $theImageData = base64_encode(file_get_contents($filedata['tmp_name']));
+    $theImageMimeType = $filedata['type']; 
+    $theImageDataURI = "data:" . $theImageMimeType . ";" . 'base64,' . $theImageData; 
+
+    // Test to see if the image isn't too big & is an image 
+    if($filedata['size'] < $maxFileSize && in_array($filedata['type'], $fileTypesAllowed)) { 
+        return $theImageDataURI;
+    } else {
+        echo "Error!"; 
+        return FALSE; 
+    }
 }
 
 
-
-
-// callback functions 
+// DISPLAY OPTIONS SUBMISSIONS 
 //=========================================
-function adjustDisplayConditions(){
-    // Take the Input Data
-     $dispCondData = $_POST['MYSQL'];
-
-    // Run the function to handle the display conditions for start dates 
-     insertingDates($dispCondData); 
-     insertingTimes($dispCondData);
-     insertWeekdays($dispCondData);
-
-      return false; 
+function addDisplayConditions($dispCondData){
+    if(!isnull($dispCondData)) { 
+        // Run the function to handle the display conditions for start dates 
+         insertingDates($dispCondData); 
+         insertingTimes($dispCondData);
+         insertWeekdays($dispCondData);
+    }
 }
 
 // DATE FUNCTIONS FOR CALLBACKS 
@@ -123,46 +160,5 @@ function insertWeekdays($formData) {
         $db->query($sql,$insertSQL);
     }
 }
-
-
-// callback functions 
-  //=========================================
-    function processImg(){
-       // Check if there is a legit file in there  
-       if(isset($_FILES['imageAd'])) { 
-           // Return the Image Info; 
-           $imageInfo = $_FILES['imageAd']; 
-           $imageData = imageUpload($imageInfo); 
-        } else { 
-            echo "Fail!"; 
-        }
-
-        $imgInfo = $_POST['MYSQL'];
-        $imgInfo['imageAd'] = $imageData; // set the image to go back with the post 
-
-        return $imgInfo;
-    }
-
-    function imageUpload($filedata){ 
-       // Test The Image Stuff 
-        $maxFileSize = 1000000; // 1mb  
-        $fileTypesAllowed = array("image/gif", "image/png", "image/jpeg", "image/jpg");  
-        
-        $theImageData = base64_encode(file_get_contents($filedata['tmp_name']));
-        $theImageMimeType = $filedata['type']; 
-        $theImageDataURI = "data:" . $theImageMimeType . ";" . 'base64,' . $theImageData; 
-
-
-        // Test to see if the image isn't too big & is an image 
-        if($filedata['size'] < $maxFileSize && in_array($filedata['type'], $fileTypesAllowed)) { 
-            return $theImageDataURI;
-        } else {
-            echo "Error!"; 
-            return false; 
-        }
-    }
-
-
-
 
 ?> 

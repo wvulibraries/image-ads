@@ -41,7 +41,7 @@
             'label'           => "File Upload",
             'showInEditStrip' => TRUE,
             'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE, formbuilder::TYPE_EDIT),
-            'required'        => TRUE,
+            //'required'        => TRUE,
             'type'            => 'file'
         )
     );
@@ -52,8 +52,7 @@
             'label'           => "Table ID",
             'primary'         => TRUE,
             'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE, formbuilder::TYPE_EDIT),
-            'type'            => 'hidden',
-            'value'           => $imageID
+            //'type'            => 'hidden',
         )
     );
 
@@ -62,7 +61,7 @@
             'name'            => "name",
             'label'           => "Image Name",
             'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE, formbuilder::TYPE_EDIT),
-            'required'        => TRUE,
+            //'required'        => TRUE,
             'type'            => 'text',
             'duplicates'      => TRUE, 
             'fieldID'         => "imgName"
@@ -75,7 +74,7 @@
             'label'           => "Is this image being displayed now?",
             'showInEditStrip' => TRUE,
             'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE, formbuilder::TYPE_EDIT),
-            'required'        => TRUE,
+           // 'required'        => TRUE,
             'type'            => 'boolean',
             'duplicates'      => TRUE,
             'options'         => array("YES","N0")
@@ -88,7 +87,7 @@
             'label'           => "Is this iamge high priority?",
             'showInEditStrip' => TRUE,
             'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE, formbuilder::TYPE_EDIT),
-            'required'        => TRUE,
+            //'required'        => TRUE,
             'type'            => 'boolean',
             'duplicates'      => TRUE,
             'options'         => array("YES","NO")
@@ -101,7 +100,7 @@
             'label'           => "Please provide meaningful alt text.",
             'showInEditStrip' => TRUE,
             'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE, formbuilder::TYPE_EDIT),
-            'required'        => TRUE,
+           // 'required'        => TRUE,
             'type'            => 'textarea',
         )
     );
@@ -112,7 +111,7 @@
             'label'           => "Add a Link",
             'showInEditStrip' => TRUE,
             'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE, formbuilder::TYPE_EDIT),
-            'required'        => TRUE,
+           // 'required'        => TRUE,
             'type'            => 'URL',
         )
     );
