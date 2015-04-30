@@ -63,123 +63,158 @@
     // Functions for building out the current date and time back into form options and setting them in the form fields
     // ================================================================================================================
 
-    function formatMonthSelectMenu($month) {
-        // Rebuild Forms 
-        $dateMonths        = array("", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
-        $selectMenuOptions = array("id" => "start_date", "name" => "dateStart[]"); 
+    // function formatMonthSelectMenu($month) {
+    //     // Rebuild Forms 
+    //     $dateMonths        = array("", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+    //     $selectMenuOptions = array("id" => "start_date", "name" => "dateStart[]"); 
 
-        // Rebuild Select Menu using the options and dates above 
-        $theMenu = sprintf('<select %s>', "name='dateStart[]' id='state_date'");
+    //     // Rebuild Select Menu using the options and dates above 
+    //     $theMenu = sprintf('<select %s>', "name='dateStart[]' id='state_date'");
 
-        // Loop through array, but forget the blank space
-        for($I=1; $I<count($dateMonths); $I++) {
-            $theMenu .= sprintf('<option value="%s" %s> %s </option>', 
-                                    $dateMonths[$I],
-                                    ($dateMonths[$I] == $month)?"selected":"",
-                                    $dateMonths[$I]
-                               );
-        }
-        $theMenu .= sprintf('</select>');
+    //     // Loop through array, but forget the blank space
+    //     for($I=1; $I<count($dateMonths); $I++) {
+    //         $theMenu .= sprintf('<option value="%s" %s> %s </option>', 
+    //                                 $dateMonths[$I],
+    //                                 ($dateMonths[$I] == $month)?"selected":"",
+    //                                 $dateMonths[$I]
+    //                            );
+    //     }
+    //     $theMenu .= sprintf('</select>');
 
-        return $theMenu; 
-    }
+    //     return $theMenu; 
+    // }
 
-    function formatDaySelectMenu($day) {
-        $days = 31; // Max Number of Days in a Month 
-        // Select menu Build 
-        $theMenu = sprintf('<select %s>', "name='dateStart[]' id='state_date'");
-        // Loop through the days starting at day 1 because you can't have 0 days
-        for($I=1; $I<=$days; $I++) {
-            $theMenu .= sprintf('<option value="%s" %s> %s </option>', 
-                                    $I, 
-                                    ($I == $day)?"selected":"", 
-                                    $I
-                                    //($I < 10)?"0".$I:$I
-                                 );
-        }
-        $theMenu .= sprintf('</select>');
-        return $theMenu; 
-    }
+    // function formatDaySelectMenu($day) {
+    //     $days = 31; // Max Number of Days in a Month 
+    //     // Select menu Build 
+    //     $theMenu = sprintf('<select %s>', "name='dateStart[]' id='state_date'");
+    //     // Loop through the days starting at day 1 because you can't have 0 days
+    //     for($I=1; $I<=$days; $I++) {
+    //         $theMenu .= sprintf('<option value="%s" %s> %s </option>', 
+    //                                 $I, 
+    //                                 ($I == $day)?"selected":"", 
+    //                                 $I
+    //                                 //($I < 10)?"0".$I:$I
+    //                              );
+    //     }
+    //     $theMenu .= sprintf('</select>');
+    //     return $theMenu; 
+    // }
 
-    function formatYearSelectMenu($year) {
+    // function formatYearSelectMenu($year) {
        
-        $getCurrentYear = date("Y"); 
-        $yearOptions = array(); 
+    //     $getCurrentYear = date("Y"); 
+    //     $yearOptions = array(); 
 
-        if($year <= $getCurrentYear) { 
-            $yearsTemp = ($year - 1);            
-            for($J = 5; $J >= 0;  $J--){ 
-                $yearsTemp += 1;
-                array_push($yearOptions,$yearsTemp); 
-            }
-        }
+    //     if($year <= $getCurrentYear) { 
+    //         $yearsTemp = ($year - 1);            
+    //         for($J = 5; $J >= 0;  $J--){ 
+    //             $yearsTemp += 1;
+    //             array_push($yearOptions,$yearsTemp); 
+    //         }
+    //     }
         
-        $theMenu = sprintf('<select %s>', "name='dateStart[]' id='state_date'");
-        // Loop through the days starting at day 1 because you can't have 0 days
-        for($I=0; $I<=count($yearOptions); $I++) {
-            $theMenu .= sprintf('<option value="%s" %s> %s </option>', 
-                                    $yearOptions[$I], 
-                                    ($yearOptions[$I] == $year)?"selected":"", 
-                                    $yearOptions[$I]
-                                 );
-        }
-        $theMenu .= sprintf('</select>');
-        return $theMenu; 
-    }
+    //     $theMenu = sprintf('<select %s>', "name='dateStart[]' id='state_date'");
+    //     // Loop through the days starting at day 1 because you can't have 0 days
+    //     for($I=0; $I<=count($yearOptions); $I++) {
+    //         $theMenu .= sprintf('<option value="%s" %s> %s </option>', 
+    //                                 $yearOptions[$I], 
+    //                                 ($yearOptions[$I] == $year)?"selected":"", 
+    //                                 $yearOptions[$I]
+    //                              );
+    //     }
+    //     $theMenu .= sprintf('</select>');
+    //     return $theMenu; 
+    // }
 
+    // function formatTime(){ 
+
+    // }
 
 
     $numOfDisplayConditions = count($imageDisplayArray);
-    
-    // function pullTime($unixdate){
-    //     $date = date("H:m", $unixdate);
-    //     // Going to have to build out the form elements and do the insertions through this function 
-    // }
+    $weekdayArray = array();
+
         foreach($imageDisplayArray as $imageDisplay) {
             foreach($imageDisplay as $dispIndex => $dispValue) {
                 if(!is_empty($dispValue) && $dispIndex === "dateStart") {
-                    // echo addDateRanges();
+    
                     //print $dispIndex . " - " . $dispValue . "<br>"; 
-
                     // Seperate the date into values for the select menus 
-                    $month = date('F', $dispValue);
+                    $month = date('m', $dispValue);
                     $day   = date('d', $dispValue); 
                     $year  = date('Y', $dispValue); 
-                    
+                
+                    // Looking for solution using the date class in engineAPI 
+                     $date    = new date; 
+                     $ddMonth = $date->dropdownMonthSelect(1,$month,array());
+                     $ddDay   = $date->dropdownDaySelect($day,array()); 
+                     $ddYear  = $date->dropdownYearSelect(-1,5,$year,array());
 
-                    // Print the form elements to the screen 
-                    print formatMonthSelectMenu($month) . formatDaySelectMenu($day) . formatYearSelectMenu($year) . "<br>";
-
-                    // $date = new date; 
-                    // // Date and Time Dropdown
-                    // // Let engine build then modify the value 
-                    // $startMonth = $date->dropdownMonthSelect(1, FALSE, array("id"=>"start_date","name"=>"dateStart[]"));
-                    // $startDay   = $date->dropdownDaySelect(FALSE, array("id"=>"start_date","name"=>"dateStart[]")); 
-                    // $startYear  = $date->dropdownYearSelect(0,1, FALSE, array("id"=>"start_date","name"=>"dateStart[]"));
-                    // print $startMonth . " - " . $startDay . " - " . $startYear . "<br>"; 
+                     print $ddMonth . $ddDay . $ddYear . " - "; 
                 }
-               
+                if(!is_empty($dispValue) && $dispIndex === "dateEnd") {
+    
+                    //print $dispIndex . " - " . $dispValue . "<br>"; 
+                    // Seperate the date into values for the select menus 
+                    $month = date('m', $dispValue);
+                    $day   = date('d', $dispValue); 
+                    $year  = date('Y', $dispValue); 
+                
+                    // Looking for solution using the date class in engineAPI 
+                     $date    = new date; 
+                     $ddMonth = $date->dropdownMonthSelect(1,$month,array());
+                     $ddDay   = $date->dropdownDaySelect($day,array()); 
+                     $ddYear  = $date->dropdownYearSelect(-1,5,$year,array());
+
+                     print $ddMonth . $ddDay . $ddYear . "<br>"; 
+                }
                 if(!is_empty($dispValue && $dispIndex === "timeStart")) {
-                    print $dispIndex . " == " . date('H:i', $dispValue) . "<br/>"; 
+                    
+                    $hour = date("H", $dispValue); 
+                    $min  = date("i", $dispValue); 
+
+                    $date = new date; 
+                    $ddHour = $date->dropdownHourSelect(TRUE, $hour, array("name" => "timeStart[]"));
+                    $ddMin =  $date->dropdownMinuteSelect(TRUE, $min, array("name" => "timeStart[]"));
+
+                    print $ddHour . $ddMin . "<br/>"; 
+
                 }
                 if(!is_empty($dispValue && $dispIndex === "timeEnd")) {
-                    print $dispIndex . " == " . date('H:i',$dispValue) . "<br/>"; 
+                    
+                    $hour = date("H", $dispValue); 
+                    $min  = date("i", $dispValue); 
+
+                    $date = new date; 
+                    $ddHour = $date->dropdownHourSelect(TRUE, $hour, array("name" => "timeStart[]"));
+                    $ddMin =  $date->dropdownMinuteSelect(TRUE, $min, array("name" => "timeStart[]"));
+
+                    print $ddHour . $ddMin . "<br/>"; 
                 }
                 if(!is_empty($dispValue && $dispIndex === "weekdays")) {
-                    print $dispIndex . " == " . $dispValue . "<br/>"; 
+                    // // Removing Duplicate Weekday Values 
+                    // // Maybe this should be done somewhere else, like when the values are added
+                    // $weekdayArrayTemp = explode(",", $dispValue);  // Remove Duplicates 
+
+                    // for($I = 0; $I<count($weekdayArrayTemp); $I++){ 
+                    //    $weekdayValue = $weekdayArrayTemp[$I];
+                    //    if(!in_array($weekdayValue, $weekdayArray)){
+                    //         array_push($weekdayArray, $weekdayValue);
+                    //    }
+                    // }
+
+                    $weekdaysTemp = explode(",", $dispValue); 
+                    for($I = 0; $I<count($weekdaysTemp); $I++){
+                        $tempValue = $weekdaysTemp[$I]; 
+                        // Check for Duplicates 
+                        if(!in_array( $tempValue ,$weekdayArray)) { 
+                            array_push($weekdayArray, $tempValue); // Push to array
+                        }
+                    }
                 }
             }
         }
-    
-
-
-    //  // Define Dropdwons 
-    // $startHour = $date->dropdownHourSelect(TRUE, TRUE, array("name" => "timeStart[]")); 
-    // $startMin  = $date->dropdownMinuteSelect(TRUE, TRUE, array("name" => "timeStart[]"));  
-
-    // $endHour   = $date->dropdownHourSelect(TRUE, TRUE, array("name" => "timeEnd[]")); 
-    // $endMin    = $date->dropdownMinuteSelect(TRUE, TRUE, array("name" => "timeEnd[]")); 
-      
 
 // Call backs 
 // ============================================================================
@@ -337,6 +372,7 @@ function processImageInfo() {
                                     'Sunday'    => "Sunday" 
                                   ), 
                     'showIn'  => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE),
+                    'value' => $weekdayArray
                 )
             );
         }
