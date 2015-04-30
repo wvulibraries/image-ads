@@ -54,9 +54,9 @@ function addTimeRanges($options=NULL) {
 
     // Define Dropdwons 
     $startHour = $date->dropdownHourSelect(TRUE, isset($options['startHour'])?$options['startHour']:TRUE, array("name" => "timeStart[]")); 
-    $startMin  = $date->dropdownMinuteSelect(TRUE, isset($options['startMin'])?$options['startMin']:TRUE, array("name" => "timeStart[]"));  
+    $startMin  = $date->dropdownMinuteSelect(15, isset($options['startMin'])?$options['startMin']:TRUE, array("name" => "timeStart[]"));  
     $endHour   = $date->dropdownHourSelect(TRUE, isset($options['endHour'])?$options['endHour']:TRUE, array("name" => "timeEnd[]")); 
-    $endMin    = $date->dropdownMinuteSelect(TRUE, isset($options['endMin'])?$options['endMin']:TRUE, array("name" => "timeEnd[]")); 
+    $endMin    = $date->dropdownMinuteSelect(15, isset($options['endMin'])?$options['endMin']:TRUE, array("name" => "timeEnd[]")); 
 
     // Engine Time Dropdowns & Return them for JS
     $startTime = $startHour . " : " . $startMin . "mins"; 

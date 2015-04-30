@@ -1,4 +1,15 @@
 <?php
+
+// Process New Image Callback 
+// ========================================
+function processNewImage() { 
+    echo "Callback working!"; 
+    return FALSE;  
+}
+
+
+
+
 // callback functions 
 //=========================================
 function adjustDisplayConditions(){

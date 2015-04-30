@@ -13,7 +13,7 @@
 <section>
     <div id="UploadImageForm">
 	   {form name="imageAdForm" display="form"}
-       {form name="imageAdForm" display="edit" expandable="true" addGet="true"}
+      <!--  {form name="imageAdForm" display="edit" expandable="true" addGet="true"} -->
     </div>
 </section>
 
