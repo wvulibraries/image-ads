@@ -269,97 +269,27 @@ function updateImageAd($data,$id) {
     }
 }
 
-function updateImageDispOptions($data,$id) { 
-   // DB Stuff 
-    $localvars = localvars::getInstance();
-    $db  = db::get($localvars->get('dbConnectionName'));
-
-  // Update SQL for each option 
-    if(!isnull($data)) {
-        updateDates($data,$id); 
-       // updateTimes($data,$id);
-       // updateWeekdays($data,$id); 
-    }
-}
-
-function updateDates($formInfo, $id){ 
-    print "<pre>"; 
-    var_dump($formInfo); print "</pre>"; 
-
+// Avoiding Repition 
+// Deleting  Records  &  Adding the new ones for the display Options 
+function updateImageDispOptions($formInfo, $id){ 
     // DB Stuff 
     $localvars = localvars::getInstance();
     $db  = db::get($localvars->get('dbConnectionName'));
 
-    // We dont' want to add complete null stuff 
-    if(!isnull($formInfo['dateStart'])) { 
-         // Adjust them with to Unix timestamps
-        $startDates =  adjustDates($formInfo["dateStart"]); 
-        $endDates = adjustDates($formInfo["dateEnd"]);
-
-        // Setup the DB query 
-        $sql = sprintf("UPDATE displayConditions SET `dateStart` = ?, `dateEnd` = ? WHERE `weekdays` = 'NULL', `timeStart` = 'NULL', `timeEnd` = 'NULL', `imageAdID` = %s", $id);
-
-        var_dump($sql); 
-
-        // Loop through the Date Ranges and Push them into the DB 
-        for($dateIteration = 0; $dateIteration < count($startDates); $dateIteration++) { 
-            $insertSQL = array($startDates[$dateIteration],$endDates[$dateIteration]);
-            $sqlResult = $db->query($sql, $insertSQL); 
-            
-
-        }
-    } else if (isnull($formInfo['dateStart'])){
-
-        $sql = sprintf("DELETE FROM displayConditions WHERE `imageAdID` = %s", $id);
-
-        $sqlResult = $db->query($sql);     
-         if($sqlResult->error()) {
-            errorHandle::newError(__FUNCTION__."() - " . $sqlResult->errorMsg(), errorHandle::DEBUG);
-            errorHandle::errorMsg(getResultMessage("systemsPolicyError")); 
-            return false; 
-         } else { 
-            // Success message for 3 seconds 
-            echo "<div class='success'> Your have successfully deleted the records </div>"; 
-         }
-    } 
+    // Delete the Records So that we don't have to try and guess what is new and what is old data
+    $sql = sprintf("DELETE FROM displayConditions WHERE `imageAdID` = %s", $id);
+    $sqlResult = $db->query($sql);     
+    
+    if($sqlResult->error()) {
+        errorHandle::newError(__FUNCTION__."() - " . $sqlResult->errorMsg(), errorHandle::DEBUG);
+        errorHandle::errorMsg(getResultMessage("systemsPolicyError")); 
+        return false; 
+    }
+    else { 
+        // set the id into the data 
+        $formInfo['imageAdID'] = $id; 
+        addDisplayConditions($formInfo);  
+    }
 }
-
-// // Insert Time into the DB  
-// function insertingTimes($formData){ 
-//     $startTimes = adjustTimes($formData["timeStart"]); 
-//     $endTimes = adjustTimes($formData["timeEnd"]); 
-
-//     // DB Stuff 
-//     $localvars = localvars::getInstance();
-//     $db  = db::get($localvars->get('dbConnectionName'));
-
-//     // We dont' want to add complete null stuff 
-//     if(!$startTimes == NULL) { 
-//         // Setup the DB query 
-//         $sql = sprintf("INSERT INTO displayConditions SET `dateStart`,dateEnd, weekdays,timeStart,timeEnd) VALUES (?,?,?,?,?,?)");
-//         // Loop through the Date Ranges and Push them into the DB 
-//         for($timeIt = 0; $timeIt < count($startTimes); $timeIt++) { 
-//             $insertSQL = array($formData['imageAdID'], NULL, NULL, NULL, $startTimes[$timeIt], $endTimes[$timeIt]);
-//             $db->query($sql, $insertSQL); 
-//         }
-//     }
-// }
-
-// // Inserting Weekday Values 
-// // ===========================================
-// function insertWeekdays($formData) { 
-//     // DB Stuff 
-//     $localvars = localvars::getInstance();
-//     $db  = db::get($localvars->get('dbConnectionName'));
-
-//     if(!$formData['weekdays'] == NULL) { 
-//         $sql = sprintf("INSERT INTO displayConditions (imageAdID,dateStart,dateEnd, weekdays,timeStart,timeEnd) VALUES (?,?,?,?,?,?)");
-        
-//         $weekArrays = implode(",", $formData['weekdays']); 
-//         $insertSQL = array($formData['imageAdID'], NULL, NULL, $weekArrays, NULL, NULL);
-//         $db->query($sql,$insertSQL);
-//     }
-// }
-
 
 ?> 
