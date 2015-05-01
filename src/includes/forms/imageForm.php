@@ -17,6 +17,7 @@
         // =========================================
         // Parameter Types ($trigger, $callback) 
         $processor->setCallback('beforeInsert', 'processNewImage');
+        $processor->setCallback('afterInsert', 'processDisplayInformation');
         $processor->processPost(); 
     }
 
@@ -33,6 +34,8 @@
     $form->updateTitle = "Update Form";
     $form->submitTextUpdate = 'Update';
     $form->submitTextEdit   = 'Update';
+
+    
 
     $form->addField(
         array(
@@ -151,7 +154,6 @@
                                 'Sunday'    => "Sunday" 
                               ), 
                 'showIn'  => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE),
-                'value' => $weekdayArray
             )
         );
     

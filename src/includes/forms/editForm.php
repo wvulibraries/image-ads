@@ -1,4 +1,5 @@
  <?php 
+
     // Pull in current information from the DB
     // ====================================================
     $imageID = $_GET['MYSQL']['imageID']; 
@@ -17,15 +18,15 @@
         return FALSE;
     }
 
-    // Insert Time and Date Functions used by JS 
-    // ========================================================================
-    recurseInsert("includes/addDateTimeFunctions.php","php");    
-
-    // Callbacks 
-    // ========================================================================
+// Callbacks 
+// ========================================================================
     recurseInsert("includes/forms/callbacks.php", "php");
 
-    // Create a new array for the data 
+// Display Option Information 
+// ========================================================================
+    recurseInsert("includes/addDateTimeFunctions.php","php");  
+
+// Create a new array for the data 
     // Pull the data into to multiple arrays so that it is easier to work with 
     // =========================================================================
 
@@ -46,6 +47,7 @@
         // Need to add something to search for if Null or Not Null 
 
         $tempDispArray = array(
+            'ID'        => $row['ID'],
             'dateStart' => $row['dateStart'],
             'dateEnd'   => $row['dateEnd'],
             'timeStart' => $row['timeStart'],
@@ -159,43 +161,37 @@
 
     // Set the DB Ranges toa  local var for use later 
     $localvars->set("exsistingTimeRanges", $dbTimeRanges); 
+    $imgURI = $displayAdRecords[$imageID]['imageInfo']['imageAd'];
 
-
-// Form Creating and Updating Pulling information into the values fo the form
-// ============================================================================
 
 // Callback Logic for handling the image upload 
     if(!is_empty($_POST) || session::has('POST')) { 
-        $processor = formBuilder::createProcessor(); // create processor
-        $processor->setCallback('beforeInsert', 'processUpdate'); // Callbacks 
-        $processor->processPost();  // process form after callback is inserted 
+        // Run the Processor 
+        // ========================================
+        $processor = formBuilder::createProcessor(); 
+        // Set the Callback functions to fire from the callbacks.php file
+        // =========================================
+        // Parameter Types ($trigger, $callback) 
+        $processor->setCallback('beforeUpdate', 'processUpdate');
+        // $processor->setCallback('afterInsert', 'processDisplayInformation');
+        $processor->processPost(); 
     }
 
-    $form      = formBuilder::createForm('editImage');
+// Building the form 
+    $localvars = localvars::getInstance();
+    $form = formBuilder::createForm('editAdForm');
 
-    
     $form->linkToDatabase(array(
         'table' => "imageAds"
     ));
 
-    $form->insertTitle = "Edit Image";
-    $form->editTitle   = "Edit Image";
-    $form->updateTitle = "Edit Image";
+    $form->insertTitle = "New Roating Image";
+    $form->editTitle   = "Edit Rotating Image";
+    $form->updateTitle = "Update Form";
+    $form->submitTextUpdate = 'Update';
+    $form->submitTextEdit   = 'Update';
 
-    $imgURI = $displayAdRecords[$imageID]['imageInfo']['imageAd']; 
-
-    $form->addField(
-        array(
-            'name'    => "ID",
-            'label'   => "Table ID",
-            'primary' => TRUE,
-            'showIn'  => array(formBuilder::TYPE_INSERT),
-            'type'    => 'hidden',
-            'value'   => $imageID
-        )
-    );
-
-    $form->addField(
+     $form->addField(
         array(
             'name'   => "Current Image",
             'label'  => "Image Your Editing", 
@@ -206,14 +202,24 @@
 
     $form->addField(
         array(
+            'name'            => "ID",
+            'label'           => "Table ID",
+            'primary'         => TRUE,
+            'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE, formbuilder::TYPE_EDIT),
+            'type'          => 'hidden',
+            'value'           => $imageID
+        )
+    );
+
+    $form->addField(
+        array(
             'name'            => "name",
             'label'           => "Image Name",
             'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE, formbuilder::TYPE_EDIT),
-            'required'        => TRUE,
+            //'required'        => TRUE,
             'type'            => 'text',
             'duplicates'      => TRUE, 
-            'fieldID'         => "imgName",
-            'value'           => $imageInfoArray['name']
+            'fieldID'         => "imgName"
         )
     );
 
@@ -223,25 +229,23 @@
             'label'           => "Is this image being displayed now?",
             'showInEditStrip' => TRUE,
             'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE, formbuilder::TYPE_EDIT),
-            'required'        => TRUE,
+           // 'required'        => TRUE,
             'type'            => 'boolean',
             'duplicates'      => TRUE,
-            'options'         => array("YES","N0"),
-            'value'           => $imageInfoArray['enabled']
+            'options'         => array("YES","N0")
         )
     );
 
-     $form->addField(
+    $form->addField(
         array(
             'name'            => "priority",
-            'label'           => "Is this iamge high priority?",
+            'label'           => "Is this image high priority?",
             'showInEditStrip' => TRUE,
             'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE, formbuilder::TYPE_EDIT),
-            'required'        => TRUE,
+            //'required'        => TRUE,
             'type'            => 'boolean',
             'duplicates'      => TRUE,
-            'options'         => array("YES","NO"),
-            'value'           => $imageInfoArray['priority']
+            'options'         => array("YES","NO")
         )
     );
 
@@ -251,9 +255,8 @@
             'label'           => "Please provide meaningful alt text.",
             'showInEditStrip' => TRUE,
             'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE, formbuilder::TYPE_EDIT),
-            'required'        => TRUE,
+           // 'required'        => TRUE,
             'type'            => 'textarea',
-            'value'           => $imageInfoArray['altText']
         )
     );
 
@@ -263,54 +266,49 @@
             'label'           => "Add a Link",
             'showInEditStrip' => TRUE,
             'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE, formbuilder::TYPE_EDIT),
-            'required'        => TRUE,
+           // 'required'        => TRUE,
             'type'            => 'URL',
-            'value'           => $imageInfoArray['actionURL']
         )
     );
 
+    $form->addField(
+            array(
+                'name'   => "Date Ranges",
+                'label'  => "Add Dates Image Will Display", 
+                'type'   => "plaintext",
+                'value'  => "<a href='javascript:void(0);' class='addDateRange'> Add Date </a> | <a href='javascript:void(0);' class='deleteDateRange'> Remove Last Date </a>" . $localvars->get("exsistingDateRanges"),
+                'showIn' => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE)
+            )
+        );
 
-    if(!isnull($imageDisplayArray)) {
-     $form->addField(
-                array(
-                    'name'   => "Date Ranges",
-                    'label'  => "Add Dates Image Will Display", 
-                    'type'   => "plaintext",
-                    'value'  => "<a href='javascript:void(0);' class='addDateRange'> Add Date </a> | <a href='javascript:void(0);' class='deleteDateRange'> Remove Last Date </a>" . $localvars->get("exsistingDateRanges"),
-                    'showIn' => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE)
-                )
-            );
-
-            $form->addField(
-                array(
-                    'name'   => "Time Ranges",
-                    'label'  => "Add Times Image Will Display", 
-                    'type'   => "plaintext",
-                    'value'  => "<a href='javascript:void(0);' class='addTimeRange'> Add Time </a> | <a href='javascript:void(0);' class='deleteTimeRange'> Remove Last Time Range </a>" . $localvars->get("exsistingTimeRanges"),
-                    'showIn' => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE)
-                )
-            );
-                
-            $form->addField(
-                array(
-                    'name'    => "weekdays",
-                    'label'   => "Days of the Week",
-                    'type'    => "checkbox",
-                    'options' => array(
-                                    'Monday'    => "Monday",
-                                    'Tuesday'   => 'Tuesday',
-                                    'Wednesday' => "Wednesday",
-                                    'Thursday'  => "Thursday", 
-                                    'Friday'    => "Friday", 
-                                    'Saturday'  => "Saturday", 
-                                    'Sunday'    => "Sunday" 
-                                  ), 
-                    'showIn'  => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE),
-                    'value' => $weekdayArray
-                )
-            );
-        }
-
-?>
-
-
+        $form->addField(
+            array(
+                'name'   => "Time Ranges",
+                'label'  => "Add Times Image Will Display", 
+                'type'   => "plaintext",
+                'value'  => "<a href='javascript:void(0);' class='addTimeRange'> Add Time </a> | <a href='javascript:void(0);' class='deleteTimeRange'> Remove Last Time Range </a>" . $localvars->get("exsistingTimeRanges"),
+                'showIn' => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE)
+            )
+        );
+            
+        $form->addField(
+            array(
+                'name'    => "weekdays",
+                'label'   => "Days of the Week",
+                'type'    => "checkbox",
+                'options' => array(
+                                'Monday'    => "Monday",
+                                'Tuesday'   => 'Tuesday',
+                                'Wednesday' => "Wednesday",
+                                'Thursday'  => "Thursday", 
+                                'Friday'    => "Friday", 
+                                'Saturday'  => "Saturday", 
+                                'Sunday'    => "Sunday" 
+                              ), 
+                'showIn'  => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE),
+                'value' => $weekdayArray
+            )
+        );
+    
+    
+?> 
