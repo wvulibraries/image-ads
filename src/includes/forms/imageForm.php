@@ -15,7 +15,7 @@
         $editForm = FALSE; 
     } else { 
         $editForm = TRUE; 
-        recurseInsert("includes/forms/editForm.php"); 
+        recurseInsert("includes/forms/editForm.php", "php"); 
     }
      
 
