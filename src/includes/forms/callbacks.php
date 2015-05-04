@@ -82,12 +82,12 @@ function processDisplayInformation($processor) {
 // ========================================
 function imageUpload($filedata){ 
     // Test The Image Stuff 
-    $maxFileSize = 1000000; // 1mb  
+    $maxFileSize      = 1000000; // 1mb  
     $fileTypesAllowed = array("image/gif", "image/png", "image/jpeg", "image/jpg");  
-
-    $theImageData = base64_encode(file_get_contents($filedata['tmp_name']));
+    
+    $theImageData     = base64_encode(file_get_contents($filedata['tmp_name']));
     $theImageMimeType = $filedata['type']; 
-    $theImageDataURI = "data:" . $theImageMimeType . ";" . 'base64,' . $theImageData; 
+    $theImageDataURI  = "data:" . $theImageMimeType . ";" . 'base64,' . $theImageData; 
 
     // Test to see if the image isn't too big & is an image 
     if($filedata['size'] < $maxFileSize && in_array($filedata['type'], $fileTypesAllowed)) { 
@@ -257,11 +257,11 @@ function updateImageAd($data,$id) {
     $db  = db::get($localvars->get('dbConnectionName'));
 
   // SQL
-    if(!isnull($data)) {
-        $sql = sprintf("UPDATE `imageAds` SET `name` = ?, `enabled` = ?, `priority` = ? , `altText` = ?, `actionURL` = ? WHERE `ID` = %s", $id);
-        $sqlArray = array($data['name'],$data['enabled'],$data['priority'],$data['altText'],$data['actionURL']); 
+        if(!isnull($data)) {
+        $sql       = sprintf("UPDATE `imageAds` SET `name` = ?, `enabled` = ?, `priority` = ? , `altText` = ?, `actionURL` = ? WHERE `ID` = %s", $id);
+        $sqlArray  = array($data['name'],$data['enabled'],$data['priority'],$data['altText'],$data['actionURL']); 
         $sqlResult = $db->query($sql,$sqlArray); 
-    }
+        }
     if($sqlResult) { 
         echo " Results Updated "; 
     } else { 
