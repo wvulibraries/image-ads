@@ -7,11 +7,6 @@ function processNewImage() {
 
  // Grab the POST Data 
  $imgForm = $_POST['MYSQL'];
-
- // print "<pre>"; 
- // var_dump($imgForm);
- // print "</pre>";
-
  // new array for the image info 
     $imgInfo = array(   
         "__formID"  => $imgForm["__formID"],
@@ -223,17 +218,23 @@ function processUpdate() {
     // Get the Posted Data 
     $editedFormData = $_POST['MYSQL'];
 
+    print "<pre>"; 
+    var_dump($editedFormData);
+    print "</pre>";
+
     // Image ID
     $imageID = $_GET['MYSQL']['imageID']; 
 
     // new array for the image info 
     $imgInfo = array(   
-        "__formID"  => $editedFormData["__formID"],
-        "name"      => $editedFormData['name'],
-        "enabled"   => $editedFormData['enabled'], 
-        "priority"  => $editedFormData['priority'],
-        "altText"   => $editedFormData['altText'],
-        "actionURL" => $editedFormData['actionURL']
+        "__formID"    => $editedFormData['__formID'],
+        "__csrfToken" => $editedFormData['__csrfToken'],
+        "__csrfID"    => $editedFormData['__csrfID'],
+        "name"        => $editedFormData['name'],
+        "enabled"     => $editedFormData['enabled'], 
+        "priority"    => $editedFormData['priority'],
+        "altText"     => $editedFormData['altText'],
+        "actionURL"   => $editedFormData['actionURL']
     ); 
 
  // new array for the display conditions 
@@ -246,27 +247,8 @@ function processUpdate() {
     ); 
 
     // Send off the info to be processed by other functions 
-    updateImageAd($imgInfo,$imageID); 
     updateImageDispOptions($imgDisplayConditions, $imageID);
-    // return $imgInfo;
-}
-
-function updateImageAd($data,$id) { 
-  // DB Stuff 
-    $localvars = localvars::getInstance();
-    $db  = db::get($localvars->get('dbConnectionName'));
-
-  // SQL
-        if(!isnull($data)) {
-        $sql       = sprintf("UPDATE `imageAds` SET `name` = ?, `enabled` = ?, `priority` = ? , `altText` = ?, `actionURL` = ? WHERE `ID` = %s", $id);
-        $sqlArray  = array($data['name'],$data['enabled'],$data['priority'],$data['altText'],$data['actionURL']); 
-        $sqlResult = $db->query($sql,$sqlArray); 
-        }
-    if($sqlResult) { 
-        echo " Results Updated "; 
-    } else { 
-        echo "Fail!";
-    }
+    return $imgInfo;
 }
 
 // Avoiding Repition 
