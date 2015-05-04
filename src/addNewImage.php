@@ -17,6 +17,10 @@
     </div>
 </section>
 
+<section> 
+    <a href="index.php" class="button"> Back to Home </a>
+</section>')
+
 <!-- 
 ===================================================================
 // Need to insert some JS Here that shows the preivew of the image 

@@ -40,7 +40,7 @@ $localVars->set("pageURL","http".((isset($_SERVER['HTTPS']))?"s":"")."://".$_SER
 	<![endif]-->
 
 	<!-- <script type="text/javascript" src="{local var="jsURL"}/bootstrap/js/bootstrap.min.js"></script> -->
-	<!-- <link rel="stylesheet"                       type="text/css" href="{local var="jsURL"}/bootstrap/css/bootstrap.min.css"/> -->
+	<link rel="stylesheet" type="text/css" href="{local var="jsURL"}/bootstrap/css/bootstrap.min.css"/> 
 
 	<link rel="stylesheet{local var="styleRel"}" type="text/css" href="{local var="cssURL"}/common.{local var="cssExt"}" />
 	<link rel="stylesheet{local var="styleRel"}" type="text/css" href="{local var="cssURL"}/fonts.{local var="cssExt"}" />

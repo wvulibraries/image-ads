@@ -20,8 +20,14 @@
         errorHandle::errorMsg(getResultMessage("systemsPolicyError")); 
         return false; 
      } else { 
-        // Success message for 3 seconds 
-        echo "<div class='success'> Your have successfully deleted the records </div>"; 
+        // Success message forward back home 
+       $message = sprintf(' <div class"success"> You have deleted the record! </div> 
+                            <section> 
+                                <a href="addNewImage.php" class="button"> Add New Image </a>
+                                <a href="index.php" class="button"> Back to Home </a>
+                            </section>');
+
+       echo $message; 
      }
 
      $sqlDisCondResult = $db->query($sqlRemoveDispCond);

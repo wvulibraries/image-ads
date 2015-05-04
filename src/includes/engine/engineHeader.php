@@ -17,6 +17,4 @@
 
 		recurseInsert("includes/engine/headerIncludes.php","php");
 		templates::load("library2012.2col");
-
-
 ?>

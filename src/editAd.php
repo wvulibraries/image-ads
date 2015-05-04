@@ -20,7 +20,10 @@
     </div>
 </section>
 
-
+<section> 
+    <a href="addNewImage.php" class="button"> Add New Image </a>
+    <a href="index.php" class="button"> Back to Home </a>
+</section>
 
 <?php
     templates::display('footer'); 
