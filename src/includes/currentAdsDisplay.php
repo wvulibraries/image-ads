@@ -71,6 +71,22 @@
                 // do nothing so that it doesn't show that to the user
                 $imgID = $imgProperties; 
             } 
+            else if ($recordsIndex == "enabled"){
+                if($imageProperties == 0 ){
+                   print  "<div class='image-diabled'><p> Image is Disabled </p></div>";  
+                } 
+                else { 
+                    print "<div class='image-enabled'><p> Image is Enabled </p></div>";
+                }
+            }
+            else if ($recordsIndex == "priority"){
+                if($imageProperties == 0 ){
+                   print  "<div class='image-priority-high'><p> Low Priority </p></div>";  
+                } 
+                else { 
+                    print "<div class='image-prioroity-high'><p> High Priority </p></div>";
+                }
+            }
             else { 
                 print "<li>" . $imgProperties . "</li>"; 
             }
