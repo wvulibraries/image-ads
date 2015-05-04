@@ -27,10 +27,10 @@
         // A placeholder array that will be used for the basic info from the imageAds Table
         $tempAdArray = array(
             'ID'        => $row['ID'],
-            'name'      => $row['name'], 
+            'name'      => htmlSanitize($row['name']), 
             'enabled'   => $row['enabled'],
             'priority'  => $row['priority'],
-            'altText'   => $row['altText'],
+            'altText'   => htmlSanitize($row['altText']),
             'actionURL' => $row['actionURL'],
             'imageAd'   => $row['imageAd']
         ); 
