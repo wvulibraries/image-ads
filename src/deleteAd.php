@@ -19,16 +19,10 @@
      $sqlImgResult = $db->query($sqlRemoveImg, array($imageID));     
      if($sqlImgResult->error()) {
         errorHandle::newError(__FUNCTION__."() - " . $sqlImgResult->errorMsg(), errorHandle::DEBUG);
-        errorHandle::errorMsg(getResultMessage("systemsPolicyError")); 
+        errorHandle::errorMsg('Error deleting record'); 
      } else { 
         // Success message forward back home 
-       $message = sprintf(' <div class"success"> You have deleted the record! </div> 
-                            <section> 
-                                <a href="addNewImage.php" class="button"> Add New Image </a>
-                                <a href="index.php" class="button"> Back to Home </a>
-                            </section>');
-
-       echo $message; 
+       errorHandle::successMsg('You have deleted the record!');
      }
 
      $sqlDisCondResult = $db->query($sqlRemoveDispCond, array($imageID));
@@ -37,4 +31,13 @@
         errorHandle::errorMsg(getResultMessage("systemsPolicyError")); 
      }
 
+     $localvars->set("resultMessage",errorHandle::prettyPrint());
+
 ?>
+
+{local var="resultMessage"}
+
+<section> 
+    <a href="addNewImage.php" class="button"> Add New Image </a>
+    <a href="index.php" class="button"> Back to Home </a>
+</section>
