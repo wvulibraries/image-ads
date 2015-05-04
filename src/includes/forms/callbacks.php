@@ -248,7 +248,27 @@ function processUpdate() {
 
     // Send off the info to be processed by other functions 
     updateImageDispOptions($imgDisplayConditions, $imageID);
+    // Send off the info to be processed by other functions 
+    updateImageAd($imgInfo,$imageID); 
+
     return $imgInfo;
+}
+
+function updateImageAd($data,$id) { 
+  // DB Stuff 
+    $localvars = localvars::getInstance();
+    $db  = db::get($localvars->get('dbConnectionName'));
+  // SQL
+        if(!isnull($data)) {
+        $sql       = sprintf("UPDATE `imageAds` SET `name` = ?, `enabled` = ?, `priority` = ? , `altText` = ?, `actionURL` = ? WHERE `ID` = %s", $id);
+        $sqlArray  = array($data['name'],$data['enabled'],$data['priority'],$data['altText'],$data['actionURL']); 
+        $sqlResult = $db->query($sql,$sqlArray); 
+        }
+    if($sqlResult) { 
+        echo " Results Updated "; 
+    } else { 
+        echo "Fail!";
+    }
 }
 
 // Avoiding Repition 
