@@ -72,7 +72,7 @@
                 $imgID = $imgProperties; 
             } 
             else if ($recordsIndex == "enabled"){
-                if($imageProperties == 0 ){
+                if($imgProperties == 0 ){
                    print  "<div class='image-diabled'><p> Image is Disabled </p></div>";  
                 } 
                 else { 
@@ -80,7 +80,7 @@
                 }
             }
             else if ($recordsIndex == "priority"){
-                if($imageProperties == 0 ){
+                if($imgProperties == 0 ){
                    print  "<div class='image-priority-high'><p> Low Priority </p></div>";  
                 } 
                 else { 
