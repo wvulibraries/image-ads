@@ -17,6 +17,10 @@
         $editForm = FALSE;
     }  
 
+    $dateValue = "<a href='javascript:void(0);' class='addDateRange'> Add Date </a> | <a href='javascript:void(0);' class='deleteDateRange'> Remove Last Date </a>"; 
+    $timeValue = "<a href='javascript:void(0);' class='addTimeRange'> Add Time </a> | <a href='javascript:void(0);' class='deleteTimeRange'> Remove Last Time Range </a>"; 
+
+
 // Callback Logic for handling the image upload 
     if(!is_empty($_POST) || session::has('POST')) { 
         // Run the Processor 
@@ -33,19 +37,19 @@
 
 // Building the form 
     $localvars = localvars::getInstance();
-    $form = formBuilder::createForm('imageAdForm');
+    $form      = formBuilder::createForm('imageAdForm');
 
     $form->linkToDatabase(array(
         'table' => "imageAds"
     ));
 
-    $form->insertTitle = "New Roating Image";
-    $form->editTitle   = "Edit Rotating Image";
-    $form->updateTitle = "Update Form";
+    $form->insertTitle      = "New Roating Image";
+    $form->editTitle        = "Edit Rotating Image";
+    $form->updateTitle      = "Update Form";
     $form->submitTextUpdate = 'Update';
     $form->submitTextEdit   = 'Update';
 
-    
+      
 
     $form->addField(
         array(
@@ -135,7 +139,7 @@
                 'name'   => "Date Ranges",
                 'label'  => "Add Dates Image Will Display", 
                 'type'   => "plaintext",
-                'value'  => "<a href='javascript:void(0);' class='addDateRange'> Add Date </a> | <a href='javascript:void(0);' class='deleteDateRange'> Remove Last Date </a>",
+                'value'  => $dateValue,
                 'showIn' => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE)
             )
         );
@@ -145,7 +149,7 @@
                 'name'   => "Time Ranges",
                 'label'  => "Add Times Image Will Display", 
                 'type'   => "plaintext",
-                'value'  => "<a href='javascript:void(0);' class='addTimeRange'> Add Time </a> | <a href='javascript:void(0);' class='deleteTimeRange'> Remove Last Time Range </a>",
+                'value'  => $timeValue,
                 'showIn' => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE)
             )
         );
