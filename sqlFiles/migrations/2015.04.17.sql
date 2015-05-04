@@ -5,11 +5,11 @@ DROP TABLE IF EXISTS `imageAds`;
 CREATE TABLE `imageAds` (
   `ID` tinyint(1) unsigned AUTO_INCREMENT NOT NULL,
   `name` varchar(50) DEFAULT NULL,
+  `imageAd` mediumblob DEFAULT NULL,
   `enabled` boolean DEFAULT FALSE, 
   `priority` boolean DEFAULT FALSE, 
   `altText` varchar(200) DEFAULT NULL,
   `actionURL` varchar(200) DEFAULT NULL,
-  `imageAd` mediumblob DEFAULT NULL, 
   ## LINK DIPSLAY CONDITIONS IN THIS TABLE 
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
