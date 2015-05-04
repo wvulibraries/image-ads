@@ -15,11 +15,6 @@
     ?>
 </section>
 
-<section> 
-    <a href="addNewImage.php" class="button"> Add New Image </a>
-</section>
-
-
 <?php
     templates::display('footer'); 
 ?>

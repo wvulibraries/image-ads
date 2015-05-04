@@ -53,15 +53,3 @@ section {
 	float:left;
 	margin-top:10px;
 }
-
-.button { 
-	background:#0D5257;
-	padding:10px;
-	color:#fff !important;
-	border-radius:5px;
-	margin-right:10px;
-}
-
-.button:hover, .button:active, .button:focus { 
-	background:#333F48;
-}
