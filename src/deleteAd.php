@@ -12,7 +12,7 @@
 
     // DB And SQL Statements
     $sqlRemoveDispCond = sprintf("DELETE FROM displayConditions WHERE imageAdID=?");
-    $sqlRemoveImg      = sprintf("DELETE FROM imageAds WHERE ID=?");
+    $sqlRemoveImg      = sprintf("DELETE FROM imageAds WHERE ID=? LIMIT 1");
 
     // // remove the image from the DB 
     // // remove the conditions associated with that image

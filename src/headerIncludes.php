@@ -8,4 +8,4 @@
 ?>
 
 <title> Image Add Manager </title> 
-<link rel="stylesheet" type="text/css" href="{local var="baseDirectory"}/css/basic.css" />
+<link rel="stylesheet" type="text/css" href="css/basic.css" />

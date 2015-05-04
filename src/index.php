@@ -1,6 +1,6 @@
 
 <?php 
-	require_once "includes/engine/engineHeader.php";
+	require_once "engineHeader.php";
     templates::display('header'); 
 ?>
 
