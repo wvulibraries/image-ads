@@ -171,6 +171,7 @@ $timeValue = "<a href='javascript:void(0);' class='addTimeRange'> Add Time </a> 
                                 'Sunday'    => "Sunday" 
                               ), 
                 'showIn'  => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE),
+                'value'   => ($editForm === TRUE ? $localvars->get('exsistingWeekdays') : NULL),
             )
         );
     

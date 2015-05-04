@@ -153,5 +153,6 @@ for($itTimes = 0; $itTimes < count($startTime); $itTimes++ ) {
 
 // Set the DB Ranges toa  local var for use later 
 $localvars->set("exsistingTimeRanges", $dbTimeRanges); 
+$localvars->set("exsistingWeekdays", $weekdayArray); 
 $imgURI = $displayAdRecords[$imageID]['imageInfo']['imageAd'];
 ?> 
