@@ -20,7 +20,6 @@
      if($sqlImgResult->error()) {
         errorHandle::newError(__FUNCTION__."() - " . $sqlImgResult->errorMsg(), errorHandle::DEBUG);
         errorHandle::errorMsg(getResultMessage("systemsPolicyError")); 
-        return false; 
      } else { 
         // Success message forward back home 
        $message = sprintf(' <div class"success"> You have deleted the record! </div> 
@@ -36,7 +35,6 @@
      if($sqlDisCondResult->error()) {
         errorHandle::newError(__FUNCTION__."() - " . $sqlDisCondResult->errorMsg(), errorHandle::DEBUG);
         errorHandle::errorMsg(getResultMessage("systemsPolicyError")); 
-        return false; 
      }
 
 ?>
