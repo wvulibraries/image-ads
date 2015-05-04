@@ -1,41 +1,5 @@
  <?php 
-
-// Callbacks 
-// ========================================================================
-    recurseInsert("includes/forms/callbacks.php", "php");
-// Display Option Information 
-// ========================================================================
-    recurseInsert("includes/addDateTimeFunctions.php","php");  
-
-// Check to see if this is the edit form
-// ========================================================================
-    if(!is_empty($_GET)) { 
-        $imageID   = $_GET['MYSQL']['imageID']; 
-        $editForm = TRUE; 
-        recurseInsert("includes/forms/editForm.php", "php"); 
-    } else { 
-        $editForm = FALSE;
-    }  
-
-    $dateValue = "<a href='javascript:void(0);' class='addDateRange'> Add Date </a> | <a href='javascript:void(0);' class='deleteDateRange'> Remove Last Date </a>"; 
-    $timeValue = "<a href='javascript:void(0);' class='addTimeRange'> Add Time </a> | <a href='javascript:void(0);' class='deleteTimeRange'> Remove Last Time Range </a>"; 
-
-
-// Callback Logic for handling the image upload 
-    if(!is_empty($_POST) || session::has('POST')) { 
-        // Run the Processor 
-        // ========================================
-        $processor = formBuilder::createProcessor(); 
-        // Set the Callback functions to fire from the callbacks.php file
-        // =========================================
-        // Parameter Types ($trigger, $callback) 
-        $processor->setCallback('beforeInsert', 'processNewImage');
-        $processor->setCallback('afterInsert', 'processDisplayInformation');
-        $processor->setCallback('beforeUpdate', 'processUpdate');
-        $processor->processPost(); 
-    }
-
-// Building the form 
+ // Building the form 
     $localvars = localvars::getInstance();
     $form      = formBuilder::createForm('imageAdForm');
 
@@ -49,7 +13,45 @@
     $form->submitTextUpdate = 'Update';
     $form->submitTextEdit   = 'Update';
 
-      
+// Callbacks 
+// ========================================================================
+    recurseInsert("includes/forms/callbacks.php", "php");
+// Display Option Information 
+// ========================================================================
+    recurseInsert("includes/addDateTimeFunctions.php","php");  
+
+
+// Set Date and Time Variables for the form, but need to set before the editForm information is loaded. 
+$dateValue = "<a href='javascript:void(0);' class='addDateRange'> Add Date </a> | <a href='javascript:void(0);' class='deleteDateRange'> Remove Last Date </a>"; 
+$timeValue = "<a href='javascript:void(0);' class='addTimeRange'> Add Time </a> | <a href='javascript:void(0);' class='deleteTimeRange'> Remove Last Time Range </a>"; 
+
+// Check to see if this is the edit form
+// ========================================================================
+    if(!is_empty($_GET) && validate::getInstance()->integer($_GET['MYSQL']['imageID'])) { 
+        $imageID   = $_GET['MYSQL']['imageID']; 
+        $editForm = TRUE; 
+        recurseInsert("includes/forms/editForm.php", "php"); 
+
+        $dateValue .= $localvars->get('exsistingDateRanges'); 
+        $timeValue .= $localvars->get('exsistingTimeRanges');
+
+    } else { 
+        $editForm = FALSE;
+    }  
+
+// Callback Logic for handling the image upload 
+    if(!is_empty($_POST) || session::has('POST')) { 
+        // Run the Processor 
+        // ========================================
+        $processor = formBuilder::createProcessor(); 
+        // Set the Callback functions to fire from the callbacks.php file
+        // =========================================
+        // Parameter Types ($trigger, $callback) 
+        $processor->setCallback('beforeInsert', 'processNewImage');
+        $processor->setCallback('afterInsert', 'processDisplayInformation');
+        $processor->setCallback('beforeUpdate', 'processUpdate');
+        $processor->processPost(); 
+    }      
 
     $form->addField(
         array(

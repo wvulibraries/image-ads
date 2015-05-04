@@ -25,6 +25,7 @@ html, body, form, nav, ul {
 	display:block;
 	float:left;
 	padding:20px;
+	margin:0;
 }
 
 .current-images img { 

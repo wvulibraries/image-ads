@@ -218,11 +218,8 @@ function processUpdate() {
     // Get the Posted Data 
     $editedFormData = $_POST['MYSQL'];
 
-    print "<pre>"; 
-    var_dump($editedFormData);
-    print "</pre>";
-
     // Image ID
+    // if() {}
     $imageID = $_GET['MYSQL']['imageID']; 
 
     // new array for the image info 
@@ -260,8 +257,8 @@ function updateImageAd($data,$id) {
     $db  = db::get($localvars->get('dbConnectionName'));
   // SQL
         if(!isnull($data)) {
-        $sql       = sprintf("UPDATE `imageAds` SET `name` = ?, `enabled` = ?, `priority` = ? , `altText` = ?, `actionURL` = ? WHERE `ID` = %s", $id);
-        $sqlArray  = array($data['name'],$data['enabled'],$data['priority'],$data['altText'],$data['actionURL']); 
+        $sql       = sprintf("UPDATE `imageAds` SET `name` = ?, `enabled` = ?, `priority` = ? , `altText` = ?, `actionURL` = ? WHERE `ID` = ?");
+        $sqlArray  = array($data['name'],$data['enabled'],$data['priority'],$data['altText'],$data['actionURL'], $id); 
         $sqlResult = $db->query($sql,$sqlArray); 
         }
     if($sqlResult) { 
@@ -279,8 +276,8 @@ function updateImageDispOptions($formInfo, $id){
     $db  = db::get($localvars->get('dbConnectionName'));
 
     // Delete the Records So that we don't have to try and guess what is new and what is old data
-    $sql = sprintf("DELETE FROM displayConditions WHERE `imageAdID` = %s", $id);
-    $sqlResult = $db->query($sql);     
+    $sql = sprintf("DELETE FROM displayConditions WHERE `imageAdID` = ?");
+    $sqlResult = $db->query($sql, array($id));     
     
     if($sqlResult->error()) {
         errorHandle::newError(__FUNCTION__."() - " . $sqlResult->errorMsg(), errorHandle::DEBUG);
