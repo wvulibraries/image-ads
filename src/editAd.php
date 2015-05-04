@@ -1,9 +1,7 @@
 <?php
-    require_once "includes/engine/engineHeader.php";
+    require_once "engineHeader.php";
     templates::display('header'); 
-    recurseInsert("includes/forms/editForm.php", "php");
-    // recurseInsert("includes/forms/editImageForm.php","php");    
-
+    recurseInsert("includes/forms/ImageForm.php","php");    
 
     // EDIT THE FORM VALUES OF THE FORMBUILDER FORM 
 ?>
@@ -14,9 +12,7 @@
 
 <section>
     <div id="editImage">
-      <!--  {form name="imageAdForm" display="edit"} -->
-      {form name="editAdForm" display="form"} 
-      <!-- {form name="editImage" display="insert"} --> 
+        {form name="imageAdForm" display="form"} 
     </div>
 </section>
 

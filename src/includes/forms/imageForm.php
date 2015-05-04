@@ -3,10 +3,21 @@
 // Callbacks 
 // ========================================================================
     recurseInsert("includes/forms/callbacks.php", "php");
-
 // Display Option Information 
 // ========================================================================
     recurseInsert("includes/addDateTimeFunctions.php","php");  
+
+// Check to see if this is the edit form
+// ========================================================================
+    $imageID   = $_GET['MYSQL']['imageID']; 
+
+    if((isempty($imageID)) || (!validate::getInstance()->integer($imageID))) {
+        $editForm = FALSE; 
+    } else { 
+        $editForm = TRUE; 
+        recurseInsert("includes/forms/editForm.php"); 
+    }
+     
 
 // Callback Logic for handling the image upload 
     if(!is_empty($_POST) || session::has('POST')) { 
@@ -56,6 +67,7 @@
             'primary'         => TRUE,
             'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE, formbuilder::TYPE_EDIT),
             //'type'            => 'hidden',
+            'value'           => ($editForm === TRUE ? $imageID : NULL),
         )
     );
 
