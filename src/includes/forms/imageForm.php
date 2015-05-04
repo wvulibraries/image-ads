@@ -9,15 +9,13 @@
 
 // Check to see if this is the edit form
 // ========================================================================
-    $imageID   = $_GET['MYSQL']['imageID']; 
-
-    if((isempty($imageID)) || (!validate::getInstance()->integer($imageID))) {
-        $editForm = FALSE; 
-    } else { 
+    if(!is_empty($_GET)) { 
+        $imageID   = $_GET['MYSQL']['imageID']; 
         $editForm = TRUE; 
         recurseInsert("includes/forms/editForm.php", "php"); 
-    }
-     
+    } else { 
+        $editForm = FALSE;
+    }  
 
 // Callback Logic for handling the image upload 
     if(!is_empty($_POST) || session::has('POST')) { 
@@ -29,6 +27,7 @@
         // Parameter Types ($trigger, $callback) 
         $processor->setCallback('beforeInsert', 'processNewImage');
         $processor->setCallback('afterInsert', 'processDisplayInformation');
+        $processor->setCallback('beforeUpdate', 'processUpdate');
         $processor->processPost(); 
     }
 
@@ -53,9 +52,9 @@
             'name'            => "imageAd",
             'fieldID'         => "imageAd",
             'label'           => "File Upload",
-            'showInEditStrip' => TRUE,
-            'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE, formbuilder::TYPE_EDIT),
-            //'required'        => TRUE,
+            'showInEditStrip' => FALSE,
+            'showIn'          => array(formBuilder::TYPE_INSERT),
+            'required'        => ($editForm === TRUE ? FALSE : TRUE),
             'type'            => 'file'
         )
     );
@@ -66,7 +65,7 @@
             'label'           => "Table ID",
             'primary'         => TRUE,
             'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE, formbuilder::TYPE_EDIT),
-            //'type'            => 'hidden',
+            'type'            => 'hidden',
             'value'           => ($editForm === TRUE ? $imageID : NULL),
         )
     );
@@ -76,7 +75,7 @@
             'name'            => "name",
             'label'           => "Image Name",
             'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE, formbuilder::TYPE_EDIT),
-            //'required'        => TRUE,
+            'required'        => TRUE,
             'type'            => 'text',
             'duplicates'      => TRUE, 
             'fieldID'         => "imgName"
@@ -89,7 +88,7 @@
             'label'           => "Is this image being displayed now?",
             'showInEditStrip' => TRUE,
             'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE, formbuilder::TYPE_EDIT),
-           // 'required'        => TRUE,
+            //'required'        => TRUE,
             'type'            => 'boolean',
             'duplicates'      => TRUE,
             'options'         => array("YES","N0")
@@ -115,7 +114,7 @@
             'label'           => "Please provide meaningful alt text.",
             'showInEditStrip' => TRUE,
             'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE, formbuilder::TYPE_EDIT),
-           // 'required'        => TRUE,
+            'required'        => TRUE,
             'type'            => 'textarea',
         )
     );
@@ -126,7 +125,7 @@
             'label'           => "Add a Link",
             'showInEditStrip' => TRUE,
             'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE, formbuilder::TYPE_EDIT),
-           // 'required'        => TRUE,
+            'required'        => TRUE,
             'type'            => 'URL',
         )
     );
