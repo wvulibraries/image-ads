@@ -8,6 +8,8 @@
     $localvars = localvars::getInstance();
     $db        = db::get($localvars->get('dbConnectionName')); 
 
+    // verify that $imageID is an integer. 
+
     // DB And SQL Statements
     $sqlRemoveDispCond = sprintf("DELETE FROM displayConditions WHERE imageAdID=?");
     $sqlRemoveImg      = sprintf("DELETE FROM imageAds WHERE ID=?");
@@ -30,7 +32,7 @@
        echo $message; 
      }
 
-     $sqlDisCondResult = $db->query($sqlRemoveDispCond);
+     $sqlDisCondResult = $db->query($sqlRemoveDispCond, array($imageID));
      if($sqlDisCondResult->error()) {
         errorHandle::newError(__FUNCTION__."() - " . $sqlDisCondResult->errorMsg(), errorHandle::DEBUG);
         errorHandle::errorMsg(getResultMessage("systemsPolicyError")); 
