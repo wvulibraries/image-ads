@@ -30,7 +30,7 @@
             'name'      => $row['name'], 
             'enabled'   => $row['enabled'],
             'priority'  => $row['priority'],
-            'altText'   => $row ['altText'],
+            'altText'   => $row['altText'],
             'actionURL' => $row['actionURL'],
             'imageAd'   => $row['imageAd']
         ); 
