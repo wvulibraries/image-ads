@@ -1,4 +1,3 @@
-
 <?php 
 	require_once "../engineHeader.php";
     templates::display('header'); 
