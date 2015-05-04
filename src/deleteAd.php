@@ -9,12 +9,12 @@
     $db        = db::get($localvars->get('dbConnectionName')); 
 
     // DB And SQL Statements
-    $sqlRemoveDispCond = sprintf("DELETE FROM displayConditions WHERE imageAdID=".$imageID);
-    $sqlRemoveImg      = sprintf("DELETE FROM imageAds WHERE ID=".$imageID);
+    $sqlRemoveDispCond = sprintf("DELETE FROM displayConditions WHERE imageAdID=?");
+    $sqlRemoveImg      = sprintf("DELETE FROM imageAds WHERE ID=?");
 
     // // remove the image from the DB 
     // // remove the conditions associated with that image
-     $sqlImgResult = $db->query($sqlRemoveImg);     
+     $sqlImgResult = $db->query($sqlRemoveImg, array($imageID));     
      if($sqlImgResult->error()) {
         errorHandle::newError(__FUNCTION__."() - " . $sqlImgResult->errorMsg(), errorHandle::DEBUG);
         errorHandle::errorMsg(getResultMessage("systemsPolicyError")); 
