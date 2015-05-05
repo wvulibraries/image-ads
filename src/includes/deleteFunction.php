@@ -1,17 +1,9 @@
 <?php
-    function deleteRecord(){ 
+    function deleteRecord($imageID){ 
         // Delete a Record and Display Conditions  
         // ========================================================================
         $localvars = localvars::getInstance();
         $db        = db::get($localvars->get('dbConnectionName')); 
-        $tempID    =   $_GET['MYSQL']['imageID']; 
-
-        // Validate that Getting an Integer 
-        if(validate::getInstance()->integer($tempID)) {
-            $imageID = $tempID; 
-        } else { 
-            $imageID = NULL; 
-        }
         
         // DB And SQL Statements
         $sqlRemoveDispCond = sprintf("DELETE FROM displayConditions WHERE imageAdID=?");
@@ -35,5 +27,10 @@
          }
 
          $localvars->set("resultMessage",errorHandle::prettyPrint());
+    }
+
+    function deleteCanceled() {
+        $cancledMsg = "<div class='warning'> Your request to delete the image has been canceled.  </div>";  
+        $localvars->set("resultMessage",$cancledMsg);   
     }
 ?>
