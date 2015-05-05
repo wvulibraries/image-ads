@@ -26,13 +26,13 @@
         
         // A placeholder array that will be used for the basic info from the imageAds Table
         $tempAdArray = array(
-            'ID'        => $row['ID'],
-            'name'      => htmlSanitize($row['name']), 
+            'name'      => htmlSanitize($row['name']),
+            'imageAd'   => $row['imageAd'],
+            'ID'        => $row['ID'], 
             'enabled'   => $row['enabled'],
             'priority'  => $row['priority'],
             'altText'   => htmlSanitize($row['altText']),
-            'actionURL' => $row['actionURL'],
-            'imageAd'   => $row['imageAd']
+            'actionURL' => htmlSanitize($row['actionURL']),
         ); 
 
         // The display Options Temp Array
@@ -62,7 +62,7 @@
         foreach($imageRecords["imageInfo"] as $recordsIndex => $imgProperties) {
             if($recordsIndex == "name") {
                 $imgName = $imgProperties; 
-                print "<li> <h2>" . $imgProperties . "</h2></li>";
+                print "<h2>" . $imgProperties . "</h2>";
             } 
             elseif($recordsIndex == "imageAd"){ 
                 echo '<img src="', $imgProperties ,'"> ';  
@@ -72,39 +72,44 @@
                 $imgID = $imgProperties; 
             } 
             else if ($recordsIndex == "enabled"){
+                print "<li>"; 
                 if($imgProperties == 0 ){
-                   print  "<div class='image-diabled'><p> Image is Disabled </p></div>";  
+                   print  "<div class='image-status disabled'><span class='display'> <i class='fa fa-eye-slash'></i> Disabled </span></div>";  
                 } 
                 else { 
-                    print "<div class='image-enabled'><p> Image is Enabled </p></div>";
+                    print "<div class='image-status enabled'><span class='display'> <i class='fa fa-eye'></i> Enabled </span></div>";
                 }
             }
             else if ($recordsIndex == "priority"){
                 if($imgProperties == 0 ){
-                   print  "<div class='image-priority-high'><p> Low Priority </p></div>";  
+                   print  "<div class='image-priority low'> <span class='display'> <i class='fa fa-circle-thin'></i> Low Priority </span></div>";  
                 } 
                 else { 
-                    print "<div class='image-prioroity-high'><p> High Priority </p></div>";
+                    print "<div class='image-priority high'><span class='display'> <i class='fa fa-exclamation-circle'></i> High Priority </span></div>";
                 }
+                print "</li>";
+            } 
+            else if ($recordsIndex == "altText" ) {
+                print " <h3> Alt Text: </h3> <li>";  
+                print $imgProperties . "</li>"; 
+            }
+            else if ($recordsIndex == "actionURL" ) {
+                print " <h3> Link: </h3> <li>";  
+                print "<a href='" . $imgProperties . "'>" . $imgProperties . "</a></li>"; 
             }
             else { 
                 print "<li>" . $imgProperties . "</li>"; 
             }
         }        
 
+        print " <h3> Display Dates: </h3> "; 
+        
         foreach($imageRecords["display"] as $index => $displayRecords) { 
-
     
             foreach($displayRecords as $value => $dispRecord){ 
-                // print "Values  - " . $value . "<br>";
-                // print "Display Options - " . $dispRecord . "<br>"; 
-                // print "<pre>";
-                // var_dump($dispRecord);
-                // print "</pre>"; 
-
                 // Print the Values but Only if they aren't Null and have a specific Time 
                 if($value === "dateStart" && !isnull($dispRecord)) { 
-                    print "<li> <strong> Display Dates: </strong>"; 
+                    print "<li>"; 
                     print "<span class='start-date-range'>";
                     print date("m/d/Y", $dispRecord) . " - "; 
                     print "</span>";
@@ -114,8 +119,16 @@
                     print date("m/d/Y", $dispRecord); 
                     print "</span> </li>";
                 }
-                elseif($value === "timeStart" && !isnull($dispRecord)) {
-                    print "<li> <strong> Display Times: </strong> <span class='start-time-range'>"; 
+            }
+        }
+
+        print " <h3> Display Times: </h3> "; 
+        
+        foreach($imageRecords["display"] as $index => $displayRecords) { 
+    
+            foreach($displayRecords as $value => $dispRecord){ 
+               if($value === "timeStart" && !isnull($dispRecord)) {
+                    print "<li> <span class='start-time-range'>"; 
                     print date("h:i a", $dispRecord) .  " - "; 
                     print "</span>";
                 }
@@ -123,13 +136,20 @@
                     print "<span class='end-time-range'>"; 
                     print date("h:i a", $dispRecord); 
                     print "</span> </li>";
-                }
-                elseif($value === "weekdays" && !isnull($dispRecord)) { 
-                    print "<li><strong> Display on Weekdays </strong>" . $dispRecord . "</li>"; 
-                }
-           
+                } 
             }
         }
+
+        print " <h3> Display Weekdays: </h3> "; 
+        
+        foreach($imageRecords["display"] as $index => $displayRecords) { 
+            foreach($displayRecords as $value => $dispRecord){ 
+               if($value === "weekdays" && !isnull($dispRecord)) { 
+                    print "<li>" . $dispRecord . "</li>"; 
+                }
+            }
+        }
+
 
         $baseDir = $localvars->get('baseDirectory'); 
 
