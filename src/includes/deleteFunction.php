@@ -1,9 +1,5 @@
 <?php
-
     function deleteRecord(){ 
-        require_once "engineHeader.php";
-        templates::display('header'); 
-
         // Delete a Record and Display Conditions  
         // ========================================================================
         $localvars = localvars::getInstance();
