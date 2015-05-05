@@ -34,8 +34,10 @@ $timeValue = "<a href='javascript:void(0);' class='addTimeRange'> Add Time </a> 
         creatingEditViews(); // creates the views for the edit form display options
         $dateValue .= $localvars->get('exsistingDateRanges'); 
         $timeValue .= $localvars->get('exsistingTimeRanges');
-
-    } else { 
+        $editingImage = sprintf("<img src='%s'/>",
+            $localvars->get('editingImage'));
+    } 
+    else { 
         $editForm = FALSE;
     }  
 
@@ -64,6 +66,18 @@ $timeValue = "<a href='javascript:void(0);' class='addTimeRange'> Add Time </a> 
             'type'            => 'file'
         )
     );
+
+    if($editForm === TRUE){ 
+        $form->addField(
+            array(
+                'name'            => "imagePlaceholder",
+                'fieldID'         => "imagePlaceholder",
+                'label'           => "Image Your Editing",
+                'showIn'          => array(formBuilder::TYPE_UPDATE),
+                'type'            => 'plaintext',
+                'value'           => $editingImage          )
+        );
+    }
 
     $form->addField(
         array(
