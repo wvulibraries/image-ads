@@ -19,6 +19,7 @@
 // Display Option Information 
 // ========================================================================
     recurseInsert("includes/addDateTimeFunctions.php","php");  
+    recurseInsert("includes/forms/editForm.php", "php"); 
 
 
 // Set Date and Time Variables for the form, but need to set before the editForm information is loaded. 
@@ -30,8 +31,7 @@ $timeValue = "<a href='javascript:void(0);' class='addTimeRange'> Add Time </a> 
     if(!is_empty($_GET) && validate::getInstance()->integer($_GET['MYSQL']['imageID'])) { 
         $imageID   = $_GET['MYSQL']['imageID']; 
         $editForm = TRUE; 
-        recurseInsert("includes/forms/editForm.php", "php"); 
-
+        creatingEditViews(); // creates the views for the edit form display options
         $dateValue .= $localvars->get('exsistingDateRanges'); 
         $timeValue .= $localvars->get('exsistingTimeRanges');
 
