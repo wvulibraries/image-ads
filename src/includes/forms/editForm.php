@@ -1,5 +1,5 @@
 <?php 
-function creatingEditViews() { 
+function creatingEditViews(){ 
     // Pull in current information from the DB
     // ====================================================
     $imageID   = $_GET['MYSQL']['imageID']; 
