@@ -131,10 +131,22 @@
             }
         }
 
+        $baseDir = $localvars->get('baseDirectory'); 
+
+        $editDir =  sprintf ("<a href='%s%s' class='%s'> EDIT IMAGE </a>",
+                $baseDir,
+                "/editImage/?imageID=$imgID",
+                "edit button");
+
+        $deleteDir =  sprintf ("<a href='%s%s' class='%s'> DELETE IMAGE </a>",
+                $baseDir,
+                "/deleteImage/?imageID=$imgID",
+                "delete button");
+
+
         // Setup Buttons to pass the editing of the information into different forms
         print "<li>";
-            print "<a href='editAd.php?imageID=$imgID'> EDIT IMAGE </a> |";
-            print "<a href='deleteAd.php?imageID=$imgID'> DELETE IMAGE </a> ";
+            print $editDir . " " . $deleteDir; 
         print "</li>";
 
         print "</ul>";
