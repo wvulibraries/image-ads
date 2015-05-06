@@ -10,7 +10,8 @@
     $form->insertTitle      = "New Roating Image";
     $form->editTitle        = "Edit Rotating Image";
     $form->updateTitle      = "Update Form";
-    $form->submitTextUpdate = 'Update';
+    $form->submitTextUpdate = 'Update Image';
+    $form->deleteTextUpdate = 'Delete Image';
     $form->submitTextEdit   = 'Update';
 
 // Callbacks
@@ -186,6 +187,26 @@ $timeValue = "<a href='javascript:void(0);' class='addTimeRange'> Add Time </a> 
                               ),
                 'showIn'  => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE),
                 'value'   => ($editForm === TRUE ? $localvars->get('exsistingWeekdays') : NULL),
+            )
+        );
+
+        $form->addField(
+            array(
+                'name'            => ($editForm === TRUE ? 'update' : 'insert'),
+                'value'           => ($editForm === TRUE ? 'Update Image' : 'Insert Image'),
+                'fieldID'         => 'UpdateButton',
+                'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE, formbuilder::TYPE_EDIT),
+                'type'            => 'submit',
+            )
+        );
+
+        $form->addField(
+            array(
+                'name'            => 'delete',
+                'value'           => 'Delete Image',
+                'fieldID'         => 'DeleteButton',
+                'showIn'          => array(formBuilder::TYPE_UPDATE, formbuilder::TYPE_EDIT),
+                'type'            => 'delete',
             )
         );
 

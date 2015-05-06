@@ -157,5 +157,9 @@ function creatingEditViews(){
     // Setup the current image for displaying it
     $imgURI = $displayAdRecords[$imageID]['imageInfo']['imageAd'];
     $localvars->set("editingImage", $imgURI);
+
+    // Local Var setup for the Edit Button
+    $editLink = $localvars->get("baseDirectory"). "/deleteImage/?imageID=" . $imageID;
+    $localvars->set("deleteButtonLink", $editLink);
 }
 ?>
