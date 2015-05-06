@@ -1,5 +1,5 @@
- <?php 
- // Building the form 
+ <?php
+ // Building the form
     $localvars = localvars::getInstance();
     $form      = formBuilder::createForm('imageAdForm');
 
@@ -13,47 +13,47 @@
     $form->submitTextUpdate = 'Update';
     $form->submitTextEdit   = 'Update';
 
-// Callbacks 
+// Callbacks
 // ========================================================================
     recurseInsert("includes/forms/callbacks.php", "php");
-// Display Option Information 
+// Display Option Information
 // ========================================================================
-    recurseInsert("includes/addDateTimeFunctions.php","php");  
-    recurseInsert("includes/forms/editForm.php", "php"); 
+    recurseInsert("includes/addDateTimeFunctions.php","php");
+    recurseInsert("includes/forms/editForm.php", "php");
 
 
-// Set Date and Time Variables for the form, but need to set before the editForm information is loaded. 
-$dateValue = "<a href='javascript:void(0);' class='addDateRange'> Add Date </a> | <a href='javascript:void(0);' class='deleteDateRange'> Remove Last Date </a>"; 
-$timeValue = "<a href='javascript:void(0);' class='addTimeRange'> Add Time </a> | <a href='javascript:void(0);' class='deleteTimeRange'> Remove Last Time Range </a>"; 
+// Set Date and Time Variables for the form, but need to set before the editForm information is loaded.
+$dateValue = "<a href='javascript:void(0);' class='addDateRange'> Add Date </a> | <a href='javascript:void(0);' class='deleteDateRange'> Remove Last Date </a>";
+$timeValue = "<a href='javascript:void(0);' class='addTimeRange'> Add Time </a> | <a href='javascript:void(0);' class='deleteTimeRange'> Remove Last Time Range </a>";
 
 // Check to see if this is the edit form
 // ========================================================================
-    if(!is_empty($_GET) && validate::getInstance()->integer($_GET['MYSQL']['imageID'])) { 
-        $imageID   = $_GET['MYSQL']['imageID']; 
-        $editForm = TRUE; 
+    if(!is_empty($_GET) && validate::getInstance()->integer($_GET['MYSQL']['imageID'])) {
+        $imageID   = $_GET['MYSQL']['imageID'];
+        $editForm = TRUE;
         creatingEditViews(); // creates the views for the edit form display options
-        $dateValue .= $localvars->get('exsistingDateRanges'); 
+        $dateValue .= $localvars->get('exsistingDateRanges');
         $timeValue .= $localvars->get('exsistingTimeRanges');
         $editingImage = sprintf("<img src='%s'/>",
             $localvars->get('editingImage'));
-    } 
-    else { 
+    }
+    else {
         $editForm = FALSE;
-    }  
+    }
 
-// Callback Logic for handling the image upload 
-    if(!is_empty($_POST) || session::has('POST')) { 
-        // Run the Processor 
+// Callback Logic for handling the image upload
+    if(!is_empty($_POST) || session::has('POST')) {
+        // Run the Processor
         // ========================================
-        $processor = formBuilder::createProcessor(); 
+        $processor = formBuilder::createProcessor();
         // Set the Callback functions to fire from the callbacks.php file
         // =========================================
-        // Parameter Types ($trigger, $callback) 
+        // Parameter Types ($trigger, $callback)
         $processor->setCallback('beforeInsert', 'processNewImage');
         $processor->setCallback('afterInsert', 'processDisplayInformation');
         $processor->setCallback('beforeUpdate', 'processUpdate');
-        $processor->processPost(); 
-    }      
+        $processor->processPost();
+    }
 
     $form->addField(
         array(
@@ -67,7 +67,7 @@ $timeValue = "<a href='javascript:void(0);' class='addTimeRange'> Add Time </a> 
         )
     );
 
-    if($editForm === TRUE){ 
+    if($editForm === TRUE){
         $form->addField(
             array(
                 'name'            => "imagePlaceholder",
@@ -97,7 +97,7 @@ $timeValue = "<a href='javascript:void(0);' class='addTimeRange'> Add Time </a> 
             'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE, formbuilder::TYPE_EDIT),
             'required'        => TRUE,
             'type'            => 'text',
-            'duplicates'      => TRUE, 
+            'duplicates'      => TRUE,
             'fieldID'         => "imgName"
         )
     );
@@ -153,7 +153,7 @@ $timeValue = "<a href='javascript:void(0);' class='addTimeRange'> Add Time </a> 
     $form->addField(
             array(
                 'name'   => "Date Ranges",
-                'label'  => "Add Dates Image Will Display", 
+                'label'  => "Add Dates Image Will Display",
                 'type'   => "plaintext",
                 'value'  => $dateValue,
                 'showIn' => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE)
@@ -163,13 +163,13 @@ $timeValue = "<a href='javascript:void(0);' class='addTimeRange'> Add Time </a> 
         $form->addField(
             array(
                 'name'   => "Time Ranges",
-                'label'  => "Add Times Image Will Display", 
+                'label'  => "Add Times Image Will Display",
                 'type'   => "plaintext",
                 'value'  => $timeValue,
                 'showIn' => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE)
             )
         );
-            
+
         $form->addField(
             array(
                 'name'    => "weekdays",
@@ -179,15 +179,15 @@ $timeValue = "<a href='javascript:void(0);' class='addTimeRange'> Add Time </a> 
                                 'Monday'    => "Monday",
                                 'Tuesday'   => 'Tuesday',
                                 'Wednesday' => "Wednesday",
-                                'Thursday'  => "Thursday", 
-                                'Friday'    => "Friday", 
-                                'Saturday'  => "Saturday", 
-                                'Sunday'    => "Sunday" 
-                              ), 
+                                'Thursday'  => "Thursday",
+                                'Friday'    => "Friday",
+                                'Saturday'  => "Saturday",
+                                'Sunday'    => "Sunday"
+                              ),
                 'showIn'  => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE),
                 'value'   => ($editForm === TRUE ? $localvars->get('exsistingWeekdays') : NULL),
             )
         );
-    
-    
-?> 
+
+
+?>
