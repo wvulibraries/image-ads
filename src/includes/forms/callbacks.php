@@ -199,7 +199,7 @@ function insertWeekdays($formData) {
     if(!$formData['weekdays'] == NULL) {
         $sql = sprintf("INSERT INTO displayConditions (imageAdID,dateStart,dateEnd, weekdays,timeStart,timeEnd) VALUES (?,?,?,?,?,?)");
 
-        $weekArrays = implode(",", $formData['weekdays']);
+        $weekArrays = implode(", ", $formData['weekdays']);
         $insertSQL = array($formData['imageAdID'], NULL, NULL, $weekArrays, NULL, NULL);
         $db->query($sql,$insertSQL);
     }
@@ -255,17 +255,20 @@ function updateImageAd($data,$id) {
     $localvars = localvars::getInstance();
     $db  = db::get($localvars->get('dbConnectionName'));
   // SQL
-        if(!isnull($data)) {
+    if(!isnull($data)) {
         $sql       = sprintf("UPDATE `imageAds` SET `name` = ?, `enabled` = ?, `priority` = ? , `altText` = ?, `actionURL` = ? WHERE `ID` = ?");
         $sqlArray  = array($data['name'],$data['enabled'],$data['priority'],$data['altText'],$data['actionURL'], $id);
         $sqlResult = $db->query($sql,$sqlArray);
-        }
-
-    if($sqlResult) {
-       $successMsg = "Recods";
-    } else {
-        echo "Fail!";
     }
+
+    if($sqlResult->error()) {
+        errorHandle::newError(__FUNCTION__."() - " . $sqlResult->errorMsg(), errorHandle::DEBUG);
+        errorHandle::errorMsg('Error getting the image information from the database');
+     } else {
+        errorHandle::successMsg('<i class="fa fa-thumbs-up"></i> Nice Job.  You have updated your image properties.');
+     }
+
+    $localvars->set("feedbackStatus",errorHandle::prettyPrint());
 }
 
 // Avoiding Repition
@@ -283,8 +286,7 @@ function updateImageDispOptions($formInfo, $id){
         errorHandle::newError(__FUNCTION__."() - " . $sqlResult->errorMsg(), errorHandle::DEBUG);
         errorHandle::errorMsg(getResultMessage("systemsPolicyError"));
         return false;
-    }
-    else {
+    } else {
         // set the id into the data
         $formInfo['imageAdID'] = $id;
         addDisplayConditions($formInfo);

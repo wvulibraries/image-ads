@@ -11,14 +11,18 @@ function creatingEditViews(){
     $sqlResult = $db->query($sql);
 
 
-    if ($sqlResult->error()) {
-        print "ERROR GETTING ADS  -- the error -- " . $sqlResult->errorMsg();
-        return FALSE;
-    }
     if ($sqlResult->rowCount() < 1) {
-        print "NO ADS FOUND";
+        errorHandle::errorMsg('No Images found are you sure you have added them?');
         return FALSE;
     }
+
+    if($sqlResult->error()) {
+        errorHandle::newError(__FUNCTION__."() - " . $sqlResult->errorMsg(), errorHandle::DEBUG);
+        errorHandle::errorMsg('Error getting the image information from the database');
+     }
+
+     $localvars->set("feedbackStatus",errorHandle::prettyPrint());
+
 
     // Create a new array for the data
     // Pull the data into to multiple arrays so that it is easier to work with
@@ -80,16 +84,17 @@ function creatingEditViews(){
                      array_push($endDates, $dispValue);
                 }
             }
-            if(!is_empty($dispValue && $dispIndex === "timeStart" || $dispIndex ==="timeEnd")) {
+            if(!is_empty($dispValue) && ($dispIndex === "timeStart" || $dispIndex ==="timeEnd")) {
                 // Pull into easier arrays to work with
-                 if ( $dispIndex === "timeStart") {
-                     array_push($startTime, $dispValue);
-                } else {
-                     array_push($endTime, $dispValue);
+                if ( $dispIndex === "timeStart") {
+                    array_push($startTime, $dispValue);
+                }
+                if ($dispIndex === "timeEnd") {
+                    array_push($endTime, $dispValue);
                 }
             }
             if(!is_empty($dispValue && $dispIndex === "weekdays")) {
-                $weekdaysTemp = explode(",", $dispValue);
+                $weekdaysTemp = explode(", ", $dispValue);
                 for($I = 0; $I<count($weekdaysTemp); $I++){
                     $tempValue = $weekdaysTemp[$I];
                     // Check for Duplicates
@@ -136,6 +141,8 @@ function creatingEditViews(){
         $startValue = $startTime[$itTimes];
         $endValue   = $endTime[$itTimes];
 
+
+
          $starthour = date("H", $startValue);
          $startmin  = date("i", $startValue);
          $endhour   = date("H", $endValue);
@@ -149,6 +156,7 @@ function creatingEditViews(){
                             'endMin'    => $endmin
                         )
                     );
+
     }
 
     // Set the DB Ranges toa  local var for use later
