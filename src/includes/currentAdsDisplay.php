@@ -1,6 +1,5 @@
 <?php
 
-    //DB Connection and SQL Statements
     $localvars = localvars::getInstance();
     $db        = db::get($localvars->get('dbConnectionName')); // TELL WHAT DB TO CONNECT TO
 	$sql       = sprintf("SELECT imageAds.*, displayConditions.dateStart, displayConditions.dateEnd, displayConditions.weekdays, displayConditions.timeStart, displayConditions.timeEnd FROM imageAds LEFT JOIN displayConditions ON displayConditions.imageAdID = imageAds.ID");
@@ -8,7 +7,6 @@
     $data      = NULL;
     $URLpath = "http://$_SERVER[HTTP_HOST]/admin/image_manager";
 
-    // Testing the SQL Stuff
 	if ($sqlResult->error()) {
 		print "ERROR GETTING ADS  -- the error -- " . $sqlResult->errorMsg();
 		return FALSE;
@@ -37,10 +35,8 @@
 
     $displayAdRecords = array();  // Create an Array to parse the data in there
 
-    // Look at the stuff in the DB and actually fetch it
     while($row = $sqlResult->fetch()) {
 
-        // A placeholder array that will be used for the basic info from the imageAds Table
         $tempAdArray = array(
             'name'      => htmlSanitize($row['name']),
             'imageAd'   => $row['imageAd'],
@@ -50,9 +46,6 @@
             'altText'   => htmlSanitize($row['altText']),
             'actionURL' => htmlSanitize($row['actionURL']),
         );
-
-        // The display Options Temp Array
-        // Need to add something to search for if Null or Not Null
 
         $tempDispArray = array(
             'dateStart' => $row['dateStart'],
@@ -71,10 +64,8 @@
         $imgID; // Create Varible for the ID
         $imgName; // Creat Variable for the Name
 
-        // Loop through the first Array which is really a placeholder for all arrays
         print "<ul class='current-images'>";
 
-        // Loop through interior of arrays to get information such as image properties
         foreach($imageRecords["imageInfo"] as $recordsIndex => $imgProperties) {
             if($recordsIndex == "name") {
                 $imgName = $imgProperties;
@@ -84,7 +75,6 @@
                 echo '<img src="', $imgProperties ,'"> ';
             }
             elseif ($recordsIndex == "ID") {
-                // do nothing so that it doesn't show that to the user
                 $imgID = $imgProperties;
             }
             else if ($recordsIndex == "enabled"){
@@ -123,7 +113,6 @@
         foreach($imageRecords["display"] as $index => $displayRecords) {
 
             foreach($displayRecords as $value => $dispRecord){
-                // Print the Values but Only if they aren't Null and have a specific Time
                 if($value === "dateStart" && !isnull($dispRecord)) {
                     print "<li>";
                     print "<span class='start-date-range'>";
@@ -179,8 +168,6 @@
                 "/deleteImage/?imageID=$imgID",
                 "delete button");
 
-
-        // Setup Buttons to pass the editing of the information into different forms
         print "<li>";
             print $editDir . " " . $deleteDir;
         print "</li>";

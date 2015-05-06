@@ -1,5 +1,4 @@
  <?php
- // Building the form
     $localvars = localvars::getInstance();
     $form      = formBuilder::createForm('imageAdForm');
 
@@ -14,21 +13,13 @@
     $form->deleteTextUpdate = 'Delete Image';
     $form->submitTextEdit   = 'Update';
 
-// Callbacks
-// ========================================================================
     recurseInsert("includes/forms/callbacks.php", "php");
-// Display Option Information
-// ========================================================================
     recurseInsert("includes/addDateTimeFunctions.php","php");
     recurseInsert("includes/forms/editForm.php", "php");
 
+    $dateValue = "<a href='javascript:void(0);' class='addDateRange'> Add Date </a> | <a href='javascript:void(0);' class='deleteDateRange'> Remove Last Date </a>";
+    $timeValue = "<a href='javascript:void(0);' class='addTimeRange'> Add Time </a> | <a href='javascript:void(0);' class='deleteTimeRange'> Remove Last Time Range </a>";
 
-// Set Date and Time Variables for the form, but need to set before the editForm information is loaded.
-$dateValue = "<a href='javascript:void(0);' class='addDateRange'> Add Date </a> | <a href='javascript:void(0);' class='deleteDateRange'> Remove Last Date </a>";
-$timeValue = "<a href='javascript:void(0);' class='addTimeRange'> Add Time </a> | <a href='javascript:void(0);' class='deleteTimeRange'> Remove Last Time Range </a>";
-
-// Check to see if this is the edit form
-// ========================================================================
     if(!is_empty($_GET) && validate::getInstance()->integer($_GET['MYSQL']['imageID'])) {
         $imageID   = $_GET['MYSQL']['imageID'];
         $editForm = TRUE;
@@ -42,7 +33,6 @@ $timeValue = "<a href='javascript:void(0);' class='addTimeRange'> Add Time </a> 
         $editForm = FALSE;
     }
 
-// Callback Logic for handling the image upload
     if(!is_empty($_POST) || session::has('POST')) {
         // Run the Processor
         // ========================================
