@@ -3,12 +3,10 @@
 // Process New Image Callback
 // ========================================
 function processNewImage() {
- $localvars = localvars::getInstance();
+    $localvars = localvars::getInstance();
+    $imgForm   = $_POST['MYSQL'];
 
- // Grab the POST Data
- $imgForm = $_POST['MYSQL'];
- // new array for the image info
-    $imgInfo = array(
+    $imgInfo   = array(
         "__formID"  => $imgForm["__formID"],
         "name"      => $imgForm['name'],
         "enbaled"   => $imgForm['enabled'],
@@ -18,7 +16,6 @@ function processNewImage() {
         "altText"   => $imgForm['altText']
     );
 
- // new array for the display conditions
     $imgDisplayConditions = array(
         "dateStart" => $imgForm["dateStart"],
         "dateEnd"   => $imgForm["dateEnd"],
@@ -29,24 +26,17 @@ function processNewImage() {
 
     $localvars->set("displayConditionsTemp", $imgDisplayConditions);
 
- // Check if there is a file
     if(isset($_FILES['imageAd'])) {
-      // if file exsists then look at the info and pass that into the
-      // upload function -- upload function will test the image
-       $imageInfo = $_FILES['imageAd'];
-       $imageData = imageUpload($imageInfo);
-    } else {
-        // No image was loaded or something wasn't right
-        echo "Fail!";
+        $imageInfo = $_FILES['imageAd'];
+        $imageData = imageUpload($imageInfo);
+    }
+    else {
+        $errorStatus = '<div class="error"> Something went wrong or you did not properly upload an image. </div>';
         return FALSE;
     }
 
-    // Check to see if the Display Options exsist to run that information on the same callback
-    // If it does we are going to go to the do run the commented function below
-    // Needs to happen after the insert of the imageAds so I can then pull the imageAd ID
-    // addDisplayConditions($imgInfo)
-
-    $imgInfo['imageAd'] = $imageData; // set the image to go back with the post
+    $localvars->set("feedbackStatus",$errorStatus);
+    $imgInfo['imageAd'] = $imageData;
     return $imgInfo;
 }
 
@@ -55,20 +45,13 @@ function processNewImage() {
 // after the Insert has happened
 // ========================================
 function processDisplayInformation($processor) {
-   //  Need to figure out how to get the ID of the last submitted item
     $localvars = localvars::getInstance();
-    $db  = db::get($localvars->get('dbConnectionName'));
+    $db        = db::get($localvars->get('dbConnectionName'));
+    $imageID   = $processor->insertID;
 
-    // Get the ID of the last insert
-    // Format the data from the local var
-    // Add the ID to the data
-    $imageID = $processor->insertID;
-    $imgDisplayConditions = $localvars->get("displayConditionsTemp");
+    $imgDisplayConditions              = $localvars->get("displayConditionsTemp");
     $imgDisplayConditions['imageAdID'] = $imageID;
-
-    //  Run the functions that will process each bit of data indpendently
     addDisplayConditions($imgDisplayConditions);
-
 }
 
 
@@ -76,7 +59,6 @@ function processDisplayInformation($processor) {
 // Processing the Image and Uploading It
 // ========================================
 function imageUpload($filedata){
-    // Test The Image Stuff
     $maxFileSize      = 1000000; // 1mb
     $fileTypesAllowed = array("image/gif", "image/png", "image/jpeg", "image/jpg");
 
@@ -84,11 +66,10 @@ function imageUpload($filedata){
     $theImageMimeType = $filedata['type'];
     $theImageDataURI  = "data:" . $theImageMimeType . ";" . 'base64,' . $theImageData;
 
-    // Test to see if the image isn't too big & is an image
     if($filedata['size'] < $maxFileSize && in_array($filedata['type'], $fileTypesAllowed)) {
         return $theImageDataURI;
     } else {
-        echo "No Image was uploaded!";
+        print "No Image was uploaded!";
         return FALSE;
     }
 }
@@ -98,7 +79,6 @@ function imageUpload($filedata){
 //=========================================
 function addDisplayConditions($dispCondData){
     if(!isnull($dispCondData)) {
-        // Run the function to handle the display conditions for start dates
          insertingDates($dispCondData);
          insertingTimes($dispCondData);
          insertWeekdays($dispCondData);
@@ -108,21 +88,14 @@ function addDisplayConditions($dispCondData){
 // DATE FUNCTIONS FOR CALLBACKS
 // ===========================================
 function insertingDates($formInfo){
-    // Adjust them with to Unix timestamps
     $startDates =  adjustDates($formInfo["dateStart"]);
     $endDates = adjustDates($formInfo["dateEnd"]);
 
-    // DB Stuff
     $localvars = localvars::getInstance();
     $db  = db::get($localvars->get('dbConnectionName'));
 
-    // We dont' want to add complete null stuff
     if(!$startDates == NULL) {
-
-        // Setup the DB query
         $sql = sprintf("INSERT INTO displayConditions (imageAdID,dateStart,dateEnd, weekdays,timeStart,timeEnd) VALUES (?,?,?,?,?,?)");
-
-        // Loop through the Date Ranges and Push them into the DB
         for($dateIteration = 0; $dateIteration < count($startDates); $dateIteration++) {
             $insertSQL = array($formInfo['imageAdID'],$startDates[$dateIteration],$endDates[$dateIteration], NULL, NULL, NULL);
             $db->query($sql, $insertSQL);
@@ -131,57 +104,43 @@ function insertingDates($formInfo){
 }
 
 function adjustDates($formData){
-   $returnDates = array();
-   // Loop through the array 3 numbers at a time
-   // pull out the first value of each
-   // count the number of items in the array outside of the for loop
-   // if not the loop is always short after the second loop
+   $returnDates     = array();
    $numofIterations = count($formData);
 
    for($i=0; $i<$numofIterations; $i+=3) {
-        $month = array_shift($formData);
-        $day   = array_shift($formData);
-        $year  = array_shift($formData);
-
-        // $newDateString = $month . "/" . $day . "/" . $year;
+        $month    = array_shift($formData);
+        $day      = array_shift($formData);
+        $year     = array_shift($formData);
         $unixDate = mktime(0,0,0,$month,$day,$year);
-        // $unixDate = date("U", strtotime($newDateString));
+
         array_push($returnDates, $unixDate);
     }
     return $returnDates;
 }
 
-// Adjust Time Into Time Stamps
 function adjustTimes($formInfo){
     $returnTimes = array(); // array to send info back to the insert function
     $numOfTimes  = count($formInfo);
 
-    // Loop through the times by 2 so that I can grab hour and minute
     for($i=0; $i < $numOfTimes;  $i+=2){
-        $hour = array_shift($formInfo);
-        $min  = array_shift($formInfo);
-
+        $hour     = array_shift($formInfo);
+        $min      = array_shift($formInfo);
         $theTimes = mktime($hour,$min,0,0,0,0);
+
         array_push($returnTimes, $theTimes);
     }
-
     return $returnTimes;
 }
 
 // Insert Time into the DB
 function insertingTimes($formData){
     $startTimes = adjustTimes($formData["timeStart"]);
-    $endTimes = adjustTimes($formData["timeEnd"]);
+    $endTimes   = adjustTimes($formData["timeEnd"]);
+    $localvars  = localvars::getInstance();
+    $db         = db::get($localvars->get('dbConnectionName'));
 
-    // DB Stuff
-    $localvars = localvars::getInstance();
-    $db  = db::get($localvars->get('dbConnectionName'));
-
-    // We dont' want to add complete null stuff
     if(!$startTimes == NULL) {
-        // Setup the DB query
         $sql = sprintf("INSERT INTO displayConditions (imageAdID,dateStart,dateEnd, weekdays,timeStart,timeEnd) VALUES (?,?,?,?,?,?)");
-        // Loop through the Date Ranges and Push them into the DB
         for($timeIt = 0; $timeIt < count($startTimes); $timeIt++) {
             $insertSQL = array($formData['imageAdID'], NULL, NULL, NULL, $startTimes[$timeIt], $endTimes[$timeIt]);
             $db->query($sql, $insertSQL);
@@ -192,13 +151,11 @@ function insertingTimes($formData){
 // Inserting Weekday Values
 // ===========================================
 function insertWeekdays($formData) {
-    // DB Stuff
     $localvars = localvars::getInstance();
     $db  = db::get($localvars->get('dbConnectionName'));
 
     if(!$formData['weekdays'] == NULL) {
         $sql = sprintf("INSERT INTO displayConditions (imageAdID,dateStart,dateEnd, weekdays,timeStart,timeEnd) VALUES (?,?,?,?,?,?)");
-
         $weekArrays = implode(", ", $formData['weekdays']);
         $insertSQL = array($formData['imageAdID'], NULL, NULL, $weekArrays, NULL, NULL);
         $db->query($sql,$insertSQL);
@@ -207,22 +164,11 @@ function insertWeekdays($formData) {
 
 // Process Updating Certain Rows of Data
 // ===========================================
-
-// Note that there has to be a better way of processing the update using the
-// functions that are already made for inserting
-// There should also be some magic button that turns an insert form into an update form
-// that would make the form builder asset much better and easier to use in these
-// situations
-
 function processUpdate() {
-    // Get the Posted Data
     $editedFormData = $_POST['MYSQL'];
+    $imageID        = $_GET['MYSQL']['imageID'];
 
-    // Image ID
-    // if() {}
-    $imageID = $_GET['MYSQL']['imageID'];
 
-    // new array for the image info
     $imgInfo = array(
         "__formID"    => $editedFormData['__formID'],
         "__csrfToken" => $editedFormData['__csrfToken'],
@@ -234,7 +180,6 @@ function processUpdate() {
         "actionURL"   => $editedFormData['actionURL']
     );
 
- // new array for the display conditions
     $imgDisplayConditions = array(
         "dateStart" => $editedFormData["dateStart"],
         "dateEnd"   => $editedFormData["dateEnd"],
@@ -243,18 +188,15 @@ function processUpdate() {
         "weekdays"  => $editedFormData["weekdays"]
     );
 
-    // Send off the info to be processed by other functions
     updateImageDispOptions($imgDisplayConditions, $imageID);
-    // Send off the info to be processed by other functions
     updateImageAd($imgInfo,$imageID);
     return $imgInfo;
 }
 
 function updateImageAd($data,$id) {
-  // DB Stuff
     $localvars = localvars::getInstance();
-    $db  = db::get($localvars->get('dbConnectionName'));
-  // SQL
+    $db        = db::get($localvars->get('dbConnectionName'));
+
     if(!isnull($data)) {
         $sql       = sprintf("UPDATE `imageAds` SET `name` = ?, `enabled` = ?, `priority` = ? , `altText` = ?, `actionURL` = ? WHERE `ID` = ?");
         $sqlArray  = array($data['name'],$data['enabled'],$data['priority'],$data['altText'],$data['actionURL'], $id);
@@ -271,15 +213,11 @@ function updateImageAd($data,$id) {
     $localvars->set("feedbackStatus",errorHandle::prettyPrint());
 }
 
-// Avoiding Repition
-// Deleting  Records  &  Adding the new ones for the display Options
-function updateImageDispOptions($formInfo, $id){
-    // DB Stuff
-    $localvars = localvars::getInstance();
-    $db  = db::get($localvars->get('dbConnectionName'));
 
-    // Delete the Records So that we don't have to try and guess what is new and what is old data
-    $sql = sprintf("DELETE FROM displayConditions WHERE `imageAdID` = ?");
+function updateImageDispOptions($formInfo, $id){
+    $localvars = localvars::getInstance();
+    $db        = db::get($localvars->get('dbConnectionName'));
+    $sql       = sprintf("DELETE FROM displayConditions WHERE `imageAdID` = ?");
     $sqlResult = $db->query($sql, array($id));
 
     if($sqlResult->error()) {
@@ -287,10 +225,11 @@ function updateImageDispOptions($formInfo, $id){
         errorHandle::errorMsg(getResultMessage("systemsPolicyError"));
         return false;
     } else {
-        // set the id into the data
         $formInfo['imageAdID'] = $id;
         addDisplayConditions($formInfo);
     }
+
+    $localvars->set("feedbackStatus",errorHandle::prettyPrint());
 }
 
 ?>
