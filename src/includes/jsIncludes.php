@@ -31,4 +31,42 @@
             location.href = '{local var="deleteButtonLink"}';
         });
     }
+
+    if($('#UploadImageForm').length) {
+        var fileUpload  = $('#imageAd');
+
+        fileUpload.parent().append('<div class="imagepreview"></div>');
+        var imgcontainer = $('.imagepreview');
+
+        fileUpload.change(function(){
+           var theFile      = this.files,
+               maxFileSize  = "1000000",
+               fileLength   = theFile.length;
+
+           if(fileLength && theFile[0].type.match('image.*') && (theFile[0].size < maxFileSize)) {
+                console.log("File is an image and we are field has length");
+                imgcontainer.html('<img id="imgPrev" alt="preview for image that is going to be uploaded"/>');
+
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('#imgPrev').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(theFile[0]);
+
+           } else {
+              console.log("WHooohaho this is not an image!");
+              fileUpload.replaceWith(fileUpload = fileUpload.clone(true));
+              imgcontainer.html("<div class='error'> You can only upload images, please try again!</div>");
+           }
+
+        });
+
+    }
+
+
+
+
+
+
+
 </script>
