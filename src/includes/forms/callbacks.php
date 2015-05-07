@@ -95,9 +95,9 @@ function insertingDates($formInfo){
     $db  = db::get($localvars->get('dbConnectionName'));
 
     if(!$startDates == NULL) {
-        $sql = sprintf("INSERT INTO displayConditions (imageAdID,dateStart,dateEnd, weekdays,timeStart,timeEnd) VALUES (?,?,?,?,?,?)");
+        $sql = sprintf("INSERT INTO displayConditions (imageAdID, dateStart, dateEnd) VALUES (?,?,?)");
         for($dateIteration = 0; $dateIteration < count($startDates); $dateIteration++) {
-            $insertSQL = array($formInfo['imageAdID'],$startDates[$dateIteration],$endDates[$dateIteration], NULL, NULL, NULL);
+            $insertSQL = array($formInfo['imageAdID'],$startDates[$dateIteration],$endDates[$dateIteration]);
             $db->query($sql, $insertSQL);
         }
     }
@@ -140,9 +140,9 @@ function insertingTimes($formData){
     $db         = db::get($localvars->get('dbConnectionName'));
 
     if(!$startTimes == NULL) {
-        $sql = sprintf("INSERT INTO displayConditions (imageAdID,dateStart,dateEnd, weekdays,timeStart,timeEnd) VALUES (?,?,?,?,?,?)");
+        $sql = sprintf("INSERT INTO displayConditions (imageAdID,timeStart,timeEnd) VALUES (?,?,?)");
         for($timeIt = 0; $timeIt < count($startTimes); $timeIt++) {
-            $insertSQL = array($formData['imageAdID'], NULL, NULL, NULL, $startTimes[$timeIt], $endTimes[$timeIt]);
+            $insertSQL = array($formData['imageAdID'],$startTimes[$timeIt], $endTimes[$timeIt]);
             $db->query($sql, $insertSQL);
         }
     }
@@ -151,14 +151,35 @@ function insertingTimes($formData){
 // Inserting Weekday Values
 // ===========================================
 function insertWeekdays($formData) {
-    $localvars = localvars::getInstance();
-    $db  = db::get($localvars->get('dbConnectionName'));
+    $localvars   = localvars::getInstance();
+    $insertArray = array();
 
-    if(!$formData['weekdays'] == NULL) {
-        $sql = sprintf("INSERT INTO displayConditions (imageAdID,dateStart,dateEnd, weekdays,timeStart,timeEnd) VALUES (?,?,?,?,?,?)");
-        $weekArrays = implode(", ", $formData['weekdays']);
-        $insertSQL = array($formData['imageAdID'], NULL, NULL, $weekArrays, NULL, NULL);
-        $db->query($sql,$insertSQL);
+    foreach ($formData['weekdays'] as $weekday){
+        if($weekday == 'Monday' || $weekday == 'Tuesday' || $weekday == 'Wednesday' || $weekday == 'Thursday' || $weekday == 'Friday' || $weekday == 'Saturday' || $weekday == 'Sunday' ) {
+            array_push($insertArray, 1);
+        }
+        else {
+            array_push($insertArray, 0);
+        }
+    }
+
+    for($i = (7 - count($insertArray)); $i > 0; $i--) {
+        array_push($insertArray, 0);
+    }
+
+    if(!isnull($insertArray)) {
+        $db  = db::get($localvars->get('dbConnectionName'));
+        $sql = sprintf("INSERT INTO displayConditions (monday,tuesday,wednesday,thursday,friday,saturday,sunday) VALUES (?,?,?,?,?,?,?)");
+
+        $db->query($sql,$insertArray);
+
+        if($sqlResult->error()) {
+            errorHandle::newError(__FUNCTION__."() - " . $sqlResult->errorMsg(), errorHandle::DEBUG);
+            errorHandle::errorMsg(getResultMessage("systemsPolicyError"));
+            return false;
+        }
+
+        $localvars->set("feedbackStatus",errorHandle::prettyPrint());
     }
 }
 
