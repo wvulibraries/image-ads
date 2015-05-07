@@ -2,7 +2,7 @@
 
     $localvars = localvars::getInstance();
     $db        = db::get($localvars->get('dbConnectionName')); // TELL WHAT DB TO CONNECT TO
-	$sql       = sprintf("SELECT imageAds.*, displayConditions.dateStart, displayConditions.dateEnd, displayConditions.weekdays, displayConditions.timeStart, displayConditions.timeEnd FROM imageAds LEFT JOIN displayConditions ON displayConditions.imageAdID = imageAds.ID");
+	$sql       = sprintf("SELECT imageAds.*, displayConditions.dateStart, displayConditions.dateEnd, displayConditions.monday, displayConditions.tuesday, displayConditions.wednesday, displayConditions.thursday, displayConditions.friday, displayConditions.saturday, displayConditions.sunday, displayConditions.timeStart, displayConditions.timeEnd FROM imageAds LEFT JOIN displayConditions ON displayConditions.imageAdID = imageAds.ID");
 	$sqlResult = $db->query($sql);
     $data      = NULL;
     $URLpath = "http://$_SERVER[HTTP_HOST]/admin/image_manager";
