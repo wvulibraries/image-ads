@@ -37,6 +37,7 @@
 
     while($row = $sqlResult->fetch()) {
 
+
         $tempAdArray = array(
             'name'      => htmlSanitize($row['name']),
             'imageAd'   => $row['imageAd'],
@@ -52,7 +53,7 @@
             'dateEnd'   => $row['dateEnd'],
             'timeStart' => $row['timeStart'],
             'timeEnd'   => $row['timeEnd'],
-            'weekdays'  => $row['weekdays']
+            //'weekdays'  => $row['weekdays']
         );
 
         $displayAdRecords[$row['ID']]["imageInfo"] = $tempAdArray;

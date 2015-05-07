@@ -169,14 +169,14 @@ function insertWeekdays($formData) {
 
     if(!isnull($insertArray)) {
         $db  = db::get($localvars->get('dbConnectionName'));
-        $sql = sprintf("INSERT INTO displayConditions (monday,tuesday,wednesday,thursday,friday,saturday,sunday) VALUES (?,?,?,?,?,?,?)");
+        $sql = sprintf("INSERT INTO displayConditions (imageAdID,monday,tuesday,wednesday,thursday,friday,saturday,sunday) VALUES (?,?,?,?,?,?,?,?)");
 
-        $db->query($sql,$insertArray);
+        array_unshift($insertArray, $formData['imageAdID']);
+        $sqlResult = $db->query($sql,$insertArray);
 
         if($sqlResult->error()) {
             errorHandle::newError(__FUNCTION__."() - " . $sqlResult->errorMsg(), errorHandle::DEBUG);
-            errorHandle::errorMsg(getResultMessage("systemsPolicyError"));
-            return false;
+            errorHandle::errorMsg('Error getting the weekdays to the database');
         }
 
         $localvars->set("feedbackStatus",errorHandle::prettyPrint());
