@@ -27,7 +27,8 @@
         $dateValue .= $localvars->get('exsistingDateRanges');
         $timeValue .= $localvars->get('exsistingTimeRanges');
         $editingImage = sprintf("<img src='%s'/>",
-            $localvars->get('editingImage'));
+            $localvars->get('editingImage')
+        );
     }
     else {
         $editForm = FALSE;
@@ -43,6 +44,7 @@
         $processor->setCallback('beforeInsert', 'processNewImage');
         $processor->setCallback('afterInsert', 'processDisplayInformation');
         $processor->setCallback('beforeUpdate', 'processUpdate');
+        $processor->setCallback('afterUpdate', 'creatingEditViews');
         $processor->processPost();
     }
 
@@ -66,7 +68,8 @@
                 'label'           => "Image Your Editing",
                 'showIn'          => array(formBuilder::TYPE_UPDATE),
                 'type'            => 'plaintext',
-                'value'           => $editingImage          )
+                'value'           => $editingImage
+            )
         );
     }
 
@@ -176,7 +179,7 @@
                                 'Sunday'    => "Sunday"
                               ),
                 'showIn'  => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE),
-                'value'   => ($editForm === TRUE ? $localvars->get('exsistingWeekdays') : NULL),
+                'value'   => ($editForm === TRUE ? $localvars->get('exsistingWeekdays') : array()),
             )
         );
 

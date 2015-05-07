@@ -170,9 +170,10 @@ function processUpdate() {
 
 
     $imgInfo = array(
-        "__formID"    => $editedFormData['__formID'],
-        "__csrfToken" => $editedFormData['__csrfToken'],
-        "__csrfID"    => $editedFormData['__csrfID'],
+        // "__formID"    => $editedFormData['__formID'],
+        // "__csrfToken" => $editedFormData['__csrfToken'],
+        // "__csrfID"    => $editedFormData['__csrfID'],
+        // "ID"          => $imageID,
         "name"        => $editedFormData['name'],
         "enabled"     => $editedFormData['enabled'],
         "priority"    => $editedFormData['priority'],
@@ -228,7 +229,6 @@ function updateImageDispOptions($formInfo, $id){
         $formInfo['imageAdID'] = $id;
         addDisplayConditions($formInfo);
     }
-
     $localvars->set("feedbackStatus",errorHandle::prettyPrint());
 }
 
