@@ -208,7 +208,8 @@ function updateImageAd($data,$id) {
         errorHandle::newError(__FUNCTION__."() - " . $sqlResult->errorMsg(), errorHandle::DEBUG);
         errorHandle::errorMsg('Error getting the image information from the database');
      } else {
-        errorHandle::successMsg('<i class="fa fa-thumbs-up"></i> Nice Job.  You have updated your image properties.');
+        $successMessage = '<i class="fa fa-thumbs-up" onLoad="setTimeout(\'delayer()\', 5000)"></i> Nice Job.  You have updated your image properties.';
+        errorHandle::successMsg($successMessage);
      }
 
     $localvars->set("feedbackStatus",errorHandle::prettyPrint());
