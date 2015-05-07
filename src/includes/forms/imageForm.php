@@ -15,24 +15,6 @@
 
     recurseInsert("includes/forms/callbacks.php", "php");
     recurseInsert("includes/addDateTimeFunctions.php","php");
-    recurseInsert("includes/forms/editForm.php", "php");
-
-    $dateValue = "<a href='javascript:void(0);' class='addDateRange'> Add Date </a> | <a href='javascript:void(0);' class='deleteDateRange'> Remove Last Date </a>";
-    $timeValue = "<a href='javascript:void(0);' class='addTimeRange'> Add Time </a> | <a href='javascript:void(0);' class='deleteTimeRange'> Remove Last Time Range </a>";
-
-    if(!is_empty($_GET) && validate::getInstance()->integer($_GET['MYSQL']['imageID'])) {
-        $imageID   = $_GET['MYSQL']['imageID'];
-        $editForm = TRUE;
-        creatingEditViews(); // creates the views for the edit form display options
-        $dateValue .= $localvars->get('exsistingDateRanges');
-        $timeValue .= $localvars->get('exsistingTimeRanges');
-        $editingImage = sprintf("<img src='%s'/>",
-            $localvars->get('editingImage')
-        );
-    }
-    else {
-        $editForm = FALSE;
-    }
 
     if(!is_empty($_POST) || session::has('POST')) {
         // Run the Processor
@@ -46,6 +28,24 @@
         $processor->setCallback('beforeUpdate', 'processUpdate');
         $processor->setCallback('afterUpdate', 'creatingEditViews');
         $processor->processPost();
+    }
+
+
+    $dateValue = "<a href='javascript:void(0);' class='addDateRange'> Add Date </a> | <a href='javascript:void(0);' class='deleteDateRange'> Remove Last Date </a>";
+    $timeValue = "<a href='javascript:void(0);' class='addTimeRange'> Add Time </a> | <a href='javascript:void(0);' class='deleteTimeRange'> Remove Last Time Range </a>";
+
+    if(!is_empty($_GET) && validate::getInstance()->integer($_GET['MYSQL']['imageID'])) {
+        $imageID   = $_GET['MYSQL']['imageID'];
+        $editForm = TRUE;
+        recurseInsert("includes/forms/editForm.php", "php");
+        $dateValue .= $localvars->get('exsistingDateRanges');
+        $timeValue .= $localvars->get('exsistingTimeRanges');
+        $editingImage = sprintf("<img src='%s'/>",
+            $localvars->get('editingImage')
+        );
+    }
+    else {
+        $editForm = FALSE;
     }
 
     $form->addField(

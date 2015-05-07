@@ -1,6 +1,4 @@
 <?php
-function creatingEditViews(){
-
     $imageID   = $_GET['MYSQL']['imageID'];
     $localvars = localvars::getInstance();
     $db        = db::get($localvars->get('dbConnectionName'));
@@ -143,5 +141,4 @@ function creatingEditViews(){
 
     $editLink = $localvars->get("baseDirectory"). "/deleteImage/?imageID=" . $imageID;
     $localvars->set("deleteButtonLink", $editLink);
-}
 ?>
