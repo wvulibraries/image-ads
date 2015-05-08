@@ -16,19 +16,16 @@
     );
     $sqlResult = $db->query($sql);
 
-    if($sqlResult->error()) {
-        errorHandle::newError(__FUNCTION__."() - " . $sqlResult->errorMsg(), errorHandle::DEBUG);
-        errorHandle::errorMsg('Error getting the weekdays to the database');
-    }
-
     $imageURI = NULL;
     while($row = $sqlResult->fetch()) {
         $imageURI = $row['imageAd'];
     }
 
-    print sprintf("<img src='%s'/>", $imageURI);
+    $imageParts = explode(";", $imageURI); // split on the ; after the mime type
+    $mimeType = substr($imageParts[0], 5); // get the information after the data: text
+    $imageData = substr($imageParts[1],7); // decode the URI
+    $decodedImage = base64_decode($imageData);
 
-    $localvars->set("dbStatusImage",errorHandle::prettyPrint());
+    header('Content-Type:' . $mimeType);
+    print $decodedImage;
 ?>
-
-{local var="dbStatusImage"}
