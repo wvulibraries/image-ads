@@ -63,11 +63,9 @@ function imageUpload($filedata){
     $fileTypesAllowed = array("image/gif", "image/png", "image/jpeg", "image/jpg");
 
     $theImageData     = base64_encode(file_get_contents($filedata['tmp_name']));
-    $theImageMimeType = $filedata['type'];
-    $theImageDataURI  = "data:" . $theImageMimeType . ";" . 'base64,' . $theImageData;
 
     if($filedata['size'] < $maxFileSize && in_array($filedata['type'], $fileTypesAllowed)) {
-        return $theImageDataURI;
+        return $theImageData;
     } else {
         print "No Image was uploaded!";
         return FALSE;
