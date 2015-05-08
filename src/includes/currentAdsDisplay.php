@@ -55,21 +55,20 @@
         );
 
         $tempWeekdayArray = array(
-            'monday'   => $row['monday'],
+            'monday'    => $row['monday'],
             'tuesday'   => $row['tuesday'],
             'wednesday' => $row['wednesday'],
             'thursday'  => $row['thursday'],
             'friday'    => $row['friday'],
             'saturday'  => $row['saturday'],
-            'sunday'    => $row['sunday'],
+            'sunday'    => $row['sunday']
         );
 
-        $tempDispArray['weekdays'] => $tempWeekdayArray;
+        $tempDispArray['weekdays'] = $tempWeekdayArray;
 
         $displayAdRecords[$row['ID']]["imageInfo"] = $tempAdArray;
         $displayAdRecords[$row['ID']]['display'][] = $tempDispArray;
     }
-
 
     foreach($displayAdRecords as $imageRecords) {
         $imgID; // Create Varible for the ID
