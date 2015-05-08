@@ -156,15 +156,40 @@
         }
 
         print " <h3> Display Weekdays: </h3> ";
-
+        $tempWeekdayValuesArray = array();
         foreach($imageRecords["display"] as $index => $displayRecords) {
             foreach($displayRecords as $value => $dispRecord){
                if($value === "weekdays" && !isnull($dispRecord)) {
-                    print "<li><p>" . $dispRecord . "</p></li>";
+                    foreach($dispRecord as $weekday => $weekbool) {
+                        if($weekday == "monday" && $weekbool == 1) {
+                            array_push($tempWeekdayValuesArray, "Monday");
+                        }
+                        if($weekday == "tuesday" && $weekbool == 1) {
+                             array_push($tempWeekdayValuesArray, "Tuesday");
+                        }
+                        if($weekday == "wednesday" && $weekbool == 1) {
+                             array_push($tempWeekdayValuesArray, "Wednesday");
+                        }
+                        if($weekday == "thursday" && $weekbool == 1) {
+                             array_push($tempWeekdayValuesArray, "Thursday");
+                        }
+                        if($weekday == "friday" && $weekbool == 1) {
+                             array_push($tempWeekdayValuesArray, "Friday");
+                        }
+                        if($weekday == "saturday" && $weekbool == 1) {
+                             array_push($tempWeekdayValuesArray,print "Saturday");
+                        }
+                        if($weekday == "sunday" && $weekbool == 1) {
+                             array_push($tempWeekdayValuesArray,print "Sunday");
+                        }
+                    }
+
+                    if(!isempty($tempWeekdayValuesArray)){
+                        print implode(", ", $tempWeekdayValuesArray);
+                    }
                 }
             }
         }
-
 
         $baseDir = $localvars->get('baseDirectory');
 
