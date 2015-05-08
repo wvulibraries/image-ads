@@ -26,6 +26,8 @@
     $imageData = substr($imageParts[1],7); // decode the URI
     $decodedImage = base64_decode($imageData);
 
+
+
     header('Content-Type:' . $mimeType);
-    print $decodedImage;
+    print $imageData;
 ?>
