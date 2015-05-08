@@ -62,7 +62,7 @@ function imageUpload($filedata){
     $maxFileSize      = 1000000; // 1mb
     $fileTypesAllowed = array("image/gif", "image/png", "image/jpeg", "image/jpg");
 
-    $theImageData     = base64_encode(file_get_contents($filedata['tmp_name']));
+    $theImageData     = file_get_contents($filedata['tmp_name']);
 
     if($filedata['size'] < $maxFileSize && in_array($filedata['type'], $fileTypesAllowed)) {
         return $theImageData;
