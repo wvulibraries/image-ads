@@ -37,7 +37,6 @@
 
     while($row = $sqlResult->fetch()) {
 
-
         $tempAdArray = array(
             'name'      => htmlSanitize($row['name']),
             'imageAd'   => $row['imageAd'],
@@ -53,8 +52,19 @@
             'dateEnd'   => $row['dateEnd'],
             'timeStart' => $row['timeStart'],
             'timeEnd'   => $row['timeEnd'],
-            //'weekdays'  => $row['weekdays']
         );
+
+        $tempWeekdayArray = array(
+            'monday'   => $row['monday'],
+            'tuesday'   => $row['tuesday'],
+            'wednesday' => $row['wednesday'],
+            'thursday'  => $row['thursday'],
+            'friday'    => $row['friday'],
+            'saturday'  => $row['saturday'],
+            'sunday'    => $row['sunday'],
+        );
+
+        $tempDispArray['weekdays'] => $tempWeekdayArray;
 
         $displayAdRecords[$row['ID']]["imageInfo"] = $tempAdArray;
         $displayAdRecords[$row['ID']]['display'][] = $tempDispArray;
