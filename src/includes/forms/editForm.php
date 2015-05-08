@@ -22,6 +22,7 @@
 
     $displayAdRecords = array();
     while($row = $sqlResult->fetch()) {
+
         $tempAdArray = array(
             'ID'        => $row['ID'],
             'name'      => $row['name'],
@@ -31,14 +32,27 @@
             'actionURL' => $row['actionURL'],
             'imageAd'   => $row['imageAd']
         );
+
         $tempDispArray = array(
             'ID'        => $row['ID'],
             'dateStart' => $row['dateStart'],
             'dateEnd'   => $row['dateEnd'],
             'timeStart' => $row['timeStart'],
             'timeEnd'   => $row['timeEnd'],
-            'weekdays'  => $row['weekdays']
         );
+
+        $tempWeekdayArray = array(
+            'monday'    => $row['monday'],
+            'tuesday'   => $row['tuesday'],
+            'wednesday' => $row['wednesday'],
+            'thursday'  => $row['thursday'],
+            'friday'    => $row['friday'],
+            'saturday'  => $row['saturday'],
+            'sunday'    => $row['sunday']
+        );
+
+        $tempDispArray['weekdays'] = $tempWeekdayArray;
+
         $displayAdRecords[$row['ID']]["imageInfo"] = $tempAdArray;
         $displayAdRecords[$row['ID']]['display'][] = $tempDispArray;
 
@@ -82,6 +96,10 @@
             }
         }
     }
+
+
+
+
 
     for ($itDates = 0; $itDates < count($startDates); $itDates++) {
 
