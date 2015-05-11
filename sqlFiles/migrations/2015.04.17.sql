@@ -5,7 +5,7 @@ DROP TABLE IF EXISTS `imageAds`;
 CREATE TABLE `imageAds` (
   `ID` tinyint(1) unsigned AUTO_INCREMENT NOT NULL,
   `name` varchar(50) DEFAULT NULL,
-  `imageAd` mediumblob DEFAULT NULL,
+  `imageAd` longblob DEFAULT NULL,
   `enabled` boolean DEFAULT FALSE,
   `priority` boolean DEFAULT FALSE,
   `altText` varchar(200) DEFAULT NULL,

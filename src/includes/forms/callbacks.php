@@ -61,11 +61,16 @@ function processDisplayInformation($processor) {
 function imageUpload($filedata){
     $maxFileSize      = 1000000; // 1mb
     $fileTypesAllowed = array("image/gif", "image/png", "image/jpeg", "image/jpg");
+    //$theImageData     = file_get_contents($filedata['tmp_name']);
+    //$image            = '0x' . bin2hex($theImageData);
 
-    $theImageData     = file_get_contents($filedata['tmp_name']);
+    $filename = $filedata['tmp_name'];
+    $handle = fopen($filename, "r");
+    $image = fread($handle, filesize($filename));
+    $image = base64_encode($image);
 
     if($filedata['size'] < $maxFileSize && in_array($filedata['type'], $fileTypesAllowed)) {
-        return $theImageData;
+        return $image;
     } else {
         print "No Image was uploaded!";
         return FALSE;

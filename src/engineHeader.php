@@ -6,10 +6,10 @@
 	// Set localVars and engineVars variables
 		$localvars  = localvars::getInstance();
 		$enginevars = enginevars::getInstance();
-	
+
 	// These are specific to EngineAPI and pulling the appropriate files
-	// recurseInsert("acl.php","php"); 
-		recurseInsert("includes/engine/vars.php","php"); // sets vars 
+	// recurseInsert("acl.php","php");
+		recurseInsert("includes/engine/vars.php","php"); // sets vars
 		recurseInsert('includes/engine/engineIncludes.php',"php");
 
 		formBuilder::ajaxHandler();
