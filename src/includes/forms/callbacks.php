@@ -29,6 +29,7 @@ function processNewImage() {
     if(isset($_FILES['imageAd'])) {
         $imageInfo = $_FILES['imageAd'];
         $imageData = imageUpload($imageInfo);
+        $imgInfo['imageType'] = $imageInfo['type'];
     }
     else {
         $errorStatus = '<div class="error"> Something went wrong or you did not properly upload an image. </div>';
@@ -37,6 +38,7 @@ function processNewImage() {
 
     $localvars->set("feedbackStatus",$errorStatus);
     $imgInfo['imageAd'] = $imageData;
+
     return $imgInfo;
 }
 
@@ -61,13 +63,10 @@ function processDisplayInformation($processor) {
 function imageUpload($filedata){
     $maxFileSize      = 1000000; // 1mb
     $fileTypesAllowed = array("image/gif", "image/png", "image/jpeg", "image/jpg");
-    //$theImageData     = file_get_contents($filedata['tmp_name']);
-    //$image            = '0x' . bin2hex($theImageData);
 
     $filename = $filedata['tmp_name'];
     $handle = fopen($filename, "r");
     $image = fread($handle, filesize($filename));
-    $image = base64_encode($image);
 
     if($filedata['size'] < $maxFileSize && in_array($filedata['type'], $fileTypesAllowed)) {
         return $image;
@@ -76,6 +75,7 @@ function imageUpload($filedata){
         return FALSE;
     }
 }
+
 
 
 // DISPLAY OPTIONS SUBMISSIONS
@@ -92,9 +92,8 @@ function addDisplayConditions($dispCondData){
 // ===========================================
 function insertingDates($formInfo){
     $startDates =  adjustDates($formInfo["dateStart"]);
-    $endDates = adjustDates($formInfo["dateEnd"]);
-
-    $localvars = localvars::getInstance();
+    $endDates   = adjustDates($formInfo["dateEnd"]);
+    $localvars  = localvars::getInstance();
     $db  = db::get($localvars->get('dbConnectionName'));
 
     if(!$startDates == NULL) {

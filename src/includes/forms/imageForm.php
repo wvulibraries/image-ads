@@ -86,6 +86,15 @@
 
     $form->addField(
         array(
+            'name'            => "imageType",
+            'label'           => "Image Type",
+            'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE, formbuilder::TYPE_EDIT),
+            'type'            => 'hidden'
+        )
+    );
+
+    $form->addField(
+        array(
             'name'            => "name",
             'label'           => "Image Name",
             'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE, formbuilder::TYPE_EDIT),
