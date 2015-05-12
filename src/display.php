@@ -1,5 +1,4 @@
 <?php
-
     require_once "engineHeaderClean.php";
 
     if (!validate::getInstance()->integer($_GET['MYSQL']['imageID'])) {

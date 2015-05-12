@@ -17,7 +17,7 @@
                 print "<h2>" . $imgProperties . "</h2>";
             }
             elseif($recordsIndex == "imageAd"){
-                print $imgProperties;
+                print "<img src='$imgProperties' alt='test image display for admins'/>";
             }
             elseif ($recordsIndex == "ID") {
                 $imgID = $imgProperties;
@@ -41,7 +41,7 @@
                 print "</li>";
             }
             else if ($recordsIndex == "altText" ) {
-                print " <h3> Alt Text: </h3> <li>";
+                print " <h3> Image Description: </h3> <li>";
                 print $imgProperties . "</li>";
             }
             else if ($recordsIndex == "actionURL" ) {

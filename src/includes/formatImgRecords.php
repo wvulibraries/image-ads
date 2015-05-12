@@ -39,6 +39,7 @@ function getImagesFromDB() {
 
         $tempAdArray = array(
             'name'      => htmlSanitize($row['name']),
+            'imageAd'   => NULL,
             'ID'        => $row['ID'],
             'enabled'   => $row['enabled'],
             'priority'  => $row['priority'],
@@ -63,15 +64,15 @@ function getImagesFromDB() {
             'sunday'    => $row['sunday']
         );
 
-        $tempDispArray['weekdays'] = $tempWeekdayArray;
-
-        if(!array_key_exists('imageAd', $tempAdArray)){
+        if(isnull($tempAdArray['imageAd'])){
             $imageURL = sprintf("%s/display.php?imageID=%s",
                     $URLpath,
                     $row['ID']
             );
             $tempAdArray['imageAd'] = $imageURL;
         }
+
+        $tempDispArray['weekdays'] = $tempWeekdayArray;
 
         $displayAdRecords[$row['ID']]["imageInfo"] = $tempAdArray;
         $displayAdRecords[$row['ID']]['display'][] = $tempDispArray;
