@@ -1,17 +1,9 @@
 <?php
-    $imageID   = $_GET['MYSQL']['imageID'];
     $localvars = localvars::getInstance();
     $db        = db::get($localvars->get('dbConnectionName'));
-    $sql       = sprintf("SELECT imageAds.*, displayConditions.dateStart, displayConditions.dateEnd, displayConditions.weekdays, displayConditions.timeStart, displayConditions.timeEnd FROM imageAds LEFT JOIN displayConditions ON displayConditions.imageAdID = imageAds.ID WHERE imageAds.ID=%s",
-                    $imageID
-                 );
-    $sqlResult = $db->query($sql);
-
-
-    if ($sqlResult->rowCount() < 1) {
-        errorHandle::errorMsg('No Images found are you sure you have added them?');
-        return FALSE;
-    }
+    $sql       = sprintf("SELECT imageAds.*, displayConditions.dateStart, displayConditions.dateEnd, displayConditions.monday, displayConditions.tuesday, displayConditions.wednesday, displayConditions.thursday, displayConditions.friday, displayConditions.saturday, displayConditions.sunday, displayConditions.timeStart, displayConditions.timeEnd FROM imageAds LEFT JOIN displayConditions ON displayConditions.imageAdID = imageAds.ID WHERE imageAds.ID=?");
+    $sqlResult = $db->query($sql,array($_GET['MYSQL']['imageID']));
+    $URLpath = "http://$_SERVER[HTTP_HOST]/admin/image_manager";
 
     if($sqlResult->error()) {
         errorHandle::newError(__FUNCTION__."() - " . $sqlResult->errorMsg(), errorHandle::DEBUG);
@@ -22,19 +14,17 @@
 
     $displayAdRecords = array();
     while($row = $sqlResult->fetch()) {
-
         $tempAdArray = array(
+            'name'      => htmlSanitize($row['name']),
+            'imageAd'   => NULL,
             'ID'        => $row['ID'],
-            'name'      => $row['name'],
             'enabled'   => $row['enabled'],
             'priority'  => $row['priority'],
-            'altText'   => $row ['altText'],
-            'actionURL' => $row['actionURL'],
-            'imageAd'   => $row['imageAd']
+            'altText'   => htmlSanitize($row['altText']),
+            'actionURL' => htmlSanitize($row['actionURL']),
         );
 
         $tempDispArray = array(
-            'ID'        => $row['ID'],
             'dateStart' => $row['dateStart'],
             'dateEnd'   => $row['dateEnd'],
             'timeStart' => $row['timeStart'],
@@ -50,6 +40,14 @@
             'saturday'  => $row['saturday'],
             'sunday'    => $row['sunday']
         );
+
+        if(isnull($tempAdArray['imageAd'])){
+            $imageURL = sprintf("%s/display.php?imageID=%s",
+                    $URLpath,
+                    $row['ID']
+            );
+            $tempAdArray['imageAd'] = $imageURL;
+        }
 
         $tempDispArray['weekdays'] = $tempWeekdayArray;
 
@@ -86,20 +84,32 @@
                 }
             }
             if(!is_empty($dispValue && $dispIndex === "weekdays")) {
-                $weekdaysTemp = explode(", ", $dispValue);
-                for($I = 0; $I<count($weekdaysTemp); $I++){
-                    $tempValue = $weekdaysTemp[$I];
-                    if(!in_array( $tempValue ,$weekdayArray)) {
-                        array_push($weekdayArray, $tempValue); // Push to array
+                foreach($dispValue as $weekday => $weekbool) {
+                    if($weekday == "monday" && $weekbool == 1) {
+                        array_push($weekdayArray, "Monday");
+                    }
+                    if($weekday == "tuesday" && $weekbool == 1) {
+                         array_push($weekdayArray, "Tuesday");
+                    }
+                    if($weekday == "wednesday" && $weekbool == 1) {
+                         array_push($weekdayArray, "Wednesday");
+                    }
+                    if($weekday == "thursday" && $weekbool == 1) {
+                         array_push($weekdayArray, "Thursday");
+                    }
+                    if($weekday == "friday" && $weekbool == 1) {
+                         array_push($weekdayArray, "Friday");
+                    }
+                    if($weekday == "saturday" && $weekbool == 1) {
+                         array_push($weekdayArray, "Saturday");
+                    }
+                    if($weekday == "sunday" && $weekbool == 1) {
+                         array_push($weekdayArray, "Sunday");
                     }
                 }
             }
         }
     }
-
-
-
-
 
     for ($itDates = 0; $itDates < count($startDates); $itDates++) {
 
@@ -152,11 +162,7 @@
 
     $localvars->set("exsistingTimeRanges", $dbTimeRanges);
     $localvars->set("exsistingWeekdays", $weekdayArray);
-
-    $imgURI = $displayAdRecords[$imageID]['imageInfo']['imageAd'];
-    $localvars->set("editingImage", $imgURI);
-
-
+    $localvars->set("editingImage", $imageInfoArray['imageAd']);
     $editLink = $localvars->get("baseDirectory"). "/deleteImage/?imageID=" . $imageID;
     $localvars->set("deleteButtonLink", $editLink);
 ?>
