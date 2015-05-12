@@ -113,10 +113,10 @@
                              array_push($tempWeekdayValuesArray, "Friday");
                         }
                         if($weekday == "saturday" && $weekbool == 1) {
-                             array_push($tempWeekdayValuesArray,print "Saturday");
+                             array_push($tempWeekdayValuesArray,"Saturday");
                         }
                         if($weekday == "sunday" && $weekbool == 1) {
-                             array_push($tempWeekdayValuesArray,print "Sunday");
+                             array_push($tempWeekdayValuesArray,"Sunday");
                         }
                     }
 

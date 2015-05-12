@@ -156,17 +156,20 @@ function insertWeekdays($formData) {
     $localvars   = localvars::getInstance();
     $insertArray = array();
 
-    foreach ($formData['weekdays'] as $weekday){
-        if($weekday == 'Monday' || $weekday == 'Tuesday' || $weekday == 'Wednesday' || $weekday == 'Thursday' || $weekday == 'Friday' || $weekday == 'Saturday' || $weekday == 'Sunday' ) {
-            array_push($insertArray, 1);
-        }
-        else {
-            array_push($insertArray, 0);
-        }
-    }
+    $weekday = $formData['weekdays'];
 
-    for($i = (7 - count($insertArray)); $i > 0; $i--) {
-        array_push($insertArray, 0);
+    $insertArray = array(
+        'monday'    => 0,
+        'tuesday'   => 0,
+        'wednesday' => 0,
+        'thursday'  => 0,
+        'friday'    => 0,
+        'saturday'  => 0,
+        'sunday'    => 0
+    );
+
+    foreach ($formData['weekdays'] as $weekday){
+        $insertArray[strtolower($weekday)] = 1;
     }
 
     if(!isnull($insertArray)) {
@@ -231,7 +234,7 @@ function updateImageAd($data,$id) {
         errorHandle::newError(__FUNCTION__."() - " . $sqlResult->errorMsg(), errorHandle::DEBUG);
         errorHandle::errorMsg('Error getting the image information from the database');
      } else {
-        $successMessage = '<i class="fa fa-thumbs-up" onLoad="setTimeout(\'delayer()\', 5000)"></i> Nice Job.  You have updated your image properties.';
+        $successMessage = '<i class="fa fa-thumbs-up"></i> Nice Job.  You have updated your image properties.';
         errorHandle::successMsg($successMessage);
      }
 
