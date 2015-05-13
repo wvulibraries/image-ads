@@ -5,7 +5,7 @@ function getImagesFromDB() {
     $sql       = sprintf("SELECT imageAds.*, displayConditions.dateStart, displayConditions.dateEnd, displayConditions.monday, displayConditions.tuesday, displayConditions.wednesday, displayConditions.thursday, displayConditions.friday, displayConditions.saturday, displayConditions.sunday, displayConditions.timeStart, displayConditions.timeEnd FROM imageAds LEFT JOIN displayConditions ON displayConditions.imageAdID = imageAds.ID");
     $sqlResult = $db->query($sql);
     $data      = NULL;
-    $URLpath = "http://$_SERVER[HTTP_HOST]/admin/image_manager";
+    $URLpath = $localvars->get('URLpath');
 
     if ($sqlResult->error()) {
         print "ERROR GETTING ADS  -- the error -- " . $sqlResult->errorMsg();
@@ -80,6 +80,8 @@ function getImagesFromDB() {
 
     return $displayAdRecords;
 }
+
+
 
 
 
