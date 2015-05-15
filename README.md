@@ -13,8 +13,8 @@ The Manage state is used to see all currently active images and get a general ov
  - Display Dates : The dates that the image will show
  - Display Times : The times that the image will show
  - Display Weekdays : The days in specific that the image will show 
- 
- **Input Areas (Create Update Delete)**
+
+**Input Areas (Create Update Delete)**
  
 The areas will allow you to use forms to create update or delete images you have already stored.  The bulk of the users time will be spent in these sections.  
 
@@ -22,7 +22,7 @@ The areas will allow you to use forms to create update or delete images you have
 
 The application is setup to send a JSON file to the html browser by using an AJAX Call. The following JQuery will display the images in a list file.   
 
-```	
+``` javascript	
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
     <script type='text/javascript'>
