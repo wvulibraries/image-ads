@@ -1,5 +1,5 @@
 <?php
-    header('Content-Type: application/json');
+    //header('Content-Type: application/json');
     require_once "../../engineHeaderClean.php";
 
     $localvars        = localvars::getInstance();
@@ -72,6 +72,17 @@
         }
         else {
             array_push($viewableAdRecords, getImageInfo($images['imageInfo']));
+        }
+    }
+
+    if(!isempty($_GET) &&  validate::getInstance()->integer($_GET['MYSQL']['limit'])) {
+        $limit = $_GET['MYSQL']['limit'];
+        if( $limit <= count($viewableAdRecords)) {
+            for($i = 0; $i < (count($viewableAdRecords) - $limit); $i++) {
+                array_pop($viewableAdRecords);
+            }
+        } else {
+            print $_GET['MYSQL']['limit'];
         }
     }
 
