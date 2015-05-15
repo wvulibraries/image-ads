@@ -1,5 +1,6 @@
 <?php
-    require_once "../../engineHeader.php";
+    header('Content-Type: application/json');
+    require_once "../../engineHeaderClean.php";
 
     $localvars        = localvars::getInstance();
     $db               = db::get($localvars->get('dbConnectionName'));
@@ -12,17 +13,10 @@
 
     $sqlResult = $db->query($sql);
 
-    if ($sqlResult->rowCount() < 1) {
-        errorHandle::errorMsg('No Images found are you sure you have added them?');
-        return FALSE;
-    }
-
     if($sqlResult->error()) {
         errorHandle::newError(__FUNCTION__."() - " . $sqlResult->errorMsg(), errorHandle::DEBUG);
         errorHandle::errorMsg('Error getting the image information from the database');
     }
-
-    $localvars->set("feedbackStatus",errorHandle::prettyPrint());
 
     $displayAdRecords = array();
     while($row = $sqlResult->fetch()) {
@@ -70,25 +64,18 @@
     $viewableAdRecords = array();
 
     foreach ($displayAdRecords as $images) {
-        print "<strong> Image </strong><br><br>";
         if(checkHasDisplayConditions($images['display'])) {
-            print "Yay, now lets test some conditions<br><br>";
             $displayBools = checkDisplayConditions((refactorDisplayConditions($images['display'])));
             if(!in_array(false, $displayBools, TRUE)) {
                array_push($viewableAdRecords, getImageInfo($images['imageInfo']));
             }
         }
         else {
-            print "No Records Match, image is enabled with no options show always<br><br>";
             array_push($viewableAdRecords, getImageInfo($images['imageInfo']));
         }
     }
 
-
-    print "<pre>";
-    var_dump($viewableAdRecords);
-    print "</pre>";
-
+    print json_encode($viewableAdRecords);
 
 
     function checkHasDisplayConditions($data) {
@@ -211,6 +198,4 @@
     }
 
 ?>
-
-{local var="feedbackStatus"}
 
