@@ -121,7 +121,7 @@
     $form->addField(
         array(
             'name'            => "priority",
-            'label'           => "Is this iamge high priority?",
+            'label'           => "Is this image high priority?",
             'showInEditStrip' => TRUE,
             'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE, formbuilder::TYPE_EDIT),
             //'required'        => TRUE,
