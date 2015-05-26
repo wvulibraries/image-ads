@@ -161,8 +161,7 @@
     }
 
     $localvars->set("exsistingTimeRanges", $dbTimeRanges);
-    $localvars->set("exsistingWeekdays", $weekdayArray);
-    $localvars->set("editingImage", $imageInfoArray['imageAd']);
-    $editLink = $localvars->get("baseDirectory"). "/deleteImage/?imageID=" . $imageID;
-    $localvars->set("deleteButtonLink", $editLink);
+    $localvars->set("exsistingWeekdays",   $weekdayArray);
+    $localvars->set("editingImage",        $imageInfoArray['imageAd']);
+    $localvars->set("deleteButtonLink",    $localvars->get("baseDirectory"). "/deleteImage/?imageID=" . $_GET['HTML']['imageID']);
 ?>
