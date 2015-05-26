@@ -1,7 +1,7 @@
 <?php
     require_once "../engineHeader.php";
     templates::display('header');
-    recurseInsert("../includes/forms/ImageForm.php","php");
+    recurseInsert("../includes/forms/imageForm.php","php");
 ?>
 
 <header>
