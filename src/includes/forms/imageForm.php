@@ -1,4 +1,5 @@
  <?php
+
     $localvars = localvars::getInstance();
     $form      = formBuilder::createForm('imageAdForm');
 
@@ -26,7 +27,6 @@
         $processor->setCallback('beforeInsert', 'processNewImage');
         $processor->setCallback('afterInsert', 'processDisplayInformation');
         $processor->setCallback('beforeUpdate', 'processUpdate');
-        $processor->setCallback('afterUpdate', 'creatingEditViews');
         $processor->processPost();
     }
 
