@@ -16,32 +16,58 @@ function processNewImage() {
         "altText"   => $imgForm['altText']
     );
 
-    $imgDisplayConditions = array(
-        "dateStart" => $imgForm["dateStart"],
-        "dateEnd"   => $imgForm["dateEnd"],
-        "timeStart" => $imgForm["timeStart"],
-        "timeEnd"   => $imgForm["timeEnd"],
-        "weekdays"  => $imgForm["weekdays"]
-    );
+    $imgDisplayConditions = setImgDisplayConditions($imgForm);
 
     $localvars->set("displayConditionsTemp", $imgDisplayConditions);
 
     if(isset($_FILES['imageAd'])) {
-        $imageInfo = $_FILES['imageAd'];
-        $imageData = imageUpload($imageInfo);
+        $imageInfo            = $_FILES['imageAd'];
+        $imageData            = imageUpload($imageInfo);
         $imgInfo['imageType'] = $imageInfo['type'];
     }
     else {
-        $errorStatus = '<div class="error"> Something went wrong or you did not properly upload an image. </div>';
+        $localvars->set("feedbackStatus",'<div class="error"> Something went wrong or you did not properly upload an image. </div>');
         return FALSE;
     }
 
-    $localvars->set("feedbackStatus",$errorStatus);
     $imgInfo['imageAd'] = $imageData;
 
     return $imgInfo;
 }
 
+// Process Updating Certain Rows of Data
+// ===========================================
+function processUpdate() {
+    $editedFormData = $_POST['MYSQL'];
+    $imageID        = $_GET['MYSQL']['imageID'];
+
+
+    $imgInfo = array(
+        "name"        => $editedFormData['name'],
+        "enabled"     => $editedFormData['enabled'],
+        "priority"    => $editedFormData['priority'],
+        "altText"     => $editedFormData['altText'],
+        "actionURL"   => $editedFormData['actionURL']
+    );
+
+    $imgDisplayConditions = setImgDisplayConditions($editedFormData);
+
+    updateImageDispOptions($imgDisplayConditions, $imageID);
+    updateImageAd($imgInfo,$imageID);
+    return $imgInfo;
+}
+
+function setImgDisplayConditions($imgForm) {
+
+    return array(
+        "dateStart" => (isset($imgForm["dateStart"]) && !is_empty($imgForm["dateStart"]))? $imgForm["dateStart"]:array(),
+        "dateEnd"   => (isset($imgForm["dateEnd"])   && !is_empty($imgForm["dateEnd"]))?   $imgForm["dateEnd"]:array(), 
+        "timeStart" => (isset($imgForm["timeStart"]) && !is_empty($imgForm["timeStart"]))? $imgForm["timeStart"]:array(),
+        "timeEnd"   => (isset($imgForm["timeEnd"])   && !is_empty($imgForm["timeEnd"]))?   $imgForm["timeEnd"]:array(),
+        "weekdays"  => (isset($imgForm["weekdays"])  && !is_empty($imgForm["weekdays"]))?  $imgForm["weekdays"]:array()
+    );
+
+}
 
 // Process the Display Information
 // after the Insert has happened
@@ -106,6 +132,7 @@ function insertingDates($formInfo){
 }
 
 function adjustDates($formData){
+
    $returnDates     = array();
    $numofIterations = count($formData);
 
@@ -188,37 +215,7 @@ function insertWeekdays($formData) {
     }
 }
 
-// Process Updating Certain Rows of Data
-// ===========================================
-function processUpdate() {
-    $editedFormData = $_POST['MYSQL'];
-    $imageID        = $_GET['MYSQL']['imageID'];
 
-
-    $imgInfo = array(
-        // "__formID"    => $editedFormData['__formID'],
-        // "__csrfToken" => $editedFormData['__csrfToken'],
-        // "__csrfID"    => $editedFormData['__csrfID'],
-        // "ID"          => $imageID,
-        "name"        => $editedFormData['name'],
-        "enabled"     => $editedFormData['enabled'],
-        "priority"    => $editedFormData['priority'],
-        "altText"     => $editedFormData['altText'],
-        "actionURL"   => $editedFormData['actionURL']
-    );
-
-    $imgDisplayConditions = array(
-        "dateStart" => $editedFormData["dateStart"],
-        "dateEnd"   => $editedFormData["dateEnd"],
-        "timeStart" => $editedFormData["timeStart"],
-        "timeEnd"   => $editedFormData["timeEnd"],
-        "weekdays"  => $editedFormData["weekdays"]
-    );
-
-    updateImageDispOptions($imgDisplayConditions, $imageID);
-    updateImageAd($imgInfo,$imageID);
-    return $imgInfo;
-}
 
 function updateImageAd($data,$id) {
     $localvars = localvars::getInstance();
