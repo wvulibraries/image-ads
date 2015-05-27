@@ -99,5 +99,5 @@ mysql -u root rotatingImageAds < /vagrant/sqlFiles/baseSQLTables.sql
 for f in $SQLFILES
 do
   echo "Processing $f ..."
-  mysql -u root roomReservations < $f
+  mysql -u root rotatingImageAds < $f
 done
