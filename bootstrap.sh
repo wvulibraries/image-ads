@@ -14,8 +14,8 @@ SQLFILES="/vagrant/sqlFiles/migrations/*.sql"
 
 yum -y install httpd httpd-devel httpd-manual httpd-tools
 yum -y install mysql-connector-java mysql-connector-odbc mysql-devel mysql-lib mysql-server
-yum -y install mod_auth_kerb mod_auth_mysql mod_authz_ldap mod_evasive mod_perl mod_security mod_ssl mod_wsgi 
-yum -y install php php-bcmath php-cli php-common php-gd php-ldap php-mbstring php-mcrypt php-mysql php-odbc php-pdo php-pear php-pear-Benchmark php-pecl-apc php-pecl-imagick php-pecl-memcache php-soap php-xml php-xmlrpc 
+yum -y install mod_auth_kerb mod_auth_mysql mod_authz_ldap mod_evasive mod_perl mod_security mod_ssl mod_wsgi
+yum -y install php php-bcmath php-cli php-common php-gd php-ldap php-mbstring php-mcrypt php-mysql php-odbc php-pdo php-pear php-pear-Benchmark php-pecl-apc php-pecl-imagick php-pecl-memcache php-soap php-xml php-xmlrpc
 yum -y install emacs emacs-common emacs-nox
 yum -y install git
 
@@ -92,8 +92,12 @@ mysql -u root < /tmp/git/engineAPI/sql/vagrantSetup.sql
 mysql -u root EngineAPI < /tmp/git/engineAPI/sql/EngineAPI.sql
 
 # application Post Setup
-## Local Setup of the SQLTables  
+## Local Setup of the SQLTables
 mysql -u root < /vagrant/sqlFiles/setup.sql
 mysql -u root rotatingImageAds < /vagrant/sqlFiles/baseSQLTables.sql
 
-
+for f in $SQLFILES
+do
+  echo "Processing $f ..."
+  mysql -u root roomReservations < $f
+done
