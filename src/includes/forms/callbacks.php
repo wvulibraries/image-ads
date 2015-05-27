@@ -30,9 +30,24 @@ function processNewImage() {
         return FALSE;
     }
 
+    if(!validateURL($imgInfo['actionURL'])) {
+        $localvars->set("feedbackStatus",'<div class="error"> No valid URL. </div>');
+        return FALSE;
+    }
+
     $imgInfo['imageAd'] = $imageData;
 
     return $imgInfo;
+}
+
+function validateURL($URL) {
+    $pattern_1 = "/^(http|https|ftp):\/\/(([A-Z0-9][A-Z0-9_-]*)(\.[A-Z0-9][A-Z0-9_-]*)+.(com|org|net|dk|at|us|tv|info|uk|co.uk|biz|se)$)(:(\d+))?\/?/i";
+    $pattern_2 = "/^(www)((\.[A-Z0-9][A-Z0-9_-]*)+.(com|org|net|dk|at|us|tv|info|uk|co.uk|biz|se)$)(:(\d+))?\/?/i";
+    if(preg_match($pattern_1, $URL) || preg_match($pattern_2, $URL)){
+        return true;
+    } else{
+        return false;
+    }
 }
 
 // Process Updating Certain Rows of Data
@@ -43,6 +58,10 @@ function processUpdate() {
 
 
     $imgInfo = array(
+        "__formID"    => $editedFormData['__formID'],
+-       "__csrfToken" => $editedFormData['__csrfToken'],
+-       "__csrfID"    => $editedFormData['__csrfID'],
+-       "ID"          => $imageID,
         "name"        => $editedFormData['name'],
         "enabled"     => $editedFormData['enabled'],
         "priority"    => $editedFormData['priority'],
@@ -61,7 +80,7 @@ function setImgDisplayConditions($imgForm) {
 
     return array(
         "dateStart" => (isset($imgForm["dateStart"]) && !is_empty($imgForm["dateStart"]))? $imgForm["dateStart"]:array(),
-        "dateEnd"   => (isset($imgForm["dateEnd"])   && !is_empty($imgForm["dateEnd"]))?   $imgForm["dateEnd"]:array(), 
+        "dateEnd"   => (isset($imgForm["dateEnd"])   && !is_empty($imgForm["dateEnd"]))?   $imgForm["dateEnd"]:array(),
         "timeStart" => (isset($imgForm["timeStart"]) && !is_empty($imgForm["timeStart"]))? $imgForm["timeStart"]:array(),
         "timeEnd"   => (isset($imgForm["timeEnd"])   && !is_empty($imgForm["timeEnd"]))?   $imgForm["timeEnd"]:array(),
         "weekdays"  => (isset($imgForm["weekdays"])  && !is_empty($imgForm["weekdays"]))?  $imgForm["weekdays"]:array()
