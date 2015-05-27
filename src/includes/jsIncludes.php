@@ -44,7 +44,6 @@
                fileLength   = theFile.length;
 
            if(fileLength && theFile[0].type.match('image.*') && (theFile[0].size < maxFileSize)) {
-                console.log("File is an image and we are field has length");
                 imgcontainer.html('<img id="imgPrev" alt="preview for image that is going to be uploaded"/>');
 
                 var reader = new FileReader();
@@ -54,9 +53,12 @@
                 reader.readAsDataURL(theFile[0]);
 
            } else {
-              console.log("WHooohaho this is not an image!");
+              if(theFile[0].size >= maxFileSize && theFile[0].type.match('image.*')) {
+                 imgcontainer.html("<div class='error'>Filesize is too large.  Please use a smaller image.</div>");
+              } else {
+                 imgcontainer.html("<div class='error'> You can only upload images, please try again!</div>");
+              }
               fileUpload.replaceWith(fileUpload = fileUpload.clone(true));
-              imgcontainer.html("<div class='error'> You can only upload images, please try again!</div>");
            }
 
         });
