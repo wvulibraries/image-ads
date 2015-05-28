@@ -118,11 +118,11 @@
 
         $sMonth     = date('m', $startValue);
         $sDay       = date('d', $startValue);
-        $sYear      = date('y', $startValue);
+        $sYear      = date('Y', $startValue);
 
         $eMonth     = date('m', $endValue);
         $eDay       = date('d', $endValue);
-        $eYear      = date('y', $endValue);
+        $eYear      = date('Y', $endValue);
 
         $dbDateRanges .= addDateRanges(
                         array(
@@ -141,8 +141,6 @@
     for($itTimes = 0; $itTimes < count($startTime); $itTimes++ ) {
         $startValue = $startTime[$itTimes];
         $endValue   = $endTime[$itTimes];
-
-
 
          $starthour = date("H", $startValue);
          $startmin  = date("i", $startValue);
