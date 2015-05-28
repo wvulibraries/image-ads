@@ -137,7 +137,7 @@ a.delete.button {
 	margin:0;
 }
 
-#start_date,#end_date {
+.start_date,.end_date {
 	width:25%;
 }
 
@@ -215,4 +215,20 @@ section {
 input[type="text"] {
 	display:block;
 	padding:10px !important;
+}
+
+.error {
+	padding:5px;
+	border: 3px solid red;
+}
+
+.has-error { font-size:16px; color:red;}
+
+.disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  opacity: .65;
 }
