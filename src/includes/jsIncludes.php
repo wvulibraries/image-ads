@@ -9,6 +9,7 @@
     if($('.addDateRange').length){
         $('.addDateRange').click(function(){
            $('.addDateRange').parent().append('<?php echo addDateRanges(); ?>');
+           addEventsToDom();
         });
 
         $('.deleteDateRange').click(function(){
@@ -52,10 +53,12 @@
                 }
                 reader.readAsDataURL(theFile[0]);
 
-           } else {
+           }
+           else {
               if(theFile[0].size >= maxFileSize && theFile[0].type.match('image.*')) {
                  imgcontainer.html("<div class='has-error'>Filesize is too large.  Please use a smaller image.</div>");
-              } else {
+              }
+              else {
                  imgcontainer.html("<div class='has-error'> You can only upload images, please try again!</div>");
               }
               fileUpload.replaceWith(fileUpload = fileUpload.clone(true));
@@ -64,10 +67,22 @@
         });
     }
 
-    if($('.inputs').length){
-        createDateRangesArray();
-        $('.start_date').change(createDateRangesArray);
-        $('.end_date').change(createDateRangesArray);
+    $(function() {
+        addEventsToDom();
+    });
+
+    function addEventsToDom(){
+        if($('.inputs').length){
+            createDateRangesArray();
+            $('.start_date').change(createDateRangesArray);
+            $('.end_date').change(createDateRangesArray);
+        }
+        if($('.times').length) {
+            createTimeTest();
+            $('.time_start').change(createTimeTest);
+            $('.time_end').change(createTimeTest);
+        }
+        //console.log('Events Function: ' + 'Inputs Length -' + $('.inputs').length );
     }
 
     function createDateRangesArray(){
@@ -75,10 +90,10 @@
         $('.inputs').each(function() {
             var startDates = dateElmArray($(this).children('.start_date'));
             var endDates   = dateElmArray($(this).children('.end_date'));
-            var tempCheck = startDates.toString() + ", " + endDates.toString();
+            var tempCheck  = startDates.toString() + ", " + endDates.toString();
 
             if(startDates >= endDates) {
-                console.log("Issues with the start date");
+                //console.log("Issues with the start date");
                 $(this).addClass("error");
                 $(this).append("<div class='has-error'> Your start date can't be before your end date! <br><br> </div>")
                 $('input:submit').attr('disabled', 'disabled').addClass('disabled');
@@ -89,20 +104,80 @@
                 $('input:submit').attr('disabled', 'disabled').addClass('disabled');
             }
             else {
-                console.log("fixed");
+                //console.log("fixed");
                 $(this).removeClass("error");
                 $(this).children('.has-error').hide();
                 $('input:submit').removeAttr('disabled', 'disabled').removeClass('disabled');
             }
 
             dateRanges.push(tempCheck);
-            console.log(dateRanges);
+            //console.log(dateRanges);
         });
     }
 
+    function createTimeTest(){
+        var startRanges = [];
+        var endRanges = [];
+        $('.times').each(function() {
+            var startTimes     = timeElmArray($(this).children('.time_start'));
+            var endTimes       = timeElmArray($(this).children('.time_end'));
+            var tempCheckStart = startTimes.toString();
+            var tempCheckEnd   = endTimes.toString();
+
+            if(startTimes >= endTimes) {
+                $(this).addClass("error");
+                $(this).append("<div class='has-error'> Your start time can't be before your end time! <br><br> </div>")
+                $('input:submit').attr('disabled', 'disabled').addClass('disabled');
+            }
+            else if(checkOverlappingTimes(startRanges, endRanges, startTimes, endTimes)) {
+                $(this).addClass("error");
+                $(this).append("<div class='has-error'> Time ranges overlap. <br><br> </div>")
+                $('input:submit').attr('disabled', 'disabled').addClass('disabled');
+            }
+            else {
+                $(this).removeClass("error");
+                $(this).children('.has-error').hide();
+                $('input:submit').removeAttr('disabled', 'disabled').removeClass('disabled');
+            }
+
+            startRanges.push(tempCheckStart);
+            endRanges.push(tempCheckEnd);
+        });
+    }
+
+    function checkOverlappingTimes(startArray, endArray, startTime, endTime){
+        if(startArray.length === endArray.length) {
+            for(var i = 0; i <= startArray.length; i++) {
+                if((startArray[i] <= endTime) && (startTime <= endArray[i])) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+        }
+    }
+
+    function timeElmArray(elm){
+        var tempArray   = [],
+            returnArray = [];
+
+        elm.each(function() {
+            tempArray.push(this.value);
+        });
+
+        for(var i = 0; i <= tempArray.length; i+=2) {
+            var hour = tempArray.shift();
+            var min  = tempArray.shift();
+
+            var timestamp = hour + min;
+            return timestamp;
+        }
+    }
+
     function dateElmArray(elm) {
-        var tempArray   = [];
-        var returnArray = [];
+        var tempArray   = [],
+            returnArray = [];
 
         elm.each(function() {
             tempArray.push(this.value);
@@ -117,16 +192,5 @@
         }
     }
 
-    // function compareArrays(array1, array2) {
-    //     if(array1.length === array2.length) {
-    //         var i = array1.length;
-    //         while(i--){
-    //             if(array1[i] === array2[i]) {
-    //                 return false;
-    //             }
-    //         }
-    //         return true;
-    //     }
-    // }
 
 </script>
