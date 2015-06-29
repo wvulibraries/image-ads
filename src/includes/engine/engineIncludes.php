@@ -14,4 +14,18 @@
     //var_dump($db); // dumps the variable 
 
     //echo "EINCLUDES IS WORKING!";
+    //
+    if (EngineAPI::VERSION >= "4.0") {
+    $localvars  = localvars::getInstance();
+    $localvarsFunction = array($localvars,'set');
+}
+else {
+    $localvarsFunction = array("localvars","add");
+}
+
+call_user_func_array($localvarsFunction,array("cssExt","less"));
+call_user_func_array($localvarsFunction,array("cssURL","/css/2012"));
+call_user_func_array($localvarsFunction,array("jsURL", "/javascript/2012"));
+call_user_func_array($localvarsFunction,array("imgURL","/images/2012"));
+call_user_func_array($localvarsFunction,array("styleRel","")); 
 ?>
