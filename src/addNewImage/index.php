@@ -9,6 +9,7 @@
 </header>
 
 <section>
+    {local var="feedbackStatus"}
     <div id="UploadImageForm">
 	   {form name="imageAdForm" display="form"}
     </div>

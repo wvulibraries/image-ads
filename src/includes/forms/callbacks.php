@@ -27,12 +27,13 @@ function processNewImage() {
     }
     else {
         $localvars->set("feedbackStatus",'<div class="error"> Something went wrong or you did not properly upload an image. </div>');
-        return FALSE;
+        return $imgInfo;
     }
 
     if(!validateURL($imgInfo['actionURL'])) {
-        $localvars->set("feedbackStatus",'<div class="error"> No valid URL. </div>');
-        return FALSE;
+        $localvars->set("feedbackStatus",'<div class="error"> No valid URL. Please make sure that your URLis formatted correctly. Ex: <strong> https://www.lib.wvu.edu </strong> </div>');
+        $imgInfo['actionURL'] = NULL;
+        return $imgInfo;
     }
 
     $imgInfo['imageAd'] = $imageData;
@@ -116,7 +117,7 @@ function imageUpload($filedata){
     if($filedata['size'] < $maxFileSize && in_array($filedata['type'], $fileTypesAllowed)) {
         return $image;
     } else {
-        print "No Image was uploaded!";
+        $localvars->set("feedbackStatus",'<div class="error"> Something went wrong or you did not properly upload an image. </div>');
         return FALSE;
     }
 }
