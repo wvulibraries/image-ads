@@ -75,7 +75,7 @@
         }
     }
 
-    if(!isempty($_GET) &&  validate::getInstance()->integer($_GET['MYSQL']['limit'])) {
+    if(!is_empty($_GET) &&  validate::getInstance()->integer($_GET['MYSQL']['limit'])) {
         $limit = $_GET['MYSQL']['limit'];
         if( $limit <= count($viewableAdRecords)) {
             for($i = 0; $i < (count($viewableAdRecords) - $limit); $i++) {
