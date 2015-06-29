@@ -49,7 +49,7 @@
         );
 
         if(isnull($tempAdArray['imageAd'])){
-            $imageURL = sprintf("%s/display.php?imageID=%s",
+            $imageURL = sprintf("%s/includes/ajax/display.php?imageID=%s",
                     $URLpath,
                     $row['ID']
             );
