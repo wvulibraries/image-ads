@@ -66,6 +66,13 @@
     foreach ($displayAdRecords as $images) {
         if(checkHasDisplayConditions($images['display'])) {
             $displayBools = checkDisplayConditions((refactorDisplayConditions($images['display'])));
+
+
+            // print "<pre>";
+            // var_dump($displayBools);
+            // print "</pre>";
+
+
             if(!in_array(false, $displayBools, TRUE)) {
                array_push($viewableAdRecords, getImageInfo($images['imageInfo']));
             }
@@ -172,6 +179,7 @@
         $timeShowBool     = NULL;
         $weekdayShowBool  = NULL;
 
+
         if($hasDate) {
             if($data['dateStart'] <= $currentDate && $data['dateEnd'] >= $currentDate) {
                 $dateShowBool = TRUE;
@@ -194,15 +202,16 @@
         }
 
         if($hasWeekdays) {
-            if(array_search($currentDayofWeek, $data['weekdays'])) {
+            if(array_search($currentDayofWeek, $data['weekdays']) === FALSE ) {
+                $weekdayShowBool = FALSE;
+            } else {
                 $weekdayShowBool = TRUE;
             }
-            else {
-               $weekdayShowBool = FALSE;
-            }
-        } else {
+        }
+        else {
             $weekdayShowBool = TRUE;
         }
+
 
         return array($dateShowBool,$timeShowBool,$weekdayShowBool);
 
