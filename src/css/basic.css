@@ -237,8 +237,8 @@ input[type="text"] {
   opacity: .65;
 }
 
-.formErrors {
-  color: #aa2323;
+.errorMessage {
+  color: #aa2323 !important;
   border: solid 1px #eeabab;
   background-color: #f6d6d6;
   border-radius: 3px;
@@ -246,9 +246,18 @@ input[type="text"] {
   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1), inset 0px 0px 3px white;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.1), inset 0px 0px 3px white;
   padding:0;
-  opacity:.9;
-  display:none;
 }
 
-.formErrors ul { list-style:none; margin:0; padding:0;}
-.formErrors li { padding:5px; }
+.successMessage {
+  color: #4F8A10 !important;
+  border: solid 1px #4F8A10;
+  background-color: #DFF2BF;
+  border-radius: 3px;
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1), inset 0px 0px 3px white;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1), inset 0px 0px 3px white;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1), inset 0px 0px 3px white;
+  padding:0;
+}
+
+.formErrors ul, .errorPrettyPrint { list-style: none !important; margin:0; padding:0;}
+.formErrors li, .errorPrettyPrint li { padding:5px; }

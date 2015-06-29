@@ -9,7 +9,7 @@ function processNewImage() {
     $imgInfo   = array(
         "__formID"  => $imgForm["__formID"],
         "name"      => $imgForm['name'],
-        "enbaled"   => $imgForm['enabled'],
+        "enabled"   => $imgForm['enabled'],
         "priority"  => $imgForm['priority'],
         "altText"   => $imgForm['altText'],
         "actionURL" => $imgForm['actionURL'],
@@ -30,7 +30,7 @@ function processNewImage() {
         return $imgInfo;
     }
 
-    if(!validateURL($imgInfo['actionURL'])) {
+    if(!validate::getInstance()->url($imgInfo['actionURL'])) {
         $localvars->set("feedbackStatus",'<div class="error"> No valid URL. Please make sure that your URLis formatted correctly. Ex: <strong> https://www.lib.wvu.edu </strong> </div>');
         $imgInfo['actionURL'] = NULL;
         return $imgInfo;
@@ -39,16 +39,6 @@ function processNewImage() {
     $imgInfo['imageAd'] = $imageData;
 
     return $imgInfo;
-}
-
-function validateURL($URL) {
-    $pattern_1 = "/^(http|https|ftp):\/\/(([A-Z0-9][A-Z0-9_-]*)(\.[A-Z0-9][A-Z0-9_-]*)+.(com|org|net|dk|at|us|tv|info|uk|co.uk|biz|se)$)(:(\d+))?\/?/i";
-    $pattern_2 = "/^(www)((\.[A-Z0-9][A-Z0-9_-]*)+.(com|org|net|dk|at|us|tv|info|uk|co.uk|biz|se)$)(:(\d+))?\/?/i";
-    if(preg_match($pattern_1, $URL) || preg_match($pattern_2, $URL)){
-        return true;
-    } else{
-        return false;
-    }
 }
 
 // Process Updating Certain Rows of Data
