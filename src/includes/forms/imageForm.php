@@ -121,13 +121,24 @@
     $form->addField(
         array(
             'name'            => "priority",
-            'label'           => "Is this image high priority?",
+            'label'           => "What is the display priority of this image?",
             'showInEditStrip' => TRUE,
             'showIn'          => array(formBuilder::TYPE_INSERT, formBuilder::TYPE_UPDATE, formbuilder::TYPE_EDIT),
-            //'required'        => TRUE,
-            'type'            => 'boolean',
+            'required'        => TRUE,
+            'type'            => 'select',
             'duplicates'      => TRUE,
-            'options'         => array("YES","NO")
+            'options'         => array(
+                                '1' => "1 - Low",
+                                '2' => "2",
+                                '3' => "3",
+                                '4' => "4",
+                                '5' => "5 - Medium",
+                                '6' => "6",
+                                '7' => "7",
+                                '8' => "8",
+                                '9' => "9",
+                                '10' => "10 - High"
+                              ),
         )
     );
 
