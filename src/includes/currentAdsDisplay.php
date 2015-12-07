@@ -5,7 +5,7 @@
 
     try {
             $displayAdRecords =  getImagesFromDB();
-     
+
             if (!$displayAdRecords) {
                 throw new Exception("no images");
             }
@@ -37,11 +37,11 @@
                 }
             }
             else if ($recordsIndex == "priority"){
-                if($imgProperties == 0 ){
-                   print  "<div class='image-priority low'> <span class='display'> <i class='fa fa-circle-thin'></i> Low Priority </span></div>";
+                if($imgProperties <= 5 ){
+                   print  "<div class='image-priority low'> <span class='display'> <i class='fa fa-circle-thin'></i> Low Priority - $imgProperties </span></div>";
                 }
                 else {
-                    print "<div class='image-priority high'><span class='display'> <i class='fa fa-exclamation-circle'></i> High Priority </span></div>";
+                    print "<div class='image-priority high'><span class='display'> <i class='fa fa-exclamation-circle'></i> High Priority - $imgProperties </span></div>";
                 }
                 print "</li>";
             }
@@ -149,7 +149,7 @@
         print "</li>";
 
         print "</ul>";
-    }   
-    } catch (Exception $e) {   
-    }   
+    }
+    } catch (Exception $e) {
+    }
 ?>
