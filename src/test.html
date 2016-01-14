@@ -1,0 +1,43 @@
+<html>
+<head>
+    <title>Testing Image Render</title>
+</head>
+<body>
+    <h1> Testing Json Pull </h1>
+
+    <ul class="slider">
+
+    </ul>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <script type='text/javascript'>
+        $(document).ready(function() {
+
+            $.ajax({
+                dataType:'json',
+                url:'/admin/image_manager/includes/ajax/getImages.php',
+                data: '',
+                success:function() {
+                    console.log('success');
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.log(textStatus + ': ' + errorThrown);
+                },
+                complete: function(data){
+                    var jsonData = data.responseJSON;
+
+                    for (var i = 0; i < jsonData.length; i++) {
+                        var buildList = '<li class="slider-object"><a href="' + jsonData[i].actionURL +'">';
+                        buildList += '<img src="'+ jsonData[i].imageAd +'" alt="' + jsonData[i].altText + '" title="' + jsonData[i].name + '" />';
+                        buildList += '</a></li>';
+
+                        $('.slider').append(buildList);
+                    }
+                },
+            });
+
+        });
+    </script>
+</body>
+</html>

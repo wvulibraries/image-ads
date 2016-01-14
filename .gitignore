@@ -1,0 +1,4 @@
+/serverConfiguration/serverLogs/
+/serverConfiguration/includes/
+/.vagrant/
+sessionLogin.php
