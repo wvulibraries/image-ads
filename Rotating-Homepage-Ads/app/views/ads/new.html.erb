@@ -1,0 +1,77 @@
+<h1>Create New Roating Image Ad</h1>
+<h2>New Roating Ad</h2>
+<%= form_for :ad do |f| %>
+    <p>
+      <%= f.label :'File Upload' %><br>
+      <%= f.file_field :image %>
+    </p>
+
+    <p>
+      <%= f.label :'Image Name' %><br>
+      <%= f.text_field :title %>
+    </p>
+
+    <p>
+      <%= f.label :'Is this image being displayed now?' %><br>
+      <%= f.select :desired_attribute, ['No', 'Yes']%>
+    </p>
+
+    <p>
+      <%= f.label :'What is the display priority of this Ad?' %><br>
+      <%= f.select :priority, [['1 - Low', 1], ['2 - Medium', 2], ['3 - High', 3]]%>
+    </p>
+
+    <p>
+      <%= f.label :'Please provide meaningful alt text.' %><br>
+      <%= f.text_area :alttext %>
+    </p>
+
+    <p>
+      <%= f.label :'Add a Link' %><br>
+      <%= f.text_field :link %>
+    </p>
+
+    <p>
+       <div>
+         <%= f.label :'Days of the Week'%><br>
+         <% Date::DAYNAMES.each do |day| %>
+             <%= f.check_box :day, {}, day %>
+             <%= day %>
+         <% end %>
+       </div>
+    </p>
+
+    <div>
+      <%= f.label :'Add Dates Ad Will Be Displayed'%><br>
+      <%= f.label :'Add Date | Remove Last Date'%><br>
+      <p>
+        <%= f.label :'Start Date:'%><br>
+        <%= f.date_select :startdate, :order => [:month, :day, :year] %>
+      </p>
+
+      <p>
+        <%= f.label :'End Date:'%><br>
+        <%= f.date_select :enddate, :order => [:month, :day, :year] %>
+      </p>
+
+    </div>
+
+    <div>
+      <%= f.label :'Add Times Ad Will Be Displayed'%><br>
+      <%= f.label :'Add Time | Remove Last Time Range'%><br>
+      <p>
+        <%= f.label :'Start Time:'%><br>
+        <%= f.time_select :start,  {ampm: true} %>
+      </p>
+
+      <p>
+        <%= f.label :'End Time:'%><br>
+        <%= f.time_select :end,  {ampm: true} %>
+      </p>
+
+    </div>
+
+    <p>
+      <%= f.submit %>
+    </p>
+<% end %>
