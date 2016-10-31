@@ -1,7 +1,11 @@
 class Ad < ApplicationRecord
-# has_many :schedules
-# validates :title, presence: true,
-#                   length: { minimum: 5 }
+has_many :start_end_dates
+
+accepts_nested_attributes_for :start_end_date
+
+
+validates :image_name, presence: true,
+                  length: { minimum: 5 }
 
 validate :file_size_under_one_mb
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161031153506) do
+ActiveRecord::Schema.define(version: 20161031165007) do
 
   create_table "ads", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "filename"
@@ -26,8 +26,23 @@ ActiveRecord::Schema.define(version: 20161031153506) do
   end
 
   create_table "schedules", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.integer  "ad_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["ad_id"], name: "index_schedules_on_ad_id", using: :btree
   end
 
+  create_table "start_end_dates", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.integer  "ad_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["ad_id"], name: "index_start_end_dates_on_ad_id", using: :btree
+  end
+
+  add_foreign_key "schedules", "ads"
+  add_foreign_key "start_end_dates", "ads"
 end
