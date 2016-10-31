@@ -5,20 +5,12 @@ class CreateAds < ActiveRecord::Migration[5.0]
       t.string  :content_type
       t.binary  :file_contents
 
-      t.string  :title
+      t.string  :image_name
+      t.string  :displayed
       t.integer :priority
-      t.string  :desired_attribute
       t.string  :alttext
       t.string  :link
-      t.text    :selected_days
-    end
 
-    create_table :tasks do |t|
-      t.belongs_to :ads, index: true
-      t.datetime :start_date
-      t.datetime :end_date
-      t.datetime :start_time
-      t.datetime :end_time
       t.timestamps
     end
   end

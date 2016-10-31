@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>filename:</strong>
+  <%= @ad.filename %>
+</p>
+
+<p>
+  <img src="data:<%=@ad.content_type%>;base64,<%= @ad.base64_encode%>">
+</p>
+
+<p>
+  <strong>Image Name:</strong>
+  <%= @ad.image_name %>
+</p>
+
+<p>
+  <strong>Currently Displayed:</strong>
+  <%= @ad.displayed %>
+</p>
+
+<p>
+  <strong>Priority:</strong>
+  <%= @ad.priority %>
+</p>
+
+<p>
+  <strong>Alttext:</strong>
+  <%= @ad.alttext %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @ad.link %>
+</p>
+
+<%= link_to 'Edit', edit_ad_path(@ad) %> |
+<%= link_to 'Back', ads_path %>
