@@ -1,0 +1,15 @@
+<p>
+  <strong>Start Time:</strong>
+  <%= start_end_time.hr_start_time %>
+</p>
+
+<p>
+  <strong>End Time:</strong>
+  <%= start_end_time.hr_end_time %>
+</p>
+
+<p>
+  <%= link_to 'Destroy Time Range', [start_end_time.ad, start_end_time],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>
