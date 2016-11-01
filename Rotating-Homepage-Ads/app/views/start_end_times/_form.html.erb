@@ -1,0 +1,13 @@
+<%= form_for([@ad, @ad.start_end_times.build]) do |f| %>
+  <p>
+    <%= f.label :'Start Time' %><br>
+    <%= f.text_field :start_time, :class => "timepicker"%>
+  </p>
+  <p>
+    <%= f.label :'End Time' %><br>
+    <%= f.text_field :end_time, :class => "timepicker"%>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
