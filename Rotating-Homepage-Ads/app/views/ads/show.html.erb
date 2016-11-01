@@ -34,33 +34,22 @@
   <%= @ad.link %>
 </p>
 
-<h2>Date Ranges Ad will Be Displayed</h2>
-<% @ad.start_end_dates.each do |start_end_date| %>
-  <p>
-    <strong>Start Date:</strong>
-    <%= start_end_date.start_date %>
-  </p>
+<div>
+  <strong>Days of the Week</strong>
+  <%= @ad.selected_days.drop(1) %>
+</div>
 
-  <p>
-    <strong>End Date:</strong>
-    <%= start_end_date.end_date %>
-  </p>
-<% end %>
+<h2>Date Ranges Ad will Be Displayed</h2>
+<%= render @ad.start_end_dates %>
 
 <h2>Add Date:</h2>
-<%= form_for([@ad, @ad.start_end_dates.build]) do |f| %>
-  <p>
-    <%= f.label :'Start Date' %><br>
-    <%= f.text_field :start_date, :class => "datepicker"%>
-  </p>
-  <p>
-    <%= f.label :'End Date' %><br>
-    <%= f.text_field :end_date, :class => "datepicker"%>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+<%= render 'start_end_dates/form' %>
+
+<h2>Time Ranges Ad will Be Displayed</h2>
+<%= render @ad.start_end_times %>
+
+<h2>Add Time:</h2>
+<%= render 'start_end_times/form' %>
 
 <%= link_to 'Edit', edit_ad_path(@ad) %> |
 <%= link_to 'Back', ads_path %>

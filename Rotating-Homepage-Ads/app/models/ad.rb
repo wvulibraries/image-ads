@@ -1,13 +1,14 @@
 class Ad < ApplicationRecord
-has_many :start_end_dates
-
-accepts_nested_attributes_for :start_end_date
-
+has_many :start_end_dates, dependent: :destroy
+has_many :start_end_times, dependent: :destroy
+accepts_nested_attributes_for :start_end_dates, :start_end_times
 
 validates :image_name, presence: true,
                   length: { minimum: 5 }
 
 validate :file_size_under_one_mb
+
+serialize :selected_days, Array
 
 def initialize(params = {})
   @file = params.delete(:image)

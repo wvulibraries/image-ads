@@ -10,6 +10,7 @@ class CreateAds < ActiveRecord::Migration[5.0]
       t.integer :priority
       t.string  :alttext
       t.string  :link
+      t.text    :selected_days
 
       t.timestamps
     end

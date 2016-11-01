@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161031165007) do
+ActiveRecord::Schema.define(version: 20161031192230) do
 
   create_table "ads", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "filename"
@@ -21,17 +21,9 @@ ActiveRecord::Schema.define(version: 20161031165007) do
     t.integer  "priority"
     t.string   "alttext"
     t.string   "link"
+    t.text     "selected_days", limit: 65535
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
-  end
-
-  create_table "schedules", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.datetime "start_date"
-    t.datetime "end_date"
-    t.integer  "ad_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["ad_id"], name: "index_schedules_on_ad_id", using: :btree
   end
 
   create_table "start_end_dates", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -43,6 +35,15 @@ ActiveRecord::Schema.define(version: 20161031165007) do
     t.index ["ad_id"], name: "index_start_end_dates_on_ad_id", using: :btree
   end
 
-  add_foreign_key "schedules", "ads"
+  create_table "start_end_times", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.integer  "ad_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["ad_id"], name: "index_start_end_times_on_ad_id", using: :btree
+  end
+
   add_foreign_key "start_end_dates", "ads"
+  add_foreign_key "start_end_times", "ads"
 end
