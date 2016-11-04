@@ -10,6 +10,11 @@ class AdsController < ApplicationController
   # GET /ads/1
   # GET /ads/1.json
   def show
+  #   @ad = Ad.all
+  #   respond_to do |format|
+  #     format.html
+  #     format.json { render json: @ad.as_json(only: [:image_name]) }
+  #  end
   end
 
   # GET /ads/new

@@ -24,6 +24,41 @@ def base64_encode
   return Base64.encode64(self.file_contents)
 end
 
+def checkDisplayed
+  if self.displayed = 'Yes'
+   return true
+  else
+    return false
+  end
+end
+
+def checkDayOfWeek
+  # if day of week matches with current day of week
+  return true
+  #else  return false
+end
+
+def checkTimes
+  # if time range is between current time range or no time range is added return true
+  # else return false
+end
+
+def checkDates
+  # if current date is between the date range return true
+  # ELSE RETURN FALSE
+end
+
+def priorityLevel
+  # reorder the array / hash based on priority level
+end
+
+def sendToJSON
+  # check times, dates, day of week
+  # if any are false don't include them in hash
+  # send hash to priority
+  # return hash to JSON page to parse JSON
+end
+
 private
   def sanitize_filename(filename)
     # Get only the filename, not the whole path (for IE)
@@ -31,10 +66,11 @@ private
     return File.basename(filename)
   end
 
-  NUM_BYTES_IN_MEGABYTE = 1048576
   def file_size_under_one_mb
-    if (@file.size.to_f / NUM_BYTES_IN_MEGABYTE) > 1
+    num_bytes = 1048576
+    if (@file.size.to_f / num_bytes) > 1
       errors.add(:file, 'File size cannot be over one megabyte.')
     end
   end
+
 end

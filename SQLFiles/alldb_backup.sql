@@ -492,7 +492,7 @@ CREATE TABLE `proxies_priv` (
 
 LOCK TABLES `proxies_priv` WRITE;
 /*!40000 ALTER TABLE `proxies_priv` DISABLE KEYS */;
-INSERT INTO `proxies_priv` VALUES ('localhost','root','','',1,'','2016-10-26 15:29:52'),('localhost.localdomain','root','','',1,'','2016-10-26 15:29:52');
+INSERT INTO `proxies_priv` VALUES ('localhost','root','','',1,'','2016-11-01 15:18:05'),('localhost.localdomain','root','','',1,'','2016-11-01 15:18:05');
 /*!40000 ALTER TABLE `proxies_priv` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -893,4 +893,4 @@ CREATE TABLE IF NOT EXISTS `slow_log` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-10-26 15:35:19
+-- Dump completed on 2016-11-01 15:23:38

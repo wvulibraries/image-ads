@@ -43,12 +43,12 @@
 
   <div>
     <%= f.label :'Days of the Week'%><br>
-    <%= f.collection_check_boxes(:selected_days, Date::DAYNAMES, :downcase, :to_s) do |day| %>
+    <%= f.collection_check_boxes(:selected_days, Date::DAYNAMES, :titleize, :to_s) do |day| %>
       <%= day.check_box + day.text%>
     <% end %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <br><%= f.submit %>
   </div>
 <% end %>
