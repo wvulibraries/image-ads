@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
-  get 'ajax/getAds'
-
-  #root 'display#index'
-
   root 'ads#index'
+
+  get 'display/:id' => 'display#show'
 
   resources :ads do
     resources :start_end_dates

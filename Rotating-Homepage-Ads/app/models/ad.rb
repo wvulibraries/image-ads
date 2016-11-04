@@ -1,6 +1,7 @@
 class Ad < ApplicationRecord
 has_many :start_end_dates, dependent: :destroy
 has_many :start_end_times, dependent: :destroy
+
 accepts_nested_attributes_for :start_end_dates, :start_end_times
 
 validates :image_name, presence: true,
