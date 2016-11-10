@@ -34,9 +34,15 @@ def checkDisplayed
 end
 
 def checkDayOfWeek
-  # if day of week matches with current day of week
-  return true
-  #else  return false
+  # checks if there are any days entered in selected_days
+  if (self.selected_days.size-1 != 0)
+    # if days exist check and see if today is in the list
+    d = Date.today
+    return self.selected_days.include?(Date::DAYNAMES[d.wday])
+  else
+    #returns true if no days are selected we assume they want all days
+    return true
+  end
 end
 
 def checkTimes
@@ -45,8 +51,13 @@ def checkTimes
 end
 
 def checkDates
-  # if current date is between the date range return true
-  # ELSE RETURN FALSE
+  if (self.start_end_dates.count != 0)
+    # check for vaild day
+    return false
+  else
+    #returns true if no date ranges are set we assume they want all days
+    return true
+  end
 end
 
 def priorityLevel
@@ -54,6 +65,9 @@ def priorityLevel
 end
 
 def sendToJSON
+  #return self.checkDayOfWeek
+  return self.checkDates
+
   # check times, dates, day of week
   # if any are false don't include them in hash
   # send hash to priority

@@ -26,11 +26,6 @@ ActiveRecord::Schema.define(version: 20161107195944) do
     t.datetime "updated_at",                  null: false
   end
 
-  create_table "displays", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "start_end_dates", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.datetime "start_date"
     t.datetime "end_date"

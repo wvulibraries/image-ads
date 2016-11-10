@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'ajax/getads'
+
   root 'ads#index'
 
   get 'display/:id' => 'display#show'
@@ -7,5 +9,7 @@ Rails.application.routes.draw do
     resources :start_end_dates
     resources :start_end_times
   end
+
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

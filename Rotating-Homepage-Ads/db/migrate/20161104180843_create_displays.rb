@@ -1,8 +1,8 @@
 class CreateDisplays < ActiveRecord::Migration[5.0]
-  def change
-    create_table :displays do |t|
+  def up
+  end
 
-      t.timestamps
-    end
+  def down
+    drop_table :displays
   end
 end
