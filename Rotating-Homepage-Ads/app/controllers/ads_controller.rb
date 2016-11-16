@@ -40,6 +40,7 @@ class AdsController < ApplicationController
   # PATCH/PUT /ads/1
   # PATCH/PUT /ads/1.json
   def update
+    ad_params.delete(:file)
     respond_to do |format|
       if @ad.update(ad_params)
         format.html { redirect_to @ad, notice: 'Ad was successfully updated.' }
@@ -69,6 +70,6 @@ class AdsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ad_params
-      params.require(:ad).permit(:image, :image_name, :displayed, :priority, :alttext, :link, :selected_days => [])
+      params.require(:ad).permit(:file, :image_name, :displayed, :priority, :alttext, :link, :selected_days => [])
     end
 end

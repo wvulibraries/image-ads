@@ -12,13 +12,23 @@ validate :file_size_under_one_mb
 serialize :selected_days, Array
 
 def initialize(params = {})
-  @file = params.delete(:image)
+  @file = params.delete(:file)
   super
   if @file
     self.filename = sanitize_filename(@file.original_filename)
     self.content_type = @file.content_type
     self.file_contents = @file.read
   end
+end
+
+def update(params = {})
+  file = params.delete(:file)
+  if file
+    self.filename = sanitize_filename(file.original_filename)
+    self.content_type = file.content_type
+    self.file_contents = file.read
+  end
+  super
 end
 
 def base64_encode
@@ -48,6 +58,13 @@ end
 def checkTimes
   # if time range is between current time range or no time range is added return true
   # else return false
+  if (self.start_end_times.count != 0)
+    # check for vaild time
+    return false
+  else
+    #returns true if no time ranges are set we assume they want times
+    return true
+  end
 end
 
 def checkDates
@@ -65,9 +82,11 @@ def priorityLevel
 end
 
 def sendToJSON
-  #return self.checkDayOfWeek
-  return self.checkDates
-
+  if self.checkDayOfWeek
+   return self.checkDates
+  else
+   return false 
+  end
   # check times, dates, day of week
   # if any are false don't include them in hash
   # send hash to priority
@@ -83,8 +102,12 @@ private
 
   def file_size_under_one_mb
     num_bytes = 1048576
-    if (@file.size.to_f / num_bytes) > 1
-      errors.add(:file, 'File size cannot be over one megabyte.')
+    if @file
+      if @file.size.to_f > num_bytes
+        errors.add(:file, 'File size cannot be over one megabyte.')
+      end
+    else
+      return true
     end
   end
 

@@ -11,9 +11,15 @@
     </div>
   <% end %>
 
+  <% if ad.filename.present? %>
+    <div class="field">
+      <p><img src="/display/<%= ad.id %>"></p>
+    </div>
+  <% end %>
+
   <div class="field">
     <%= f.label :'File Upload' %><br>
-    <%= f.file_field :image %>
+    <%= f.file_field :file %>
   </div>
 
   <div class="field">
