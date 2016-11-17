@@ -58,22 +58,35 @@ end
 def checkTimes
   # if time range is between current time range or no time range is added return true
   # else return false
+  now = Time.zone.now.strftime('%H:%M')
   if (self.start_end_times.count != 0)
     # check for vaild time
+    self.start_end_times.each do |t|
+      if (t.start_time.strftime( "%H:%M" ) <= now) and (t.end_time.strftime( "%H:%M" ) >= now)
+        return true
+      end
+    end
     return false
   else
     #returns true if no time ranges are set we assume they want times
-    return true
+    return false
   end
 end
 
 def checkDates
   if (self.start_end_dates.count != 0)
     # check for vaild day
+    today = Date.today
+
+    self.start_end_dates.each do |d|
+      if d.start_date.between?(today, d.end_date)
+        return true
+      end
+    end
     return false
   else
     #returns true if no date ranges are set we assume they want all days
-    return true
+    return false
   end
 end
 
@@ -82,11 +95,12 @@ def priorityLevel
 end
 
 def sendToJSON
-  if self.checkDayOfWeek
-   return self.checkDates
-  else
-   return false 
-  end
+  #if self.checkDayOfWeek
+  #return self.checkDates
+  return self.checkTimes
+  #else
+  # return false
+  #end
   # check times, dates, day of week
   # if any are false don't include them in hash
   # send hash to priority
