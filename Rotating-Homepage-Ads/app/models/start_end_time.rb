@@ -1,6 +1,8 @@
 class StartEndTime < ApplicationRecord
   belongs_to :ad
   validates_presence_of :ad
+  validates :start_time, presence: true
+  validates :end_time, presence: true 
 
   def hr_start_time
     return convert_time(self.start_time.to_s)

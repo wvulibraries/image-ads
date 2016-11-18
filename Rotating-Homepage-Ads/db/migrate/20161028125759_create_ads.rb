@@ -1,12 +1,12 @@
 class CreateAds < ActiveRecord::Migration[5.0]
-  def change
+  def up
     create_table :ads do |t|
       t.string  :filename
       t.string  :content_type
       t.binary  :file_contents
 
       t.string  :image_name
-      t.string  :displayed
+      t.boolean  :displayed
       t.integer :priority
       t.string  :alttext
       t.string  :link
@@ -14,5 +14,9 @@ class CreateAds < ActiveRecord::Migration[5.0]
 
       t.timestamps
     end
+  end
+
+  def down
+    drop_table :ads
   end
 end

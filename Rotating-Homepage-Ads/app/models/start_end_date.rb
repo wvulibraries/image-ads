@@ -1,6 +1,8 @@
 class StartEndDate < ApplicationRecord
   belongs_to :ad
   validates_presence_of :ad
+  validates :start_date, presence: true
+  validates :end_date, presence: true 
 
   def hr_start_date
     return convert_date(self.start_date.to_s)

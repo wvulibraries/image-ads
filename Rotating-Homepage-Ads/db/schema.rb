@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161107195944) do
+ActiveRecord::Schema.define(version: 20161031192230) do
 
   create_table "ads", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "filename"
     t.string   "content_type"
     t.binary   "file_contents", limit: 65535
     t.string   "image_name"
-    t.string   "displayed"
+    t.boolean  "displayed"
     t.integer  "priority"
     t.string   "alttext"
     t.string   "link"
