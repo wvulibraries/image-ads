@@ -1,5 +1,6 @@
 class AjaxController < ApplicationController
   def getads
-    @ads = Ad.all
+    @ads = Ad.where(:displayed = "yes");
+    logger.info @ads
   end
 end

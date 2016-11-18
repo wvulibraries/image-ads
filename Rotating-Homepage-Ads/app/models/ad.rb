@@ -95,16 +95,17 @@ def priorityLevel
 end
 
 def sendToJSON
-  #if self.checkDayOfWeek
-  #return self.checkDates
-  return self.checkTimes
-  #else
-  # return false
-  #end
-  # check times, dates, day of week
-  # if any are false don't include them in hash
-  # send hash to priority
-  # return hash to JSON page to parse JSON
+  # #if self.checkDayOfWeek
+  # #return self.checkDates
+  # return self.checkTimes
+  # #else
+  # # return false
+  # #end
+  # # check times, dates, day of week
+  # # if any are false don't include them in hash
+  # # send hash to priority
+  # # return hash to JSON page to parse JSON
+  return true
 end
 
 private
