@@ -1,11 +1,11 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  start_time: 2016-10-31 19:22:30
-  end_time: 2016-10-31 19:22:30
-  ad: one
-
-two:
-  start_time: 2016-10-31 19:22:30
-  end_time: 2016-10-31 19:22:30
-  ad: two
+# # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+#
+# one:
+#   start_time: 2016-10-31 19:22:30
+#   end_time: 2016-10-31 19:22:30
+#   ad: one
+#
+# two:
+#   start_time: 2016-10-31 19:22:30
+#   end_time: 2016-10-31 19:22:30
+#   ad: two

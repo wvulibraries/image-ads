@@ -4,16 +4,27 @@ class Ad < ApplicationRecord
 
   accepts_nested_attributes_for :start_end_dates, :start_end_times
 
-  validates :image_name, presence: true,
-                    length: { minimum: 5 }
-
+  validates :image_name, presence: true, length: { minimum: 5 }
+  validates :filename, presence: true
+  validates :file_contents, presence:true
+  validates :content_type, presence: true, inclusion: { [:svg, :png, :jpg, :gif] }
   validate :file_size_under_one_mb
 
   serialize :selected_days, Array
 
+  # Scope is used in the view to get only ads of with these items
+  # example: Ads.ads_shown.sorted_priority
   scope :sorted_priority, -> { order("priority DESC") }
   scope :ads_shown, -> { where(:displayed => true) }
 
+
+  # initialize
+  # ==================================================
+  # Tell me the methods are doing then give an example
+  #
+  # For example:
+  #   fallbacks_for(:"pt-BR")
+  #     => [:"pt-BR", :pt, :en]
   def initialize(params = {})
     @file = params.delete(:file)
     super

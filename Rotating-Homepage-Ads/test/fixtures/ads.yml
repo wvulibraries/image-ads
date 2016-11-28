@@ -1,15 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  image_name: MyString
-  displayed: MyString
-  priority: MyString
-  alttext: MyString
-  link: MyString
-
-two:
-  image_name: MyString
-  displayed: MyString
-  priority: MyString
-  alttext: MyString
-  link: MyString
+# one:
+#   image_name: MyString
+#   displayed: MyString
+#   priority: MyString
+#   alttext: MyString
+#   link: MyString
+#
+# two:
+#   image_name: MyString
+#   displayed: MyString
+#   priority: MyString
+#   alttext: MyString
+#   link: MyString
