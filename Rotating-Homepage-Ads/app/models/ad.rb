@@ -7,7 +7,7 @@ class Ad < ApplicationRecord
   validates :image_name, presence: true, length: { minimum: 5 }
   validates :filename, presence: true
   validates :file_contents, presence:true
-  validates :content_type, presence: true, inclusion: { [:svg, :png, :jpg, :gif] }
+  validates :content_type, presence: true, format: { with: /[image\/]+(svg|png|jpg|svg\+xml)/i }
   validate :file_size_under_one_mb
 
   serialize :selected_days, Array
@@ -37,12 +37,12 @@ class Ad < ApplicationRecord
 
   def update(params = {})
     file = params.delete(:file)
+    super
     if file
       self.filename = sanitize_filename(file.original_filename)
       self.content_type = file.content_type
       self.file_contents = file.read
     end
-    super
   end
 
   def base64_encode
@@ -122,5 +122,4 @@ class Ad < ApplicationRecord
         return true
       end
     end
-
 end
