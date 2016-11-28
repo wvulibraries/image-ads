@@ -1,15 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-# one:
-#   image_name: MyString
-#   displayed: MyString
-#   priority: MyString
-#   alttext: MyString
-#   link: MyString
-#
-# two:
-#   image_name: MyString
-#   displayed: MyString
-#   priority: MyString
-#   alttext: MyString
-#   link: MyString
+<% 10.times do |n| %>
+  ad_<%= n %>:
+    id: <%= n %>
+    filename: <%= "filename#{n}" %>
+    content_type: <%= 'image/png' %>
+    file_contents: <%= "Hello World" %>
+    image_name: <%= "image#{n}" %>
+    displayed: <%= true %>
+    priority: <%= n %>
+    alttext: <%= "something crazy #{n}" %>
+    link: <%= "http://www.google.com" %>
+    selected_days: <%= ['', 'Sunday', 'Monday', 'Tuesday'] %>
+    created_at: <%= Date.today %>
+    updated_at: <%= 10.days.from_now %>
+<% end %>

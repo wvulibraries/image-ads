@@ -1,15 +1,19 @@
 class Ad < ApplicationRecord
+  # dependent records of start_end_dates and start_end_times
+  # this creates a many-to-many database relationship
   has_many :start_end_dates, dependent: :destroy
   has_many :start_end_times, dependent: :destroy
 
   accepts_nested_attributes_for :start_end_dates, :start_end_times
 
+  # all the basic validations for this new record to be inserted
   validates :image_name, presence: true, length: { minimum: 5 }
   validates :filename, presence: true
   validates :file_contents, presence:true
   validates :content_type, presence: true, format: { with: /[image\/]+(svg|png|jpg|svg\+xml)/i }
   validate :file_size_under_one_mb
 
+  # putting the selected days into an array in the database
   serialize :selected_days, Array
 
   # Scope is used in the view to get only ads of with these items
@@ -20,11 +24,11 @@ class Ad < ApplicationRecord
 
   # initialize
   # ==================================================
-  # Tell me the methods are doing then give an example
+  # Name : Tracy McCormick
+  # Date : 11/28/2016
   #
-  # For example:
-  #   fallbacks_for(:"pt-BR")
-  #     => [:"pt-BR", :pt, :en]
+  # Description:
+  # Overrides the initizle function in ActiveRecord to gather file information the file information is then stored in various instance name which relate to the datbase.
   def initialize(params = {})
     @file = params.delete(:file)
     super
