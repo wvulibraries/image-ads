@@ -3,6 +3,7 @@ class StartEndDate < ApplicationRecord
   validates_presence_of :ad
   validates :start_date, presence: true
   validates :end_date, presence: true
+  validate :dates_not_same
 
   # hr_dates
   # ==================================================
@@ -50,5 +51,19 @@ class StartEndDate < ApplicationRecord
   def convert_date(datetime)
     date = Time.parse(datetime)
     return date.strftime("%m-%d-%Y").strip
+  end
+
+  # dates not same
+  # ==================================================
+  # Name : David Davis
+  # Date : 11/29/2016
+  #
+  # Description:
+  # keeps the start and end date from being equal and submitting 
+  def dates_not_same
+    if self.start_date == self.end_date
+      errors.add(:start_date, "start date can not equal end date")
+      errors.add(:end_date, "end date can not equal start date")
+    end
   end
 end
