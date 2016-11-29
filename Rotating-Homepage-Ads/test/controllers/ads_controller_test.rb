@@ -39,20 +39,23 @@ class AdsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  # test "image upload" do
+  #   test_image = "#{Rails.root}/app/assets/images/hollow.png"
+  #   file = Rack::Test::UploadedFile.new(test_image, "image/png")
+  #   post "/create", :user => { :avatar => file }
+  #   assert_response :success
+  # end
+
+
+
+
   test "should create ad" do
     assert_difference('Ad.count') do
+      test_image = "#{Rails.root}/app/assets/images/ad-sample.gif"
+      test_file = Rack::Test::UploadedFile.new(test_image, "image/gif")
       post ads_url, params: {
                   ad: {
-                    file: ActionDispatch::Http::UploadedFile.new({ :tempfile => File.new(Rails.root.join, "/app/assets/images/hollow.png")}),
-
-                    # file: ActionDispatch::Http::UploadedFile.new({
-                    #   :filename => "hollow.png",
-                    #   :content_type => "image/png",
-                    #   :tempfile => File.new("#{Rails.root}/app/assets/images/hollow.png")
-                    # }),
-
-                    #file: ActionDispatch::Http::UploadedFile.new(tempfile: File.new(Rails.root.join, "/app/assets/images/hollow.png"), filename: "hollow.png", type: "image/png"),
-
+                    file: test_file,
                     image_name: 'some image',
                     displayed: true,
                     priority: 1,
