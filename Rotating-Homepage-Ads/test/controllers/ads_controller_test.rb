@@ -44,6 +44,15 @@ class AdsControllerTest < ActionDispatch::IntegrationTest
       post ads_url, params: {
                   ad: {
                     file: ActionDispatch::Http::UploadedFile.new({ :tempfile => File.new(Rails.root.join, "/app/assets/images/hollow.png")}),
+
+                    # file: ActionDispatch::Http::UploadedFile.new({
+                    #   :filename => "hollow.png",
+                    #   :content_type => "image/png",
+                    #   :tempfile => File.new("#{Rails.root}/app/assets/images/hollow.png")
+                    # }),
+
+                    #file: ActionDispatch::Http::UploadedFile.new(tempfile: File.new(Rails.root.join, "/app/assets/images/hollow.png"), filename: "hollow.png", type: "image/png"),
+
                     image_name: 'some image',
                     displayed: true,
                     priority: 1,
