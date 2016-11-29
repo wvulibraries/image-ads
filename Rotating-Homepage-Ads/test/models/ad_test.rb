@@ -68,13 +68,34 @@ class AdTest < ActiveSupport::TestCase
     today = Date.today.strftime("%A")
     ad = Ad.find(1)
     ad.selected_days = ["", today]
-    assert ad.checkDayOfWeek, "this should come back true because we changed the selected days of the week to be today"
+    assert ad.check_day_of_week, "this should come back true because we changed the selected days of the week to be today"
   end
 
   test "check that tomorrow fails and doesn't return a true for todays selected day of the week" do
     tomorrow = 1.day.from_now.strftime("%A")
     ad = Ad.find(1)
     ad.selected_days = ["", tomorrow]
-    assert_not ad.checkDayOfWeek, "this should come back false"
+    assert_not ad.check_day_of_week, "this should come back false"
   end
+
+  test "check times assuming that the times are empty" do
+    ad = Ad.find(1)
+    ad.start_end_times = []
+    assert ad.check_times, "should have been true, because not finding times should return true to always display"
+  end
+
+  test "check times assuming that the dates are empty" do
+    ad = Ad.find(1)
+    ad.start_end_dates = []
+    assert ad.check_dates, "should have been true, because not finding times should return true to always display"
+  end
+
+  test "send to json function reads true" do
+    ad = Ad.find(1)
+    ad.selected_days = [""]
+    ad.start_end_dates = []
+    ad.start_end_times = []
+    assert ad.send_to_JSON, "should evaluate to true because all items are empty and all should be reading as true"
+  end
+
 end
