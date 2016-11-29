@@ -39,6 +39,13 @@ class Ad < ApplicationRecord
     end
   end
 
+  # update
+  # ==================================================
+  # Name : Tracy McCormick
+  # Date : 11/28/2016
+  #
+  # Description:
+  # Overrides the update function in ActiveRecord to gather file information the file information
   def update(params = {})
     file = params.delete(:file)
     super
@@ -49,73 +56,91 @@ class Ad < ApplicationRecord
     end
   end
 
+  # base 64 encode
+  # ==================================================
+  # Name : Tracy McCormick
+  # Date : 11/28/2016
+  #
+  # Description:
+  # Returns a base 64 encoded string for displaying the images
   def base64_encode
     return Base64.encode64(self.file_contents)
   end
 
-  def checkDayOfWeek
-    # checks if there are any days entered in selected_days
+  # check day of week
+  # ==================================================
+  # Name : Tracy McCormick
+  # Date : 11/28/2016
+  #
+  # Description:
+  # Checks to see if anything in the array, if not assume that it displays on all days
+  # Otherwise the day of the week if it matches today will reveal true
+  def check_day_of_week
     if (self.selected_days.size-1 != 0)
-      # if days exist check and see if today is in the list
       d = Date.today
       return self.selected_days.include?(Date::DAYNAMES[d.wday])
     else
-      #returns true if no days are selected we assume they want all days
       return true
     end
   end
 
-  def checkTimes
-    # if time range is between current time range or no time range is added return true
-    # else return false
+  # check times
+  # ==================================================
+  # Name : Tracy McCormick
+  # Modified By: David Davis
+  # Date : 11/29/2016
+  #
+  # Description:
+  # Loops through all the times and sees if today is between the ranges
+  def check_times
     if (self.start_end_times.count != 0)
-      # check for vaild time
-      now = Time.zone.now.strftime('%H:%M')
-
-      self.start_end_times.each do |t|
-        if (t.start_time.strftime( "%H:%M" ) <= now) and (t.end_time.strftime( "%H:%M" ) >= now)
-          return true
-        end
-      end
-      return false
+      self.start_end_times.each { |t| return t.check_time_ranges }
     else
-      #returns true if no time ranges are set we assume they want times
       return true
     end
   end
 
-  def checkDates
+  # check dates
+  # ==================================================
+  # Name : Tracy McCormick
+  # Modified By: David Davis
+  # Date : 11/29/2016
+  #
+  # Description:
+  # Loops through all the dates and sees if today is between the ranges
+  def check_dates
     if (self.start_end_dates.count != 0)
-      # check for vaild day
-      today = Date.today
-
-      self.start_end_dates.each do |d|
-        if d.start_date.between?(today, d.end_date)
-          return true
-        end
-      end
-      return false
+      self.start_end_dates.each { |d| return d.check_date_ranges }
     else
-      #returns true if no date ranges are set we assume they want all days
       return true
     end
   end
 
-  def sendToJSON
-    if self.checkDayOfWeek and self.checkTimes and self.checkDates
-     return true
-    else
-     return false
-    end
+  # send to JSON
+  # ==================================================
+  # Name : Tracy McCormick
+  # Modified By: David Davis
+  # Date : 11/29/2016
+  #
+  # Description:
+  # uses other methods to check if all values are true, if so the item can move into the JSON array.
+  def send_to_JSON
+    evaluate_checks = [self.check_times, self.check_dates, self.check_day_of_week]
+    return evaluate_checks.all?
   end
 
   private
+    # @TODO
+    # ==================================================
+    # TRACY DOCUMENT THESE
     def sanitize_filename(filename)
-      # Get only the filename, not the whole path (for IE)
-      # Thanks to this article I just found for the tip: http://mattberther.com/2007/10/19/uploading-files-to-a-database-using-rails
       return File.basename(filename)
     end
 
+    # @TODO
+    # ==================================================
+    # TRACY DOCUMENT THESE
+    # TRACY Refactor if possible lots of iffs looks messy 
     def file_size_under_one_mb
       num_bytes = 1048576
       if @file
