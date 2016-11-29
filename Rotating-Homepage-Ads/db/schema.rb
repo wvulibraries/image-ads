@@ -10,20 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161031192230) do
+ActiveRecord::Schema.define(version: 20161129175456) do
 
   create_table "ads", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "filename"
     t.string   "content_type"
-    t.binary   "file_contents", limit: 65535
     t.string   "image_name"
     t.boolean  "displayed"
     t.integer  "priority"
     t.string   "alttext"
     t.string   "link"
     t.text     "selected_days", limit: 65535
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.binary   "file_contents", limit: 16777215
   end
 
   create_table "start_end_dates", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
