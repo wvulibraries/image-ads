@@ -10,7 +10,7 @@ class Ad < ApplicationRecord
   validates :image_name, presence: true, length: { minimum: 5 }
   validates :filename, presence: true
   validates :file_contents, presence:true
-  validates :content_type, presence: true, format: { with: /[image\/]+(svg|png|jpg|svg\+xml)/i }
+  validates :content_type, presence: true, format: { with: /[image\/]+(svg|png|gif|jpg|svg\+xml)/i }
   validate :file_size_under_one_mb
 
   # putting the selected days into an array in the database
@@ -48,12 +48,12 @@ class Ad < ApplicationRecord
   # Overrides the update function in ActiveRecord to gather file information the file information
   def update(params = {})
     file = params.delete(:file)
-    super
     if file
       self.filename = sanitize_filename(file.original_filename)
       self.content_type = file.content_type
       self.file_contents = file.read
     end
+    super
   end
 
   # base 64 encode
@@ -140,15 +140,12 @@ class Ad < ApplicationRecord
     # @TODO
     # ==================================================
     # TRACY DOCUMENT THESE
-    # TRACY Refactor if possible lots of iffs looks messy 
+    # TRACY Refactor if possible lots of iffs looks messy
     def file_size_under_one_mb
       num_bytes = 1048576
-      if @file
-        if @file.size.to_f > num_bytes
-          errors.add(:file, 'File size cannot be over one megabyte.')
-        end
-      else
-        return true
+      if @file && @file.size.to_f > num_bytes
+        errors.add(:file, 'File size cannot be over one megabyte.')
       end
+      return true
     end
 end
