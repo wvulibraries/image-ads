@@ -4,12 +4,12 @@ Rails.application.routes.draw do
   root 'public#index'
 
   # admin
-  get '/admin', to: 'ads#index'
+  get '/admin', to: 'admin#index'
 
   # vagrant only
-  get '/vagrantlogin', to:"public#set_vagrant_user"
-  get '/vlogout', to:"public#logout"
-  get '/vfail', to: "public#fail_vagrant_user"
+  # get '/vagrantlogin', to:"public#set_vagrant_user"
+  # get '/vlogout', to:"public#logout"
+  # get '/vfail', to: "public#fail_vagrant_user"
 
   # forces the controllers to use the admin name space
   # this is going to allow for the addition of a function to restrict access
@@ -21,21 +21,16 @@ Rails.application.routes.draw do
 
   #get '/admin/departments/list', to: 'departments#index'
 
-
-
-
-
-  get 'public/index'
-
   get 'ajax/getads'
 
   #root 'ads#index'
 
   get 'display/:id' => 'display#show'
 
-  resources :ads do
-    resources :start_end_dates
-    resources :start_end_times
+  scope '/admin' do
+      resources :ads, module:'admin' do
+        resources :start_end_dates, :start_end_times
+      end
   end
 
 

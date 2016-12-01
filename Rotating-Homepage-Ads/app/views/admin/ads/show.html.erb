@@ -43,13 +43,13 @@
 <%= render @ad.start_end_dates %>
 
 <h2>Add Date:</h2>
-<%= render 'start_end_dates/form' %>
+<%= render 'admin/start_end_dates/form' %>
 
 <h2>Time Ranges Ad will Be Displayed</h2>
 <%= render @ad.start_end_times %>
 
 <h2>Add Time:</h2>
-<%= render 'start_end_times/form' %>
+<%= render 'admin/start_end_dates/form' %>
 
 <%= link_to 'Edit', edit_ad_path(@ad) %> |
 <%= link_to 'Back', ads_path %>

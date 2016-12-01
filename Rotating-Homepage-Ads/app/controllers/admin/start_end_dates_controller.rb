@@ -1,4 +1,4 @@
-class StartEndDatesController < ApplicationController
+class Admin::StartEndDatesController < AdminController
   def create
     @ad = Ad.find(params[:ad_id])
     @start_end_date = @ad.start_end_dates.create(start_end_date_params)
