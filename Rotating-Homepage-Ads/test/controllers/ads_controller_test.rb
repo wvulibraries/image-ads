@@ -59,12 +59,11 @@ class AdsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should destroy ad" do
-      assert_difference('Ad.count', -1) do
+    assert_difference('Ad.count', -1) do
       delete ad_url(@ad)
     end
 
     assert_redirected_to ads_url
   end
-
 
 end

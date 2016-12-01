@@ -3,12 +3,20 @@
   <head>
     <title>RotatingHomepageAds</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <main>
     <%= yield %>
-  </body>
+  </main>
+
+  <footer>
+    <div class="builtBy">
+        <span class="built">Built</span>
+        <span class="by">By </span>
+        <span class="wvu">WVU</span>
+        <span class="libs">Libraries</span>
+    </div>
+  </footer>
 </html>

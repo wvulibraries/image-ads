@@ -9,3 +9,12 @@
 #   start_date: 2016-10-31 16:50:07
 #   end_date: 2016-10-31 16:50:07
 #   ad: two
+
+
+<% 3.times do |n| %>
+  date_<%= n %>:
+    id: <%= n %>
+    start_date: <%= Date.today %>
+    end_date: <%= 10.days.from_now %>
+    ad_id: 1
+<% end %>

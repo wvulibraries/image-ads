@@ -9,3 +9,11 @@
 #   start_time: 2016-10-31 19:22:30
 #   end_time: 2016-10-31 19:22:30
 #   ad: two
+
+<% 3.times do |n| %>
+  time_<%= n %>:
+    id: <%= n %>
+    start_time: <%= Time.now %>
+    end_time: <%= 10.hours.from_now %>
+    ad_id: 1
+<% end %>
