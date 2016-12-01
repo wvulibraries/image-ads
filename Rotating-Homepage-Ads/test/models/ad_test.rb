@@ -71,13 +71,6 @@ class AdTest < ActiveSupport::TestCase
     assert ad.check_day_of_week, "this should come back true because we changed the selected days of the week to be today"
   end
 
-  test "check that tomorrow fails and doesn't return a true for todays selected day of the week" do
-    tomorrow = 1.day.from_now.strftime("%A")
-    ad = Ad.find(1)
-    ad.selected_days = ["", tomorrow]
-    assert_not ad.check_day_of_week, "this should come back false"
-  end
-
   test "check times assuming that the times are empty" do
     ad = Ad.find(1)
     ad.start_end_times = []

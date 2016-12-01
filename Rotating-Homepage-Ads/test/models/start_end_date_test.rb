@@ -13,7 +13,7 @@ class StartEndDateTest < ActiveSupport::TestCase
   test "should be a valid start end date" do
     assert @startEndDate.valid?, "the start end date was not a valid date"
   end
-  
+
   test "should NOT be valid" do
     @startEndDate.ad = nil
     assert_not @startEndDate.valid?, "the start end date was not a valid date"
@@ -38,5 +38,23 @@ class StartEndDateTest < ActiveSupport::TestCase
     @startEndDate.start_date = 1.day.ago.to_datetime
     @startEndDate.end_date = 1.day.ago.to_datetime
     assert_not @startEndDate.save, "saved an invalid combination of dates"
+  end
+
+  test "do not allow an empty start date with a valid end date" do
+    @startEndDate.start_date = nil
+    @startEndDate.end_date = 1.day.ago.to_datetime
+    assert_not @startEndDate.save,  "saved with an invalid start date and valid end date"
+  end
+
+  test "do not allow an empty end date with a valid start date" do
+    @startEndDate.start_date = 1.day.ago.to_datetime
+    @startEndDate.end_date = nil
+    assert_not @startEndDate.save, "saved with an invalid end date and a valid start date"
+  end
+
+  test "do not allow both to be nil values if both are nil values, then a date doesn't need to be made" do
+    @startEndDate.start_date = nil
+    @startEndDate.end_date = nil
+    assert_not @startEndDate.save, "saved with nil values"
   end
 end
