@@ -63,6 +63,7 @@ class StartEndTime < ApplicationRecord
   #
   # Ex:
   #  Takes a datetime stamp and returns HH:MM AM/PM  [6:00 == 6:00 AM] [14:00 == 2:00 PM]
+  private
   def convert_time(datetime)
     time = Time.parse(datetime)
     return time.strftime("%l:%M %p").strip
