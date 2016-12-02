@@ -23,7 +23,10 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 
-gem 'omniauth-cas'
+# gem 'omniauth-cas'
+
+gem 'rack-cas'
+gem 'rack-cas-rails'
 
 # SASS GEMS
 gem 'bourbon'

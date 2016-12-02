@@ -38,7 +38,8 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-    addressable (2.4.0)
+    addressable (2.5.0)
+      public_suffix (~> 2.0, >= 2.0.2)
     arel (7.1.4)
     bourbon (4.2.7)
       sass (~> 3.4)
@@ -61,7 +62,6 @@ GEM
       sass (>= 3.2)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
-    hashie (3.4.6)
     i18n (0.7.0)
     jbuilder (2.6.0)
       activesupport (>= 3.0.0, < 5.1)
@@ -93,17 +93,19 @@ GEM
       mini_portile2 (~> 2.1.0)
     normalize-scss (6.0.0)
       sass (~> 3.3)
-    omniauth (1.3.1)
-      hashie (>= 1.2, < 4)
-      rack (>= 1.0, < 3)
-    omniauth-cas (1.1.1)
-      addressable (~> 2.3)
-      nokogiri (~> 1.5)
-      omniauth (~> 1.2)
     pickadate-rails (3.5.6.0)
       railties (>= 3.1.0)
+    public_suffix (2.0.4)
     puma (3.6.0)
     rack (2.0.1)
+    rack-cas (0.15.0)
+      addressable (~> 2.3)
+      nokogiri (~> 1.5)
+      rack (>= 1.3)
+    rack-cas-rails (2.0.2)
+      byebug (~> 9.0)
+      rack-cas (~> 0.15)
+      rails (~> 5.0, >= 5.0.0)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.0.0.1)
@@ -185,9 +187,10 @@ DEPENDENCIES
   mysql2 (>= 0.3.18, < 0.5)
   neat
   normalize-scss
-  omniauth-cas
   pickadate-rails
   puma (~> 3.0)
+  rack-cas
+  rack-cas-rails
   rails (~> 5.0.0, >= 5.0.0.1)
   sass-rails (~> 5.0)
   spring

@@ -90,36 +90,3 @@ gem install rails
 gem install mysql2
 rbenv rehash
 bundle
-
-cd /vagrant/
-if [ -d ${APP_NAME} ] ; then
-  echo "Starting Existing rails app ${APP_NAME}"
-  echo " -------------------------------------------------------------------------- "
-  cd /vagrant/${APP_NAME}
-  bin/bundle install
-
-else
-  echo "Create new rails app for ${APP_NAME}"
-  echo " -------------------------------------------------------------------------- "
-  rails new ${APP_NAME} -d mysql
-fi
-
-cd /vagrant/${APP_NAME}
-
-#Here we are checking to see if a database backup exists
-if [ ! -f /vagrant/SQLFiles/alldb_backup.sql ]; then
-  echo "Create new database for ${APP_NAME}"
-  echo " -------------------------------------------------------------------------- "
-  bin/rails db:create
-  echo "Backup databases for ${APP_NAME}"
-  echo " -------------------------------------------------------------------------- "
-  mysqldump -u root --all-databases > /vagrant/SQLFiles/alldb_backup.sql
-else
-  echo "Import databases for ${APP_NAME}"
-  echo " -------------------------------------------------------------------------- "
-  mysql -u root < /vagrant/SQLFiles/alldb_backup.sql
-fi
-
-# echo "Starting Puma Web Server"
-# echo " -------------------------------------------------------------------------- "
-# bin/rails server -b 0.0.0.0 -d
