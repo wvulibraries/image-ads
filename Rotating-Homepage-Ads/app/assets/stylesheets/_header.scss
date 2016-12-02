@@ -1,0 +1,29 @@
+header{
+  @include span-columns(12);
+  background: $header-background;
+  padding: 10px;
+  border-bottom: $border;
+  color: $gray-text;
+
+  .title-block {
+    @include span-columns(12);
+
+    @include breakpoint(tablet){
+      @include span-columns(6);
+      @include omega;
+    }
+
+  }
+
+  .user-panel {
+    @include span-columns(12);
+
+    @include breakpoint(tablet){
+      @include span-columns(6);
+      @include omega;
+      text-align: right; 
+    }
+  }
+
+  h1 { font-size:16px; margin:0; padding:0;}
+}

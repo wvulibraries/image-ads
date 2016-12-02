@@ -10,17 +10,32 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
+
  *= require_self
  */
 
- // libraries for frontend
-@import "normalize/import-now";
-@import "bourbon";
-@import "neat";
-@import "neat-helpers";
+ @import "normalize/import-now";
+ @import "bourbon";
+ @import "neat";
+ @import "neat-helpers";
+ @import "variables";
+ @import "mixins/*";
+
+// application wide
+@import "base";
+@import "header";
+@import "footer";
+
+// fonts
+@import "fonts";
+
+// admin panels
+@import "admin";
+@import "ads";
+@import "errors";
 
 // library for pick date for time and date stuff
 @import "pickadate/default";
 @import "pickadate/default.date";
 @import "pickadate/default.time";
+@import "custom_picker";
