@@ -130,17 +130,29 @@ class Ad < ApplicationRecord
   end
 
   private
-    # @TODO
+    # file size under one mb
     # ==================================================
-    # TRACY DOCUMENT THESE
+    # Name : Tracy McCormick
+    # Date : 12/01/2016
+    #
+    # Description:
+    # The File.basename function returns the last component of the filename given in filename, which must
+    # be formed using forward slashes (“/”) regardless of the separator used on
+    # the local file system. If suffix is given and present at the end of
+    # filename, it is removed.
     def sanitize_filename(filename)
       return File.basename(filename)
     end
 
-    # @TODO
+    # file size under one mb
     # ==================================================
-    # TRACY DOCUMENT THESE
-    # TRACY Refactor if possible lots of iffs looks messy
+    # Name : Tracy McCormick
+    # Date : 12/01/2016
+    #
+    # Description:
+    # Checks to see if the image file is less than one meg.
+    # if it is over 1 mb the function will send a error message stating this
+    # Otherwise it will return true if it is less than 1 mb.
     def file_size_under_one_mb
       num_bytes = 1048576
       if @file && @file.size.to_f > num_bytes
