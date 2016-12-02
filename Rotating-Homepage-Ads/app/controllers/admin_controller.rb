@@ -10,7 +10,5 @@ class AdminController < ApplicationController
       session.delete('cas')
       redirect_to root_path, notice: 'You have failed this Application with a faulty login!'
     end
-  layout "admin"
-  def index
   end
 end
