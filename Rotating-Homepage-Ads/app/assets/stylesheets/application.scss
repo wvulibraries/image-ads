@@ -18,21 +18,16 @@
  @import "bourbon";
  @import "neat";
  @import "neat-helpers";
+
+ // import variables
  @import "variables";
+
+ // import mixins so that all partials can use them.  
  @import "mixins/*";
 
-// application wide
-@import "base";
-@import "header";
-@import "footer";
+ // application wide
+ @import "partials/*";
 
-// fonts
-@import "fonts";
-
-// admin panels
-@import "admin";
-@import "ads";
-@import "errors";
 
 // library for pick date for time and date stuff
 @import "pickadate/default";
