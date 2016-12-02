@@ -4,8 +4,18 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
+# one: {}
 # column: value
 #
-two: {}
+# two: {}
 # column: value
+
+<% 10.times do |n| %>
+  user_<%= n %>:
+    id: <%= n %>
+    username: <%= "username#{n}" %>
+    lastname: <%= "lastname#{n}" %>
+    firstname: <%= "firstname#{n}" %>
+    created_at: <%= Date.today %>
+    updated_at: <%= 10.days.from_now %>
+<% end %>

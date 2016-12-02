@@ -35,6 +35,7 @@ Rails.application.routes.draw do
       resources :ads, module:'admin' do
         resources :start_end_dates, :start_end_times
       end
+      resources :users, module:'admin'
   end
 
 
