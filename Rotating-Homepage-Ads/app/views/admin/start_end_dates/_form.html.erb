@@ -1,4 +1,6 @@
 <%= form_for([@ad, @ad.start_end_dates.build]) do |f| %>
+  <%= error_messages_for(f.object) %>
+  
   <p>
     <%= f.label :'Start Date' %><br>
     <%= f.text_field :start_date, :class => "datepicker"%>
