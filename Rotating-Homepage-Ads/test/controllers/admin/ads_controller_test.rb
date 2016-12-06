@@ -1,8 +1,11 @@
 require 'test_helper'
 
 class Admin::AdsControllerTest < ActionDispatch::IntegrationTest
+  include CasHelper
+
   setup do
     @ad = Ad.find(1)
+    set_current_user('vagrant')
   end
 
   # called after every single test

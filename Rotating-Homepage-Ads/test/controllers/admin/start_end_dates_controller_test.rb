@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class StartEndDatesControllerTest < ActionDispatch::IntegrationTest
+class Admin::StartEndDatesControllerTest < ActionDispatch::IntegrationTest
   ## setup the base model used for testing
   def setup
     @ad = Ad.find(1)
