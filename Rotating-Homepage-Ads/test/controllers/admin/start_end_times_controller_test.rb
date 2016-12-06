@@ -4,6 +4,7 @@ class Admin::StartEndTimesControllerTest < ActionDispatch::IntegrationTest
   ## setup the base model used for testing
   def setup
     @ad = Ad.find(1)
+    get '/vagrantlogin'
   end
 
   # called after every single test

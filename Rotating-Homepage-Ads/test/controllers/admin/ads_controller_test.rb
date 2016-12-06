@@ -3,17 +3,18 @@ require 'test_helper'
 class Admin::AdsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @ad = Ad.find(1)
-    set_current_user('vagrant')
-  end
-  
-  def set_current_user(user)
-    session['cas'] = { 'user' => user.username, 'extra_attributes' => {} }
+    get '/vagrantlogin'
   end
 
   # called after every single test
   teardown do
     # when controller is using cache it may be a good idea to reset it afterwards
     Rails.cache.clear
+  end
+
+  test "getting user session works" do
+    assert session['cas']['user'],  "this does not have a user session"
+    assert_equal session['cas']['user'], "vagrant", "this does not equal vagrant because something sucks"
   end
 
   test "should get index" do
