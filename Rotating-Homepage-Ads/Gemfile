@@ -19,6 +19,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'rack-cas'
 gem 'rack-cas-rails'
 
+gem 'simplecov', :require => false, :group => :test
+
 # SASS GEMS
 gem 'bourbon'
 gem 'neat'
