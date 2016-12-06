@@ -1,6 +1,6 @@
 <%= form_for(ad) do |f| %>
 
-  <%= error_messages_for(f.object) %>
+  <%= render '/application/error_messages', object: f.object %>
 
   <% if ad.filename.present? %>
     <div class="field">

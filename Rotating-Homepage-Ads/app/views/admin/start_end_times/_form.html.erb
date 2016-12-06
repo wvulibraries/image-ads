@@ -1,5 +1,6 @@
 <%= form_for([@ad, @ad.start_end_times.build]) do |f| %>
-  <%= error_messages_for(f.object) %>
+  <%= render '/application/error_messages', object: f.object %>
+
   <p>
     <%= f.label :'Start Time' %><br>
     <%= f.text_field :start_time, :class => "timepicker"%>
