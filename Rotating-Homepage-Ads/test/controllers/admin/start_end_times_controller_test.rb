@@ -14,7 +14,7 @@ class StartEndTimesControllerTest < ActionDispatch::IntegrationTest
 
   test "should be able to create new times" do
     assert_difference('StartEndTime.count') do
-      post "/ads/#{@ad.id}/start_end_times", params: {
+      post "/admin/ads/#{@ad.id}/start_end_times", params: {
           start_end_time: {
             start_time: Time.now.midnight.strftime("%l:%M %p").strip,
             end_time: Time.now.beginning_of_day.strftime("%l:%M %p").strip
@@ -32,7 +32,7 @@ class StartEndTimesControllerTest < ActionDispatch::IntegrationTest
   test "should destroy time range" do
 
     assert_difference('StartEndTime.count', -1) do
-      delete "/ads/#{@ad.id}/start_end_times/1"
+      delete "/admin/ads/#{@ad.id}/start_end_times/1"
     end
 
     assert_no_difference('StartEndTime.count') do

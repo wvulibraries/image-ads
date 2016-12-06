@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class AdsControllerTest < ActionDispatch::IntegrationTest
+class Admin::AdsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @ad = Ad.find(1)
   end

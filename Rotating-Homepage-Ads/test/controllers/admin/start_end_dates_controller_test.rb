@@ -14,7 +14,7 @@ class StartEndDatesControllerTest < ActionDispatch::IntegrationTest
 
   test "should be able to create new dates" do
     assert_difference('StartEndDate.count') do
-      post "/ads/#{@ad.id}/start_end_dates", params: {
+      post "/admin/ads/#{@ad.id}/start_end_dates", params: {
           start_end_date: {
             start_date: 1.day.ago,
             end_date: 1.day.from_now
@@ -32,7 +32,7 @@ class StartEndDatesControllerTest < ActionDispatch::IntegrationTest
   test "should destroy date range" do
 
     assert_difference('StartEndDate.count', -1) do
-      delete "/ads/#{@ad.id}/start_end_dates/1"
+      delete "/admin/ads/#{@ad.id}/start_end_dates/1"
     end
 
     assert_no_difference('StartEndDate.count') do
