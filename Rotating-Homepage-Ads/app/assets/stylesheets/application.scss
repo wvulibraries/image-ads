@@ -23,14 +23,17 @@
  @import "font-awesome-sprockets";
  @import "font-awesome";
 
+ // import mixins so that all partials can use them.
+ @import "mixins/*";
+
  // import variables
  @import "variables";
 
 // import any custom libs, also so after variables so that variables can be used in the lib files
  @import "libs/*";
 
- // import mixins so that all partials can use them.
- @import "mixins/*";
+ // base link colors
+ @include link_maker($link-color, $link-color, darken($link-color, 20%), lighten($link-color, 20%));
 
  // application wide
  @import "partials/*";
@@ -39,4 +42,3 @@
 @import "pickadate/default";
 @import "pickadate/default.date";
 @import "pickadate/default.time";
-@import "custom_picker";

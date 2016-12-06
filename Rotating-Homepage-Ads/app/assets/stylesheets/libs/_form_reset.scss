@@ -11,15 +11,15 @@ $fh-font-color: rgb(40, 40, 40) !default;
 $fh-border-radius: 5px !default;
 $fh-border-width: 1px !default;
 $fh-border-style: solid !default;
-$fh-border-color: rgb(200, 200, 200) !default;
+$fh-border-color: $border-color !default;
 
 // Inputs, Textareas, Select, Option
 $fh-input-height: 40px !default;
 $fh-input-width: 100% !default;
 $fh-input-max-width: 400px !default;
 $fh-input-bg-color: #fff !default;
-$fh-focus-bg-color: rgb(220, 220, 220) !default;
-$fh-focus-border-color: $fh-border-color !default;
+$fh-focus-bg-color: rgba(#eee,.3) !default;
+$fh-focus-border-color: $light-blue !default;
 $fh-focus-font-color: $fh-font-color !default;
 
 // Select Vendor Styling
@@ -112,7 +112,6 @@ textarea {
 	max-width: $fh-input-max-width;
 	padding: $fh-input-height / 5;
 	background-color: $fh-input-bg-color;
-
 	border-radius: $fh-border-radius;
 	border: $fh-border-width $fh-border-style $fh-border-color;
 }
