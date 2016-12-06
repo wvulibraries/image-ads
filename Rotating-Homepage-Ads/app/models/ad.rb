@@ -10,7 +10,7 @@ class Ad < ApplicationRecord
   validates :image_name, presence: true, length: { minimum: 5 }
   validates :filename, presence: true
   validates :file_contents, presence:true
-  validates :content_type, presence: true, format: { with: /[image\/]+(svg|png|gif|jpg|svg\+xml)/i }
+  validates :content_type, presence: true, format: { with: /[image\/]+(svg|png|gif|jpg|jpeg|svg\+xml)/i }
   validate :file_size_under_one_mb
 
   # putting the selected days into an array in the database
