@@ -42,7 +42,7 @@ class Admin::UsersController < AdminController
   def update
     respond_to do |format|
       if @user.update(ad_params)
-        format.html { redirect_to ad_url(@user), notice: 'User was successfully updated.' }
+        format.html { redirect_to user_url(@user), notice: 'User was successfully updated.' }
         format.json { render :show, status: :ok, location: @user }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class Admin::UsersController < AdminController
   def destroy
     @user.destroy
     respond_to do |format|
-      format.html { redirect_to ads_url, notice: 'User was successfully destroyed.' }
+      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
