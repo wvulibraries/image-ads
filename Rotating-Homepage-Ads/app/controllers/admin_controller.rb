@@ -11,4 +11,13 @@ class AdminController < ApplicationController
       redirect_to root_path, notice: 'You have failed this Application with a faulty login!'
     end
   end
+
+  # def check_user_permission
+  #   user = User.exists?(username: session['cas']['username']);
+  #   if !user
+  #     session.delete('cas')
+  #     redirect_to root_path, notice: 'User permissions failed, you do not have access to the admin side of this app.'
+  #   end
+  # end
+
 end
