@@ -22,7 +22,10 @@
  // import variables
  @import "variables";
 
- // import mixins so that all partials can use them.  
+// import any custom libs, also so after variables so that variables can be used in the lib files
+ @import "libs/*";
+
+ // import mixins so that all partials can use them.
  @import "mixins/*";
 
  // application wide
