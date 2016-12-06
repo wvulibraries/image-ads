@@ -19,6 +19,10 @@
  @import "neat";
  @import "neat-helpers";
 
+// Font Awesome
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
+
  // import variables
  @import "variables";
 
@@ -30,7 +34,6 @@
 
  // application wide
  @import "partials/*";
-
 
 // library for pick date for time and date stuff
 @import "pickadate/default";
