@@ -3,6 +3,8 @@ class AdminController < ApplicationController
   before_action :authenticate!
   before_action :check_secret_CAS
 
+  layout "admin"
+
   private
   def check_secret_CAS
     secret = Digest::MD5.hexdigest("Library")
