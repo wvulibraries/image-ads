@@ -1,0 +1,21 @@
+.button {
+  @include button_maker($link-color, 'regular');
+}
+
+.show-button {
+  @include button_maker($success, 'ghost');
+}
+
+.edit-button {
+  @include button_maker($warning, 'ghost');
+}
+
+.delete-button {
+  @include button_maker($error, 'ghost');
+}
+
+.show-button, .edit-button, .delete-button {
+  i { font-size:1.5em; }
+  padding:5px;
+  padding-top:10px;
+}

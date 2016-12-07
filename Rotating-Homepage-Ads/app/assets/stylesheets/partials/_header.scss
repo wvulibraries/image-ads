@@ -7,21 +7,21 @@ header{
 
   .title-block {
     @include span-columns(12);
-
     @include breakpoint(tablet){
       @include span-columns(6);
-      @include omega;
     }
 
   }
 
   .user-panel {
+    margin-top:10px;
     @include span-columns(12);
 
     @include breakpoint(tablet){
+      margin-top:2px;
       @include span-columns(6);
       @include omega;
-      text-align: right; 
+      text-align: right;
     }
   }
 

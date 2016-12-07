@@ -1,0 +1,102 @@
+$card-border-radius: 6px;
+
+.ad-cards {
+  list-style:none;
+  padding:0;
+  margin:0;
+
+  > li {
+    @include span-columns(12);
+    background: rgba($default, .5);
+    border: 1px solid darken($default, 10%);
+    border-radius:$card-border-radius;
+    margin-bottom:20px;
+
+    @include breakpoint(phone){
+      @include span-columns(6);
+      @include omega(2n);
+    }
+
+    @include breakpoint(laptop){
+      @include omega-reset(2n);
+      @include span-columns(4);
+      @include omega(3n);
+      //background:blue;
+    }
+
+    @include breakpoint(desktop){
+      @include omega-reset(3n);
+      @include span-columns(3);
+      @include omega(4n);
+    }
+
+    @include breakpoint(2000px){
+      @include omega-reset(4n);
+      @include span-columns(2);
+      @include omega(6n);
+    }
+  }
+
+  h3 {
+    @include span-columns(12);
+    border-top-left-radius: $card-border-radius;
+    border-top-right-radius: $card-border-radius;
+    background:$blue;
+    margin:0;
+    color:#fff;
+    padding:5px 15px;
+  }
+
+  div {
+    padding:5px 10px;
+    font-size:14px;
+    border-bottom: 2px dotted darken($default, 10%);
+  }
+
+  .title {
+    font-weight:bold;
+  }
+
+  .em {
+    font-style: italic;
+    font-size:12px;
+  }
+
+  .image {
+    @include span-columns(12);
+    img { width:100%; height: auto; }
+    padding:10px;
+    padding-bottom:0;
+    border-bottom:0;
+  }
+
+  .image-status, .image-priority {
+    @include span-columns(6);
+    font-size:12px;
+    padding-top:0;
+    border-bottom:0;
+    height:20px;
+    //background:blue;
+  }
+
+  .actions {
+    border-bottom:0;
+    padding-top:10px;
+  }
+
+  .image-priority {
+    @include omega;
+    text-align: right;
+  }
+
+  .button {
+    float:left;
+    margin-right:5px;
+    text-align: center;
+    @include span-columns(4);
+    @include omega(3n);
+    margin-bottom:5px;
+  }
+
+  .pad-left { padding-left:20px; margin:5px auto;}
+}

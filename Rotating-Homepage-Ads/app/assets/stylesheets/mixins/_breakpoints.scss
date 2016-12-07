@@ -2,18 +2,18 @@
 // ==============================================
 // This mixin uses mobile first methodology to create break-points for mixins
 // The breakpoints are mobile, to 480px / 30em up to Desktop browsers 1200px / 60em and higher
-// Use as needed to better styling. 
+// Use as needed to better styling.
 @mixin breakpoint($break) {
   @if $break == phone {
     @media (min-width: 30em) { @content; }
   }
-  @if $break == tablet {
+  @else if $break == tablet {
     @media (min-width: 48em) { @content; }
   }
-  @if $break == laptop {
+  @else if $break == laptop {
     @media (min-width: 60em) { @content; }
   }
-  @if $break == desktop {
+  @else if $break == desktop {
     @media (min-width: 80em) { @content; }
   }
   @else {

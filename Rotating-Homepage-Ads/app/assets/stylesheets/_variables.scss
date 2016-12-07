@@ -1,3 +1,5 @@
+// WVU Branding Colors
+
 $blue: #002855;
 $gold: #EAAA00;
 
@@ -16,11 +18,20 @@ $yellow: #FDDA24;
 
 $light-blue: #9BD3DD;
 
-$border: 2px solid #e1e1e1;
-
-$border-color: #e1e1e1;
-
-$gray-text: #aaa;
-$header-background: #eee;
+// Common Web Application Colors
 
 $link-color: #009bff;
+
+$notice: #29abe0;
+$error: #d9534f;
+$success: #93c54b;
+$warning: #f47c3c;
+
+$default: #eee;
+
+// Web Specific Colors
+
+$border: 2px solid #e1e1e1;
+$border-color: #e1e1e1;
+$gray-text: #aaa;
+$header-background: $default
