@@ -11,4 +11,5 @@ script:
   - RAILS_ENV=test bundle exec rake db:migrate --trace
   - bundle exec rake db:test:prepare
 before_script:
+  - cd Rotating-Homepage-Ads
   - mysql -e 'create database `Rotating-Homepage-Ads_test`'
