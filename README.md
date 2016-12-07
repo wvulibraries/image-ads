@@ -4,6 +4,8 @@
 
 ![Coverage Status](https://raw.githubusercontent.com/wvulibraries/image-ads/master/Rotating-Homepage-Ads/coverage/coverage.svg)
 
+<img src="https://raw.githubusercontent.com/wvulibraries/image-ads/master/Rotating-Homepage-Ads/coverage/coverage.svg"/>
+
 Ad manager for rotating image ads.
 
 This application was developed to create a place for users to be able to manage image ads that are typically used in rotating or carousel fashion on the Libraries home page.  
