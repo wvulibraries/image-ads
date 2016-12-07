@@ -1,0 +1,14 @@
+language: ruby
+sudo: false
+rvm: 2.3.1
+env:
+  - DB=mysql
+branches:
+  only:
+    - master
+script:
+  - bundle install
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec rake db:test:prepare
+before_script:
+  - mysql -e 'create database Rotating-Homepage-Ads_test'

@@ -19,6 +19,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'rack-cas'
 gem 'rack-cas-rails'
 
+# coverage test gem
 gem 'simplecov', :require => false, :group => :test
 
 # SASS GEMS
