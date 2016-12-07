@@ -14,11 +14,10 @@
 
     <div class="user-panel">
       <% if authenticated? %>
-         <span>You are logged in.</span>
-         <span><%= link_to "Logout", logout_url %></span>
+         <%= link_to "Logout", logout_url, :class=>"button login-button" %>
+         <%= link_to "Public", "/", :class=>"button public-button" %>
       <% else %>
-        <span>You are not logged in.</span>
-        <span><%= link_to "Login", login_url %></span>
+        <%= link_to "Login", login_url, :class=>"button logout-button" %>
       <% end %>
     </div>
   </header>
@@ -38,9 +37,9 @@
     </ul>
   </nav>
 
-  <!-- <main>
+  <main>
     <%= yield %>
-  </main> -->
+  </main>
 
   <footer>
     <div class="builtBy">

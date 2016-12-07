@@ -14,17 +14,22 @@
 
     <div class="user-panel">
       <% if authenticated? %>
-         <span>You are logged in.</span>
-         <span><%= link_to "Logout", logout_url %></span>
-         <span><%= link_to "Admin", "/admin" %></span>
+         <%= link_to "Logout", logout_url, :class=>"button login-button" %>
+         <%= link_to "Admin", "/admin", :class=>"button admin-button" %>
       <% else %>
-        <span>You are not logged in.</span>
-        <span><%= link_to "Login", login_url %></span>
+        <%= link_to "Login", login_url, :class=>"button logout-button" %>
       <% end %>
     </div>
   </header>
 
   <main>
+    <% flash.each do |key, value| %>
+      <div class="alert <%= key %>">
+        <%= value %>
+        <span class="exit-alert"> <i class="fa fa-times-circle-o" aria-hidden="true"></i> </span>
+      </div>
+    <% end %>
+
     <%= yield %>
   </main>
 
