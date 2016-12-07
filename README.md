@@ -1,4 +1,7 @@
 # image-ads
+
+[![Build Status](https://travis-ci.org/wvulibraries/image-ads.svg?branch=master)](https://travis-ci.org/wvulibraries/image-ads)
+
 Ad manager for rotating image ads.
 
 This application was developed to create a place for users to be able to manage image ads that are typically used in rotating or carousel fashion on the Libraries home page.  
