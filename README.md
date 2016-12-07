@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/wvulibraries/image-ads.svg?branch=master)](https://travis-ci.org/wvulibraries/image-ads)
 
-![Coverage Status](Rotating-Homepage-Ads/covarage/coverage.svg)
+![Coverage Status](Rotating-Homepage-Ads/coverage/coverage.svg)
 
 Ad manager for rotating image ads.
 
