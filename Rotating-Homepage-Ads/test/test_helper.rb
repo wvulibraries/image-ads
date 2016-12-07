@@ -1,9 +1,11 @@
 ENV['RAILS_ENV'] ||= 'test'
-require 'simplecov'
-SimpleCov.start
-
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
+require 'simplecov'
+require 'simplecov-shield'
+
+SimpleCov.start
+#SimpleCov.formatter = SimpleCov::Formatter::ShieldFormatter
 
 class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.

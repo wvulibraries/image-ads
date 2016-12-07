@@ -25,4 +25,7 @@
 coverage/index.html
 coverage/assets
 coverage/.last_run.json
-coverage.resultset.json
+coverage/.resultset.json
+
+# needed ignored for production / travis tests
+config/database.yml

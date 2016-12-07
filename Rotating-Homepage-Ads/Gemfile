@@ -15,12 +15,8 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
 # gem 'omniauth-cas'
-
 gem 'rack-cas'
 gem 'rack-cas-rails'
-
-# coverage test gem
-gem 'simplecov', :require => false, :group => :test
 
 # SASS GEMS
 gem 'bourbon'
@@ -40,6 +36,12 @@ gem 'pickadate-rails'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+end
+
+# gems for the test environment only
+group :test  do
+  gem 'simplecov'
+  gem 'simplecov-shield'
 end
 
 group :development do
