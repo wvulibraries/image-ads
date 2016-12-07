@@ -14,5 +14,3 @@ script:
 before_script:
   - cd Rotating-Homepage-Ads
   - mysql -e 'create database `Rotating-Homepage-Ads_test`'
-  - sudo service mysql stop
-  - sudo service mysql start
