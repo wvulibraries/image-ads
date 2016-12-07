@@ -8,4 +8,6 @@ start-srv.sh
 
 # don't let these stupid things in the repo
 .DS_STORE
-.DS_Store 
+.DS_Store
+
+Rotating-Homepage-Ads/config/database.yml
