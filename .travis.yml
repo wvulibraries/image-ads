@@ -8,8 +8,12 @@ branches:
     - master
 script:
   - bundle install
+  - RAILS_ENV=test bundle exec rake db:reset
   - RAILS_ENV=test bundle exec rake db:migrate --trace
   - bundle exec rake db:test:prepare
 before_script:
   - cd Rotating-Homepage-Ads
+  - sudo /etc/init.d/mysql start
   - mysql -e 'create database `Rotating-Homepage-Ads_test`'
+  - sudo /etc/init.d/mysql stop
+  - sudo /etc/init.d/mysql start
