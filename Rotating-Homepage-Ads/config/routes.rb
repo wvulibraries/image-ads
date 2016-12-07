@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   # vagrant only
   if Rails.env.development? || Rails.env.test?
     get '/vagrantlogin', to:"public#set_vagrant_user"
+    get '/vagrantlogout', to:"public#logout"
   end
 
   get '/logout', to:"public#logout"
