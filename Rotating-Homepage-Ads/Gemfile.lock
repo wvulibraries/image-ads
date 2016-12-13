@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/rubycas/rubycas-client.git
+  revision: 7b67c8f1b5515ee4e28479d640d2da0a5aadfbe0
+  specs:
+    rubycas-client (2.3.10.rc1)
+      activesupport
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -38,8 +45,6 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-    addressable (2.5.0)
-      public_suffix (~> 2.0, >= 2.0.2)
     arel (7.1.4)
     bourbon (4.2.7)
       sass (~> 3.4)
@@ -101,17 +106,8 @@ GEM
       sass (~> 3.3)
     pickadate-rails (3.5.6.0)
       railties (>= 3.1.0)
-    public_suffix (2.0.4)
     puma (3.6.2)
     rack (2.0.1)
-    rack-cas (0.15.0)
-      addressable (~> 2.3)
-      nokogiri (~> 1.5)
-      rack (>= 1.3)
-    rack-cas-rails (2.0.2)
-      byebug (~> 9.0)
-      rack-cas (~> 0.15)
-      rails (~> 5.0, >= 5.0.0)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.0.0.1)
@@ -203,10 +199,9 @@ DEPENDENCIES
   normalize-scss
   pickadate-rails
   puma (~> 3.0)
-  rack-cas
-  rack-cas-rails
   rails (~> 5.0.0, >= 5.0.0.1)
   rake
+  rubycas-client!
   sass-rails (~> 5.0)
   simplecov
   simplecov-shield

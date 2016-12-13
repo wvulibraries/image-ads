@@ -15,8 +15,10 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
 # gem 'omniauth-cas'
-gem 'rack-cas'
-gem 'rack-cas-rails'
+# gem 'rack-cas'
+# gem 'rack-cas-rails'
+
+gem 'rubycas-client', :git => 'git://github.com/rubycas/rubycas-client.git'
 
 # SASS GEMS
 gem 'bourbon'
@@ -24,6 +26,9 @@ gem 'neat'
 gem 'normalize-scss'
 gem 'font-awesome-sass'
 gem 'pickadate-rails'
+
+# public frontend demo
+# gem 'bxslider-rails'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'

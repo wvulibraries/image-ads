@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     get '/vagrantlogout', to:"public#logout"
   end
 
+  get '/login', to: "public#login"
   get '/logout', to:"public#logout"
   get 'ajax/getads'
   get 'display/:id' => 'display#show'
