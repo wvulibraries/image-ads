@@ -1,0 +1,71 @@
+$background-color: $light-green;
+$grad-color: lighten($blue, 30%);
+
+.hero-wrapper {
+  @include span-columns(12);
+  position:relative;
+  @include linear-gradient(to right, $light-green, $light-blue);
+  padding:30px 20px 20px;
+  overflow:hidden;
+  z-index:0;
+
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 200%;
+    z-index:1;
+    transform: translateX(0%);
+    animation: backgroundtransform 50s ease infinite;
+    @include linear-gradient(135deg,  rgba($grad-color,.1) 0%,rgba($grad-color,0) 34%,rgba($grad-color,.8) 86%,rgba($grad-color,.8) 100%);
+  }
+
+  .rotating-images {
+    @include span-columns(12);
+    position:relative;
+    z-index:99;
+
+    @include breakpoint(tablet){
+      @include span-columns(4);
+    }
+  }
+
+  .hero-text {
+    @include span-columns(12);
+    font-size:1.5em;
+    position:relative;
+    z-index:99;
+
+    h2, p {color:#fff; text-shadow:2px 2px 2px rgba(#000,.5); }
+
+    h2 { border-bottom: 1px dotted #fff;}
+
+    @include breakpoint(tablet){
+      @include span-columns(8);
+    }
+  }
+}
+
+.slider { padding:0; margin:0; @include span-columns(12);
+  img{ width:100%; height:auto; }
+}
+
+.bx-pager-item { width:10px; float:left;}
+
+
+
+
+// Animations
+
+@keyframes backgroundtransform {
+    0%{
+      transform: translateX(0%);
+    }
+    50%{
+      transform: translateX(-50%);
+    }
+    100%{
+      transform: translateX(0%);
+    }
+}

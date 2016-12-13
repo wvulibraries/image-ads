@@ -1,33 +1,3 @@
-<!-- <table>
-  <thead>
-    <tr>
-      <th>File Name</th>
-      <th>Image Name</th>
-      <th>Displayed</th>
-      <th>Priority</th>
-      <th>Alt Text</th>
-      <th>Link</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @ads.each do |ad| %>
-      <tr>
-        <td><%= ad.filename %></td>
-        <td><%= ad.image_name %></td>
-        <td><%= ad.displayed %></td>
-        <td><%= ad.priority %></td>
-        <td><%= ad.alttext %></td>
-        <td><%= ad.link %></td>
-        <td><%= link_to icon('eye'), ad %></td>
-        <td><%= link_to icon('pencil-square-o'), edit_ad_path(ad) %></td>
-        <td><%= link_to icon('trash'), ad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table> -->
-
 <h2> Current Ads </h2>
 <ul class="ad-cards">
   <% @ads.each do |ad| %>

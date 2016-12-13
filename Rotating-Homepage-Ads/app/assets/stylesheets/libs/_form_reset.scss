@@ -227,28 +227,6 @@ legend {
 
 /* Buttons, Input Type Submit/Reset ------------------ */
 
-button,
-input[type="button"],
-input[type="submit"],
-input[type="reset"],
-input[type="image"] {
-	height: $fh-button-height;
-	width: $fh-button-width;
-	max-width: $fh-button-max-width;
-	background-color: $fh-button-bg-color;
-	padding: $fh-input-height / 5;
-	cursor: pointer;
-
-	color: $fh-button-font-color;
-	font-weight: 700;
-
-	-webkit-appearance: none;
-	-moz-appearance: none;
-
-	border-radius: $fh-border-radius;
-	border: $fh-border-width $fh-border-style $fh-border-color;
-}
-
 input[type="image"] {
 	text-align: center;
 	padding: $fh-input-height / 5;
@@ -278,14 +256,14 @@ input[type="radio"]:focus {
 	outline: $fh-focus-border-color solid 2px;
 }
 
-button:hover,
-input[type="button"]:hover,
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-button:focus,
-input[type="button"]:focus,
-input[type="submit"]:focus,
-input[type="reset"]:focus {
-	background-color: $fh-button-hover-bg-color;
-	color: $fh-button-hover-font-color;
+
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="image"] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+
+	@include button_maker($link-color, 'ghost');
 }

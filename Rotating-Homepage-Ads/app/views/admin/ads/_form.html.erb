@@ -2,50 +2,76 @@
 
   <%= render '/application/error_messages', object: f.object %>
 
-  <% if ad.filename.present? %>
-    <div class="field">
-      <p><img src="/display/<%= ad.id %>"></p>
-    </div>
+  <% if ad.id.present? %>
+    <h2> Edit Ad </h2>
+  <% else %>
+    <h2> Create Ad </h2>
   <% end %>
 
-  <div class="field">
-    <%= f.label :'File Upload' %><br>
-    <%= f.file_field :file, accept: 'image/png,image/gif,image/jpeg,image/svg+xml' %>
+  <div class="file-upload-wrapper">
+    <div class="image-preview">
+      <% if ad.filename.present? %>
+          <p><img src="/display/<%= ad.id %>"></p>
+      <% else %>
+         <p> Image Preview </p>
+      <% end %>
+    </div>
+
+    <div class="field file-upload" data-text="Please Upload an Image">
+      <%= f.label :'Please Upload an Image Ad' %>
+      <%= f.file_field :file, accept: 'image/png,image/gif,image/jpeg,image/svg+xml', :class => "file-upload-input" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :image_name %>
-    <%= f.text_field :image_name %>
-  </div>
+  <div class="image-info-wrapper">
+    <div class="field">
+      <%= f.label :image_name %>
+      <%= f.text_field :image_name %>
 
-  <div class="field">
-    <%= f.label :'Is this image being displayed now?' %><br>
-    <%= f.select :displayed, [['No', false], ['Yes', true]]%>
-  </div>
+    </div>
 
-  <div class="field">
-    <%= f.label :'What is the display priority of this Ad?' %><br>
-    <%= f.select :priority, [['1 - Low', 1], ['2', 2], ['3', 3], ['4', 4], ['5 - Medium', 5], ['6', 6], ['7', 7], ['8', 8], ['9', 9], ['10 - High', 10]]%>
-  </div>
+    <div class="field">
+      <%= f.label :'Please provide meaningful alt text.' %>
+      <%= f.text_field :alttext %>
+    </div>
 
-  <div class="field">
-    <%= f.label :'Please provide meaningful alt text.' %>
-    <%= f.text_field :alttext %>
-  </div>
+    <div class="field">
+      <%= f.label :'Add a Link' %>
+      <%= f.text_field :link %>
+    </div>
 
-  <div class="field">
-    <%= f.label :'Add a Link' %>
-    <%= f.text_field :link %>
-  </div>
+    <div class="selects">
+      <div class="field enabled">
+        <%= f.label :'Is this image being displayed now?' %>
+        <%= f.select :displayed, [['Yes', true], ['No', false]]%>
+      </div>
 
-  <div>
-    <%= f.label :'Days of the Week'%><br>
-    <%= f.collection_check_boxes(:selected_days, Date::DAYNAMES, :titleize, :to_s) do |day| %>
-      <%= day.check_box + day.text%>
-    <% end %>
+      <div class="field priority">
+        <%= f.label :'What is the display priority of this Ad?' %>
+        <%= f.select :priority, [['1', 1], ['2', 2], ['3', 3], ['4', 4], ['5 ', 5], ['6', 6], ['7', 7], ['8', 8], ['9', 9], ['10', 10]]%>
+      </div>
+    </div>
+
+
+    <div>
+      <%= f.label :'Days of the Week'%>
+      <ul class="checkbox-list">
+      <%= f.collection_check_boxes(:selected_days, Date::DAYNAMES, :titleize, :to_s) do |day| %>
+        <li> <%= day.check_box %> <span class="check-label"> <%= day.text %> </span>  </li>
+      <% end %>
+      </ul>
+    </div>
+
+
   </div>
 
   <div class="actions">
-    <br><%= f.submit %>
+    <div class="cancel-button-wrapper">
+      <%= link_to 'Cancel', ads_path, :class=>"cancel-button" %>
+    </div>
+
+    <div class="submit-button-wrapper">
+      <%= f.submit 'Create Ad', :class=>"button submit-button" %>
+    </div>
   </div>
 <% end %>

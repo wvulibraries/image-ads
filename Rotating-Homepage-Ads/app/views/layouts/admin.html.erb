@@ -13,12 +13,7 @@
     </div>
 
     <div class="user-panel">
-      <% if authenticated? %>
-         <%= link_to "Logout", logout_url, :class=>"button login-button" %>
-         <%= link_to "Public", "/", :class=>"button public-button" %>
-      <% else %>
-        <%= link_to "Login", login_url, :class=>"button logout-button" %>
-      <% end %>
+
     </div>
   </header>
 
@@ -38,6 +33,12 @@
   </nav>
 
   <main>
+    <% flash.each do |key, value| %>
+      <div class="alert <%= key %>">
+        <%= value %>
+        <span class="exit-alert"> <i class="fa fa-times-circle-o" aria-hidden="true"></i> </span>
+      </div>
+    <% end %>
     <%= yield %>
   </main>
 

@@ -1,7 +1,3 @@
-.button {
-  @include button_maker($link-color, 'regular');
-}
-
 .show-button {
   @include button_maker($success, 'ghost');
 }
@@ -18,4 +14,20 @@
   i { font-size:1.5em; }
   padding:5px;
   padding-top:10px;
+}
+
+.submit-button {
+  @include button_maker($success, 'ghost');
+}
+
+.cancel-button {
+  @include button_maker(darken($default,20%), 'ghost');
+}
+
+.button {
+  @include button_maker($link-color, 'ghost');
+}
+
+.button-hero {
+  @include button_maker(#fff, 'ghost');
 }

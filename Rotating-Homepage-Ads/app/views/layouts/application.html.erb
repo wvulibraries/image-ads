@@ -13,12 +13,9 @@
     </div>
 
     <div class="user-panel">
-      <% if authenticated? %>
-         <%= link_to "Logout", logout_url, :class=>"button login-button" %>
-         <%= link_to "Admin", "/admin", :class=>"button admin-button" %>
-      <% else %>
-        <%= link_to "Login", login_url, :class=>"button logout-button" %>
-      <% end %>
+        <%= link_to "Logout", "/logout", :class=>"button login-button" %>
+        <%= link_to "Admin", "/admin", :class=>"button admin-button" %>
+        <%= link_to "Login", "/login", :class=>"button logout-button" %>
     </div>
   </header>
 

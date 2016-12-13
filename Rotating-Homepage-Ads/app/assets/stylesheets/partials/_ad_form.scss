@@ -1,0 +1,154 @@
+form {
+  @include span-columns(12);
+  padding:20px;
+  background: lighten($default,5%);
+  border-radius: 8px;
+  float:left;
+  height:auto;
+  position:relative;
+  border: 1px solid darken($default, 10%);
+  margin-bottom:20px;
+
+  @include breakpoint(laptop){
+    @include span-columns(8);
+    @include shift(2);
+  }
+
+  @include breakpoint(desktop){
+    @include span-columns(6);
+    @include shift(3);
+  }
+}
+
+.file-upload-wrapper {
+  @include span-columns(12);
+  margin-bottom:45px;
+
+  // min-height:675px;
+  // position:relative;
+  // @include breakpoint(tablet){
+  //   @include span-columns(6);
+  // }
+
+  .image-preview {
+    @include span-columns(12);
+    height:auto;
+    padding:10px;
+    border: 2px dashed darken($default, 20%);
+    margin-bottom:10px;
+  }
+
+
+  .file-upload {
+    @include span-columns(12);
+    position:relative;
+    label { display:none; }
+
+    &:after {
+       content: attr(data-text);
+       font-size: 14px;
+       position: absolute;
+       top: 0;
+       left: 0;
+       background: #fff;
+       padding: 7px 15px;
+       display: block;
+       border-radius: 5px 10px 10px 5px;
+       font-weight: 300;
+       height: 40px;
+       width:100%;
+       color:#000;
+       border: 1px solid darken($default, 10%);
+     }
+
+     &:before {
+       content: 'Upload';
+       position: absolute;
+       top: 0;
+       right: 0;
+       display: inline-block;
+       height: 40px;
+       background: $link-color;
+       color: #fff;
+       padding: 5px 30px;
+       pointer-events: none;
+       border-radius: 0 5px 5px 0;
+       z-index: 25;
+     }
+
+     &:hover,&:focus {
+       &:after {
+        border-color:darken($link-color, 10%);
+       }
+       &:before {
+        background:darken($link-color, 10%);
+       }
+     }
+  }
+
+  input[type="file"] {
+     opacity: 0;
+     position: absolute;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     z-index: 99;
+     height:60px;
+     margin: 0;
+     padding: 0;
+     display: block;
+     cursor: pointer;
+     width: 100%;
+     max-width:100%;
+  }
+}
+
+.image-info-wrapper {
+  @include span-columns(12);
+  margin-bottom:20px;
+  input { max-width:100%; }
+}
+
+.selects {
+  .field { @include span-columns(6); @include omega(2n);}
+  select { max-width:100%; }
+}
+
+.actions {
+  @include span-columns(12);
+  margin-bottom:5px;
+
+  .button, .cancel-button {
+    @include span-columns(12);
+    max-width:100%;
+    margin:0;
+    text-align: center;
+    height:52px;
+    padding:13px 0;
+    margin-bottom:10px;
+    &:last-of-type { margin-bottom:0;}
+
+    @include breakpoint(tablet) {
+      @include span-columns(4);
+      @include omega(3n);
+      margin-bottom:0;
+    }
+  }
+}
+
+.cancel-button-wrapper {
+    @include span-columns(6);
+    @include breakpoint(laptop){
+      @include span-columns(4);
+    }
+}
+
+.submit-button-wrapper {
+  @include span-columns(6);
+  @include omega();
+  @include breakpoint(laptop){
+    @include span-columns(4);
+    @include omega();
+  }
+}

@@ -13,10 +13,17 @@ html, body {
 }
 
 main {
-  height:100%;
-  padding:20px;
-  margin-bottom:-35px; // equals footer height
+  min-height:800px;
   &:after {
     height:35px; // equals footer height
   }
+}
+
+
+.pull-right {
+  float:right;
+}
+
+.pull-left {
+  float:left;
 }
