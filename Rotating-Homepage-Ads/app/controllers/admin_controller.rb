@@ -1,25 +1,16 @@
-require "rack-cas-rails"
 class AdminController < ApplicationController
-  before_action :authenticate!
-  before_action :check_secret_CAS
-
+  # tell rails which view layout to use with this controller
   layout "admin"
 
-  private
-  def check_secret_CAS
-    secret = Digest::MD5.hexdigest("Library")
-    if secret != session['cas']['secret']
-      session.delete('cas')
-      redirect_to root_path, notice: 'You have failed this Application with a faulty login!'
-    end
-  end
+  # perform filter before action
+  before_filter CASClient::Frameworks::Rails::Filter
 
-  # def check_user_permission
-  #   user = User.exists?(username: session['cas']['username']);
-  #   if !user
-  #     session.delete('cas')
-  #     redirect_to root_path, notice: 'User permissions failed, you do not have access to the admin side of this app.'
-  #   end
-  # end
+   def index
+     @username = session[:cas_user]
+     @extra_attributes = session[:cas_extra_attributes]
+   end
 
+   def logout
+     CASClient::Frameworks::Rails::Filter.logout(self)
+   end
 end
