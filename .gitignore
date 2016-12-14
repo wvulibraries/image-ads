@@ -5,6 +5,9 @@ sessionLogin.php
 db-back.sh
 start-srv.sh
 /SQLFiles/
+server
+/server
+
 
 # don't let these stupid things in the repo
 .DS_STORE
