@@ -35,8 +35,7 @@ This application was developed to create a place for users to be able to manage 
 
 ### Setup Databases
   - cd into /vagrant/bin/
-  - run the command `rails db:reset`
-  - followed by  `rails db:migrate`
+  - run the command `rake db:create && rake db:migrate`
 
 ### Run the Server
   - use `rails server` to boot server with vagrant by adding to the `config/boot.rb` file
@@ -135,3 +134,9 @@ The application is setup to send a JSON file to the html browser by using an AJA
 If the number of images recieved needs to be limited this can be done by adding a querystring to the end of the url.  An example of this would be if the images need to be limited to 7.  
 
 	http://localhost:8090/admin/image_manager/includes/ajax/getImages.php?limit=7
+
+
+# Making the Vagrant Box use SSL:
+ - Find the Appropriate Apache Configs in our storage system
+ - Use the Wildcard Certs.  
+ - Place them on the System in the paths mentioned in the ssl_local.conf files.  
