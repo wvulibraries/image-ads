@@ -22,8 +22,30 @@ yum install -y zlib-devel
 yum install -y readline-devel
 yum install -y ntp git vim emacs
 
-echo "Change server time to Eastern"
-ln -s /usr/share/zoneinfo/US/Eastern /etc/localtime
+echo "Installing Apache ... "
+echo " -------------------------------------------------------------------------- "
+yum install -y httpd
+yum install -y curl-devel httpd-devel
+
+echo "Setup Apache ... "
+echo " -------------------------------------------------------------------------- "
+chkconfig httpd on
+
+echo "Enable EPEL for Yum Utilitis  ... "
+echo " -------------------------------------------------------------------------- "
+yum install -y epel-release yum-utils
+yum-config-manager --enable epel
+
+echo "Install Passenger for Rails to use apache  ... "
+echo " -------------------------------------------------------------------------- "
+yum install -y pygpgme curl
+curl --fail -sSLo /etc/yum.repos.d/passenger.repo https://oss-binaries.phusionpassenger.com/yum/definitions/el-passenger.repo
+yum install -y mod_passenger
+
+echo "Restarting Apache ... "
+echo " -------------------------------------------------------------------------- "
+systemctl restart httpd
+yum -y update
 
 echo "Installing mysql ... "
 echo " -------------------------------------------------------------------------- "
