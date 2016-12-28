@@ -137,6 +137,7 @@ If the number of images recieved needs to be limited this can be done by adding 
 
 
 # Making the Vagrant Box use SSL:
- - Find the Appropriate Apache Configs in our storage system
- - Use the Wildcard Certs.  
- - Place them on the System in the paths mentioned in the ssl_local.conf files.  
+Should run everything from the bootstrap. 
+
+## PUMA
+Start Puma Server in using custom configs `bundle exec puma -C config/puma.rb`
