@@ -101,14 +101,15 @@ echo " -------------------------------------------------------------------------
 curl --silent --location https://rpm.nodesource.com/setup_4.x | bash -
 yum -y install nodejs
 
-echo " Change ownership so vagrant user can install gems and such "
-sudo chown -R vagrant /usr/local/
-
-echo "Gem install bundler and rails ... "
+echo " Change ownership so vagrant user can install gems and such for non-privaledged use"
 echo " -------------------------------------------------------------------------- "
 
-gem install bundler
-gem install rails
-gem install mysql2
-rbenv rehash
-bundle
+chown -R vagrant /usr/local/
+chown -R vagrant /usr/local/bin
+chown -R vagrant /usr/local/lib/ruby/gems/2.3.0
+
+echo "Generate a ssl ticket (self signed default information)"
+echo " -------------------------------------------------------------------------- "
+
+mkdir /etc/httpd/ssl
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/httpd/ssl/${APP_NAME}.key -out /etc/httpd/ssl/${APP_NAME}.crt -subj '/CN=localhost/O=My Company Name LTD./C=US'

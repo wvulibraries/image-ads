@@ -13,8 +13,10 @@ Vagrant.configure(API_VERSION) do |config|
 
         config.vm.box = "bento/centos-7.2"
         config.vm.network :forwarded_port, guest: 3000, host: 3000
-        config.vm.network "private_network", ip: "127.0.0.1"
+
         config.vm.provision "shell", path: "bootstrap.sh"
+        config.vm.provision "shell", path: "rails_app_bootstrap.sh", privileged: false
+
         config.ssh.insert_key = false
     end
 end
