@@ -14,10 +14,28 @@
 </div>
 
 
-<section class="tool-select">
-  <div class="tool">
-    <h2> Currently Displayed Ads </h2>
-    <p> Javascript will be added here to show current ads. </p>
+<section class="docs equalHeight">
+  <div class="documentation equal">
+    <h2> Documentation / Issues </h2>
+
+    <p> Quality is important to us.  That means fixing bugs and documenting code.  All code in this repo is documented in the codebase.  All of the functionality is documented in the readme.  If you have any other documentation needs or want to submit a bug, feature request, extension, etc.  Please submit a detailed request via the github issues.  This will help us in tracking, and maintaining the product on release cycles. </p>
+
+    <a href="https://github.com/wvulibraries/image-ads/issues" class="button button-primary"> <i class="fa fa-bug" aria-hidden="true"></i> Issues </a>
+  </div>
+
+  <div class="contributing equal">
+    <h2> Contributing to the Repo </h2>
+
+    <p> If this has been useful for you and you want to contribute, feel free to create pull requests into the repo.  The best way to get your pull requests into the main repo is by writing tests and solving realistic problems in the applications.  All contributions are welcome. If you do not code and want to contribute, feel free to add to the documentation or the WIKI! </p>
+
+    <a href="https://github.com/wvulibraries/image-ads/wiki" class="button button-primary"> <i class="fa fa-book" aria-hidden="true"></i> Wiki </a>
+  </div>
+
+  <div class="apis equal">
+    <h2> Our API Streams </h2>
+    <p> You can use our exisiting API by clicking the link at the bottom of this box! Attach our homepage links to any site you want using our JSON! </p>
+
+    <a href="/ajax/getads.json" class="button button-primary"> <i class="fa fa-link" aria-hidden="true"></i> Our API </a>
   </div>
 </section>
 
@@ -58,6 +76,21 @@
 
                   slider.reloadSlider();
               },
+          });
+
+
+          $(window).on('load resize', function(){
+            console.log('sizing');
+            var tallest = 0;
+            $('.equalHeight').each(function(){
+              $('.equal').each(function(){
+                  $(this).css('height','auto');
+                  if($(this).height() > tallest){
+                    tallest = $(this).height() + 72;
+                  }
+              });
+              $('.equal', this).height(tallest);
+            });
           });
       });
   </script>

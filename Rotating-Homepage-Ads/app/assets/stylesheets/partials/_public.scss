@@ -53,6 +53,34 @@ $grad-color: lighten($blue, 30%);
 
 .bx-pager-item { width:10px; float:left;}
 
+.docs {
+  @include span-columns(12);
+  padding:30px 20px;
+
+  > div {
+    @include span-columns(12);
+    background: $default;
+    border: 1px solid darken($default, 10%);
+    border-radius:8px;
+    position:relative;
+    padding:20px;
+    margin-bottom:20px;
+
+    a {
+      width:calc(100% - 40px);
+      text-align:center;
+      position:absolute;
+      bottom:20px;
+      left:20px;
+    }
+
+    @include breakpoint(tablet){
+      @include span-columns(4);
+      @include omega(3n);
+      margin-bottom:0;
+    }
+  }
+}
 
 
 
