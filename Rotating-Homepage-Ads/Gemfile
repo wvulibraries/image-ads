@@ -16,7 +16,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
 # Needed for Centos and Passenger
-gem 'therubyracer'
+# gem 'therubyracer'
 
 
 # gem 'omniauth-cas'
@@ -28,6 +28,7 @@ gem 'rubycas-client', :git => 'git://github.com/rubycas/rubycas-client.git'
 # SASS GEMS
 gem 'bourbon'
 gem 'neat'
+gem 'bitters'
 gem 'normalize-scss'
 gem 'font-awesome-sass'
 gem 'pickadate-rails'
