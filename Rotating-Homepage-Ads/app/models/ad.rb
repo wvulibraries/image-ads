@@ -76,7 +76,7 @@ class Ad < ApplicationRecord
   # Checks to see if anything in the array, if not assume that it displays on all days
   # Otherwise the day of the week if it matches today will reveal true
   def check_day_of_week
-    if (self.selected_days.size-1 != 0)
+    if (self.selected_days.size - 1) > 0 && !self.selected_days.nil?
       d = Date.today
       return self.selected_days.include?(Date::DAYNAMES[d.wday])
     else
@@ -93,7 +93,7 @@ class Ad < ApplicationRecord
   # Description:
   # Loops through all the times and sees if today is between the ranges
   def check_times
-    if (self.start_end_times.count != 0)
+    if self.start_end_times.count > 0 && !self.start_end_times.nil?
       self.start_end_times.each { |t| return t.check_time_ranges }
     else
       return true
@@ -109,7 +109,7 @@ class Ad < ApplicationRecord
   # Description:
   # Loops through all the dates and sees if today is between the ranges
   def check_dates
-    if (self.start_end_dates.count != 0)
+    if self.start_end_dates.count > 0 && !self.start_end_dates.nil?
       self.start_end_dates.each { |d| return d.check_date_ranges }
     else
       return true
