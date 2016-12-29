@@ -1,55 +1,60 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div id="notice"><%= notice %></div>
 
-<p>
-  <strong>filename:</strong>
-  <%= @ad.filename %>
-</p>
+  <div class="show-ad">
+  <p>
+    <strong>filename:</strong>
+    <%= @ad.filename %>
+  </p>
 
-<p>
-  <img src="/display/<%= @ad.id %>">
-</p>
+  <p>
+    <img src="/display/<%= @ad.id %>">
+  </p>
 
-<p>
-  <strong>Image Name:</strong>
-  <%= @ad.image_name %>
-</p>
+  <p>
+    <strong>Image Name:</strong>
+    <%= @ad.image_name %>
+  </p>
 
-<p>
-  <strong>Currently Displayed:</strong>
-  <%= @ad.displayed %>
-</p>
+  <p>
+    <strong>Currently Displayed:</strong>
+    <%= @ad.displayed %>
+  </p>
 
-<p>
-  <strong>Priority:</strong>
-  <%= @ad.priority %>
-</p>
+  <p>
+    <strong>Priority:</strong>
+    <%= @ad.priority %>
+  </p>
 
-<p>
-  <strong>Alttext:</strong>
-  <%= @ad.alttext %>
-</p>
+  <p>
+    <strong>Alttext:</strong>
+    <%= @ad.alttext %>
+  </p>
 
-<p>
-  <strong>Link:</strong>
-  <%= @ad.link %>
-</p>
+  <p>
+    <strong>Link:</strong>
+    <%= @ad.link %>
+  </p>
 
 <div>
   <strong>Days of the Week</strong>
   <%= @ad.selected_days.drop(1) %>
 </div>
+</div>
 
 <h2>Date Ranges Ad will Be Displayed</h2>
-<%= render @ad.start_end_dates %>
+<%# render @ad.start_end_dates %>
 
 <h2>Add Date:</h2>
-<%= render 'admin/start_end_dates/form' %>
+<%# render 'admin/start_end_dates/form' %>
 
 <h2>Time Ranges Ad will Be Displayed</h2>
-<%= render @ad.start_end_times %>
+<%# render @ad.start_end_times %>
 
 <h2>Add Time:</h2>
-<%= render 'admin/start_end_dates/form' %>
+<%# render 'admin/start_end_times/form' %>
 
 <%= link_to 'Edit', edit_ad_path(@ad) %> |
 <%= link_to 'Back', ads_path %>
+
+</div>

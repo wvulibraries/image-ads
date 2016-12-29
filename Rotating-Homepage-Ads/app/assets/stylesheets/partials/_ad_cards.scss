@@ -29,12 +29,6 @@ $card-border-radius: 6px;
       @include span-columns(3);
       @include omega(4n);
     }
-
-    @include breakpoint(2000px){
-      @include omega-reset(4n);
-      @include span-columns(2);
-      @include omega(6n);
-    }
   }
 
   h3 {

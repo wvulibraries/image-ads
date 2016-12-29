@@ -1,3 +1,4 @@
+<div class="container">
 <h2> Current Ads </h2>
 <ul class="ad-cards">
   <% @ads.each do |ad| %>
@@ -71,9 +72,9 @@
     </div>
 
     <div class="actions">
-        <%= link_to icon('eye'), ad, :class=>"button show-button", :title=>"show image ad" %>
-        <%= link_to icon('pencil-square-o'), edit_ad_path(ad), :class=>"button edit-button", :title=>"edit image ad" %>
-        <%= link_to icon('trash'), ad, :class=>"button delete-button", :title=>"delete image ad", method: :delete, data: { confirm: 'Are you sure you want to delete this Ad, it will affect all time and date ranges as well? You may consider making the ad disabled instead.' } %>
+        <%= link_to icon('eye'), ad, :class=>"show-button", :title=>"show image ad" %>
+        <%= link_to icon('pencil-square-o'), edit_ad_path(ad), :class=>"edit-button", :title=>"edit image ad" %>
+        <%= link_to icon('trash'), ad, :class=>"delete-button", :title=>"delete image ad", method: :delete, data: { confirm: 'Are you sure you want to delete this Ad, it will affect all time and date ranges as well? You may consider making the ad disabled instead.' } %>
     </div>
   </li>
   <% end %>
@@ -82,3 +83,4 @@
 <br>
 
 <%= link_to 'New Ad', new_ad_path, :class => 'button new-ad-button' %>
+</div>

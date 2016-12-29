@@ -4,6 +4,7 @@ $inactive-checkbox-color: darken($default, 15%);
 input[type=checkbox] {
 	width: 1em;
 	height: 1em;
+	display:inline-block;
 	font: inherit;
 	vertical-align: middle;
 	-webkit-appearance: none;

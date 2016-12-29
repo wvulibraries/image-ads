@@ -14,29 +14,22 @@
  *= require_self
  */
 
- @import "normalize/import-now";
- @import "bourbon";
- @import "neat";
- @import "neat-helpers";
+@import "normalize/import-now";
+@import "bourbon";
+@import "base/base";
+@import "neat";
+@import "neat-helpers";
 
 // Font Awesome
- @import "font-awesome-sprockets";
- @import "font-awesome";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
- // import mixins so that all partials can use them.
- @import "mixins/*";
+// import mixins so that all partials can use them.
+@import "mixins/*";
+@import "custom_objects/*";
 
- // import variables
- @import "variables";
-
-// import any custom libs, also so after variables so that variables can be used in the lib files
- @import "libs/*";
-
- // base link colors
- @include link_maker($link-color, $link-color, darken($link-color, 20%), lighten($link-color, 20%));
-
- // application wide
- @import "partials/*";
+// application wide
+@import "partials/*";
 
 // library for pick date for time and date stuff
 @import "pickadate/default";

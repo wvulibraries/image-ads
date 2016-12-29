@@ -10,12 +10,6 @@
   @include button_maker($error, 'ghost');
 }
 
-.show-button, .edit-button, .delete-button {
-  i { font-size:1.5em; }
-  padding:5px;
-  padding-top:10px;
-}
-
 .submit-button {
   @include button_maker($success, 'ghost');
 }
@@ -30,4 +24,10 @@
 
 .button-hero {
   @include button_maker(#fff, 'ghost');
+}
+
+.show-button, .edit-button, .delete-button {
+  i { font-size:1.25em; }
+  padding:5px;
+  padding-top:10px;
 }

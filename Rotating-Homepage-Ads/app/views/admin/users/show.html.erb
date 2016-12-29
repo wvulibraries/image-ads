@@ -1,19 +1,27 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="well">
+    <p>
+      <strong> Username: </strong>
+      <%= @user.username %>
+    </p>
 
-<p>
-  <strong>username:</strong>
-  <%= @user.username %>
-</p>
+    <p>
+      <strong>First Name:</strong>
+      <%= @user.firstname %>
+    </p>
 
-<p>
-  <strong>Last Name:</strong>
-  <%= @user.lastname %>
-</p>
+    <p>
+      <strong>Last Name:</strong>
+      <%= @user.lastname %>
+    </p>
 
-<p>
-  <strong>First Name:</strong>
-  <%= @user.firstname %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+    <div class="actions">
+      <div class="submit-button-wrapper">
+        <%= link_to icon('pencil-square-o') + ' Edit', edit_user_path(@user), :class=>"edit-button" %>
+      </div>
+      <div class="cancel-button-wrapper">
+        <%= link_to 'Cancel', users_path, :class=>"cancel-button" %>
+      </div>
+    </div>
+  </div>
+</div>

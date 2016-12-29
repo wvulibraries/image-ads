@@ -1,0 +1,74 @@
+// Typography
+$base-font-family: $helvetica;
+$heading-font-family: $base-font-family;
+
+// Font Sizes
+$base-font-size: 1em;
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$base-border-radius: 3px;
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Colors
+$blue: #002855;
+$gold: #EAAA00;
+
+$default: #eee;
+$gray-text: #aaa;
+
+// Bitters Defaults
+$dark-gray: #333;
+$medium-gray: #999;
+$light-gray: $default;
+
+// WVU COLORS
+$pms432: #333F48;
+$pms429: #A2AAAD;
+$pms300: #005EB8;
+$pms144c: #ED8B00;
+$dark-green: #0D5257;
+$light-green: #9ABEAA;
+$red: #BE3A34;
+$red-orange: #E35205;
+$yellow: #FDDA24;
+$light-blue: #9BD3DD;
+
+// Web Application Colors
+$link-color: #009bff;
+$notice: #29abe0;
+$error: #d9534f;
+$success: #93c54b;
+$warning: #f47c3c;
+
+// Borders
+$header-background: $default;
+
+// Font Colors
+$base-font-color: $dark-gray;
+$action-color: $link-color;
+
+// Border
+$base-border-color: $light-gray;
+$base-border: 1px solid $base-border-color;
+
+// Custom Existing Vars
+$border: $base-border;
+$border-color: $base-border-color;
+
+// Background Colors
+$base-background-color: #fff;
+$secondary-background-color: tint($base-border-color, 75%);
+
+// Forms
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease;

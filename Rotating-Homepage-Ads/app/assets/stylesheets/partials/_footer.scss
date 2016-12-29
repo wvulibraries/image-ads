@@ -5,6 +5,10 @@ footer{
   border-top: $border;
   font-size:10px;
   height:35px;
+  margin-top:35px;
+  
+  position:fixed;
+  bottom:0;
 
   .builtBy {
     color: $gray-text;

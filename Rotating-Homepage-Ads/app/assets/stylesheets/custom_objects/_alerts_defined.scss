@@ -30,3 +30,5 @@
     cursor:pointer;
   }
 }
+
+.alert .content { @include span-columns(12); margin-top:-26px;}

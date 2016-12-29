@@ -54,7 +54,6 @@ $grad-color: lighten($blue, 30%);
 .bx-pager-item { width:10px; float:left;}
 
 .docs {
-  @include span-columns(12);
   padding:30px 20px;
 
   > div {

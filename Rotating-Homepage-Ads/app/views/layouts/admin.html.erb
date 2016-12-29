@@ -13,7 +13,7 @@
     </div>
 
     <div class="user-panel">
-
+      <%= link_to "Public", "/", :class=>"button admin-button" %>
     </div>
   </header>
 
@@ -35,10 +35,11 @@
   <main>
     <% flash.each do |key, value| %>
       <div class="alert <%= key %>">
-        <%= value %>
+        <div class="content"> <%= value %> </div>
         <span class="exit-alert"> <i class="fa fa-times-circle-o" aria-hidden="true"></i> </span>
       </div>
     <% end %>
+
     <%= yield %>
   </main>
 
