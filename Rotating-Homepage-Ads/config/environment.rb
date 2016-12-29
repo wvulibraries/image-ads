@@ -10,8 +10,15 @@ Rails.application.initialize!
 require 'casclient'
 require 'casclient/frameworks/rails/filter'
 
+
+# cas_logger = CASClient::Logger.new(Rails.root+'/log/cas.log')
+# cas_logger.level = Logger::DEBUG
+
 CASClient::Frameworks::Rails::Filter.configure(
-  :cas_base_url => 'https://ssodev.wvu.edu/cas/login'
+  :cas_base_url => 'https://ssodev.wvu.edu/cas',
+  :login_url     => "https://ssodev.wvu.edu/cas/login",
+  :logout_url    => "https://ssodev.wvu.edu/cas/logout",
+  :validate_url  => "https://ssodev.wvu.edu/cas/proxyValidate"
 )
 
 
