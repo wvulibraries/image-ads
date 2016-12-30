@@ -106,23 +106,7 @@ form, .well {
   margin-top:2em;
   margin-bottom:5px;
 
-  .button{
-    @include span-columns(12);
-    margin:0;
-    text-align: center;
-    height:52px;
-    padding:13px 0;
-    margin-bottom:10px;
-    &:last-of-type { margin-bottom:0;}
-
-    @include breakpoint(tablet) {
-      @include span-columns(4);
-      @include omega(3n);
-      margin-bottom:0;
-    }
-  }
-
-  .cancel-button, .submit-button, .edit-button {
+ .cancel-button, .submit-button, .edit-button {
     @include span-columns(12);
     height:52px;
     padding:13px;
@@ -138,4 +122,20 @@ form, .well {
 
 .submit-button-wrapper {
   @include span-columns(6);
+}
+
+.card-action {
+  @include span-columns(12);
+  margin-bottom:5px;
+  border-bottom:0;
+  .btn{
+    @include span-columns(12);
+    text-align: center;
+    i { font-size:2em;}
+    @include breakpoint(tablet) {
+      @include span-columns(4);
+      @include omega(3n);
+      margin-bottom:0;
+    }
+  }
 }

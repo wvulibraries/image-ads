@@ -1,0 +1,20 @@
+.picker--opened .picker__frame {
+    top: auto;
+    bottom: 20% !important;
+}
+
+.picker__header {
+  float:left;
+  width:100%;
+  padding:.5em 4em;
+}
+
+.picker__select--year {
+  width:30% !important;
+  float:right;
+}
+
+.picker__select--month {
+  width:60% !important;
+  float:left;
+}
