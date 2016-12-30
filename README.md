@@ -1,4 +1,4 @@
-# image-ads
+# Image-ads
 
 [![Build Status](https://travis-ci.org/wvulibraries/image-ads.svg?branch=master)](https://travis-ci.org/wvulibraries/image-ads)![Coverage Status](/Rotating-Homepage-Ads/coverage/coverage.png?raw=true)
 
@@ -13,7 +13,6 @@ This application was developed to create a place for users to be able to manage 
   - Rails -v (5.0.0.1)
   - MySQL
   - Bundler
-
 ---
 
 # Running in Vagrant Box
@@ -55,29 +54,6 @@ This application was developed to create a place for users to be able to manage 
 
 # Deployment
 
-# Customization
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
 ** Manage Ads
 
 The Manage state is used to see all currently active images and get a general overview of what images are stored and the data that they are going to have with them.  When look at the manage state you will see the following information,
@@ -93,7 +69,7 @@ The Manage state is used to see all currently active images and get a general ov
 
 The areas will allow you to use forms to create update or delete images you have already stored.  The bulk of the users time will be spent in these sections.
 
-**Front End Use**
+## Front End Use
 
 The application is setup to send a JSON file to the html browser by using an AJAX Call. The following JQuery will display the images in a list file.   
 
@@ -131,13 +107,17 @@ The application is setup to send a JSON file to the html browser by using an AJA
  ```
 
 
-If the number of images recieved needs to be limited this can be done by adding a querystring to the end of the url.  An example of this would be if the images need to be limited to 7.  
+If the number of images recieved needs to be limited this can be done by adding a query string to the end of the url.  An example of this would be if the images need to be limited to 7.  
 
 	http://localhost:8090/admin/image_manager/includes/ajax/getImages.php?limit=7
 
+## PUMA Using SSL (Needed for CAS)
 
-# Making the Vagrant Box use SSL:
-Should run everything from the bootstrap. 
-
-## PUMA
-Start Puma Server in using custom configs `bundle exec puma -C config/puma.rb`
+1. Starts puma using custom configs.
+  - `bundle exec puma -C config/puma.rb`
+2. Be sure that in the `config/application.rb` the line `config.forced_ssl = true` is present and un-commented.
+3. Have some self signed ssl tickets generated and placed in the /etc/httpd/ssl folders.
+  - You may have to make the SSL tickets and make the ssl directory
+  - `sudo mkdir /etc/httpd/ssl`
+  - Replace ${APP_NAME} with your applications name, or web address.  Ex: imageads.mysite.com or imageads.lib.wvu.edu
+  - `sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/httpd/ssl/${APP_NAME}.key -out /etc/httpd/ssl/${APP_NAME}.crt -subj '/CN=localhost/O=My Company Name LTD./C=US'`

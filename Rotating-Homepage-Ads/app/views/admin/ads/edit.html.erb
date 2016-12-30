@@ -3,15 +3,25 @@
 
   <%= render 'form', ad: @ad %>
 
-  <h2>Date Ranges: </h2>
-  <!-- Render is too slow... causes super slow times -->
-  <%# render @ad.start_end_dates %>
 
+  <div class="date-ranges">
+    <h2>Date Ranges: </h2>
+    <!-- Render is too slow... causes super slow times -->
+    <%# render @ad.start_end_dates %>
 
-  <h2>Time Ranges: </h2>
-  <!-- Render is too slow... causes super slow times -->
-  <%# render @ad.start_end_times %>
+    <a href="#" class="button modal-toggle" data-target=".date-modal"> Add Date Range </a> <br><br>
+  </div>
+
+  <div class="time-ranges">
+    <h2>Time Ranges: </h2>
+    <!-- Render is too slow... causes super slow times -->
+    <%# render @ad.start_end_times %>
+
+    <a href="#" class="button modal-toggle" data-target=".time-modal"> Add Date Range </a>
+    <br><br>
+  </div>
 </div>
+
 
 <div class="date-modal modal">
   <div class="modal-wrapper">
