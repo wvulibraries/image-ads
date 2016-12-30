@@ -4,7 +4,7 @@ class Admin::AdsController < AdminController
   # GET /ads
   # GET /ads.json
   def index
-    @ads = Ad.all
+    @ads = Ad.includes(:start_end_dates).includes(:start_end_times).all
   end
 
   # GET /ads/1
