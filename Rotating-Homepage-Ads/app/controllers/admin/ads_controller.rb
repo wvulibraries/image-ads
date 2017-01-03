@@ -9,8 +9,7 @@ class Admin::AdsController < AdminController
 
   # GET /ads/1
   # GET /ads/1.json
-  def show
-  end
+  def show; end
 
   # GET /ads/new
   def new
@@ -18,8 +17,7 @@ class Admin::AdsController < AdminController
   end
 
   # GET /ads/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /ads
   # POST /ads.json
@@ -63,13 +61,14 @@ class Admin::AdsController < AdminController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_ad
-      @ad = Ad.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def ad_params
-      params.require(:ad).permit(:file, :image_name, :displayed, :priority, :alttext, :link, :selected_days => [])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_ad
+    @ad = Ad.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def ad_params
+    params.require(:ad).permit(:file, :image_name, :displayed, :priority, :alttext, :link, selected_days: [])
+  end
 end
