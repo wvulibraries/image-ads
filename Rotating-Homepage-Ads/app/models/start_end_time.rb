@@ -1,3 +1,9 @@
+# StartEndTime CLASS
+# ==================================================
+# AUTHORS : Tracy McCormick, David Davis
+# Description:
+# The data layer for start and end times. Only affects ads.  Needs presence of an Ad. 
+
 class StartEndTime < ApplicationRecord
   belongs_to :ad
   validates_presence_of :ad
@@ -15,7 +21,7 @@ class StartEndTime < ApplicationRecord
   # Ex:
   #  Takes a datetime stamp and returns HH:MM AM/PM  [6:00 == 6:00 AM] [14:00 == 2:00 PM]
   def hr_start_time
-    return convert_time(self.start_time.to_s)
+    convert_time(start_time.to_s)
   end
 
   # hr_end_time
@@ -26,7 +32,7 @@ class StartEndTime < ApplicationRecord
   # Description:
   # Uses convert_time method to return a human readable start time
   def hr_end_time
-    return convert_time(self.end_time.to_s)
+    convert_time(end_time.to_s)
   end
 
   # check_time_ranges
@@ -42,14 +48,14 @@ class StartEndTime < ApplicationRecord
   # Modified By: David Davis 11/29/16
   # removed if condition ot return true or false from bewteen method
   def check_time_ranges
-    now = Time.now.strftime( "%H:%M" )
-    start_time = self.start_time.strftime( "%H:%M" )
-    end_time =  self.end_time.strftime( "%H:%M" )
-    return now.between?(start_time, end_time)
+    now = Time.now.strftime('%H:%M')
+    start_time = self.start_time.strftime('%H:%M')
+    end_time = self.end_time.strftime('%H:%M')
+    now.between?(start_time, end_time)
   end
 
-
   private
+
   # convert_time
   # ==================================================
   # Name : David Davis
@@ -63,9 +69,11 @@ class StartEndTime < ApplicationRecord
   #
   # Ex:
   #  Takes a datetime stamp and returns HH:MM AM/PM  [6:00 == 6:00 AM] [14:00 == 2:00 PM]
+
   private
+
   def convert_time(datetime)
     time = Time.parse(datetime)
-    return time.strftime("%l:%M %p").strip
+    time.strftime('%l:%M %p').strip
   end
 end

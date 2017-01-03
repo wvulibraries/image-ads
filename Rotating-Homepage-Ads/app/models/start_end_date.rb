@@ -1,3 +1,9 @@
+# StartEnd Date CLASS
+# ==================================================
+# AUTHORS : Tracy McCormick, David Davis
+# Description:
+# The data layer for start and end dates.  Start and end dates only affect ads.
+
 class StartEndDate < ApplicationRecord
   belongs_to :ad
   validates_presence_of :ad
@@ -15,11 +21,11 @@ class StartEndDate < ApplicationRecord
   # @return (string)
 
   def hr_start_date
-    return convert_date(self.start_date.to_s)
+    convert_date(start_date.to_s)
   end
 
   def hr_end_date
-    return convert_date(self.end_date.to_s)
+    convert_date(end_date.to_s)
   end
 
   # check date ranges
@@ -33,9 +39,8 @@ class StartEndDate < ApplicationRecord
 
   def check_date_ranges
     today = Date.today
-    return today.between?(self.start_date, self.end_date)
+    today.between?(start_date, end_date)
   end
-
 
   # convert_date
   # ==================================================
@@ -47,10 +52,10 @@ class StartEndDate < ApplicationRecord
   #
   # Description:
   # Returns a string from the Month Day Year as human readable.
-  private
+
   def convert_date(datetime)
     date = Time.parse(datetime)
-    return date.strftime("%m-%d-%Y").strip
+    date.strftime('%m/%d/%Y').strip
   end
 
   # dates not same
@@ -59,11 +64,12 @@ class StartEndDate < ApplicationRecord
   # Date : 11/29/2016
   #
   # Description:
-  # keeps the start and end date from being equal and submitting 
+  # keeps the start and end date from being equal and submitting
+  
   def dates_not_same
-    if self.start_date == self.end_date
-      errors.add(:start_date, "start date can not equal end date")
-      errors.add(:end_date, "end date can not equal start date")
+    if start_date == end_date
+      errors.add(:start_date, 'start date can not equal end date')
+      errors.add(:end_date, 'end date can not equal start date')
     end
   end
 end
