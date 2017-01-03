@@ -1,9 +1,12 @@
 $card-border-radius: 6px;
 
 .ad-cards {
+  @include span-columns(12);
   list-style:none;
   padding:0;
-  margin:0;
+  margin:0 0 30px;
+  position:relative;
+
 
   > li {
     @include span-columns(12);
@@ -12,6 +15,10 @@ $card-border-radius: 6px;
     border-radius:$card-border-radius;
     margin-bottom:20px;
 
+    position:relative;
+    bottom:0;
+    left:0;
+    
     @include breakpoint(phone){
       @include span-columns(6);
       @include omega(2n);
@@ -93,4 +100,51 @@ $card-border-radius: 6px;
   }
 
   .pad-left { padding-left:20px; margin:5px auto;}
+}
+
+.show-ad {
+  @include span-columns(12);
+  img { width:100%; height:auto;}
+  > div { margin-bottom:20px; }
+}
+
+.date-ranges-show, .time-ranges-show {
+  ul { list-style:disc; padding-left:2em;}
+}
+
+
+.card-action {
+  @include span-columns(12);
+  margin-bottom:5px;
+  border-bottom:0;
+  position:absolute;
+  bottom:0; left:0;
+  .btn{
+    @include span-columns(12);
+    text-align: center;
+    i { font-size:2em;}
+    @include breakpoint(tablet) {
+      @include span-columns(4);
+      @include omega(3n);
+      margin-bottom:0;
+    }
+  }
+}
+
+.show-action {
+  @include span-columns(12);
+  border-bottom:0;
+  .btn{
+    @include span-columns(12);
+    text-align: center;
+    margin-bottom:5px;
+
+    i { font-size:2em;}
+
+    @include breakpoint(tablet) {
+      @include span-columns(6);
+      @include omega(2n);
+      margin-bottom:0;
+    }
+  }
 }

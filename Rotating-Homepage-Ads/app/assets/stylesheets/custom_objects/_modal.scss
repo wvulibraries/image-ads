@@ -1,6 +1,3 @@
-@import "bourbon";
-@import "neat";
-
 $modal-close-color: red;
 $modal-close-color-hover: darken(red, 10%);
 $modal-bg-color: #fff;
@@ -10,7 +7,7 @@ $modal-border-radius: 3px;
 .modal {
      display:none;
      position:fixed;
-    z-index:9999; 
+    z-index:9999;
      top:0;
      left:0;
      width:100%;

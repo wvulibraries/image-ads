@@ -115,27 +115,39 @@ form, .well {
   }
 }
 
+
 .cancel-button-wrapper {
     @include span-columns(6);
-    @include omega();
 }
 
 .submit-button-wrapper {
   @include span-columns(6);
 }
 
-.card-action {
+.date-ranges {
   @include span-columns(12);
-  margin-bottom:5px;
-  border-bottom:0;
-  .btn{
-    @include span-columns(12);
-    text-align: center;
-    i { font-size:2em;}
+}
+
+.date-range-button {
+  position:relative;
+  margin-top:20px;
+  display:inline-block;
+}
+
+.ad-header {
+  .title { @include span-columns(12);
     @include breakpoint(tablet) {
-      @include span-columns(4);
-      @include omega(3n);
-      margin-bottom:0;
+        @include span-columns(6);
+    }
+  }
+
+  .utils { @include span-columns(12);
+    @include breakpoint(tablet) {
+        @include span-columns(6);
+        text-align:right;
+        @include omega();
     }
   }
 }
+
+.footer-util { @include span-columns(12); text-align:right;}

@@ -23,3 +23,21 @@
 main, header, footer, div {
   @include clearfix;
 }
+
+main { clear:left; }
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.pull-left {
+  float: left !important;
+}
+
+.pull-right {
+  float:right !important;
+}

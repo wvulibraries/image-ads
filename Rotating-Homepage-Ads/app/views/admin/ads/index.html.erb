@@ -1,5 +1,11 @@
 <div class="container">
-<h2> Current Ads </h2>
+  <div class="ad-header">
+      <div class="title"><h2> Current Ads </h2></div>
+      <div class="utils"><%= link_to 'New Ad', new_ad_path, :class => 'button new-ad-button' %></div>
+  </div>
+
+
+
 <ul class="ad-cards">
   <% @ads.each do |ad| %>
   <li>
@@ -81,6 +87,6 @@
 </ul>
 
 <br>
+<div class="footer-util"><%= link_to 'New Ad', new_ad_path, :class => 'button new-ad-button' %></div>
 
-<%= link_to 'New Ad', new_ad_path, :class => 'button new-ad-button' %>
 </div>

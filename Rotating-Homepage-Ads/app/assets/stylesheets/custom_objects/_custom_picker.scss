@@ -18,3 +18,9 @@
   width:60% !important;
   float:left;
 }
+
+.picker--time .picker__frame {
+    min-width: 256px;
+    max-width: 320px;
+    top: 10% !important;
+}

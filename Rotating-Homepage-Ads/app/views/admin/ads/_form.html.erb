@@ -71,7 +71,11 @@
     </div>
 
     <div class="submit-button-wrapper">
-      <%= f.submit 'Create Ad', :class=>"button submit-button" %>
+      <% if ad.id.present? %>
+        <%= f.submit 'Submit Edits', :class=>"button submit-button" %>
+      <% else %>
+        <%= f.submit 'Create Ad', :class=>"button submit-button" %>
+      <% end %>
     </div>
   </div>
 <% end %>
