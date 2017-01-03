@@ -13,6 +13,7 @@ class Admin::StartEndTimesController < AdminController
   end
 
   private
+
   def start_end_time_params
     params.require(:start_end_time).permit(:start_time, :end_time)
   end

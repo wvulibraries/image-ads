@@ -1,8 +1,7 @@
 class PublicController < ApplicationController
-  layout "application"
+  layout 'application'
 
-  def index
-  end
+  def index; end
 
   # def logout
   #   session.delete('cas')

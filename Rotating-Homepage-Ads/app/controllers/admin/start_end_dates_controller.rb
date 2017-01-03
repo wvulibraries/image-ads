@@ -13,6 +13,7 @@ class Admin::StartEndDatesController < AdminController
   end
 
   private
+
   def start_end_date_params
     params.require(:start_end_date).permit(:start_date, :end_date)
   end
