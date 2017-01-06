@@ -2,7 +2,7 @@
 
 ## Variables
 RUBY_VERSION='2.3.0'
-APP_NAME="Rotating-Homepage-Ads"
+APP_NAME="image-ads"
 
 ## SERVER CONFIGURATION
 echo "Updating OS and YUM"
