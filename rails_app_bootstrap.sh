@@ -6,5 +6,5 @@ gem install mysql2
 
 echo "install rails app dependencies ... "
 echo " -------------------------------------------------------------------------- "
-cd /vagrant/Rotating-Homepage-Ads
+cd /vagrant/image-ads
 bundle install
