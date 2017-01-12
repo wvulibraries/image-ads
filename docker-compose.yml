@@ -12,11 +12,3 @@ image-ads:
     - "3000:3000"
   links:
     - mysql
-example-rails-app:
-  build: ./example-rails-app
-  volumes:
-    - ./example-rails-app:/usr/src/app
-  ports:
-    - "3001:3000"
-  links:
-    - mysql
