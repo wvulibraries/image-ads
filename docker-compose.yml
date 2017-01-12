@@ -1,0 +1,22 @@
+# Based on info found at https://github.com/CodingItWrong/rails-docker-mac
+
+mysql:
+  image: mysql:latest
+  environment:
+    MYSQL_ALLOW_EMPTY_PASSWORD: "true"
+image-ads:
+  build: ./image-ads
+  volumes:
+    - ./image-ads:/usr/src/app
+  ports:
+    - "3000:3000"
+  links:
+    - mysql
+example-rails-app:
+  build: ./example-rails-app
+  volumes:
+    - ./example-rails-app:/usr/src/app
+  ports:
+    - "3001:3000"
+  links:
+    - mysql
