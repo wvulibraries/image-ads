@@ -5,7 +5,7 @@ require 'simplecov'
 require 'simplecov-shield'
 
 SimpleCov.start
-#SimpleCov.formatter = SimpleCov::Formatter::ShieldFormatter
+SimpleCov.formatter = SimpleCov::Formatter::ShieldFormatter
 
 class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.

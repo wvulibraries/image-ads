@@ -14,10 +14,6 @@ class AdminController < ApplicationController
     redirect_to ads_path, success: "Welcome #{@username}!  You have been sucessfully logged in!"
   end
 
-  def logout
-    CASClient::Frameworks::Rails::Filter.logout(self)
-  end
-
   private
 
   def check_permissions

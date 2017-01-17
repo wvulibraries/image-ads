@@ -12,11 +12,6 @@ class Admin::AdsControllerTest < ActionDispatch::IntegrationTest
     Rails.cache.clear
   end
 
-  test "getting user session works" do
-    assert session['cas']['user'],  "this does not have a user session"
-    assert_equal session['cas']['user'], "vagrant", "this does not equal vagrant because something sucks"
-  end
-
   test "should get index" do
     get ads_url
     assert_response :success

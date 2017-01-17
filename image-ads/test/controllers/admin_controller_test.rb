@@ -2,7 +2,7 @@ require 'test_helper'
 
 class AdminControllerTest < ActionDispatch::IntegrationTest
   setup do
-    CASClient::Frameworks::Rails::Filter.fake("username1", {:sn => "Admin", :mail => "username1@nowhere.com"})
+    CASClient::Frameworks::Rails::Filter.fake("username1", {:role => "user", :email => "homer@test.foo"})
   end
 
   # called after every single test
@@ -13,17 +13,12 @@ class AdminControllerTest < ActionDispatch::IntegrationTest
 
   test "should get index" do
     get admin_url
-    assert_response :success
-  end
-
-  test "should get logout" do
-    get "/logout"
-    assert_response :success
+    assert_redirected_to ads_path
   end
 
   test "should fail get index" do
     CASClient::Frameworks::Rails::Filter.fake("username")
     get admin_url
-    assert_response :success
+    assert_redirected_to root_path
   end
 end
