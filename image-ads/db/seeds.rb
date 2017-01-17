@@ -50,4 +50,3 @@ end
 # Create Users
 User.create(username: 'djdavis', firstname: 'David', lastname: 'Davis')
 User.create(username: 'tam0013', firstname: 'Tracy', lastname: 'McCormick')
-User.create(username: 'vagrant', firstname: 'Vagrant', lastname: 'Admin')
