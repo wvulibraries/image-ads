@@ -7,12 +7,5 @@ class PublicController < ApplicationController
     session.delete('cas')
     redirect_to root_path, notice: 'Logged Out!'
   end
-
-  def set_vagrant_user
-      session['cas'] = {
-        'cas_user' => 'vagrant',
-        'extra_attributes' => {},
-      }
-      redirect_to root_path, notice: 'Logged In!'
-  end
+  
 end

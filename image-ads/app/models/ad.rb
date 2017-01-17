@@ -75,6 +75,7 @@ class Ad < ApplicationRecord
   # check day of week
   # ==================================================
   # Name : Tracy McCormick
+  # Modified By: David Davis
   # Date : 11/28/2016
   #
   # Description:
@@ -83,9 +84,10 @@ class Ad < ApplicationRecord
   def check_day_of_week
     if (selected_days.size - 1) > 0 && !selected_days.nil?
       d = Date.today
-      selected_days.include?(Date::DAYNAMES[d.wday])
+      weekday =  Date::DAYNAMES[d.wday]
+      selected_days.include?(weekday)
     else
-      true
+      return true
     end
   end
 
@@ -101,7 +103,7 @@ class Ad < ApplicationRecord
   def check_times
     if start_end_times.count > 0 && !start_end_times.nil?
       start_end_times.each do |t|
-        return if t.check_time_ranges
+        return true if t.check_time_ranges
       end
 
       false
@@ -122,7 +124,7 @@ class Ad < ApplicationRecord
   def check_dates
     if start_end_dates.count > 0 && !start_end_dates.nil?
       start_end_dates.each do |d|
-        return if d.check_date_ranges
+        return true if d.check_date_ranges
       end
 
       false

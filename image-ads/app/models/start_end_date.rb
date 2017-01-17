@@ -39,7 +39,7 @@ class StartEndDate < ApplicationRecord
 
   def check_date_ranges
     today = Date.today
-    today.between?(start_date, end_date)
+    !!today.between?(start_date.to_date, end_date.to_date)
   end
 
   # convert_date
@@ -65,7 +65,7 @@ class StartEndDate < ApplicationRecord
   #
   # Description:
   # keeps the start and end date from being equal and submitting
-  
+
   def dates_not_same
     if start_date == end_date
       errors.add(:start_date, 'start date can not equal end date')

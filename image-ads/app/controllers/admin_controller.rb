@@ -3,7 +3,7 @@ class AdminController < ApplicationController
   layout 'admin'
 
   # perform filter before action
-  before_filter CASClient::Frameworks::Rails::Filter
+  before_action CASClient::Frameworks::Rails::Filter
   before_action :check_permissions
 
   def index

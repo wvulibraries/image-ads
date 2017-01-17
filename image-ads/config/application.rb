@@ -11,6 +11,6 @@ module RotatingHomepageAds
     ## Although this should be handled by the server
     config.time_zone = 'Eastern Time (US & Canada)'
     config.active_record.default_timezone = :local
-    config.forced_ssl = true 
+    config.forced_ssl = true
   end
 end

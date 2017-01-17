@@ -2,7 +2,7 @@
 # ==================================================
 # AUTHORS : Tracy McCormick, David Davis
 # Description:
-# The data layer for start and end times. Only affects ads.  Needs presence of an Ad. 
+# The data layer for start and end times. Only affects ads.  Needs presence of an Ad.
 
 class StartEndTime < ApplicationRecord
   belongs_to :ad
@@ -38,6 +38,7 @@ class StartEndTime < ApplicationRecord
   # check_time_ranges
   # ==================================================
   # Name : Tracy McCormick
+  # Modified By: David Davis
   # Date : 11/29/2016
   #
   # @return (boolean)
@@ -51,7 +52,7 @@ class StartEndTime < ApplicationRecord
     now = Time.now.strftime('%H:%M')
     start_time = self.start_time.strftime('%H:%M')
     end_time = self.end_time.strftime('%H:%M')
-    now.between?(start_time, end_time)
+    !!now.between?(start_time, end_time)
   end
 
   private
