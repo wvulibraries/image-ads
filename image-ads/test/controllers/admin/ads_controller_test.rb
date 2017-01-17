@@ -57,7 +57,6 @@ class Admin::AdsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to ad_url(Ad.last)
   end
 
-
   test "should update ad" do
     patch ad_url(@ad), params: { ad: { alttext: "updated" } }
     assert_redirected_to ad_url(@ad), "this did not redirect properly"

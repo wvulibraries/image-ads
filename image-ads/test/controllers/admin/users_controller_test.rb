@@ -18,6 +18,11 @@ class Admin::UsersControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "should get edit" do
+    get edit_user_url(@user)
+    assert_response :success
+  end
+
   test "should create user" do
     assert_difference('User.count') do
       post users_url, params: {
@@ -31,6 +36,11 @@ class Admin::UsersControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to user_url(User.last)
   end
 
+  test "user shouldn't save without a username" do
+    @user.username = nil
+    assert_not @user.save, "ad saved without a username"
+  end
+
   test "should update user" do
     patch user_url(@user), params: { user: { firstname: "Jane" } }
     assert_redirected_to user_url(@user), "this did not redirect properly"
@@ -38,12 +48,10 @@ class Admin::UsersControllerTest < ActionDispatch::IntegrationTest
     assert_equal "Jane", @user.firstname, "firstname was not equal for update of firstname"
   end
 
-  test "should fail update user" do
-    patch user_url(@user), params: { user: { username: nil } }
-    #assert_redirected_to user_url(@user), "this did not redirect properly"
-    #@user.reload
-    #assert_equal nil, @user.firstname, "firstname was not equal for update of firstname"
-   end
+  # test "should fail update user" do
+  #   patch user_url(@user), params: { user: { username: nil } }
+  #   assert_equal nil, @user.username, "firstname was not equal for update of firstname"
+  #  end
 
   test "should destroy user" do
     assert_difference('User.count', -1) do

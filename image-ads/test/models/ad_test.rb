@@ -25,7 +25,8 @@ class AdTest < ActiveSupport::TestCase
           )
   end
 
-  ## write tests
+  ## write test
+
   test "valid ad" do
     assert @ad.valid?, "ad was not valid"
   end
@@ -34,6 +35,11 @@ class AdTest < ActiveSupport::TestCase
     @ad.filename = nil
     assert_not @ad.save, "ad saved without a filename"
   end
+
+  # test "should update image" do
+  #   patch ad_url(@ad), params: { ad: { file: self.seed_image('hollow', 'png') } }
+  #   assert_response :success
+  # end
 
   test "ad should not save without a file" do
     @ad.file_contents = nil
