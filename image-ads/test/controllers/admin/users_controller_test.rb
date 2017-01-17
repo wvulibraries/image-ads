@@ -4,8 +4,13 @@ class Admin::UsersControllerTest < ActionDispatch::IntegrationTest
   ## setup the base model used for testing
   def setup
     @user = User.find(1)
-    #get '/vagrantlogin'
     CASClient::Frameworks::Rails::Filter.fake(@user.username, {:sn => "Admin", :mail => "username1@nowhere.com"})
+  end
+
+  # called after every single test
+  teardown do
+    # when controller is using cache it may be a good idea to reset it afterwards
+    Rails.cache.clear
   end
 
   test "should get index" do
@@ -48,10 +53,10 @@ class Admin::UsersControllerTest < ActionDispatch::IntegrationTest
     assert_equal "Jane", @user.firstname, "firstname was not equal for update of firstname"
   end
 
-  # test "should fail update user" do
-  #   patch user_url(@user), params: { user: { username: nil } }
-  #   assert_equal nil, @user.username, "firstname was not equal for update of firstname"
-  #  end
+  test "should fail update user" do
+    patch user_url(@user), params: { user: { firstname: nil } }
+    assert_not_equal nil, @user.firstname, "firstname was equal for update of firstname"
+   end
 
   test "should destroy user" do
     assert_difference('User.count', -1) do

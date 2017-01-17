@@ -7,7 +7,7 @@ class PublicControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get login" do
-    get "/vagrantlogin"
+    CASClient::Frameworks::Rails::Filter.fake("username1", {:sn => "Admin", :mail => "username1@nowhere.com"})
     assert_redirected_to root_url
   end
 
@@ -17,7 +17,7 @@ class PublicControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should delete the session for cas user" do
-    get "/vagrantlogin"
+    CASClient::Frameworks::Rails::Filter.fake("username1", {:sn => "Admin", :mail => "username1@nowhere.com"})
     assert session['cas']['user'], "something is wrong no user in cas session"
 
     get "/logout"
@@ -25,7 +25,7 @@ class PublicControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should login/logout from url" do
-    get "/vagrantlogin"
+    CASClient::Frameworks::Rails::Filter.fake("username1", {:sn => "Admin", :mail => "username1@nowhere.com"})
     assert session['cas']['user'], "something is wrong no user in cas session"
 
     get "/logout"

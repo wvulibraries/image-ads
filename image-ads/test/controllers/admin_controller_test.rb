@@ -16,13 +16,13 @@ class AdminControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  # test "should get logout" do
-  #   get "/logout"
-  #   assert_response :success
-  # end
+  test "should get logout" do
+    get "/logout"
+    assert_response :success
+  end
 
   test "should fail get index" do
-    CASClient::Frameworks::Rails::Filter.fake("homer")
+    CASClient::Frameworks::Rails::Filter.fake("username")
     get admin_url
     assert_response :success
   end
