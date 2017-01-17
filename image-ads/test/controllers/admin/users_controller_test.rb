@@ -4,7 +4,8 @@ class Admin::UsersControllerTest < ActionDispatch::IntegrationTest
   ## setup the base model used for testing
   def setup
     @user = User.find(1)
-    get '/vagrantlogin'
+    #get '/vagrantlogin'
+    CASClient::Frameworks::Rails::Filter.fake(@user.username, {:sn => "Admin", :mail => "username1@nowhere.com"})
   end
 
   test "should get index" do

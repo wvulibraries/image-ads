@@ -9,9 +9,8 @@ RUN apt-get install -y mysql-client
 
 RUN mkdir /app
 WORKDIR /app
-ADD Gemfile* /app/
+ADD ./image-ads/Gemfile* /app/
 RUN bundle install
-ADD . /app
+ADD ./image-ads /app
 
 EXPOSE 3000
-CMD ["rails", "server", "-b", "0.0.0.0"]

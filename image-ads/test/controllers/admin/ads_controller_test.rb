@@ -3,7 +3,8 @@ require 'test_helper'
 class Admin::AdsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @ad = Ad.find(1)
-    get '/vagrantlogin'
+    #get '/vagrantlogin'
+    #CASClient::Frameworks::Rails::Filter.fake("username1", {:sn => "Admin", :mail => "username1@nowhere.com"})
   end
 
   # called after every single test

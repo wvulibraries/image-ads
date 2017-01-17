@@ -2,12 +2,17 @@
 /serverConfiguration/includes/
 /.vagrant/
 sessionLogin.php
+
+# ignore Tracy's scripts
 db-back.sh
 start-srv.sh
+start.sh
+db-setup.sh
+cleanup.sh
+
 /SQLFiles/
 server
 /server
-
 
 # don't let these stupid things in the repo
 .DS_STORE

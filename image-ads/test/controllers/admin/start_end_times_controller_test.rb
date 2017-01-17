@@ -4,7 +4,8 @@ class Admin::StartEndTimesControllerTest < ActionDispatch::IntegrationTest
   ## setup the base model used for testing
   def setup
     @ad = Ad.find(1)
-    get '/vagrantlogin'
+    #get '/vagrantlogin'
+    CASClient::Frameworks::Rails::Filter.fake("username1", {:sn => "Admin", :mail => "username1@nowhere.com"})
   end
 
   # called after every single test
