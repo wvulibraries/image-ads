@@ -7,50 +7,35 @@ Ad manager for rotating image ads.
 This application was developed to create a place for users to be able to manage image ads that are typically used in rotating or carousel fashion on the Libraries home page.  
 
 ## Dependencies
-  - CentOS 7.2
-  - Vagrant / Virtual Box (For development)
+  - Docker / Docker-Compose (For development)
   - Ruby Version (2.3.3)
   - Rails -v (5.0.0.1)
   - MySQL
   - Bundler
 ---
 
-# Running in Vagrant Box
+# Setup Docker-Compose
+  - In your docker-compose file you need to set you local timezone the example below is set to the America/New_York
+
+  environment:
+    # setting timezone
+    - "TZ=America/New_York" # offset = -05:00 / DST -04:00
+
+## Running in Docker
 
   - Clone the repo
-  - Use the terminal to change directory into the cloned repo and do the command `vagrant up`
-  - This will provision the box, but will not do everything you need to completed the setup so you will need to be inside of the box to continue.
+  - Use the terminal to change directory into the cloned repo and do the command `docker-compose up`
+  - This will provision the container, but will not do everything you need to completed the setup.
 
-### Vagrant SSH
+## Setup Databases
+  Before accessing the page you need to setup your databases.
 
-  The following commands need to be done after entering `vagrant ssh` be sure that you are inside of your vagrant box.  
-  - gem install bundler
-  - gem install rails
-  - gem install mysql
+  - run 'docker ps' this will show you your running dockers. Locate the container that is running your app it may look something like <imageads_image-ads_1> the first part is generally similar to the folder where your docker-compose file is located.
 
-### Build the dependencies needed for the project
-  - change directory in your vagrant box through vagrant ssh
-  - bundle install
-
-### Setup Databases
-  - cd into /vagrant/bin/
-  - run the command `rake db:create && rake db:migrate`
-
-### Run the Server
-  - use `rails server` to boot server with vagrant by adding to the `config/boot.rb` file
-
-  ```ruby
-  require 'rails/commands/server'
-  module Rails
-    class Server
-      def default_options
-        super.merge(Host:  '0.0.0.0', Port: 3000)
-      end
-    end
-  end
-  ```
-
-  - `rails server -b 0.0.0.0` this runs the rails server on an ip and helps to work with vagrant
+  - run the following commands
+    docker exec -t <container name> rails db:create
+    docker exec -t <container name> rails db:migrate
+    docker exec -t <container name> rails db:seed
 
 # Deployment
 
@@ -74,42 +59,61 @@ The areas will allow you to use forms to create update or delete images you have
 The application is setup to send a JSON file to the html browser by using an AJAX Call. The following JQuery will display the images in a list file.   
 
 ``` javascript
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type='text/javascript'>
+      $(document).ready(function() {
+          // make it slide
+          var slider = $('.slider').bxSlider({
+            mode: 'fade',
+            captions: true
+          });
 
-    <script type='text/javascript'>
-        $(document).ready(function() {
+          $.ajax({
+              dataType:'json',
+              url:'/ajax/getads.json',
+              data: '',
+              success:function() {
+                  console.log('success');
+              },
+              error: function (jqXHR, textStatus, errorThrown) {
+                  console.log(textStatus + ': ' + errorThrown);
+              },
+              complete: function(data){
+                  var jsonData = data.responseJSON;
 
-            $.ajax({
-                dataType:'json',
-                url:'http://localhost:8090/admin/image_manager/includes/ajax/getImages.php',
-                data: '',
-                success:function() {
-                    console.log('success');
-                },
-                error: function (jqXHR, textStatus, errorThrown) {
-                    console.log(textStatus + ': ' + errorThrown);
-                },
-                complete: function(data){
-                    var jsonData = data.responseJSON;
+                  for (var i = 0; i < jsonData.length; i++) {
+                      var buildList = '<li><a href="' + jsonData[i].actionUrl +'">';
+                      buildList += '<img src="'+ jsonData[i].imageAd +'" alt="' + jsonData[i].altText + '" title="' + jsonData[i].name + '" />';
+                      buildList += '</a></li>';
 
-                    for (var i = 0; i < jsonData.length; i++) {
-                        var buildList = '<li class="slider-object"><a href="' + jsonData[i].actionURL +'">';
-                        buildList += '<img src="'+ jsonData[i].imageAd +'" alt="' + jsonData[i].altText + '" title="' + jsonData[i].name + '" />';
-                        buildList += '</a></li>';
+                      $('.slider').append(buildList);
+                  }
 
-                        $('.slider').append(buildList);
-                    }
-                },
+                  slider.reloadSlider();
+              },
+          });
+
+
+          $(window).on('load resize', function(){
+            console.log('sizing');
+            var tallest = 0;
+            $('.equalHeight').each(function(){
+              $('.equal').each(function(){
+                  $(this).css('height','auto');
+                  if($(this).height() > tallest){
+                    tallest = $(this).height() + 72;
+                  }
+              });
+              $('.equal', this).height(tallest);
             });
-
-        });
-    </script>
+          });
+      });
+  </script>
  ```
 
 
-If the number of images recieved needs to be limited this can be done by adding a query string to the end of the url.  An example of this would be if the images need to be limited to 7.  
+If the number of images received needs to be limited this can be done by adding a query string to the end of the url.  An example of this would be if the images need to be limited to 7.  
 
-	http://localhost:8090/admin/image_manager/includes/ajax/getImages.php?limit=7
+	http://localhost:3000/ajax/getads.json?limit=7
 
 ## PUMA Using SSL (Needed for CAS)
 
