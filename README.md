@@ -28,9 +28,10 @@ This application was developed to create a place for users to be able to manage 
   - This will provision the container, but will not do everything you need to completed the setup.
 
 ## Setup Databases
-  Before accessing the page you need to setup your databases.
+  - Before accessing the page you need to setup your databases.
 
   - run the following commands
+    '''
     docker-compose run image-ads rails db:create
     docker-compose run image-ads rails db:migrate
     docker-compose run image-ads rails db:seed
