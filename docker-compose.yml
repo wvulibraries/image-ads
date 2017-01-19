@@ -17,7 +17,7 @@ services:
     volumes:
       - ./image-ads:/app
     environment:
-      - RAILS_ENV=development
+      - "RAILS_ENV=development"
       # setting timezone
       - "TZ=America/New_York" # offset = -05:00 / DST -04:00
     ports:
