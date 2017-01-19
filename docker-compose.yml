@@ -1,20 +1,26 @@
-# Based on info found at https://github.com/CodingItWrong/rails-docker-mac
-
-mysql:
-  image: mysql:latest
-  environment:
-    MYSQL_ALLOW_EMPTY_PASSWORD: "true"
-  ports:
-    - "3306:3306"
-image-ads:
-  build: .
-  command: bundle exec rails s -p 3000 -b '0.0.0.0'
-  volumes:
-    - ./image-ads:/app
-  environment:
-    # setting timezone
-    - "TZ=America/New_York" # offset = -05:00 / DST -04:00
-  ports:
-    - "3000:3000"
-  links:
-    - mysql
+# Based on info found at
+# https://github.com/CodingItWrong/rails-docker-mac
+# https://github.com/alienfast/docker-rails/issues/4
+version: '2'
+services:
+  mysql:
+    image: mysql
+    container_name: mysql
+    environment:
+      - "MYSQL_ALLOW_EMPTY_PASSWORD=true"
+    ports:
+      - "3306:3306"
+  image-ads:
+    build: .
+    container_name: image-ads
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    volumes:
+      - ./image-ads:/app
+    environment:
+      - RAILS_ENV=development
+      # setting timezone
+      - "TZ=America/New_York" # offset = -05:00 / DST -04:00
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mysql
