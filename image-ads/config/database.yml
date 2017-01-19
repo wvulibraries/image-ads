@@ -12,28 +12,26 @@
 default: &default
   adapter: mysql2
   encoding: utf8
-  #pool: 5
   username: root
   password:
-  #socket: /var/lib/mysql/mysql.sock
   host: mysql
 
 development:
   <<: *default
-  database: Rotating-Homepage-Ads_development
+  database: image-ads_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 # test:
 #   <<: *default
-#   database: Rotating-Homepage-Ads_test
+#   database: image-ads_test
 
 test:
   adapter: mysql2
   username: travis
   encoding: utf8
-  database: Rotating-Homepage-Ads_test
+  database: image-ads_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -56,6 +54,6 @@ test:
 #
 production:
   <<: *default
-  database: Rotating-Homepage-Ads_production
-  username: Rotating-Homepage-Ads
-  password: <%= ENV['ROTATING-HOMEPAGE-ADS_DATABASE_PASSWORD'] %>
+  database: image-ads_production
+  username: image-ads-Ads
+  password: <%= ENV['IMAGE-ADS_DATABASE_PASSWORD'] %>
