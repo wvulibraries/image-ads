@@ -30,12 +30,10 @@ This application was developed to create a place for users to be able to manage 
 ## Setup Databases
   Before accessing the page you need to setup your databases.
 
-  - run 'docker ps' this will show you your running dockers. Locate the container that is running your app it may look something like <imageads_image-ads_1> the first part is generally similar to the folder where your docker-compose file is located.
-
   - run the following commands
-    docker exec -t <container name> rails db:create
-    docker exec -t <container name> rails db:migrate
-    docker exec -t <container name> rails db:seed
+    docker-compose run image-ads rails db:create
+    docker-compose run image-ads rails db:migrate
+    docker-compose run image-ads rails db:seed
 
 # Deployment
 

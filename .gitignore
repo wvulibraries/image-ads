@@ -5,9 +5,7 @@ sessionLogin.php
 
 # ignore Tracy's scripts
 db-back.sh
-start-srv.sh
 start.sh
-db-setup.sh
 cleanup.sh
 
 /SQLFiles/
