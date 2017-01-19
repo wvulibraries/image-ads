@@ -17,8 +17,8 @@ This application was developed to create a place for users to be able to manage 
 # Setup Docker-Compose
   - In your docker-compose file you need to set you local timezone the example below is set to the America/New_York
 
-  environment:
-    # setting timezone
+  environment:<br>
+    # setting timezone<br>
     - "TZ=America/New_York" # offset = -05:00 / DST -04:00
 
 ## Running in Docker
@@ -28,10 +28,8 @@ This application was developed to create a place for users to be able to manage 
   - This will provision the container, but will not do everything you need to completed the setup.
 
 ## Setup Databases
-  - Before accessing the page you need to setup your databases.
+Run the following commands to setup your database
 
-  - run the following commands
-    '''
     docker-compose run image-ads rails db:create
     docker-compose run image-ads rails db:migrate
     docker-compose run image-ads rails db:seed
