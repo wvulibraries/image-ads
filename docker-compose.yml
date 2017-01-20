@@ -3,24 +3,26 @@
 # https://github.com/alienfast/docker-rails/issues/4
 version: '2'
 services:
-  mysql:
+  db:
     image: mysql
     container_name: mysql
-    environment:
-      - "MYSQL_ALLOW_EMPTY_PASSWORD=true"
+    env_file:
+      - '.env.db'
     ports:
       - "3306:3306"
-  image-ads:
+  web:
     build: .
     container_name: image-ads
     command: bundle exec rails s -p 3000 -b '0.0.0.0'
     volumes:
       - ./image-ads:/app
-    environment:
-      - "RAILS_ENV=development"
-      # setting timezone
-      - "TZ=America/New_York" # offset = -05:00 / DST -04:00
+    env_file:
+      - '.env.web'
     ports:
+      # format is host-port:docker-port
+      # this will forward port 3000 on the docker to port 3000 on your host
+      # to forward to 3000 to port 80 use
+      # - "80:3000"
       - "3000:3000"
     depends_on:
-      - mysql
+      - db

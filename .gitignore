@@ -1,12 +1,11 @@
-/serverConfiguration/serverLogs/
-/serverConfiguration/includes/
-/.vagrant/
-sessionLogin.php
-
 # ignore Tracy's scripts
 db-back.sh
 start.sh
 cleanup.sh
+
+# ignore our environment config files
+.env.db
+.env.web
 
 /SQLFiles/
 server
