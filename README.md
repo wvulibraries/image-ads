@@ -18,35 +18,35 @@ This application was developed to create a place for users to be able to manage 
   - Clone the repo
 
 ## Environment and Database settings
-  - To set your environment you need to create .env.db and .env.web these will hold all your setting like password for your database and your secrets key.
+  To set your environment you need to create .env.db and .env.web these will hold all your setting like password for your database and your secrets key.
 
-  - in your .env.db if you are only doing development you can simply just create a file with just one line. I set mine to take empty passwords but if you want to set a password you can set it as you would in production with the instructions below.
+  In your .env.db if you are only doing development you can simply just create a file with just one line. I set mine to take empty passwords but if you want to set a password you can set it as you would in production with the instructions below.
 
       MYSQL_ALLOW_EMPTY_PASSWORD=true
 
-  - in production you will want to set more we used the following
+  In production you will want to set more we used the following
 
       MYSQL_ROOT_PASSWORD=root
       MYSQL_DATABASE=image-ads_production
       MYSQL_USER=<username>
       MYSQL_PASSWORD=<password>
 
-  - in your .env.web you will want to set your timezone for example I have set mine to the US Eastern.
+  In your .env.web you will want to set your timezone for example I have set mine to the US Eastern.
 
       TZ=America/New_York
 
-  - also you will need to set the RAILS_ENV for either development or production
+  Also you will need to set the RAILS_ENV for either development or production
 
       RAILS_ENV=development
 
-  - if in production you will also need to set your database username and password.
+  If in production you will also need to set your database username and password.
 
       IMAGE-ADS_DATABASE_USERNAME=<username>
       IMAGE-ADS_DATABASE_PASSWORD=<password>
 
     Note: Be sure to update your config/database.yml to match.
 
-  - also to generate your secret key run "rake secret" and copy the result
+  Also to generate your secret key run "rake secret" and copy the result
 
       SECRET_KEY_BASE=<key>
 
