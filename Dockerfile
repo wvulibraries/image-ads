@@ -3,10 +3,12 @@ FROM djdaviswvu/ruby_node
 # run update
 RUN apt-get update -qq
 
-RUN mkdir /app
-WORKDIR /app
-ADD ./image-ads/Gemfile* /app/
-RUN bundle install
-ADD ./image-ads /app
+RUN apt-get -y install ssh
 
-EXPOSE 3000
+WORKDIR /app
+
+ADD image-ads /app
+RUN bundle install
+
+# Clean up APT when done.
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
