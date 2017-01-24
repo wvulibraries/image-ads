@@ -50,15 +50,7 @@
 
 
 <script type='text/javascript'>
-      $(document).ready(function() {
-          $(window).resize();
-          
-          // make it slide
-          var slider = $('.slider').bxSlider({
-            mode: 'fade',
-            captions: true
-          });
-
+      $(document).on('ready turbolinks:load', function() {
           $.ajax({
               dataType:'json',
               url:'/ajax/getads.json',
@@ -80,7 +72,11 @@
                       $('.slider').append(buildList);
                   }
 
-                  slider.reloadSlider();
+                 $('.slider').bxSlider({
+                    mode: 'fade',
+                    auto: true,
+                    captions: true
+                  });
               },
           });
 
@@ -96,6 +92,6 @@
               });
               $('.equal', this).height(tallest);
             });
-          });
+          }).resize();
       });
   </script>
