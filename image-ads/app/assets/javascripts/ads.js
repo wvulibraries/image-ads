@@ -10,6 +10,6 @@ $(document).on('ready turbolinks:load', function(){
         });
 
       $('.ad-cards > li').height(tallest);
-    });
+    }).resize();
   }
 });

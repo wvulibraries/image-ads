@@ -51,6 +51,8 @@
 
 <script type='text/javascript'>
       $(document).ready(function() {
+          $(window).resize();
+          
           // make it slide
           var slider = $('.slider').bxSlider({
             mode: 'fade',
@@ -81,7 +83,6 @@
                   slider.reloadSlider();
               },
           });
-
 
           $(window).on('load resize', function(){
             console.log('sizing');
