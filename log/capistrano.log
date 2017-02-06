@@ -1,0 +1,6 @@
+# Logfile created on 2017-01-20 15:31:23 -0500 by logger.rb/56438
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-01-20 15:31:23 -0500 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [d2ee43a8] Running /usr/bin/env mkdir -p /tmp as deploy@localhost
+ DEBUG [d2ee43a8] Command: /usr/bin/env mkdir -p /tmp

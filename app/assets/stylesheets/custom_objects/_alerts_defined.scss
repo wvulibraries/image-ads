@@ -1,0 +1,34 @@
+.alert {
+  position: relative;
+  @include alert('default');
+}
+
+.alert.notice {
+  @include alert('notice');
+}
+
+.alert.warning {
+  @include alert('warning');
+}
+
+.alert.success {
+  @include alert('success');
+}
+
+.alert.error {
+  @include alert('error');
+}
+
+.exit-alert {
+  position: absolute;
+  right:10px;
+  font-size:2em;
+  top: 50%;
+  @include transform(translateY(-50%));
+  text-shadow: none;
+  &:hover, &:focus {
+    cursor:pointer;
+  }
+}
+
+.alert .content { @include span-columns(12);}

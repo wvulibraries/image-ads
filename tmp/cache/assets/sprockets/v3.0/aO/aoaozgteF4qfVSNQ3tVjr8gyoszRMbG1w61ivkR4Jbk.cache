@@ -1,0 +1,9 @@
+I"‹(function() {
+  $(document).on('click', '.exit-alert', function() {
+    return $(this).parent().remove();
+  });
+
+  return;
+
+}).call(this);
+:ET
