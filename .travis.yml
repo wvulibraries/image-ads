@@ -12,5 +12,4 @@ script:
   - RAILS_ENV=test bundle exec rake db:migrate --trace
   - bundle exec rake db:test:prepare test
 before_script:
-  - cd image-ads
   - mysql -e 'create database `Rotating-Homepage-Ads_test`'
