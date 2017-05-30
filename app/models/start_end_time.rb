@@ -49,10 +49,10 @@ class StartEndTime < ApplicationRecord
   # Modified By: David Davis 11/29/16
   # removed if condition ot return true or false from bewteen method
   def check_time_ranges
-    now = Time.now.strftime('%H:%M')
-    start_time = self.start_time.strftime('%H:%M')
-    end_time = self.end_time.strftime('%H:%M')
-    !!now.between?(start_time, end_time)
+    now = Time.current.strftime('%H:%M')
+    s_time = start_time.strftime('%H:%M')
+    e_time = end_time.strftime('%H:%M')
+    now.between?(s_time, e_time)
   end
 
   private
